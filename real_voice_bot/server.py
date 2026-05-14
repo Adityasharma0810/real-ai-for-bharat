@@ -19,7 +19,7 @@ from livekit import api
 
 from database import save_result, create_started_interview, get_results, get_result_by_phone, get_result_by_name, get_latest_result, get_result_by_email, update_interview_admin_status, get_blocked_candidates, block_candidate
 
-load_dotenv()
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("skillfit.server")
 

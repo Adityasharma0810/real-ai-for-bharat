@@ -23,7 +23,7 @@ from nodes.technical import (
 from nodes.utils import get_llm
 from state import InterviewState
 
-load_dotenv()
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), ".env"))
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("skillfit-voice")
 
@@ -160,8 +160,8 @@ class VoiceAgent(Agent):
             llm=None,
             tts=sarvam.TTS(
                 target_language_code="en-IN",
-                model="bulbul:v2",
-                speaker="anushka",
+                model="bulbul:v3",
+                speaker="ritu",
             ),
         )
         self.state = get_initial_state()

@@ -184,14 +184,6 @@ export const HomeScreen: React.FC<any> = ({ navigation }) => {
             </AppCard>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.gridItem} activeOpacity={0.7}>
-            <AppCard style={styles.gridCard} variant="outlined">
-              <View style={[styles.iconBox, { backgroundColor: '#fdf2f8' }]}>
-                <Ionicons name="settings" size={24} color="#db2777" />
-              </View>
-              <Text style={styles.gridLabel}>{t('settings')}</Text>
-            </AppCard>
-          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

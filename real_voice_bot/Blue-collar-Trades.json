@@ -1,0 +1,2607 @@
+{
+  "Electrician": {
+    "Basic Electrical Concepts": [
+      {
+        "question": "What is Ohm’s Law?",
+        "ideal_answer": "Ohm’s Law states that voltage equals current multiplied by resistance, represented as V = I × R."
+      },
+      {
+        "question": "What is the difference between AC and DC current?",
+        "ideal_answer": "AC changes direction periodically while DC flows only in one direction."
+      },
+      {
+        "question": "What is voltage?",
+        "ideal_answer": "Voltage is the electrical potential difference that pushes current through a circuit."
+      },
+      {
+        "question": "What is current?",
+        "ideal_answer": "Current is the flow of electric charge through a conductor."
+      },
+      {
+        "question": "What is resistance?",
+        "ideal_answer": "Resistance is the opposition to the flow of electric current in a circuit."
+      },
+      {
+        "question": "What is power in an electrical circuit?",
+        "ideal_answer": "Electrical power is the rate at which electrical energy is used, calculated as P = V × I."
+      },
+      {
+        "question": "What is a conductor?",
+        "ideal_answer": "A conductor is a material that allows electricity to flow easily, such as copper or aluminum."
+      },
+      {
+        "question": "What is an insulator?",
+        "ideal_answer": "An insulator is a material that resists the flow of electricity, such as rubber or plastic."
+      },
+      {
+        "question": "What is a short circuit?",
+        "ideal_answer": "A short circuit occurs when current flows through an unintended low-resistance path causing excessive current."
+      },
+      {
+        "question": "What is a load in an electrical system?",
+        "ideal_answer": "A load is any device or equipment that consumes electrical power."
+      }
+    ],
+
+    "Safety Practices": [
+      {
+        "question": "Why is earthing important?",
+        "ideal_answer": "Earthing provides a safe path for fault current and protects people from electric shock."
+      },
+      {
+        "question": "What is the purpose of a circuit breaker?",
+        "ideal_answer": "A circuit breaker automatically stops current flow during overload or short circuit conditions."
+      },
+      {
+        "question": "What is a fuse?",
+        "ideal_answer": "A fuse is a safety device that melts and breaks the circuit when excessive current flows."
+      },
+      {
+        "question": "Why should overloaded sockets be avoided?",
+        "ideal_answer": "Overloaded sockets can cause overheating, fire hazards, and short circuits."
+      },
+      {
+        "question": "What PPE should electricians use?",
+        "ideal_answer": "Electricians should use insulated gloves, safety shoes, helmets, goggles, and insulated tools."
+      },
+      {
+        "question": "Why should wet hands be avoided while handling electricity?",
+        "ideal_answer": "Water conducts electricity and increases the risk of electric shock."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines are properly shut off and cannot be restarted during maintenance."
+      },
+      {
+        "question": "Why should damaged wires be replaced immediately?",
+        "ideal_answer": "Damaged wires can cause electric shock, short circuits, and fire hazards."
+      },
+      {
+        "question": "What should be done before repairing a circuit?",
+        "ideal_answer": "The power supply should be switched off and tested to ensure no live current is present."
+      },
+      {
+        "question": "Why are insulated tools used?",
+        "ideal_answer": "Insulated tools protect workers from accidental electric shock."
+      }
+    ]
+  },
+
+  "Plumber": {
+    "Pipe Systems": [
+      {
+        "question": "What is the purpose of a pipe trap?",
+        "ideal_answer": "A pipe trap prevents foul gases from entering buildings by holding water as a seal."
+      },
+      {
+        "question": "What is the difference between PVC and GI pipes?",
+        "ideal_answer": "PVC pipes are lightweight plastic pipes while GI pipes are galvanized iron pipes used for stronger applications."
+      },
+      {
+        "question": "Why is slope important in drainage pipes?",
+        "ideal_answer": "Proper slope ensures wastewater flows smoothly by gravity and prevents blockages."
+      },
+      {
+        "question": "What is a valve used for?",
+        "ideal_answer": "A valve controls, starts, stops, or regulates the flow of water in pipelines."
+      },
+      {
+        "question": "What is backflow?",
+        "ideal_answer": "Backflow is the reverse flow of contaminated water into the clean water supply."
+      },
+      {
+        "question": "What is pipe insulation?",
+        "ideal_answer": "Pipe insulation protects pipes from heat loss, freezing, and condensation."
+      },
+      {
+        "question": "Why is pipe pressure testing done?",
+        "ideal_answer": "Pressure testing checks for leaks and ensures the pipe system is safe and reliable."
+      },
+      {
+        "question": "What is a water hammer?",
+        "ideal_answer": "Water hammer is a pressure surge caused when flowing water suddenly stops or changes direction."
+      },
+      {
+        "question": "What is the use of Teflon tape?",
+        "ideal_answer": "Teflon tape helps seal threaded pipe joints and prevents leakage."
+      },
+      {
+        "question": "Why is proper pipe support important?",
+        "ideal_answer": "Proper support prevents sagging, leakage, and pipe damage."
+      }
+    ],
+
+    "Leak Detection and Maintenance": [
+      {
+        "question": "How can a water leak be detected?",
+        "ideal_answer": "Leaks can be detected by checking water meter readings, dampness, reduced pressure, or unusual sounds."
+      },
+      {
+        "question": "Why should leaking pipes be repaired quickly?",
+        "ideal_answer": "Leaks waste water, increase bills, and can damage walls and structures."
+      },
+      {
+        "question": "What causes pipe blockage?",
+        "ideal_answer": "Grease, debris, hair, soap buildup, and improper slope can cause pipe blockage."
+      },
+      {
+        "question": "What tool is commonly used to clear drain blockages?",
+        "ideal_answer": "A plunger or drain snake is commonly used to clear blocked drains."
+      },
+      {
+        "question": "Why should joints be checked regularly?",
+        "ideal_answer": "Checking joints helps identify leaks early and prevents major plumbing failures."
+      },
+      {
+        "question": "What is preventive maintenance in plumbing?",
+        "ideal_answer": "Preventive maintenance includes regular inspection and repair to avoid major plumbing issues."
+      },
+      {
+        "question": "Why is corrosion dangerous in plumbing?",
+        "ideal_answer": "Corrosion weakens pipes and can lead to leaks or contamination."
+      },
+      {
+        "question": "How can low water pressure be identified?",
+        "ideal_answer": "Low water pressure is noticed when water flow becomes weak or inconsistent."
+      },
+      {
+        "question": "What causes low water pressure?",
+        "ideal_answer": "Leaks, blockages, valve issues, or supply problems can cause low water pressure."
+      },
+      {
+        "question": "Why is regular tank cleaning important?",
+        "ideal_answer": "Regular cleaning prevents contamination and ensures safe water supply."
+      }
+    ]
+  },
+
+  "Welder": {
+    "Welding Basics": [
+      {
+        "question": "What is welding?",
+        "ideal_answer": "Welding is the process of joining two metal parts by heating and fusing them together."
+      },
+      {
+        "question": "What is arc welding?",
+        "ideal_answer": "Arc welding uses an electric arc to generate heat for melting and joining metals."
+      },
+      {
+        "question": "What is gas welding?",
+        "ideal_answer": "Gas welding uses fuel gases like acetylene with oxygen to produce heat for joining metals."
+      },
+      {
+        "question": "What is a welding joint?",
+        "ideal_answer": "A welding joint is the point where two metal pieces are connected together."
+      },
+      {
+        "question": "Why is surface cleaning important before welding?",
+        "ideal_answer": "Cleaning removes rust, oil, and dirt to ensure strong and defect-free welds."
+      },
+      {
+        "question": "What is the role of welding electrodes?",
+        "ideal_answer": "Electrodes carry electric current and help create the weld by melting into the joint."
+      },
+      {
+        "question": "What is filler metal?",
+        "ideal_answer": "Filler metal is additional metal used to fill the joint during welding."
+      },
+      {
+        "question": "What is slag in welding?",
+        "ideal_answer": "Slag is the non-metallic protective layer formed during welding."
+      },
+      {
+        "question": "Why is proper heat important in welding?",
+        "ideal_answer": "Proper heat ensures strong welds and prevents cracks or weak joints."
+      },
+      {
+        "question": "What is tack welding?",
+        "ideal_answer": "Tack welding is a temporary small weld used to hold parts in position before final welding."
+      }
+    ],
+
+    "Safety Measures": [
+      {
+        "question": "Why is safety gear important in welding?",
+        "ideal_answer": "Safety gear protects against burns, sparks, harmful UV light, and toxic fumes."
+      },
+      {
+        "question": "What PPE should welders use?",
+        "ideal_answer": "Welders should use gloves, helmets, face shields, aprons, and safety shoes."
+      },
+      {
+        "question": "Why is proper ventilation necessary in welding?",
+        "ideal_answer": "Proper ventilation removes harmful fumes and gases produced during welding."
+      },
+      {
+        "question": "Why should gas cylinders be handled carefully?",
+        "ideal_answer": "Improper handling can cause leaks, explosions, and serious accidents."
+      },
+      {
+        "question": "Why should flammable materials be kept away from welding areas?",
+        "ideal_answer": "Welding sparks can ignite flammable materials and cause fires."
+      },
+      {
+        "question": "Why is eye protection important in welding?",
+        "ideal_answer": "Eye protection prevents damage from bright arcs, sparks, and UV radiation."
+      },
+      {
+        "question": "Why should welding cables be checked regularly?",
+        "ideal_answer": "Damaged cables can cause electric shock and unsafe welding conditions."
+      },
+      {
+        "question": "What should be done before starting welding work?",
+        "ideal_answer": "Equipment, connections, PPE, and the work area should be inspected for safety."
+      },
+      {
+        "question": "Why is grounding important in welding machines?",
+        "ideal_answer": "Grounding prevents electric shock and ensures safe machine operation."
+      },
+      {
+        "question": "Why should hot metal be marked after welding?",
+        "ideal_answer": "Marking warns others and prevents accidental burns."
+      }
+    ]
+  },
+
+  "Carpenter": {
+    "Woodworking Basics": [
+      {
+        "question": "What is seasoning of wood?",
+        "ideal_answer": "Seasoning is the process of removing moisture from wood to improve its strength, durability, and stability."
+      },
+      {
+        "question": "Why is measurement accuracy important in carpentry?",
+        "ideal_answer": "Accurate measurements prevent material wastage and ensure proper fitting of wooden structures."
+      },
+      {
+        "question": "What is plywood?",
+        "ideal_answer": "Plywood is an engineered wood product made by gluing thin layers of wood veneers together."
+      },
+      {
+        "question": "What is the purpose of a try square?",
+        "ideal_answer": "A try square is used to check and mark right angles in woodworking."
+      },
+      {
+        "question": "What is a wood joint?",
+        "ideal_answer": "A wood joint is the connection between two wooden pieces to form a structure."
+      },
+      {
+        "question": "Why is sandpaper used?",
+        "ideal_answer": "Sandpaper is used to smooth wooden surfaces and prepare them for finishing or painting."
+      },
+      {
+        "question": "What is the use of a chisel?",
+        "ideal_answer": "A chisel is used for cutting, shaping, and carving wood."
+      },
+      {
+        "question": "Why is termite treatment important?",
+        "ideal_answer": "Termite treatment protects wood from insect damage and increases its lifespan."
+      },
+      {
+        "question": "What is polishing in carpentry?",
+        "ideal_answer": "Polishing improves the appearance of wood and protects it from moisture and damage."
+      },
+      {
+        "question": "What is the purpose of a wood plane?",
+        "ideal_answer": "A wood plane is used to smooth and level the surface of wood."
+      }
+    ],
+    "Safety Practices": [
+      {
+        "question": "Why should carpenters wear safety goggles?",
+        "ideal_answer": "Safety goggles protect the eyes from dust, wood chips, and flying particles."
+      },
+      {
+        "question": "Why is proper handling of sharp tools important?",
+        "ideal_answer": "Proper handling prevents injuries and ensures safe and efficient work."
+      },
+      {
+        "question": "Why should the workplace be kept clean?",
+        "ideal_answer": "A clean workplace reduces accidents, improves efficiency, and keeps tools organized."
+      },
+      {
+        "question": "What PPE should carpenters use?",
+        "ideal_answer": "Carpenters should use gloves, safety goggles, helmets, and safety shoes."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can break unexpectedly and cause serious injuries."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and reduces strain while handling heavy materials."
+      },
+      {
+        "question": "Why should power tools be switched off after use?",
+        "ideal_answer": "Switching off power tools prevents accidental injuries and saves energy."
+      },
+      {
+        "question": "Why is ladder safety important in carpentry?",
+        "ideal_answer": "Proper ladder use prevents falls and ensures safe working at heights."
+      },
+      {
+        "question": "Why should nails and sharp objects be stored safely?",
+        "ideal_answer": "Safe storage prevents cuts, punctures, and workplace accidents."
+      },
+      {
+        "question": "Why is proper lighting important in carpentry work?",
+        "ideal_answer": "Proper lighting improves visibility, accuracy, and reduces mistakes and accidents."
+      }
+    ]
+  },
+
+  "Mason": {
+    "Construction Basics": [
+      {
+        "question": "What is mortar?",
+        "ideal_answer": "Mortar is a mixture of cement, sand, and water used to bind bricks and stones together."
+      },
+      {
+        "question": "What is curing in construction?",
+        "ideal_answer": "Curing is the process of keeping concrete moist to help it gain strength and prevent cracks."
+      },
+      {
+        "question": "Why is proper brick alignment important?",
+        "ideal_answer": "Proper alignment ensures structural strength, stability, and good appearance."
+      },
+      {
+        "question": "What is plastering?",
+        "ideal_answer": "Plastering is the process of applying a smooth protective layer on walls and ceilings."
+      },
+      {
+        "question": "What is RCC?",
+        "ideal_answer": "RCC stands for Reinforced Cement Concrete, which combines concrete and steel for strength."
+      },
+      {
+        "question": "Why is proper concrete mixing important?",
+        "ideal_answer": "Proper mixing ensures strength, durability, and uniform quality of concrete."
+      },
+      {
+        "question": "What is the purpose of a foundation?",
+        "ideal_answer": "The foundation supports the structure and transfers its load safely to the ground."
+      },
+      {
+        "question": "What is scaffolding?",
+        "ideal_answer": "Scaffolding is a temporary structure used to support workers and materials during construction."
+      },
+      {
+        "question": "What is the use of a plumb bob?",
+        "ideal_answer": "A plumb bob is used to check vertical alignment in walls and structures."
+      },
+      {
+        "question": "Why is leveling important in masonry?",
+        "ideal_answer": "Leveling ensures proper alignment, stability, and quality of construction work."
+      }
+    ],
+    "Safety Practices": [
+      {
+        "question": "Why should masons wear helmets?",
+        "ideal_answer": "Helmets protect the head from falling objects and construction site injuries."
+      },
+      {
+        "question": "Why are safety shoes important for masons?",
+        "ideal_answer": "Safety shoes protect feet from heavy materials, sharp objects, and slips."
+      },
+      {
+        "question": "Why should gloves be used in masonry work?",
+        "ideal_answer": "Gloves protect hands from cuts, cement irritation, and injuries."
+      },
+      {
+        "question": "Why is proper lifting technique necessary?",
+        "ideal_answer": "Proper lifting prevents back injuries and reduces physical strain."
+      },
+      {
+        "question": "Why should scaffolding be checked before use?",
+        "ideal_answer": "Checking scaffolding ensures stability and prevents falls and accidents."
+      },
+      {
+        "question": "Why is dust protection important in masonry?",
+        "ideal_answer": "Dust protection prevents breathing problems caused by cement and construction dust."
+      },
+      {
+        "question": "Why should wet cement be handled carefully?",
+        "ideal_answer": "Wet cement can cause skin irritation and chemical burns."
+      },
+      {
+        "question": "Why should tools be stored properly?",
+        "ideal_answer": "Proper storage prevents accidents and improves work efficiency."
+      },
+      {
+        "question": "Why is site cleanliness important?",
+        "ideal_answer": "A clean site reduces accidents and creates a safer working environment."
+      },
+      {
+        "question": "Why should electrical safety be followed at construction sites?",
+        "ideal_answer": "Electrical safety prevents shocks, fires, and serious injuries."
+      }
+    ]
+  },
+
+  "Painter": {
+    "Painting Basics": [
+      {
+        "question": "Why is surface preparation important before painting?",
+        "ideal_answer": "Surface preparation ensures better paint adhesion, smooth finish, and longer durability."
+      },
+      {
+        "question": "What is primer and why is it used?",
+        "ideal_answer": "Primer is a base coat applied before paint to improve adhesion and surface protection."
+      },
+      {
+        "question": "What is the difference between oil paint and water-based paint?",
+        "ideal_answer": "Oil paint is durable and glossy while water-based paint dries faster and is easier to clean."
+      },
+      {
+        "question": "Why is sanding done before painting?",
+        "ideal_answer": "Sanding smooths the surface and removes old paint or roughness for better finishing."
+      },
+      {
+        "question": "What is putty used for in painting?",
+        "ideal_answer": "Putty is used to fill cracks and holes and create a smooth surface before painting."
+      },
+      {
+        "question": "Why is thinning paint important?",
+        "ideal_answer": "Thinning helps achieve proper consistency for smooth and even paint application."
+      },
+      {
+        "question": "What is the purpose of masking tape in painting?",
+        "ideal_answer": "Masking tape protects areas that should not be painted and ensures clean edges."
+      },
+      {
+        "question": "Why should paint be mixed properly?",
+        "ideal_answer": "Proper mixing ensures uniform color, texture, and smooth application."
+      },
+      {
+        "question": "What is the use of a paint roller?",
+        "ideal_answer": "A paint roller is used for quick and even painting of large flat surfaces."
+      },
+      {
+        "question": "Why is drying time important between coats?",
+        "ideal_answer": "Proper drying time prevents peeling, uneven finish, and poor paint durability."
+      }
+    ],
+    "Safety Practices": [
+      {
+        "question": "Why should painters wear masks?",
+        "ideal_answer": "Masks protect painters from inhaling harmful paint fumes, dust, and chemicals."
+      },
+      {
+        "question": "Why are gloves important while painting?",
+        "ideal_answer": "Gloves protect the skin from chemicals, paint stains, and irritation."
+      },
+      {
+        "question": "Why is proper ventilation needed during painting?",
+        "ideal_answer": "Ventilation removes toxic fumes and reduces health risks while painting."
+      },
+      {
+        "question": "Why should ladders be used safely during painting?",
+        "ideal_answer": "Safe ladder use prevents falls and injuries while working at heights."
+      },
+      {
+        "question": "Why should flammable paint materials be stored carefully?",
+        "ideal_answer": "Improper storage can cause fire hazards and accidents."
+      },
+      {
+        "question": "Why is eye protection necessary in painting?",
+        "ideal_answer": "Eye protection prevents paint splashes and dust from damaging the eyes."
+      },
+      {
+        "question": "Why should paint containers be closed after use?",
+        "ideal_answer": "Closing containers prevents spills, evaporation, and fire risks."
+      },
+      {
+        "question": "Why should electrical safety be followed while painting?",
+        "ideal_answer": "Electrical safety prevents shocks, especially when working near wires or wet surfaces."
+      },
+      {
+        "question": "Why should painters avoid smoking near paint materials?",
+        "ideal_answer": "Paint fumes are flammable and smoking can cause fire or explosions."
+      },
+      {
+        "question": "Why is proper disposal of paint waste important?",
+        "ideal_answer": "Proper disposal prevents environmental pollution and reduces safety risks."
+      }
+    ]
+  },
+  "HVAC Technician": {
+    "HVAC Basics": [
+      {
+        "question": "What does HVAC stand for?",
+        "ideal_answer": "HVAC stands for Heating, Ventilation, and Air Conditioning."
+      },
+      {
+        "question": "What is the purpose of an air conditioner?",
+        "ideal_answer": "An air conditioner removes heat and humidity from indoor air to maintain comfortable temperature and air quality."
+      },
+      {
+        "question": "What is the function of a thermostat?",
+        "ideal_answer": "A thermostat controls and maintains the desired temperature by regulating heating or cooling systems."
+      },
+      {
+        "question": "What is refrigerant?",
+        "ideal_answer": "Refrigerant is a fluid used in cooling systems that absorbs and releases heat during the refrigeration cycle."
+      },
+      {
+        "question": "What is the purpose of a compressor in HVAC?",
+        "ideal_answer": "The compressor increases the pressure and temperature of refrigerant and circulates it through the system."
+      },
+      {
+        "question": "What is the role of a condenser?",
+        "ideal_answer": "The condenser releases heat from the refrigerant to the outside environment."
+      },
+      {
+        "question": "What is the role of an evaporator?",
+        "ideal_answer": "The evaporator absorbs heat from indoor air and cools the space."
+      },
+      {
+        "question": "Why is ventilation important?",
+        "ideal_answer": "Ventilation improves indoor air quality by removing stale air and bringing in fresh air."
+      },
+      {
+        "question": "What is a duct in HVAC systems?",
+        "ideal_answer": "A duct is a passage used to distribute conditioned air throughout a building."
+      },
+      {
+        "question": "Why should air filters be cleaned regularly?",
+        "ideal_answer": "Clean air filters improve airflow, efficiency, and indoor air quality while reducing system strain."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why is regular HVAC maintenance important?",
+        "ideal_answer": "Regular maintenance improves efficiency, prevents breakdowns, and extends equipment life."
+      },
+      {
+        "question": "Why should refrigerant leaks be fixed quickly?",
+        "ideal_answer": "Refrigerant leaks reduce cooling efficiency, damage the system, and can harm the environment."
+      },
+      {
+        "question": "What PPE should HVAC technicians use?",
+        "ideal_answer": "HVAC technicians should use gloves, safety goggles, helmets, and protective footwear."
+      },
+      {
+        "question": "Why is electrical safety important in HVAC work?",
+        "ideal_answer": "HVAC systems involve electrical components, and safety prevents shocks and accidents."
+      },
+      {
+        "question": "Why should gas lines be checked carefully?",
+        "ideal_answer": "Improper gas line handling can cause leaks, fires, and explosions."
+      },
+      {
+        "question": "Why is coil cleaning necessary?",
+        "ideal_answer": "Clean coils improve heat transfer and increase HVAC system efficiency."
+      },
+      {
+        "question": "Why should belts and motors be inspected regularly?",
+        "ideal_answer": "Inspection prevents unexpected failures and ensures smooth system operation."
+      },
+      {
+        "question": "Why is proper drainage important in AC systems?",
+        "ideal_answer": "Proper drainage prevents water leakage, mold growth, and system damage."
+      },
+      {
+        "question": "Why should HVAC tools be insulated?",
+        "ideal_answer": "Insulated tools protect technicians from electrical hazards."
+      },
+      {
+        "question": "Why should system pressure be monitored?",
+        "ideal_answer": "Correct pressure ensures efficient operation and prevents compressor damage."
+      }
+    ]
+  },
+
+  "Mechanic / Automobile Technician": {
+    "Automobile Basics": [
+      {
+        "question": "What is the function of an engine?",
+        "ideal_answer": "The engine converts fuel into mechanical energy to power the vehicle."
+      },
+      {
+        "question": "What is the purpose of engine oil?",
+        "ideal_answer": "Engine oil lubricates moving parts, reduces friction, and helps cool the engine."
+      },
+      {
+        "question": "What is the function of a battery in a vehicle?",
+        "ideal_answer": "The battery provides electrical power to start the engine and operate electrical systems."
+      },
+      {
+        "question": "What is the role of a radiator?",
+        "ideal_answer": "The radiator cools the engine by removing excess heat from the coolant."
+      },
+      {
+        "question": "What is the purpose of brakes?",
+        "ideal_answer": "Brakes slow down or stop the vehicle safely."
+      },
+      {
+        "question": "What is the function of a clutch?",
+        "ideal_answer": "The clutch connects and disconnects engine power from the transmission."
+      },
+      {
+        "question": "What is a gearbox?",
+        "ideal_answer": "A gearbox changes speed and torque between the engine and wheels."
+      },
+      {
+        "question": "Why is wheel alignment important?",
+        "ideal_answer": "Proper wheel alignment improves handling, tire life, and fuel efficiency."
+      },
+      {
+        "question": "What is suspension in a vehicle?",
+        "ideal_answer": "Suspension supports the vehicle and absorbs shocks for a smooth ride."
+      },
+      {
+        "question": "Why is tire pressure important?",
+        "ideal_answer": "Proper tire pressure improves safety, fuel efficiency, and tire lifespan."
+      }
+    ],
+    "Maintenance and Safety": [
+      {
+        "question": "Why is regular vehicle servicing important?",
+        "ideal_answer": "Regular servicing prevents breakdowns, improves performance, and increases vehicle life."
+      },
+      {
+        "question": "Why should brake fluid be checked regularly?",
+        "ideal_answer": "Brake fluid ensures proper braking performance and safe vehicle operation."
+      },
+      {
+        "question": "Why is coolant important in a vehicle?",
+        "ideal_answer": "Coolant prevents engine overheating and protects the cooling system."
+      },
+      {
+        "question": "What PPE should mechanics use?",
+        "ideal_answer": "Mechanics should use gloves, safety shoes, goggles, and protective clothing."
+      },
+      {
+        "question": "Why should battery terminals be cleaned?",
+        "ideal_answer": "Clean terminals ensure proper electrical connection and better battery performance."
+      },
+      {
+        "question": "Why is proper lifting important when using a jack?",
+        "ideal_answer": "Proper lifting prevents accidents and ensures safe vehicle repair."
+      },
+      {
+        "question": "Why should fuel leaks be repaired immediately?",
+        "ideal_answer": "Fuel leaks can cause fire hazards and reduce vehicle efficiency."
+      },
+      {
+        "question": "Why should air filters be replaced regularly?",
+        "ideal_answer": "Clean air filters improve engine performance and fuel efficiency."
+      },
+      {
+        "question": "Why is exhaust system inspection important?",
+        "ideal_answer": "It helps detect leaks, reduce pollution, and maintain engine performance."
+      },
+      {
+        "question": "Why should warning lights on the dashboard not be ignored?",
+        "ideal_answer": "Warning lights indicate potential problems that need immediate attention to prevent major damage."
+      }
+    ]
+  },
+
+  "Fitter": {
+    "Fitting Basics": [
+      {
+        "question": "What is the role of a fitter?",
+        "ideal_answer": "A fitter assembles, installs, maintains, and repairs mechanical parts and machinery."
+      },
+      {
+        "question": "What is a Vernier caliper used for?",
+        "ideal_answer": "A Vernier caliper is used for accurate measurement of internal, external, and depth dimensions."
+      },
+      {
+        "question": "What is the use of a micrometer?",
+        "ideal_answer": "A micrometer is used to measure very small dimensions with high precision."
+      },
+      {
+        "question": "What is filing in fitting work?",
+        "ideal_answer": "Filing is the process of removing small amounts of material to smooth or shape a surface."
+      },
+      {
+        "question": "What is drilling?",
+        "ideal_answer": "Drilling is the process of making holes in materials using a drill machine."
+      },
+      {
+        "question": "What is tapping?",
+        "ideal_answer": "Tapping is the process of creating internal threads inside a drilled hole."
+      },
+      {
+        "question": "What is a hacksaw used for?",
+        "ideal_answer": "A hacksaw is used for cutting metal and plastic materials."
+      },
+      {
+        "question": "Why is marking important before machining?",
+        "ideal_answer": "Marking ensures accurate cutting, drilling, and fitting operations."
+      },
+      {
+        "question": "What is tolerance in fitting work?",
+        "ideal_answer": "Tolerance is the acceptable limit of variation in the dimensions of a part."
+      },
+      {
+        "question": "Why is alignment important in machine fitting?",
+        "ideal_answer": "Proper alignment prevents vibration, wear, and machine failure."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should fitters wear safety goggles?",
+        "ideal_answer": "Safety goggles protect the eyes from metal chips, sparks, and dust."
+      },
+      {
+        "question": "Why is lubrication important in machines?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and increases machine life."
+      },
+      {
+        "question": "Why should tools be inspected before use?",
+        "ideal_answer": "Inspection ensures tools are safe and prevents accidents caused by damaged equipment."
+      },
+      {
+        "question": "What PPE should fitters use?",
+        "ideal_answer": "Fitters should use gloves, goggles, helmets, and safety shoes."
+      },
+      {
+        "question": "Why should loose clothing be avoided in workshops?",
+        "ideal_answer": "Loose clothing can get caught in moving machinery and cause accidents."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "A clean workshop reduces accidents and improves work efficiency."
+      },
+      {
+        "question": "Why should sharp tools be handled carefully?",
+        "ideal_answer": "Careful handling prevents cuts, injuries, and tool damage."
+      },
+      {
+        "question": "Why should machines be switched off before maintenance?",
+        "ideal_answer": "Switching off machines prevents accidental startup and injuries."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance reduces breakdowns and improves machine reliability."
+      },
+      {
+        "question": "Why should heavy parts be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids damage to machine components."
+      }
+    ]
+  },
+  "Turner": {
+    "Lathe Machine Basics": [
+      {
+        "question": "What is the main function of a lathe machine?",
+        "ideal_answer": "A lathe machine is used to remove material from a rotating workpiece to shape it into the required size and form."
+      },
+      {
+        "question": "What is turning in machining?",
+        "ideal_answer": "Turning is the process of removing material from the outer surface of a rotating workpiece using a cutting tool."
+      },
+      {
+        "question": "What is facing in a lathe machine?",
+        "ideal_answer": "Facing is the operation of cutting the end surface of a workpiece to make it flat and smooth."
+      },
+      {
+        "question": "What is the purpose of a chuck in a lathe machine?",
+        "ideal_answer": "A chuck is used to hold and rotate the workpiece securely during machining."
+      },
+      {
+        "question": "What is tailstock used for in a lathe machine?",
+        "ideal_answer": "The tailstock supports the other end of the workpiece and holds tools like drills."
+      },
+      {
+        "question": "What is the purpose of a cutting tool in turning?",
+        "ideal_answer": "The cutting tool removes unwanted material from the rotating workpiece to achieve the desired shape."
+      },
+      {
+        "question": "Why is coolant used during turning operations?",
+        "ideal_answer": "Coolant reduces heat, improves tool life, and provides a better surface finish."
+      },
+      {
+        "question": "What is threading in a lathe machine?",
+        "ideal_answer": "Threading is the process of cutting screw threads on the surface of a workpiece."
+      },
+      {
+        "question": "What is taper turning?",
+        "ideal_answer": "Taper turning is the process of producing a conical shape by gradually reducing the diameter of the workpiece."
+      },
+      {
+        "question": "Why is measurement important in turning work?",
+        "ideal_answer": "Accurate measurement ensures the final product meets the required dimensions and tolerance."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should loose clothing be avoided near lathe machines?",
+        "ideal_answer": "Loose clothing can get caught in rotating parts and cause serious accidents."
+      },
+      {
+        "question": "Why should safety goggles be worn while operating a lathe?",
+        "ideal_answer": "Safety goggles protect the eyes from metal chips, sparks, and flying particles."
+      },
+      {
+        "question": "Why should the machine be checked before starting?",
+        "ideal_answer": "Checking ensures the machine is safe, properly set, and free from faults."
+      },
+      {
+        "question": "What PPE should a turner use?",
+        "ideal_answer": "A turner should use safety goggles, gloves when appropriate, safety shoes, and proper workshop clothing."
+      },
+      {
+        "question": "Why is lubrication important in lathe machines?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and ensures smooth machine operation."
+      },
+      {
+        "question": "Why should chips be removed safely?",
+        "ideal_answer": "Sharp metal chips can cause injuries and should be removed using proper tools, not bare hands."
+      },
+      {
+        "question": "Why should the workpiece be clamped properly?",
+        "ideal_answer": "Proper clamping prevents movement during machining and ensures safety and accuracy."
+      },
+      {
+        "question": "Why should machines be switched off before adjustments?",
+        "ideal_answer": "This prevents accidental startup and protects the operator from injuries."
+      },
+      {
+        "question": "Why is regular machine maintenance necessary?",
+        "ideal_answer": "Regular maintenance prevents breakdowns, improves accuracy, and increases machine life."
+      },
+      {
+        "question": "Why should tools be stored properly after use?",
+        "ideal_answer": "Proper storage prevents damage, improves safety, and keeps the workplace organized."
+      }
+    ]
+  },
+
+  "Machinist": {
+    "Machining Fundamentals": [
+      {
+        "question": "What is machining?",
+        "ideal_answer": "Machining is the process of removing material from a workpiece to achieve the required shape, size, and finish."
+      },
+      {
+        "question": "What is the purpose of a drilling machine?",
+        "ideal_answer": "A drilling machine is used to create holes in a workpiece."
+      },
+      {
+        "question": "What is milling?",
+        "ideal_answer": "Milling is a machining process where rotating cutters remove material from a workpiece."
+      },
+      {
+        "question": "What is grinding?",
+        "ideal_answer": "Grinding is a finishing process that removes small amounts of material for accuracy and smooth surface finish."
+      },
+      {
+        "question": "Why is tolerance important in machining?",
+        "ideal_answer": "Tolerance defines the acceptable variation in dimensions to ensure proper fitting and function."
+      },
+      {
+        "question": "What is the use of a micrometer?",
+        "ideal_answer": "A micrometer is used for highly accurate measurement of small dimensions."
+      },
+      {
+        "question": "What is a blueprint in machining?",
+        "ideal_answer": "A blueprint is a technical drawing that provides dimensions and specifications for manufacturing a part."
+      },
+      {
+        "question": "Why is cutting speed important?",
+        "ideal_answer": "Proper cutting speed improves tool life, surface finish, and machining efficiency."
+      },
+      {
+        "question": "What is feed rate in machining?",
+        "ideal_answer": "Feed rate is the speed at which the cutting tool moves against the workpiece."
+      },
+      {
+        "question": "Why is surface finish important?",
+        "ideal_answer": "Good surface finish improves part quality, performance, and fitting accuracy."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should machinists wear safety goggles?",
+        "ideal_answer": "Safety goggles protect the eyes from chips, sparks, and dust."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with moving parts and improves safety."
+      },
+      {
+        "question": "Why should machines be cleaned regularly?",
+        "ideal_answer": "Regular cleaning improves performance, reduces wear, and prevents accidents."
+      },
+      {
+        "question": "What PPE should machinists use?",
+        "ideal_answer": "Machinists should use goggles, gloves when appropriate, safety shoes, and proper workshop clothing."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools reduce accuracy and can break, causing injuries."
+      },
+      {
+        "question": "Why is proper tool setup important?",
+        "ideal_answer": "Proper setup ensures machining accuracy, safety, and efficient operation."
+      },
+      {
+        "question": "Why should loose clothing be avoided?",
+        "ideal_answer": "Loose clothing can get caught in moving machine parts and cause accidents."
+      },
+      {
+        "question": "Why is lubrication necessary in machines?",
+        "ideal_answer": "Lubrication reduces friction and wear, improving machine performance and life."
+      },
+      {
+        "question": "Why should emergency stop buttons be accessible?",
+        "ideal_answer": "Emergency stop buttons allow quick shutdown during unsafe situations or machine faults."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance helps avoid breakdowns and ensures reliable machine operation."
+      }
+    ]
+  },
+
+  "CNC Operator": {
+    "CNC Machine Basics": [
+      {
+        "question": "What does CNC stand for?",
+        "ideal_answer": "CNC stands for Computer Numerical Control."
+      },
+      {
+        "question": "What is the purpose of a CNC machine?",
+        "ideal_answer": "A CNC machine uses programmed instructions to automatically control machining operations with high precision."
+      },
+      {
+        "question": "What is G-code in CNC machining?",
+        "ideal_answer": "G-code is the programming language used to control CNC machine movements and operations."
+      },
+      {
+        "question": "What is M-code in CNC machining?",
+        "ideal_answer": "M-code controls machine functions like spindle start, coolant, and tool changes."
+      },
+      {
+        "question": "Why is workpiece clamping important in CNC machines?",
+        "ideal_answer": "Proper clamping prevents movement during machining and ensures accuracy and safety."
+      },
+      {
+        "question": "What is tool offset in CNC machining?",
+        "ideal_answer": "Tool offset is the value used to adjust tool position for accurate machining."
+      },
+      {
+        "question": "Why is zero setting important in CNC machines?",
+        "ideal_answer": "Zero setting defines the reference point for accurate machining operations."
+      },
+      {
+        "question": "What is spindle speed in CNC machining?",
+        "ideal_answer": "Spindle speed is the rotational speed of the cutting tool or workpiece during machining."
+      },
+      {
+        "question": "What is feed rate in CNC operations?",
+        "ideal_answer": "Feed rate is the speed at which the cutting tool moves relative to the workpiece."
+      },
+      {
+        "question": "Why is simulation important before running a CNC program?",
+        "ideal_answer": "Simulation helps detect errors and prevents machine damage or incorrect machining."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should CNC operators inspect tools before machining?",
+        "ideal_answer": "Tool inspection prevents tool breakage, poor quality, and machine damage."
+      },
+      {
+        "question": "Why should safety doors remain closed during CNC operations?",
+        "ideal_answer": "Safety doors protect operators from chips, coolant splash, and moving parts."
+      },
+      {
+        "question": "What PPE should CNC operators use?",
+        "ideal_answer": "CNC operators should use safety goggles, safety shoes, gloves when appropriate, and proper workshop clothing."
+      },
+      {
+        "question": "Why is coolant important in CNC machining?",
+        "ideal_answer": "Coolant reduces heat, improves tool life, and provides better surface finish."
+      },
+      {
+        "question": "Why should machine alarms not be ignored?",
+        "ideal_answer": "Machine alarms indicate faults or unsafe conditions that need immediate attention."
+      },
+      {
+        "question": "Why should chips be removed safely?",
+        "ideal_answer": "Sharp chips can cause injuries and should be removed using proper tools, not bare hands."
+      },
+      {
+        "question": "Why is preventive maintenance important for CNC machines?",
+        "ideal_answer": "Preventive maintenance improves machine reliability, accuracy, and lifespan."
+      },
+      {
+        "question": "Why should machine calibration be checked regularly?",
+        "ideal_answer": "Regular calibration ensures dimensional accuracy and consistent product quality."
+      },
+      {
+        "question": "Why should the emergency stop button be known and accessible?",
+        "ideal_answer": "It allows immediate shutdown during emergencies and prevents serious accidents."
+      },
+      {
+        "question": "Why should the work area be kept clean?",
+        "ideal_answer": "A clean work area improves safety, prevents accidents, and increases productivity."
+      }
+    ]
+  },
+  "Lathe Operator": {
+    "Lathe Machine Basics": [
+      {
+        "question": "What is the main function of a lathe machine?",
+        "ideal_answer": "A lathe machine rotates the workpiece and removes material using a cutting tool to produce the required shape and size."
+      },
+      {
+        "question": "What is turning in a lathe machine?",
+        "ideal_answer": "Turning is the process of reducing the diameter of a rotating workpiece using a cutting tool."
+      },
+      {
+        "question": "What is facing in lathe operations?",
+        "ideal_answer": "Facing is the operation of making the end surface of a workpiece flat and smooth."
+      },
+      {
+        "question": "What is the purpose of a chuck in a lathe machine?",
+        "ideal_answer": "A chuck is used to hold and rotate the workpiece securely during machining."
+      },
+      {
+        "question": "What is the use of tailstock in a lathe machine?",
+        "ideal_answer": "The tailstock supports the workpiece and holds tools like drills for machining operations."
+      },
+      {
+        "question": "What is threading in lathe work?",
+        "ideal_answer": "Threading is the process of cutting screw threads on the surface of a workpiece."
+      },
+      {
+        "question": "Why is coolant used during lathe operations?",
+        "ideal_answer": "Coolant reduces heat, improves tool life, and provides a better surface finish."
+      },
+      {
+        "question": "What is taper turning?",
+        "ideal_answer": "Taper turning is the process of producing a conical shape by gradually changing the diameter of the workpiece."
+      },
+      {
+        "question": "Why is proper tool alignment important?",
+        "ideal_answer": "Proper tool alignment ensures accurate machining and prevents tool damage."
+      },
+      {
+        "question": "Why is measurement important in lathe work?",
+        "ideal_answer": "Accurate measurement ensures the final product meets required dimensions and tolerances."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should loose clothing be avoided near lathe machines?",
+        "ideal_answer": "Loose clothing can get caught in rotating parts and cause serious accidents."
+      },
+      {
+        "question": "Why should safety goggles be worn?",
+        "ideal_answer": "Safety goggles protect the eyes from metal chips, sparks, and flying particles."
+      },
+      {
+        "question": "Why should the workpiece be clamped properly?",
+        "ideal_answer": "Proper clamping prevents movement during machining and ensures safety and accuracy."
+      },
+      {
+        "question": "What PPE should a lathe operator use?",
+        "ideal_answer": "A lathe operator should use safety goggles, safety shoes, proper clothing, and gloves only when safe to use."
+      },
+      {
+        "question": "Why should machines be switched off before adjustments?",
+        "ideal_answer": "This prevents accidental startup and protects the operator from injuries."
+      },
+      {
+        "question": "Why is lubrication important in lathe machines?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and ensures smooth machine operation."
+      },
+      {
+        "question": "Why should chips be removed using proper tools?",
+        "ideal_answer": "Sharp chips can cause injuries and should not be removed with bare hands."
+      },
+      {
+        "question": "Why is regular machine maintenance necessary?",
+        "ideal_answer": "Regular maintenance prevents breakdowns, improves accuracy, and increases machine life."
+      },
+      {
+        "question": "Why should emergency stop buttons be accessible?",
+        "ideal_answer": "Emergency stop buttons allow immediate shutdown during unsafe situations."
+      },
+      {
+        "question": "Why should tools be stored properly after use?",
+        "ideal_answer": "Proper storage prevents tool damage, improves safety, and keeps the workplace organized."
+      }
+    ]
+  },
+
+  "Sheet Metal Worker": {
+    "Sheet Metal Basics": [
+      {
+        "question": "What is sheet metal work?",
+        "ideal_answer": "Sheet metal work involves cutting, bending, shaping, and joining thin metal sheets to make useful products and structures."
+      },
+      {
+        "question": "What is the purpose of measuring and marking in sheet metal work?",
+        "ideal_answer": "Measuring and marking ensure accurate cutting and proper shaping of metal sheets."
+      },
+      {
+        "question": "What is bending in sheet metal work?",
+        "ideal_answer": "Bending is the process of changing the shape of a metal sheet by applying force without breaking it."
+      },
+      {
+        "question": "What is shearing in sheet metal work?",
+        "ideal_answer": "Shearing is the process of cutting sheet metal using blades or shearing machines."
+      },
+      {
+        "question": "What is riveting?",
+        "ideal_answer": "Riveting is the process of joining metal sheets using rivets as permanent fasteners."
+      },
+      {
+        "question": "What is the use of a snip in sheet metal work?",
+        "ideal_answer": "A snip is used for cutting thin sheet metal manually."
+      },
+      {
+        "question": "Why is template preparation important?",
+        "ideal_answer": "Templates help ensure accurate dimensions and reduce material wastage."
+      },
+      {
+        "question": "What is hemming in sheet metal work?",
+        "ideal_answer": "Hemming is the process of folding the edge of sheet metal for strength and safety."
+      },
+      {
+        "question": "Why is thickness important in sheet metal selection?",
+        "ideal_answer": "Proper thickness ensures strength, durability, and suitability for the required application."
+      },
+      {
+        "question": "What is fabrication drawing?",
+        "ideal_answer": "A fabrication drawing provides dimensions and instructions for manufacturing sheet metal parts."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should sheet metal workers wear gloves?",
+        "ideal_answer": "Gloves protect hands from sharp edges, cuts, and injuries."
+      },
+      {
+        "question": "Why is eye protection important in sheet metal work?",
+        "ideal_answer": "Eye protection prevents injury from flying metal particles and sparks."
+      },
+      {
+        "question": "Why should sharp edges be handled carefully?",
+        "ideal_answer": "Sharp edges can cause serious cuts and injuries if handled carelessly."
+      },
+      {
+        "question": "What PPE should sheet metal workers use?",
+        "ideal_answer": "They should use gloves, goggles, helmets, safety shoes, and proper protective clothing."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with moving parts and improves workplace safety."
+      },
+      {
+        "question": "Why should tools be inspected before use?",
+        "ideal_answer": "Inspection ensures tools are safe and prevents accidents caused by damaged equipment."
+      },
+      {
+        "question": "Why should the workplace be kept clean?",
+        "ideal_answer": "A clean workplace reduces accidents and improves work efficiency."
+      },
+      {
+        "question": "Why is proper lifting important for heavy sheets?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids damage to materials."
+      },
+      {
+        "question": "Why should machines be switched off before maintenance?",
+        "ideal_answer": "Switching off machines prevents accidental startup and protects workers."
+      },
+      {
+        "question": "Why is regular maintenance of tools important?",
+        "ideal_answer": "Regular maintenance improves tool life, performance, and work quality."
+      }
+    ]
+  },
+
+  "Fabricator": {
+    "Fabrication Basics": [
+      {
+        "question": "What is fabrication?",
+        "ideal_answer": "Fabrication is the process of cutting, shaping, assembling, and joining metal parts to create structures or products."
+      },
+      {
+        "question": "Why is reading drawings important in fabrication?",
+        "ideal_answer": "Drawings provide dimensions and specifications needed for accurate fabrication work."
+      },
+      {
+        "question": "What is marking in fabrication work?",
+        "ideal_answer": "Marking is the process of drawing reference lines and dimensions on materials before cutting or shaping."
+      },
+      {
+        "question": "What is cutting in fabrication?",
+        "ideal_answer": "Cutting is the process of separating material into required sizes and shapes."
+      },
+      {
+        "question": "What is welding in fabrication?",
+        "ideal_answer": "Welding joins metal parts permanently by heating and fusing them together."
+      },
+      {
+        "question": "What is grinding used for in fabrication?",
+        "ideal_answer": "Grinding is used to smooth surfaces, remove excess material, and improve finishing."
+      },
+      {
+        "question": "Why is measurement accuracy important?",
+        "ideal_answer": "Accurate measurement ensures correct fitting and reduces material wastage."
+      },
+      {
+        "question": "What is assembly in fabrication?",
+        "ideal_answer": "Assembly is the process of joining fabricated parts together to form a final product."
+      },
+      {
+        "question": "Why is alignment important in fabrication?",
+        "ideal_answer": "Proper alignment ensures strength, functionality, and correct fitting of fabricated parts."
+      },
+      {
+        "question": "What is the purpose of inspection after fabrication?",
+        "ideal_answer": "Inspection checks quality, dimensions, and strength before final use."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should fabricators wear safety helmets?",
+        "ideal_answer": "Safety helmets protect the head from falling objects and workplace injuries."
+      },
+      {
+        "question": "Why are gloves important in fabrication work?",
+        "ideal_answer": "Gloves protect hands from cuts, burns, and injuries while handling metal parts."
+      },
+      {
+        "question": "Why should eye protection be used?",
+        "ideal_answer": "Eye protection prevents injury from sparks, dust, and flying particles."
+      },
+      {
+        "question": "What PPE should fabricators use?",
+        "ideal_answer": "Fabricators should use helmets, gloves, goggles, safety shoes, and protective clothing."
+      },
+      {
+        "question": "Why is proper ventilation necessary during fabrication?",
+        "ideal_answer": "Ventilation removes harmful fumes and improves air quality in the work area."
+      },
+      {
+        "question": "Why should gas cylinders be handled carefully?",
+        "ideal_answer": "Improper handling can cause leaks, explosions, and serious accidents."
+      },
+      {
+        "question": "Why should heavy materials be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids damage to fabricated parts."
+      },
+      {
+        "question": "Why should tools be maintained regularly?",
+        "ideal_answer": "Regular maintenance improves performance, safety, and tool life."
+      },
+      {
+        "question": "Why should work areas be kept clean?",
+        "ideal_answer": "A clean work area reduces accidents and improves productivity."
+      },
+      {
+        "question": "Why should machines be switched off before repairs?",
+        "ideal_answer": "Switching off machines prevents accidental startup and protects workers during maintenance."
+      }
+    ]
+  },
+  "Construction Worker": {
+    "Construction Basics": [
+      {
+        "question": "What is the role of a construction worker?",
+        "ideal_answer": "A construction worker helps in building structures by performing tasks like digging, lifting, mixing materials, and assisting in site operations."
+      },
+      {
+        "question": "Why is site preparation important before construction begins?",
+        "ideal_answer": "Site preparation ensures the land is safe, level, and ready for construction work."
+      },
+      {
+        "question": "What is the purpose of a foundation in construction?",
+        "ideal_answer": "The foundation supports the structure and transfers its load safely to the ground."
+      },
+      {
+        "question": "What is concrete made of?",
+        "ideal_answer": "Concrete is made of cement, sand, aggregates, and water mixed together."
+      },
+      {
+        "question": "Why is curing important in construction?",
+        "ideal_answer": "Curing keeps concrete moist so it gains proper strength and avoids cracks."
+      },
+      {
+        "question": "What is scaffolding?",
+        "ideal_answer": "Scaffolding is a temporary structure used to support workers and materials during construction work."
+      },
+      {
+        "question": "Why is proper material handling important?",
+        "ideal_answer": "Proper handling prevents damage, reduces waste, and improves safety at the site."
+      },
+      {
+        "question": "What is the use of a plumb bob in construction?",
+        "ideal_answer": "A plumb bob is used to check vertical alignment of walls and structures."
+      },
+      {
+        "question": "Why is leveling important in construction?",
+        "ideal_answer": "Leveling ensures proper alignment, stability, and quality of the structure."
+      },
+      {
+        "question": "What is reinforcement in concrete work?",
+        "ideal_answer": "Reinforcement uses steel bars inside concrete to improve strength and durability."
+      }
+    ],
+    "Safety Practices": [
+      {
+        "question": "Why should construction workers wear helmets?",
+        "ideal_answer": "Helmets protect the head from falling objects and injuries on site."
+      },
+      {
+        "question": "Why are safety shoes important on construction sites?",
+        "ideal_answer": "Safety shoes protect feet from heavy materials, sharp objects, and slipping hazards."
+      },
+      {
+        "question": "Why should gloves be used during construction work?",
+        "ideal_answer": "Gloves protect hands from cuts, abrasions, and contact with harmful materials."
+      },
+      {
+        "question": "What PPE should construction workers use?",
+        "ideal_answer": "Construction workers should use helmets, gloves, safety shoes, reflective jackets, and safety goggles."
+      },
+      {
+        "question": "Why is ladder safety important?",
+        "ideal_answer": "Proper ladder use prevents falls and injuries while working at heights."
+      },
+      {
+        "question": "Why should scaffolding be inspected before use?",
+        "ideal_answer": "Inspection ensures scaffolding is stable and safe for workers."
+      },
+      {
+        "question": "Why is site cleanliness important?",
+        "ideal_answer": "A clean site reduces accidents, improves movement, and creates a safer work environment."
+      },
+      {
+        "question": "Why should electrical safety be followed at construction sites?",
+        "ideal_answer": "Electrical safety prevents shocks, fires, and serious injuries."
+      },
+      {
+        "question": "Why is proper lifting technique necessary?",
+        "ideal_answer": "Proper lifting prevents back injuries and reduces strain while handling heavy materials."
+      },
+      {
+        "question": "Why should warning signs be followed on site?",
+        "ideal_answer": "Warning signs help prevent accidents by informing workers about hazards and restricted areas."
+      }
+    ]
+  },
+
+  "Civil Site Technician": {
+    "Site Engineering Basics": [
+      {
+        "question": "What is the role of a civil site technician?",
+        "ideal_answer": "A civil site technician supervises construction activities, checks measurements, ensures quality, and supports engineers on site."
+      },
+      {
+        "question": "Why is site surveying important?",
+        "ideal_answer": "Site surveying helps determine land dimensions, levels, and positions for accurate construction planning."
+      },
+      {
+        "question": "What is the purpose of a foundation in civil construction?",
+        "ideal_answer": "The foundation supports the structure and safely transfers loads to the ground."
+      },
+      {
+        "question": "What is RCC?",
+        "ideal_answer": "RCC stands for Reinforced Cement Concrete, which combines concrete and steel reinforcement for strength."
+      },
+      {
+        "question": "Why is curing important in concrete work?",
+        "ideal_answer": "Curing helps concrete gain strength, prevents cracks, and improves durability."
+      },
+      {
+        "question": "What is the purpose of a bar bending schedule?",
+        "ideal_answer": "It provides details of reinforcement bars including size, length, and bending requirements."
+      },
+      {
+        "question": "Why is quality checking important on site?",
+        "ideal_answer": "Quality checking ensures materials and construction meet required standards and safety."
+      },
+      {
+        "question": "What is leveling in construction?",
+        "ideal_answer": "Leveling ensures surfaces and structures are at the correct height and alignment."
+      },
+      {
+        "question": "What is the purpose of construction drawings?",
+        "ideal_answer": "Construction drawings provide dimensions, design details, and instructions for site execution."
+      },
+      {
+        "question": "Why is proper material storage important?",
+        "ideal_answer": "Proper storage prevents damage, wastage, and quality loss of construction materials."
+      }
+    ],
+    "Safety and Site Management": [
+      {
+        "question": "Why should site technicians wear safety helmets?",
+        "ideal_answer": "Safety helmets protect the head from falling objects and construction hazards."
+      },
+      {
+        "question": "Why is PPE important on construction sites?",
+        "ideal_answer": "PPE protects workers from injuries caused by tools, materials, dust, and heavy equipment."
+      },
+      {
+        "question": "What PPE should civil site technicians use?",
+        "ideal_answer": "They should use helmets, safety shoes, gloves, reflective jackets, and safety goggles."
+      },
+      {
+        "question": "Why should scaffolding be checked regularly?",
+        "ideal_answer": "Regular checks ensure scaffolding remains stable and safe for use."
+      },
+      {
+        "question": "Why is housekeeping important on site?",
+        "ideal_answer": "Good housekeeping reduces accidents, improves movement, and increases productivity."
+      },
+      {
+        "question": "Why should construction equipment be inspected before use?",
+        "ideal_answer": "Inspection helps prevent breakdowns and ensures safe operation."
+      },
+      {
+        "question": "Why is documentation important in site management?",
+        "ideal_answer": "Documentation helps track work progress, material usage, and quality compliance."
+      },
+      {
+        "question": "Why should electrical safety be followed at sites?",
+        "ideal_answer": "Electrical safety prevents shocks, short circuits, and fire hazards."
+      },
+      {
+        "question": "Why is communication important in site work?",
+        "ideal_answer": "Clear communication improves coordination, safety, and project efficiency."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure quick and safe evacuation during emergencies."
+      }
+    ]
+  },
+
+  "Heavy Equipment Operator": {
+    "Equipment Operation Basics": [
+      {
+        "question": "What is the role of a heavy equipment operator?",
+        "ideal_answer": "A heavy equipment operator handles machines like excavators, loaders, bulldozers, and cranes for construction and earthmoving work."
+      },
+      {
+        "question": "Why is pre-start inspection important before operating equipment?",
+        "ideal_answer": "Pre-start inspection helps identify faults and ensures the machine is safe to operate."
+      },
+      {
+        "question": "What is the purpose of hydraulic systems in heavy equipment?",
+        "ideal_answer": "Hydraulic systems provide power for lifting, digging, and moving machine parts efficiently."
+      },
+      {
+        "question": "Why is fuel level checking important?",
+        "ideal_answer": "Checking fuel ensures smooth operation and prevents machine stoppage during work."
+      },
+      {
+        "question": "What is the purpose of load limits in equipment operation?",
+        "ideal_answer": "Load limits prevent overloading, machine damage, and accidents."
+      },
+      {
+        "question": "Why is proper machine positioning important?",
+        "ideal_answer": "Proper positioning ensures stability, safe operation, and accurate work."
+      },
+      {
+        "question": "What is the use of warning alarms in heavy equipment?",
+        "ideal_answer": "Warning alarms alert workers about machine movement and unsafe conditions."
+      },
+      {
+        "question": "Why is brake checking necessary before operation?",
+        "ideal_answer": "Brake checking ensures the machine can stop safely and prevents accidents."
+      },
+      {
+        "question": "Why is visibility important for equipment operators?",
+        "ideal_answer": "Good visibility helps avoid collisions, protects workers, and improves work accuracy."
+      },
+      {
+        "question": "Why should operating manuals be followed?",
+        "ideal_answer": "Operating manuals provide correct procedures for safe and efficient machine use."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should heavy equipment operators wear seat belts?",
+        "ideal_answer": "Seat belts protect operators from injury during sudden movements, rollovers, or accidents."
+      },
+      {
+        "question": "Why is regular machine maintenance important?",
+        "ideal_answer": "Regular maintenance prevents breakdowns, improves performance, and increases machine life."
+      },
+      {
+        "question": "What PPE should heavy equipment operators use?",
+        "ideal_answer": "Operators should use helmets, safety shoes, gloves, reflective jackets, and hearing protection when needed."
+      },
+      {
+        "question": "Why should blind spots be checked carefully?",
+        "ideal_answer": "Checking blind spots prevents accidents involving nearby workers or objects."
+      },
+      {
+        "question": "Why should unauthorized people stay away from operating zones?",
+        "ideal_answer": "Keeping people away reduces accident risks during machine operation."
+      },
+      {
+        "question": "Why should hydraulic leaks be repaired immediately?",
+        "ideal_answer": "Hydraulic leaks reduce efficiency and can cause machine failure or safety hazards."
+      },
+      {
+        "question": "Why should machines be parked on stable ground?",
+        "ideal_answer": "Stable ground prevents tipping and ensures safe parking."
+      },
+      {
+        "question": "Why is horn use important during equipment movement?",
+        "ideal_answer": "The horn warns nearby workers and helps prevent collisions."
+      },
+      {
+        "question": "Why should overload operations be avoided?",
+        "ideal_answer": "Overloading can damage equipment and increase the risk of accidents."
+      },
+      {
+        "question": "Why should emergency shutdown procedures be known?",
+        "ideal_answer": "Knowing shutdown procedures helps control dangerous situations quickly and safely."
+      }
+    ]
+  },
+  "Crane Operator": {
+    "Crane Operation Basics": [
+      {
+        "question": "What is the main role of a crane operator?",
+        "ideal_answer": "A crane operator safely lifts, moves, and places heavy materials using crane equipment."
+      },
+      {
+        "question": "Why is load capacity important in crane operation?",
+        "ideal_answer": "Load capacity ensures the crane does not lift more than its safe limit, preventing accidents and equipment damage."
+      },
+      {
+        "question": "What is the purpose of outriggers in a crane?",
+        "ideal_answer": "Outriggers provide stability and balance to the crane during lifting operations."
+      },
+      {
+        "question": "Why is load balancing important while lifting?",
+        "ideal_answer": "Proper load balancing prevents swinging, tipping, and unsafe crane movement."
+      },
+      {
+        "question": "What is the function of a crane hook?",
+        "ideal_answer": "The crane hook is used to securely attach and lift loads during operation."
+      },
+      {
+        "question": "Why should lifting paths be planned before operation?",
+        "ideal_answer": "Planning prevents collisions, ensures safe movement, and improves work efficiency."
+      },
+      {
+        "question": "What is the purpose of hand signals in crane operation?",
+        "ideal_answer": "Hand signals help communication between the crane operator and signal person for safe lifting."
+      },
+      {
+        "question": "Why is ground stability important for crane setup?",
+        "ideal_answer": "Stable ground prevents crane tipping and ensures safe lifting operations."
+      },
+      {
+        "question": "Why should weather conditions be checked before crane work?",
+        "ideal_answer": "Strong wind or bad weather can make lifting dangerous and unstable."
+      },
+      {
+        "question": "Why should load slings be inspected before use?",
+        "ideal_answer": "Inspection ensures slings are safe, strong, and free from damage before lifting."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should crane operators wear helmets?",
+        "ideal_answer": "Helmets protect against falling objects and construction site hazards."
+      },
+      {
+        "question": "Why is pre-operation inspection important for cranes?",
+        "ideal_answer": "It helps identify faults and ensures the crane is safe to operate."
+      },
+      {
+        "question": "What PPE should crane operators use?",
+        "ideal_answer": "Crane operators should use helmets, safety shoes, gloves, reflective jackets, and safety harnesses when required."
+      },
+      {
+        "question": "Why should overload lifting be avoided?",
+        "ideal_answer": "Overloading can cause crane failure, tipping, and serious accidents."
+      },
+      {
+        "question": "Why should the emergency stop function be known?",
+        "ideal_answer": "It allows immediate shutdown during dangerous situations to prevent accidents."
+      },
+      {
+        "question": "Why should unauthorized people stay away from lifting zones?",
+        "ideal_answer": "This reduces the risk of injury from moving loads or crane operations."
+      },
+      {
+        "question": "Why should wire ropes be checked regularly?",
+        "ideal_answer": "Regular checks prevent rope failure and unsafe lifting conditions."
+      },
+      {
+        "question": "Why is lubrication important for crane parts?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and improves machine life."
+      },
+      {
+        "question": "Why should brakes be tested before operation?",
+        "ideal_answer": "Brake testing ensures safe stopping and proper control of crane movement."
+      },
+      {
+        "question": "Why should crane maintenance records be kept?",
+        "ideal_answer": "Maintenance records help track inspections, repairs, and safe operating conditions."
+      }
+    ]
+  },
+
+  "Forklift Operator": {
+    "Forklift Basics": [
+      {
+        "question": "What is the main purpose of a forklift?",
+        "ideal_answer": "A forklift is used to lift, move, and stack heavy materials safely in warehouses and industrial areas."
+      },
+      {
+        "question": "Why is load balancing important in forklift operation?",
+        "ideal_answer": "Proper load balancing prevents tipping and ensures safe transportation of materials."
+      },
+      {
+        "question": "What is the purpose of forklift forks?",
+        "ideal_answer": "Forks are used to lift and carry pallets or heavy loads."
+      },
+      {
+        "question": "Why should the load be kept low while moving?",
+        "ideal_answer": "Keeping the load low improves stability and reduces the risk of tipping."
+      },
+      {
+        "question": "Why is reversing sometimes safer than moving forward?",
+        "ideal_answer": "Reversing improves visibility when the load blocks the operator’s forward view."
+      },
+      {
+        "question": "Why should load limits be followed?",
+        "ideal_answer": "Load limits prevent overloading, tipping, and equipment damage."
+      },
+      {
+        "question": "What is the role of the mast in a forklift?",
+        "ideal_answer": "The mast supports and lifts the forks vertically during load handling."
+      },
+      {
+        "question": "Why should warning horns be used?",
+        "ideal_answer": "Warning horns alert nearby workers and help prevent collisions."
+      },
+      {
+        "question": "Why is smooth driving important in forklift operation?",
+        "ideal_answer": "Smooth driving prevents load shifting, accidents, and product damage."
+      },
+      {
+        "question": "Why should ramps be used carefully?",
+        "ideal_answer": "Careful ramp use prevents tipping and loss of load control."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should forklift operators wear seat belts?",
+        "ideal_answer": "Seat belts protect operators during sudden stops, turns, or tip-over situations."
+      },
+      {
+        "question": "Why is pre-start inspection important?",
+        "ideal_answer": "Inspection ensures brakes, tires, steering, and forks are safe before operation."
+      },
+      {
+        "question": "What PPE should forklift operators use?",
+        "ideal_answer": "Operators should use safety shoes, helmets when required, gloves, and reflective jackets."
+      },
+      {
+        "question": "Why should pedestrians be kept away from forklift paths?",
+        "ideal_answer": "This reduces accidents and improves workplace safety."
+      },
+      {
+        "question": "Why should damaged pallets not be lifted?",
+        "ideal_answer": "Damaged pallets can break and cause falling loads or accidents."
+      },
+      {
+        "question": "Why is battery maintenance important in electric forklifts?",
+        "ideal_answer": "Proper battery maintenance improves performance and prevents operational failures."
+      },
+      {
+        "question": "Why should brakes be checked daily?",
+        "ideal_answer": "Brake checks ensure safe stopping and prevent accidents."
+      },
+      {
+        "question": "Why should forklifts be parked properly after use?",
+        "ideal_answer": "Proper parking prevents accidents and keeps the workplace organized."
+      },
+      {
+        "question": "Why should hydraulic leaks be repaired quickly?",
+        "ideal_answer": "Leaks reduce lifting performance and create safety hazards."
+      },
+      {
+        "question": "Why should speed limits be followed inside warehouses?",
+        "ideal_answer": "Speed limits reduce accidents and improve safe material handling."
+      }
+    ]
+  },
+
+  "Truck Driver": {
+    "Driving and Vehicle Basics": [
+      {
+        "question": "What is the main responsibility of a truck driver?",
+        "ideal_answer": "A truck driver safely transports goods from one location to another while following traffic and safety rules."
+      },
+      {
+        "question": "Why is vehicle inspection important before driving?",
+        "ideal_answer": "Inspection helps identify issues with brakes, tires, lights, and engine systems before starting the trip."
+      },
+      {
+        "question": "Why is load securing important in trucks?",
+        "ideal_answer": "Proper load securing prevents goods from shifting, falling, or causing accidents during transport."
+      },
+      {
+        "question": "Why should tire pressure be checked regularly?",
+        "ideal_answer": "Correct tire pressure improves safety, fuel efficiency, and tire life."
+      },
+      {
+        "question": "What is the purpose of mirrors in truck driving?",
+        "ideal_answer": "Mirrors help drivers monitor surrounding traffic and reduce blind spot risks."
+      },
+      {
+        "question": "Why is braking distance longer for trucks?",
+        "ideal_answer": "Trucks are heavier, so they need more distance and time to stop safely."
+      },
+      {
+        "question": "Why should overloading be avoided?",
+        "ideal_answer": "Overloading damages the vehicle, reduces control, and increases accident risks."
+      },
+      {
+        "question": "Why is route planning important for truck drivers?",
+        "ideal_answer": "Route planning improves delivery efficiency, saves fuel, and avoids delays."
+      },
+      {
+        "question": "Why should fuel levels be checked before long trips?",
+        "ideal_answer": "Checking fuel prevents unexpected stoppages and ensures smooth transport."
+      },
+      {
+        "question": "Why are warning lights on the dashboard important?",
+        "ideal_answer": "Warning lights indicate vehicle problems that need immediate attention."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should truck drivers follow speed limits?",
+        "ideal_answer": "Following speed limits improves road safety and reduces accident risks."
+      },
+      {
+        "question": "Why is rest important during long drives?",
+        "ideal_answer": "Rest prevents driver fatigue, improves focus, and reduces accident chances."
+      },
+      {
+        "question": "What PPE may be required for truck drivers?",
+        "ideal_answer": "Truck drivers may use reflective jackets, gloves, safety shoes, and helmets during loading or unloading."
+      },
+      {
+        "question": "Why should seat belts always be worn?",
+        "ideal_answer": "Seat belts protect drivers from serious injuries during accidents or sudden stops."
+      },
+      {
+        "question": "Why should brake systems be checked regularly?",
+        "ideal_answer": "Brake checks ensure safe stopping and prevent major road accidents."
+      },
+      {
+        "question": "Why should headlights and indicators be checked before trips?",
+        "ideal_answer": "They ensure visibility and safe communication with other road users."
+      },
+      {
+        "question": "Why is engine oil checking important?",
+        "ideal_answer": "Engine oil reduces friction and helps maintain engine performance."
+      },
+      {
+        "question": "Why should cargo documents be verified?",
+        "ideal_answer": "Verification ensures correct delivery, legal compliance, and smooth transport operations."
+      },
+      {
+        "question": "Why should emergency kits be carried in trucks?",
+        "ideal_answer": "Emergency kits help handle breakdowns, accidents, or unexpected road situations safely."
+      },
+      {
+        "question": "Why should blind spots be checked carefully while driving?",
+        "ideal_answer": "Checking blind spots prevents collisions with smaller vehicles or pedestrians."
+      }
+    ]
+  },
+  "Delivery Driver": {
+    "Driving and Delivery Basics": [
+      {
+        "question": "What is the main responsibility of a delivery driver?",
+        "ideal_answer": "A delivery driver safely transports and delivers goods to the correct destination on time."
+      },
+      {
+        "question": "Why is route planning important for delivery drivers?",
+        "ideal_answer": "Route planning saves time, reduces fuel usage, and helps complete deliveries efficiently."
+      },
+      {
+        "question": "Why should delivery items be checked before leaving?",
+        "ideal_answer": "Checking ensures the correct items, quantity, and delivery details are confirmed before dispatch."
+      },
+      {
+        "question": "Why is load arrangement important in delivery vehicles?",
+        "ideal_answer": "Proper arrangement prevents damage, improves safety, and makes unloading easier."
+      },
+      {
+        "question": "Why should proof of delivery be collected?",
+        "ideal_answer": "Proof of delivery confirms successful handover of goods and avoids disputes."
+      },
+      {
+        "question": "Why is fuel level checking important before delivery trips?",
+        "ideal_answer": "Checking fuel prevents delays and ensures smooth delivery operations."
+      },
+      {
+        "question": "Why should delivery timing be maintained?",
+        "ideal_answer": "Timely delivery improves customer satisfaction and business efficiency."
+      },
+      {
+        "question": "Why is customer communication important during delivery?",
+        "ideal_answer": "Good communication helps avoid confusion and ensures successful delivery."
+      },
+      {
+        "question": "Why should delivery records be maintained?",
+        "ideal_answer": "Records help track completed deliveries, returns, and customer confirmations."
+      },
+      {
+        "question": "Why should damaged packages be reported immediately?",
+        "ideal_answer": "Reporting damaged packages helps resolve issues quickly and prevents customer complaints."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should delivery drivers follow speed limits?",
+        "ideal_answer": "Following speed limits improves road safety and reduces accident risks."
+      },
+      {
+        "question": "Why should seat belts always be worn?",
+        "ideal_answer": "Seat belts protect drivers from serious injuries during accidents or sudden stops."
+      },
+      {
+        "question": "What PPE may be required for delivery drivers?",
+        "ideal_answer": "Delivery drivers may use reflective jackets, gloves, helmets for bike delivery, and safety shoes when handling goods."
+      },
+      {
+        "question": "Why should brakes be checked regularly?",
+        "ideal_answer": "Brake checks ensure safe stopping and prevent accidents."
+      },
+      {
+        "question": "Why should mirrors be checked before driving?",
+        "ideal_answer": "Mirrors improve visibility and help reduce blind spot accidents."
+      },
+      {
+        "question": "Why is tire pressure checking important?",
+        "ideal_answer": "Proper tire pressure improves safety, fuel efficiency, and tire life."
+      },
+      {
+        "question": "Why should drivers avoid mobile phone use while driving?",
+        "ideal_answer": "Using a phone while driving reduces attention and increases accident risks."
+      },
+      {
+        "question": "Why should emergency contact information be available?",
+        "ideal_answer": "Emergency contacts help respond quickly during accidents or delivery issues."
+      },
+      {
+        "question": "Why should vehicles be parked safely during delivery?",
+        "ideal_answer": "Safe parking prevents traffic issues, theft, and accidents."
+      },
+      {
+        "question": "Why is regular vehicle servicing important?",
+        "ideal_answer": "Regular servicing improves reliability, reduces breakdowns, and increases vehicle life."
+      }
+    ]
+  },
+
+  "Railway Technician": {
+    "Railway System Basics": [
+      {
+        "question": "What is the role of a railway technician?",
+        "ideal_answer": "A railway technician installs, inspects, maintains, and repairs railway systems and equipment for safe train operations."
+      },
+      {
+        "question": "Why is track inspection important?",
+        "ideal_answer": "Track inspection helps identify damage, alignment issues, and safety risks before accidents occur."
+      },
+      {
+        "question": "What is the purpose of railway signaling systems?",
+        "ideal_answer": "Signaling systems control train movement and prevent collisions by managing track usage safely."
+      },
+      {
+        "question": "Why is track alignment important?",
+        "ideal_answer": "Proper track alignment ensures smooth train movement and reduces derailment risks."
+      },
+      {
+        "question": "What is the function of railway sleepers?",
+        "ideal_answer": "Sleepers support rails, maintain track gauge, and distribute train loads to the ground."
+      },
+      {
+        "question": "Why is lubrication important in railway maintenance?",
+        "ideal_answer": "Lubrication reduces friction, wear, and improves the life of moving components."
+      },
+      {
+        "question": "What is preventive maintenance in railway systems?",
+        "ideal_answer": "Preventive maintenance involves regular inspection and servicing to avoid failures and improve safety."
+      },
+      {
+        "question": "Why should train brakes be checked regularly?",
+        "ideal_answer": "Brake checks ensure safe stopping and prevent railway accidents."
+      },
+      {
+        "question": "Why is electrical system inspection important in railways?",
+        "ideal_answer": "Inspection prevents power failures, faults, and unsafe train operations."
+      },
+      {
+        "question": "Why should railway tools be calibrated properly?",
+        "ideal_answer": "Proper calibration ensures accurate measurements and reliable maintenance work."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should railway technicians wear helmets?",
+        "ideal_answer": "Helmets protect against head injuries from tools, equipment, and site hazards."
+      },
+      {
+        "question": "Why is PPE important in railway work?",
+        "ideal_answer": "PPE protects workers from electrical hazards, heavy equipment, and moving trains."
+      },
+      {
+        "question": "What PPE should railway technicians use?",
+        "ideal_answer": "They should use helmets, safety shoes, gloves, reflective jackets, and safety goggles."
+      },
+      {
+        "question": "Why should warning signs near tracks be followed?",
+        "ideal_answer": "Warning signs help prevent accidents and ensure worker safety near moving trains."
+      },
+      {
+        "question": "Why is communication important during railway maintenance?",
+        "ideal_answer": "Clear communication prevents accidents and ensures safe coordination with train operations."
+      },
+      {
+        "question": "Why should electrical isolation be done before repair work?",
+        "ideal_answer": "Electrical isolation prevents electric shock and ensures safe maintenance."
+      },
+      {
+        "question": "Why should track maintenance be scheduled properly?",
+        "ideal_answer": "Proper scheduling avoids service disruption and ensures safe train operations."
+      },
+      {
+        "question": "Why should tools be stored properly after use?",
+        "ideal_answer": "Proper storage improves safety and prevents tool damage or loss."
+      },
+      {
+        "question": "Why is fire safety important in railway systems?",
+        "ideal_answer": "Fire safety prevents damage to equipment and protects passengers and workers."
+      },
+      {
+        "question": "Why should emergency procedures be known by railway technicians?",
+        "ideal_answer": "Knowing emergency procedures helps handle accidents and system failures quickly and safely."
+      }
+    ]
+  },
+
+  "Solar Panel Installer": {
+    "Solar Installation Basics": [
+      {
+        "question": "What is the role of a solar panel installer?",
+        "ideal_answer": "A solar panel installer sets up, connects, and maintains solar energy systems safely and efficiently."
+      },
+      {
+        "question": "What is the main purpose of a solar panel?",
+        "ideal_answer": "A solar panel converts sunlight into electrical energy using photovoltaic cells."
+      },
+      {
+        "question": "Why is panel angle important in solar installation?",
+        "ideal_answer": "The correct angle improves sunlight absorption and increases energy generation."
+      },
+      {
+        "question": "What is an inverter in a solar system?",
+        "ideal_answer": "An inverter converts DC electricity from solar panels into AC electricity for normal use."
+      },
+      {
+        "question": "Why is shading a problem for solar panels?",
+        "ideal_answer": "Shading reduces sunlight exposure and decreases the power output of the system."
+      },
+      {
+        "question": "Why is roof inspection important before installation?",
+        "ideal_answer": "Roof inspection ensures the structure is strong and suitable for safe solar panel installation."
+      },
+      {
+        "question": "What is the purpose of mounting structures in solar systems?",
+        "ideal_answer": "Mounting structures securely hold solar panels in the correct position."
+      },
+      {
+        "question": "Why is wiring quality important in solar systems?",
+        "ideal_answer": "Good wiring ensures safe power flow, reduces losses, and prevents electrical hazards."
+      },
+      {
+        "question": "Why should solar panels be cleaned regularly?",
+        "ideal_answer": "Cleaning removes dust and dirt, improving sunlight absorption and efficiency."
+      },
+      {
+        "question": "What is battery storage in solar systems?",
+        "ideal_answer": "Battery storage stores excess solar energy for use when sunlight is unavailable."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should solar installers use safety harnesses?",
+        "ideal_answer": "Safety harnesses protect workers from falls while working on rooftops or heights."
+      },
+      {
+        "question": "Why is electrical safety important in solar installation?",
+        "ideal_answer": "Solar systems involve live electrical connections, and safety prevents shocks and accidents."
+      },
+      {
+        "question": "What PPE should solar panel installers use?",
+        "ideal_answer": "They should use helmets, gloves, safety shoes, harnesses, and safety goggles."
+      },
+      {
+        "question": "Why should panels be handled carefully during installation?",
+        "ideal_answer": "Careful handling prevents panel damage and maintains system performance."
+      },
+      {
+        "question": "Why should weather conditions be checked before installation?",
+        "ideal_answer": "Bad weather increases the risk of falls, accidents, and unsafe electrical work."
+      },
+      {
+        "question": "Why should wiring connections be inspected regularly?",
+        "ideal_answer": "Inspection prevents loose connections, power loss, and fire hazards."
+      },
+      {
+        "question": "Why is grounding important in solar systems?",
+        "ideal_answer": "Grounding protects the system and people from electrical faults and lightning damage."
+      },
+      {
+        "question": "Why should tools be insulated for solar work?",
+        "ideal_answer": "Insulated tools reduce the risk of electric shock during installation and maintenance."
+      },
+      {
+        "question": "Why should battery terminals be checked regularly?",
+        "ideal_answer": "Checking terminals ensures proper storage performance and prevents system failures."
+      },
+      {
+        "question": "Why is preventive maintenance important in solar systems?",
+        "ideal_answer": "Preventive maintenance improves efficiency, reliability, and system lifespan."
+      }
+    ]
+  },
+  "Wind Turbine Technician": {
+    "Wind Turbine Basics": [
+      {
+        "question": "What is the role of a wind turbine technician?",
+        "ideal_answer": "A wind turbine technician installs, inspects, maintains, and repairs wind turbines to ensure efficient energy generation."
+      },
+      {
+        "question": "How does a wind turbine generate electricity?",
+        "ideal_answer": "Wind turns the blades, which rotate a shaft connected to a generator that converts mechanical energy into electrical energy."
+      },
+      {
+        "question": "What is the function of turbine blades?",
+        "ideal_answer": "Turbine blades capture wind energy and convert it into rotational motion."
+      },
+      {
+        "question": "What is the role of a generator in a wind turbine?",
+        "ideal_answer": "The generator converts mechanical energy from the rotating shaft into electrical energy."
+      },
+      {
+        "question": "What is a nacelle in a wind turbine?",
+        "ideal_answer": "The nacelle is the housing that contains key components like the generator, gearbox, and shaft."
+      },
+      {
+        "question": "Why is gearbox maintenance important?",
+        "ideal_answer": "The gearbox transfers rotational energy efficiently, and proper maintenance prevents failure and energy loss."
+      },
+      {
+        "question": "Why is lubrication important in wind turbines?",
+        "ideal_answer": "Lubrication reduces friction and wear in moving parts, improving efficiency and lifespan."
+      },
+      {
+        "question": "Why is regular inspection necessary for turbines?",
+        "ideal_answer": "Regular inspection helps detect faults early and prevents major breakdowns."
+      },
+      {
+        "question": "What is the purpose of a braking system in turbines?",
+        "ideal_answer": "The braking system controls or stops turbine rotation during high winds or maintenance."
+      },
+      {
+        "question": "Why is alignment important in turbine components?",
+        "ideal_answer": "Proper alignment ensures smooth operation and prevents excessive wear or failure."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should wind turbine technicians use safety harnesses?",
+        "ideal_answer": "Safety harnesses protect technicians from falls when working at heights."
+      },
+      {
+        "question": "Why is PPE important for wind turbine technicians?",
+        "ideal_answer": "PPE protects against electrical hazards, falls, and mechanical injuries."
+      },
+      {
+        "question": "What PPE should wind turbine technicians use?",
+        "ideal_answer": "They should use helmets, harnesses, gloves, safety shoes, and protective clothing."
+      },
+      {
+        "question": "Why should electrical systems be isolated before maintenance?",
+        "ideal_answer": "Isolation prevents electric shock and ensures safe maintenance work."
+      },
+      {
+        "question": "Why is weather monitoring important?",
+        "ideal_answer": "Strong winds and storms can make maintenance work dangerous."
+      },
+      {
+        "question": "Why should climbing equipment be inspected regularly?",
+        "ideal_answer": "Inspection ensures equipment safety and prevents accidents while climbing towers."
+      },
+      {
+        "question": "Why is proper communication important during turbine maintenance?",
+        "ideal_answer": "Clear communication ensures coordination and safety among team members."
+      },
+      {
+        "question": "Why should emergency procedures be known?",
+        "ideal_answer": "Emergency procedures help handle accidents or failures safely and quickly."
+      },
+      {
+        "question": "Why is fire safety important in turbines?",
+        "ideal_answer": "Fire safety prevents damage to equipment and protects workers from hazards."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance improves reliability and extends the life of wind turbines."
+      }
+    ]
+  },
+
+  "Fire Safety Technician": {
+    "Fire Safety Basics": [
+      {
+        "question": "What is the role of a fire safety technician?",
+        "ideal_answer": "A fire safety technician installs, inspects, and maintains fire protection systems to prevent and control fires."
+      },
+      {
+        "question": "What are the main types of fire extinguishers?",
+        "ideal_answer": "Common types include water, foam, dry powder, CO2, and wet chemical extinguishers."
+      },
+      {
+        "question": "What is the purpose of a fire alarm system?",
+        "ideal_answer": "A fire alarm system detects fire or smoke and alerts people to evacuate safely."
+      },
+      {
+        "question": "What is a sprinkler system?",
+        "ideal_answer": "A sprinkler system automatically releases water to control or extinguish fire."
+      },
+      {
+        "question": "Why is fire risk assessment important?",
+        "ideal_answer": "It identifies hazards and helps prevent fire accidents."
+      },
+      {
+        "question": "What is the fire triangle?",
+        "ideal_answer": "The fire triangle consists of heat, fuel, and oxygen, which are necessary for fire to occur."
+      },
+      {
+        "question": "Why is fire drill training important?",
+        "ideal_answer": "Fire drills prepare people for safe evacuation during emergencies."
+      },
+      {
+        "question": "What is the purpose of fire exits?",
+        "ideal_answer": "Fire exits provide a safe and quick route for evacuation during emergencies."
+      },
+      {
+        "question": "Why should electrical systems be checked for fire safety?",
+        "ideal_answer": "Faulty electrical systems can cause short circuits and fire hazards."
+      },
+      {
+        "question": "What is the role of smoke detectors?",
+        "ideal_answer": "Smoke detectors identify smoke early and trigger alarms to warn occupants."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should fire extinguishers be inspected regularly?",
+        "ideal_answer": "Regular inspection ensures they are functional and ready for emergency use."
+      },
+      {
+        "question": "Why is PPE important in fire safety work?",
+        "ideal_answer": "PPE protects technicians from heat, smoke, and hazardous conditions."
+      },
+      {
+        "question": "What PPE should fire safety technicians use?",
+        "ideal_answer": "They should use helmets, gloves, fire-resistant clothing, safety shoes, and breathing equipment."
+      },
+      {
+        "question": "Why should emergency exits be kept clear?",
+        "ideal_answer": "Clear exits ensure safe and quick evacuation during emergencies."
+      },
+      {
+        "question": "Why should fire alarm systems be tested regularly?",
+        "ideal_answer": "Regular testing ensures the system works properly during emergencies."
+      },
+      {
+        "question": "Why is proper storage of flammable materials important?",
+        "ideal_answer": "Proper storage reduces fire risks and prevents accidents."
+      },
+      {
+        "question": "Why should wiring and equipment be maintained?",
+        "ideal_answer": "Maintenance prevents electrical faults and reduces fire hazards."
+      },
+      {
+        "question": "Why is proper signage important in fire safety?",
+        "ideal_answer": "Signage helps people locate exits, equipment, and safety instructions quickly."
+      },
+      {
+        "question": "Why should fire safety equipment be easily accessible?",
+        "ideal_answer": "Accessibility ensures quick response during fire emergencies."
+      },
+      {
+        "question": "Why is documentation important in fire safety?",
+        "ideal_answer": "Documentation tracks inspections, maintenance, and compliance with safety standards."
+      }
+    ]
+  },
+
+  "Refrigeration Technician": {
+    "Refrigeration Basics": [
+      {
+        "question": "What is the role of a refrigeration technician?",
+        "ideal_answer": "A refrigeration technician installs, maintains, and repairs cooling systems and refrigeration units."
+      },
+      {
+        "question": "What is the purpose of a refrigeration system?",
+        "ideal_answer": "A refrigeration system removes heat from a space or substance to keep it cool."
+      },
+      {
+        "question": "What is refrigerant?",
+        "ideal_answer": "Refrigerant is a fluid that absorbs and releases heat during the refrigeration cycle."
+      },
+      {
+        "question": "What is the function of a compressor?",
+        "ideal_answer": "The compressor increases refrigerant pressure and circulates it through the system."
+      },
+      {
+        "question": "What is the role of the condenser?",
+        "ideal_answer": "The condenser releases heat from the refrigerant to the surroundings."
+      },
+      {
+        "question": "What is the role of the evaporator?",
+        "ideal_answer": "The evaporator absorbs heat and cools the surrounding environment."
+      },
+      {
+        "question": "Why is proper insulation important in refrigeration systems?",
+        "ideal_answer": "Insulation reduces heat gain and improves cooling efficiency."
+      },
+      {
+        "question": "Why is temperature control important?",
+        "ideal_answer": "Proper temperature control ensures system efficiency and prevents spoilage or damage."
+      },
+      {
+        "question": "Why should refrigerant levels be maintained?",
+        "ideal_answer": "Correct refrigerant levels ensure proper cooling and system performance."
+      },
+      {
+        "question": "What is defrosting in refrigeration systems?",
+        "ideal_answer": "Defrosting removes ice buildup to maintain efficient cooling performance."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should refrigeration technicians use PPE?",
+        "ideal_answer": "PPE protects against cold burns, electrical hazards, and refrigerant exposure."
+      },
+      {
+        "question": "What PPE should refrigeration technicians use?",
+        "ideal_answer": "They should use gloves, goggles, safety shoes, and protective clothing."
+      },
+      {
+        "question": "Why should refrigerant leaks be fixed immediately?",
+        "ideal_answer": "Leaks reduce cooling efficiency and can harm health and the environment."
+      },
+      {
+        "question": "Why is electrical safety important in refrigeration work?",
+        "ideal_answer": "Refrigeration systems involve electrical components that can cause shocks if not handled properly."
+      },
+      {
+        "question": "Why should coils be cleaned regularly?",
+        "ideal_answer": "Clean coils improve heat transfer and increase system efficiency."
+      },
+      {
+        "question": "Why should pressure levels be monitored?",
+        "ideal_answer": "Correct pressure ensures proper system operation and prevents compressor damage."
+      },
+      {
+        "question": "Why is proper ventilation necessary?",
+        "ideal_answer": "Ventilation prevents buildup of harmful gases and improves safety."
+      },
+      {
+        "question": "Why should tools be insulated?",
+        "ideal_answer": "Insulated tools reduce the risk of electrical shock."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance reduces breakdowns and increases system lifespan."
+      },
+      {
+        "question": "Why should system performance be tested after repair?",
+        "ideal_answer": "Testing ensures the system is working correctly and efficiently after maintenance."
+      }
+    ]
+  },
+  "Boiler Operator": {
+    "Boiler Operation Basics": [
+      {
+        "question": "What is the main role of a boiler operator?",
+        "ideal_answer": "A boiler operator monitors, operates, and maintains boilers to ensure safe steam and heat generation."
+      },
+      {
+        "question": "What is the purpose of a boiler?",
+        "ideal_answer": "A boiler is used to heat water and produce steam for industrial processes or heating systems."
+      },
+      {
+        "question": "Why is water level monitoring important in a boiler?",
+        "ideal_answer": "Proper water level prevents overheating, boiler damage, and unsafe operating conditions."
+      },
+      {
+        "question": "What is the function of a pressure gauge in a boiler?",
+        "ideal_answer": "A pressure gauge shows the internal pressure of the boiler to ensure safe operation."
+      },
+      {
+        "question": "What is the role of a safety valve in a boiler?",
+        "ideal_answer": "The safety valve releases excess pressure to prevent boiler explosions."
+      },
+      {
+        "question": "Why is feed water treatment important?",
+        "ideal_answer": "Feed water treatment prevents scaling, corrosion, and improves boiler efficiency."
+      },
+      {
+        "question": "What is the purpose of a blowdown process in boilers?",
+        "ideal_answer": "Blowdown removes impurities and sludge from the boiler to maintain efficiency and safety."
+      },
+      {
+        "question": "Why is fuel quality important for boiler operation?",
+        "ideal_answer": "Good fuel quality improves combustion efficiency and reduces damage or pollution."
+      },
+      {
+        "question": "Why is temperature monitoring necessary in boilers?",
+        "ideal_answer": "Temperature monitoring ensures efficient steam production and prevents overheating."
+      },
+      {
+        "question": "Why should boiler startup procedures be followed carefully?",
+        "ideal_answer": "Proper startup prevents sudden pressure changes and ensures safe operation."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why is regular boiler inspection important?",
+        "ideal_answer": "Regular inspection helps detect faults early and prevents dangerous failures."
+      },
+      {
+        "question": "What PPE should boiler operators use?",
+        "ideal_answer": "Boiler operators should use helmets, gloves, safety shoes, goggles, and heat-resistant protective clothing."
+      },
+      {
+        "question": "Why should pressure limits never be exceeded?",
+        "ideal_answer": "Exceeding pressure limits can cause boiler failure or explosion."
+      },
+      {
+        "question": "Why is proper ventilation important in boiler rooms?",
+        "ideal_answer": "Ventilation removes harmful gases and improves safe working conditions."
+      },
+      {
+        "question": "Why should leaks be repaired immediately?",
+        "ideal_answer": "Leaks reduce efficiency and can cause accidents or equipment damage."
+      },
+      {
+        "question": "Why should emergency shutdown procedures be known?",
+        "ideal_answer": "Knowing shutdown procedures helps prevent serious damage during unsafe conditions."
+      },
+      {
+        "question": "Why should burners be cleaned regularly?",
+        "ideal_answer": "Clean burners improve fuel efficiency and proper combustion."
+      },
+      {
+        "question": "Why is lubrication important in boiler systems?",
+        "ideal_answer": "Lubrication reduces wear in moving parts and improves system life."
+      },
+      {
+        "question": "Why should safety alarms be tested regularly?",
+        "ideal_answer": "Regular testing ensures alarms work properly during emergencies."
+      },
+      {
+        "question": "Why should maintenance records be kept?",
+        "ideal_answer": "Maintenance records help track inspections, repairs, and safe operating history."
+      }
+    ]
+  },
+
+  "Mining Technician": {
+    "Mining Operations Basics": [
+      {
+        "question": "What is the role of a mining technician?",
+        "ideal_answer": "A mining technician supports mining operations by inspecting equipment, monitoring safety, and assisting with extraction processes."
+      },
+      {
+        "question": "Why is geological surveying important in mining?",
+        "ideal_answer": "Geological surveying helps identify mineral deposits and safe mining locations."
+      },
+      {
+        "question": "What is the purpose of ventilation in mines?",
+        "ideal_answer": "Ventilation removes harmful gases and provides fresh air for safe working conditions."
+      },
+      {
+        "question": "Why is ground support important in mining?",
+        "ideal_answer": "Ground support prevents tunnel collapse and protects workers underground."
+      },
+      {
+        "question": "What is drilling in mining operations?",
+        "ideal_answer": "Drilling creates holes for blasting, sampling, or mineral extraction."
+      },
+      {
+        "question": "Why is blasting done carefully in mining?",
+        "ideal_answer": "Careful blasting ensures safe rock breaking and prevents accidents."
+      },
+      {
+        "question": "What is ore transportation in mining?",
+        "ideal_answer": "Ore transportation is the movement of extracted minerals from the mine to processing areas."
+      },
+      {
+        "question": "Why is equipment inspection important in mining?",
+        "ideal_answer": "Inspection prevents equipment failure and improves operational safety."
+      },
+      {
+        "question": "Why is dust control important in mining?",
+        "ideal_answer": "Dust control protects worker health and improves visibility and safety."
+      },
+      {
+        "question": "Why is communication important in mining operations?",
+        "ideal_answer": "Clear communication helps coordinate work and improves safety in hazardous environments."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should mining technicians wear helmets?",
+        "ideal_answer": "Helmets protect against falling rocks, tools, and underground hazards."
+      },
+      {
+        "question": "What PPE should mining technicians use?",
+        "ideal_answer": "They should use helmets, gloves, safety shoes, reflective clothing, goggles, and respiratory protection when needed."
+      },
+      {
+        "question": "Why is gas detection important in mines?",
+        "ideal_answer": "Gas detection identifies dangerous gases and prevents poisoning or explosions."
+      },
+      {
+        "question": "Why should emergency exits be clearly marked?",
+        "ideal_answer": "Marked exits help workers evacuate quickly during emergencies."
+      },
+      {
+        "question": "Why is machine maintenance important in mining?",
+        "ideal_answer": "Regular maintenance prevents breakdowns and ensures safe operation of heavy equipment."
+      },
+      {
+        "question": "Why should loose rocks be removed?",
+        "ideal_answer": "Removing loose rocks prevents falling hazards and tunnel accidents."
+      },
+      {
+        "question": "Why should electrical safety be followed in mining?",
+        "ideal_answer": "Electrical safety prevents shocks, fires, and equipment damage."
+      },
+      {
+        "question": "Why should blasting zones be restricted?",
+        "ideal_answer": "Restricted zones keep workers safe from flying debris and blast impact."
+      },
+      {
+        "question": "Why is fire safety important in mines?",
+        "ideal_answer": "Fire safety prevents major accidents and protects lives in enclosed mining spaces."
+      },
+      {
+        "question": "Why should emergency rescue procedures be known?",
+        "ideal_answer": "Emergency rescue procedures help respond quickly to accidents and save lives."
+      }
+    ]
+  },
+
+  "Industrial Maintenance Technician": {
+    "Maintenance Basics": [
+      {
+        "question": "What is the role of an industrial maintenance technician?",
+        "ideal_answer": "An industrial maintenance technician installs, inspects, repairs, and maintains machines and equipment in industrial facilities."
+      },
+      {
+        "question": "What is preventive maintenance?",
+        "ideal_answer": "Preventive maintenance is regular inspection and servicing to prevent machine breakdowns and improve performance."
+      },
+      {
+        "question": "Why is lubrication important in machines?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and increases machine life."
+      },
+      {
+        "question": "What is the purpose of alignment in machinery?",
+        "ideal_answer": "Proper alignment prevents vibration, wear, and machine failure."
+      },
+      {
+        "question": "Why is calibration important for industrial equipment?",
+        "ideal_answer": "Calibration ensures machines and instruments provide accurate performance and measurements."
+      },
+      {
+        "question": "What is troubleshooting in maintenance work?",
+        "ideal_answer": "Troubleshooting is the process of identifying and solving machine or system problems."
+      },
+      {
+        "question": "Why should bearings be checked regularly?",
+        "ideal_answer": "Regular checks prevent overheating, friction issues, and machine failure."
+      },
+      {
+        "question": "What is the purpose of a gearbox?",
+        "ideal_answer": "A gearbox changes speed and torque between the motor and the driven machine."
+      },
+      {
+        "question": "Why is vibration monitoring important?",
+        "ideal_answer": "Vibration monitoring helps detect machine faults before major breakdowns occur."
+      },
+      {
+        "question": "Why should maintenance logs be maintained?",
+        "ideal_answer": "Logs help track repairs, inspections, and machine performance history."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "What PPE should industrial maintenance technicians use?",
+        "ideal_answer": "They should use helmets, gloves, safety shoes, goggles, and hearing protection when required."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "Lockout and tagout ensure machines are safely shut off and cannot restart during maintenance."
+      },
+      {
+        "question": "Why should machines be switched off before repair work?",
+        "ideal_answer": "Switching off machines prevents accidental startup and protects workers from injury."
+      },
+      {
+        "question": "Why should electrical safety be followed during maintenance?",
+        "ideal_answer": "Electrical safety prevents shocks, fires, and serious equipment damage."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools reduce safety and can cause injuries or poor maintenance work."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "A clean workshop reduces accidents and improves work efficiency."
+      },
+      {
+        "question": "Why should emergency stop systems be checked regularly?",
+        "ideal_answer": "Regular checks ensure machines can be stopped quickly during unsafe situations."
+      },
+      {
+        "question": "Why should heavy parts be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids damage to machine components."
+      },
+      {
+        "question": "Why is fire safety important in industrial maintenance?",
+        "ideal_answer": "Fire safety protects workers, machines, and the facility from accidents."
+      },
+      {
+        "question": "Why should preventive maintenance schedules be followed strictly?",
+        "ideal_answer": "Following schedules reduces downtime, improves reliability, and increases equipment lifespan."
+      }
+    ]
+  }
+
+}

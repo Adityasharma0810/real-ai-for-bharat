@@ -1,0 +1,228 @@
+================================================================
+  AI SKILLFIT — HOW TO RUN THE APP
+================================================================
+
+PREREQUISITES
+-------------
+Install these before anything else:
+
+  - Python 3.10+       https://www.python.org/downloads/
+  - Node.js 18+        https://nodejs.org/
+  - npm (comes with Node.js)
+  - Git                https://git-scm.com/
+
+External accounts needed (all have free tiers):
+  - Sarvam AI          https://dashboard.sarvam.ai
+  - Groq               https://console.groq.com
+  - LiveKit Cloud      https://cloud.livekit.io
+  - Supabase           https://supabase.com
+
+
+================================================================
+  STEP 1 — CLONE THE REPO
+================================================================
+
+  git clone https://github.com/Aditya415cs/AI-for-bharat-demo-repo
+  cd AI-for-bharat-demo-repo
+
+
+================================================================
+  STEP 2 — BACKEND SETUP (FastAPI Server + Priya Voice Agent)
+================================================================
+
+Navigate to the backend folder:
+
+  cd real_voice_bot
+
+Copy the environment file:
+
+  Windows:   copy .env.example .env
+  Mac/Linux: cp .env.example .env
+
+Open .env and fill in your API keys:
+
+  SARVAM_API_KEY=        ← from dashboard.sarvam.ai → API Keys
+  GROQ_API_KEY=          ← from console.groq.com → API Keys
+  LIVEKIT_URL=           ← from cloud.livekit.io → project → Settings (wss://...)
+  LIVEKIT_API_KEY=       ← from cloud.livekit.io → project → Settings
+  LIVEKIT_API_SECRET=    ← from cloud.livekit.io → project → Settings
+  SUPABASE_URL=          ← from supabase.com → project → Settings → API
+  SUPABASE_SERVICE_ROLE_KEY= ← use SERVICE ROLE key (not anon key)
+
+Install Python dependencies:
+
+  pip install -r requirements.txt
+
+
+================================================================
+  STEP 3 — MOBILE APP SETUP (React Native / Expo)
+================================================================
+
+Navigate to the frontend folder:
+
+  cd ../frontend
+
+Copy the environment file:
+
+  Windows:   copy .env.example .env
+  Mac/Linux: cp .env.example .env
+
+Open .env and fill in:
+
+  EXPO_PUBLIC_BACKEND_URL=http://localhost:8000
+  EXPO_PUBLIC_BACKEND_API_KEY=skillfit-local
+  EXPO_PUBLIC_SUPABASE_URL=       ← from supabase.com → project → Settings → API
+  EXPO_PUBLIC_SUPABASE_ANON_KEY=  ← use ANON/PUBLIC key
+
+Install Node dependencies:
+
+  npm install
+
+
+================================================================
+  STEP 4 — ADMIN DASHBOARD SETUP (React + Vite)
+================================================================
+
+Navigate to the dashboard folder:
+
+  cd frontend/dashboard
+
+Copy the environment file:
+
+  Windows:   copy .env.example .env
+  Mac/Linux: cp .env.example .env
+
+Open .env and fill in:
+
+  VITE_SUPABASE_URL=      ← same Supabase URL as above
+  VITE_SUPABASE_ANON_KEY= ← same ANON/PUBLIC key as above
+
+Install Node dependencies:
+
+  npm install
+
+ADMIN LOGIN CREDENTIALS:
+  Email:    gov@gmail.com
+  Password: gov12345
+
+  (Create this account in Supabase → Authentication → Users
+   or via the app's sign-up screen, then grant admin role in the database)
+
+
+================================================================
+  STEP 5 — RUNNING THE APP (3 terminals needed)
+================================================================
+
+Open 3 separate terminal windows:
+
+--- Terminal 1: FastAPI Backend ---
+  cd real_voice_bot
+  python server.py
+
+  Verify it's running: open http://localhost:8000/health in browser
+  Expected response: {"status":"healthy","service":"AI SkillFit","db":"supabase"}
+
+--- Terminal 2: Priya Voice Agent ---
+  cd real_voice_bot
+  python agent.py dev
+
+  Wait until you see: "registered worker" in the logs
+  This connects Priya to LiveKit Cloud and waits for interview rooms.
+
+--- Terminal 3: Expo Web App ---
+  cd frontend
+  npx expo start --web
+
+  Opens at: http://localhost:8081
+  Use Chrome for best WebRTC/microphone support.
+
+--- Terminal 4 (optional): Admin Dashboard ---
+  cd frontend/dashboard
+  npm run dev
+
+  Opens at: http://localhost:5173
+  Login with: gov@gmail.com / gov12345
+
+
+================================================================
+  STEP 6 — USING THE APP
+================================================================
+
+1. Open http://localhost:8081 in Chrome
+2. Select your language
+3. Sign up or log in
+4. Complete onboarding (name, trade, experience)
+5. Tap "Start Interview" on the home screen
+6. Tap "Begin Interview" on the prep screen
+7. Allow microphone access when Chrome asks
+8. Tap "Start Interview" — Priya will greet you
+9. Speak naturally — Priya conducts a full trade assessment
+10. Tap "End Interview" when done → view your fitment result
+
+Admin Dashboard:
+1. Open http://localhost:5173
+2. Login: gov@gmail.com / gov12345
+3. View all interview results, scores, and candidate data
+
+
+================================================================
+  DEPLOYED URLS (if running on Render + Vercel)
+================================================================
+
+  Backend API:    https://ai-for-bharat-demo-repo.onrender.com
+  Health check:   https://ai-for-bharat-demo-repo.onrender.com/health
+  Voice Agent:    https://ai-for-bharat-demo-repo-1.onrender.com
+  Frontend:       (your Vercel URL after deployment)
+
+
+================================================================
+  TROUBLESHOOTING
+================================================================
+
+"Could not reach the server" when starting interview
+  → Make sure python server.py is running (Terminal 1)
+  → Check http://localhost:8000/health returns healthy
+
+Priya joins but doesn't speak
+  → Make sure python agent.py dev is running (Terminal 2)
+  → Check SARVAM_API_KEY and GROQ_API_KEY are set in real_voice_bot/.env
+
+No microphone audio
+  → Click the lock icon in Chrome address bar → Microphone → Allow
+  → Refresh and try again
+
+Blank white screen
+  → Open Chrome DevTools (F12) → Console → look for red errors
+  → Most common cause: missing or wrong .env values
+
+Agent crashes with AutoSubscribe error
+  → Run: pip install -r requirements.txt
+
+
+================================================================
+  SUPPORTED LANGUAGES
+================================================================
+
+  English (en-IN), Hindi (hi-IN), Kannada (kn-IN),
+  Tamil (ta-IN), Telugu (te-IN), Marathi (mr-IN),
+  Bengali (bn-IN), Gujarati (gu-IN), Malayalam (ml-IN),
+  Punjabi (pa-IN), Odia (od-IN)
+
+
+================================================================
+  PROJECT STRUCTURE
+================================================================
+
+  AI-for-bharat-demo-repo/
+  ├── frontend/               React Native (Expo) mobile + web app
+  │   ├── src/                App screens, services, navigation
+  │   ├── dashboard/          Admin dashboard (React + Vite)
+  │   └── .env                Frontend environment variables
+  ├── real_voice_bot/         Python backend + LiveKit voice agent
+  │   ├── server.py           FastAPI server
+  │   ├── agent.py            Priya voice agent
+  │   ├── requirements.txt    All Python dependencies
+  │   └── .env                Backend environment variables
+  └── HOW_TO_RUN.txt          This file
+
+================================================================

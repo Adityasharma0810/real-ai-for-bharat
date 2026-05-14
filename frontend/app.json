@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "AI-Bharat-main",
+    "slug": "ai-bharat-main",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "AI Interview Proctoring requires camera access to monitor for cheating.",
+        "NSMicrophoneUsageDescription": "AI Interview Proctoring requires microphone access to record your responses."
+      }
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.vismay.aibharat"
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "AI Interview Proctoring requires camera access to monitor for cheating.",
+          "enableMicrophonePermission": true,
+          "microphonePermissionText": "AI Interview Proctoring requires microphone access to record your responses."
+        }
+      ],
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26,
+            "kotlinVersion": "2.0.21"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f5dbb093-1d87-4210-a9cf-1331fc2bf878"
+      }
+    },
+    "owner": "adityasharma0810"
+  }
+}

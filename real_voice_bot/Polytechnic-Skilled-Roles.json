@@ -1,0 +1,2602 @@
+{
+  "Diploma Mechanical Engineer": {
+    "Mechanical Engineering Fundamentals": [
+      {
+        "question": "What is the purpose of preventive maintenance?",
+        "ideal_answer": "Preventive maintenance is regular inspection and servicing of machines to prevent breakdowns and improve efficiency."
+      },
+      {
+        "question": "What is lubrication and why is it important?",
+        "ideal_answer": "Lubrication reduces friction between moving parts, prevents wear, and increases machine life."
+      },
+      {
+        "question": "What is tolerance in mechanical engineering?",
+        "ideal_answer": "Tolerance is the acceptable limit of variation in the dimensions of a mechanical part."
+      },
+      {
+        "question": "What is the function of a bearing?",
+        "ideal_answer": "A bearing supports rotating parts and reduces friction between moving surfaces."
+      },
+      {
+        "question": "What is a gearbox used for?",
+        "ideal_answer": "A gearbox changes speed and torque between the motor and the driven machine."
+      },
+      {
+        "question": "Why is alignment important in rotating machinery?",
+        "ideal_answer": "Proper alignment prevents vibration, wear, and machine failure."
+      },
+      {
+        "question": "What is welding in mechanical engineering?",
+        "ideal_answer": "Welding is the process of joining two metal parts by heating and fusing them together."
+      },
+      {
+        "question": "What is the purpose of a shaft in machines?",
+        "ideal_answer": "A shaft transmits power and rotational motion from one component to another."
+      },
+      {
+        "question": "What is a coupling used for?",
+        "ideal_answer": "A coupling connects two shafts together for power transmission."
+      },
+      {
+        "question": "Why is vibration monitoring important?",
+        "ideal_answer": "Vibration monitoring helps detect faults early and prevents machine breakdown."
+      }
+    ],
+    "Tools and Safety": [
+      {
+        "question": "What is the use of a Vernier caliper?",
+        "ideal_answer": "A Vernier caliper is used to measure internal, external, and depth dimensions accurately."
+      },
+      {
+        "question": "What is the use of a micrometer?",
+        "ideal_answer": "A micrometer is used for precise measurement of small dimensions."
+      },
+      {
+        "question": "Why should PPE be used in workshops?",
+        "ideal_answer": "PPE protects workers from injuries caused by machines, tools, sparks, and heavy materials."
+      },
+      {
+        "question": "What PPE should a mechanical engineer use?",
+        "ideal_answer": "Safety shoes, gloves, goggles, helmets, and protective clothing should be used."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "A clean workshop reduces accidents and improves productivity."
+      },
+      {
+        "question": "Why should machines be switched off before maintenance?",
+        "ideal_answer": "Switching off machines prevents accidental startup and injuries."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines remain safely shut down during maintenance work."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can fail unexpectedly and cause injuries."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and reduces strain."
+      },
+      {
+        "question": "Why is preventive maintenance scheduling important?",
+        "ideal_answer": "It helps reduce downtime and increases machine reliability."
+      }
+    ]
+  },
+
+  "Diploma Civil Engineer": {
+    "Civil Engineering Fundamentals": [
+      {
+        "question": "What is the purpose of a foundation in construction?",
+        "ideal_answer": "The foundation supports the structure and transfers its load safely to the ground."
+      },
+      {
+        "question": "What is RCC?",
+        "ideal_answer": "RCC stands for Reinforced Cement Concrete, which combines concrete and steel for strength."
+      },
+      {
+        "question": "Why is curing important in concrete work?",
+        "ideal_answer": "Curing helps concrete gain strength, prevents cracks, and improves durability."
+      },
+      {
+        "question": "What is mortar?",
+        "ideal_answer": "Mortar is a mixture of cement, sand, and water used to bind bricks and stones together."
+      },
+      {
+        "question": "What is plastering?",
+        "ideal_answer": "Plastering provides a smooth protective surface on walls and ceilings."
+      },
+      {
+        "question": "Why is leveling important in construction?",
+        "ideal_answer": "Leveling ensures proper alignment, stability, and quality of the structure."
+      },
+      {
+        "question": "What is scaffolding?",
+        "ideal_answer": "Scaffolding is a temporary structure used to support workers and materials during construction."
+      },
+      {
+        "question": "What is the use of a plumb bob?",
+        "ideal_answer": "A plumb bob is used to check vertical alignment in walls and structures."
+      },
+      {
+        "question": "Why is site surveying important?",
+        "ideal_answer": "Surveying helps determine land dimensions, levels, and positions for accurate construction."
+      },
+      {
+        "question": "What is the purpose of reinforcement bars?",
+        "ideal_answer": "Reinforcement bars improve the tensile strength of concrete structures."
+      }
+    ],
+    "Site Management and Safety": [
+      {
+        "question": "Why should site engineers wear helmets?",
+        "ideal_answer": "Helmets protect against falling objects and construction site hazards."
+      },
+      {
+        "question": "What PPE should a civil engineer use on site?",
+        "ideal_answer": "Safety shoes, helmets, gloves, reflective jackets, and safety goggles should be used."
+      },
+      {
+        "question": "Why is site housekeeping important?",
+        "ideal_answer": "Good housekeeping reduces accidents and improves site efficiency."
+      },
+      {
+        "question": "Why should scaffolding be inspected regularly?",
+        "ideal_answer": "Inspection ensures scaffolding is stable and safe for workers."
+      },
+      {
+        "question": "Why is electrical safety important on construction sites?",
+        "ideal_answer": "Electrical safety prevents shocks, short circuits, and fire hazards."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure quick and safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is documentation important in civil projects?",
+        "ideal_answer": "Documentation helps track progress, materials, quality, and compliance."
+      },
+      {
+        "question": "Why is communication important on site?",
+        "ideal_answer": "Clear communication improves coordination, safety, and project efficiency."
+      },
+      {
+        "question": "Why should heavy materials be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids material damage."
+      },
+      {
+        "question": "Why is quality checking important in construction?",
+        "ideal_answer": "Quality checking ensures work meets standards and avoids structural failures."
+      }
+    ]
+  },
+
+  "Diploma Electrical Engineer": {
+    "Electrical Engineering Fundamentals": [
+      {
+        "question": "What is Ohm’s Law?",
+        "ideal_answer": "Ohm’s Law states that voltage equals current multiplied by resistance, V = I × R."
+      },
+      {
+        "question": "What is the difference between AC and DC current?",
+        "ideal_answer": "AC changes direction periodically while DC flows only in one direction."
+      },
+      {
+        "question": "Why is earthing important?",
+        "ideal_answer": "Earthing provides a safe path for fault current and protects people from electric shock."
+      },
+      {
+        "question": "What is the purpose of a circuit breaker?",
+        "ideal_answer": "A circuit breaker automatically stops current flow during overload or short circuit conditions."
+      },
+      {
+        "question": "What is a fuse?",
+        "ideal_answer": "A fuse is a safety device that melts and breaks the circuit when excessive current flows."
+      },
+      {
+        "question": "What is a transformer?",
+        "ideal_answer": "A transformer changes voltage levels in an electrical system using electromagnetic induction."
+      },
+      {
+        "question": "What is a conductor?",
+        "ideal_answer": "A conductor is a material like copper that allows electricity to flow easily."
+      },
+      {
+        "question": "What is an insulator?",
+        "ideal_answer": "An insulator is a material like rubber that resists the flow of electricity."
+      },
+      {
+        "question": "What is a short circuit?",
+        "ideal_answer": "A short circuit occurs when current flows through an unintended low-resistance path."
+      },
+      {
+        "question": "What is electrical power?",
+        "ideal_answer": "Electrical power is the rate at which electrical energy is used, calculated as P = V × I."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should electricians use insulated tools?",
+        "ideal_answer": "Insulated tools protect against accidental electric shock."
+      },
+      {
+        "question": "What PPE should an electrical engineer use?",
+        "ideal_answer": "Insulated gloves, safety shoes, helmets, goggles, and protective equipment should be used."
+      },
+      {
+        "question": "Why should wet hands be avoided while handling electricity?",
+        "ideal_answer": "Water conducts electricity and increases the risk of electric shock."
+      },
+      {
+        "question": "Why should damaged wires be replaced immediately?",
+        "ideal_answer": "Damaged wires can cause short circuits, fire hazards, and electric shock."
+      },
+      {
+        "question": "Why should power be switched off before repair?",
+        "ideal_answer": "Switching off power prevents accidental electric shock during maintenance."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines are properly shut off and cannot restart during maintenance."
+      },
+      {
+        "question": "Why should overloaded sockets be avoided?",
+        "ideal_answer": "Overloaded sockets can cause overheating, fire hazards, and short circuits."
+      },
+      {
+        "question": "Why is preventive maintenance important in electrical systems?",
+        "ideal_answer": "Preventive maintenance reduces failures and improves system reliability."
+      },
+      {
+        "question": "Why should electrical panels be inspected regularly?",
+        "ideal_answer": "Regular inspection helps detect faults and prevents accidents."
+      },
+      {
+        "question": "Why should emergency shutdown procedures be known?",
+        "ideal_answer": "They help prevent serious damage and protect workers during unsafe conditions."
+      }
+    ]
+  },
+  "Diploma Electronics Engineer": {
+    "Electronics Fundamentals": [
+      {
+        "question": "What is the function of a resistor in an electronic circuit?",
+        "ideal_answer": "A resistor limits or controls the flow of electric current in a circuit."
+      },
+      {
+        "question": "What is the purpose of a capacitor?",
+        "ideal_answer": "A capacitor stores electrical energy temporarily and releases it when needed."
+      },
+      {
+        "question": "What is a diode?",
+        "ideal_answer": "A diode is an electronic component that allows current to flow in only one direction."
+      },
+      {
+        "question": "What is the function of a transistor?",
+        "ideal_answer": "A transistor is used for switching and amplification in electronic circuits."
+      },
+      {
+        "question": "What is an integrated circuit (IC)?",
+        "ideal_answer": "An IC is a small electronic chip containing multiple components like transistors, resistors, and capacitors."
+      },
+      {
+        "question": "What is the difference between analog and digital signals?",
+        "ideal_answer": "Analog signals vary continuously while digital signals have discrete values like 0 and 1."
+      },
+      {
+        "question": "What is a PCB?",
+        "ideal_answer": "PCB stands for Printed Circuit Board, which supports and connects electronic components."
+      },
+      {
+        "question": "What is the purpose of grounding in electronics?",
+        "ideal_answer": "Grounding provides a reference point and protects circuits from faults and electrical noise."
+      },
+      {
+        "question": "What is soldering?",
+        "ideal_answer": "Soldering is the process of joining electronic components using molten solder."
+      },
+      {
+        "question": "Why is voltage regulation important?",
+        "ideal_answer": "Voltage regulation ensures stable voltage supply and protects sensitive electronic components."
+      }
+    ],
+    "Testing and Safety": [
+      {
+        "question": "What is the use of a multimeter in electronics?",
+        "ideal_answer": "A multimeter is used to measure voltage, current, and resistance in electronic circuits."
+      },
+      {
+        "question": "Why should anti-static precautions be followed?",
+        "ideal_answer": "Anti-static precautions protect sensitive electronic components from electrostatic damage."
+      },
+      {
+        "question": "What PPE should an electronics engineer use?",
+        "ideal_answer": "Safety goggles, gloves when needed, anti-static protection, and insulated tools should be used."
+      },
+      {
+        "question": "Why should power be switched off before repairing a circuit?",
+        "ideal_answer": "Switching off power prevents electric shock and component damage."
+      },
+      {
+        "question": "Why is proper ventilation important during soldering?",
+        "ideal_answer": "Ventilation removes harmful fumes produced during soldering."
+      },
+      {
+        "question": "Why should damaged wires be replaced immediately?",
+        "ideal_answer": "Damaged wires can cause short circuits, electric shock, and circuit failure."
+      },
+      {
+        "question": "Why is insulation important in electronic systems?",
+        "ideal_answer": "Insulation prevents electric shock and unwanted current leakage."
+      },
+      {
+        "question": "Why should test equipment be calibrated regularly?",
+        "ideal_answer": "Calibration ensures accurate measurements and reliable testing results."
+      },
+      {
+        "question": "Why should batteries be handled carefully?",
+        "ideal_answer": "Improper handling can cause leakage, fire, or damage to equipment."
+      },
+      {
+        "question": "Why is preventive maintenance important in electronics?",
+        "ideal_answer": "Preventive maintenance reduces failures and improves system reliability."
+      }
+    ]
+  },
+
+  "Diploma Computer Science Engineer": {
+    "Computer Science Fundamentals": [
+      {
+        "question": "What is an operating system?",
+        "ideal_answer": "An operating system manages computer hardware, software resources, and provides services for programs."
+      },
+      {
+        "question": "What is the difference between RAM and ROM?",
+        "ideal_answer": "RAM is temporary memory used during operation, while ROM stores permanent instructions."
+      },
+      {
+        "question": "What is a database?",
+        "ideal_answer": "A database is an organized collection of data that can be stored, managed, and accessed efficiently."
+      },
+      {
+        "question": "What is programming?",
+        "ideal_answer": "Programming is the process of writing instructions for a computer to perform specific tasks."
+      },
+      {
+        "question": "What is the purpose of a compiler?",
+        "ideal_answer": "A compiler converts source code written in a programming language into machine code."
+      },
+      {
+        "question": "What is a network?",
+        "ideal_answer": "A network is a group of connected computers that share data and resources."
+      },
+      {
+        "question": "What is an IP address?",
+        "ideal_answer": "An IP address is a unique identifier used to identify devices on a network."
+      },
+      {
+        "question": "What is cybersecurity?",
+        "ideal_answer": "Cybersecurity protects computer systems, networks, and data from attacks and unauthorized access."
+      },
+      {
+        "question": "What is cloud computing?",
+        "ideal_answer": "Cloud computing provides computing services like storage and processing over the internet."
+      },
+      {
+        "question": "What is the purpose of algorithms?",
+        "ideal_answer": "Algorithms provide step-by-step instructions to solve problems efficiently."
+      }
+    ],
+    "System Maintenance and Safety": [
+      {
+        "question": "Why is data backup important?",
+        "ideal_answer": "Data backup prevents permanent loss of important information during failures or attacks."
+      },
+      {
+        "question": "Why should antivirus software be used?",
+        "ideal_answer": "Antivirus software protects systems from malware, viruses, and cyber threats."
+      },
+      {
+        "question": "What PPE may be needed in hardware maintenance?",
+        "ideal_answer": "Anti-static wrist straps, gloves, and safety precautions for electrical safety may be needed."
+      },
+      {
+        "question": "Why should systems be shut down properly?",
+        "ideal_answer": "Proper shutdown prevents data corruption and hardware damage."
+      },
+      {
+        "question": "Why is password security important?",
+        "ideal_answer": "Strong passwords protect systems and data from unauthorized access."
+      },
+      {
+        "question": "Why should software be updated regularly?",
+        "ideal_answer": "Updates improve security, fix bugs, and enhance system performance."
+      },
+      {
+        "question": "Why is network monitoring important?",
+        "ideal_answer": "Monitoring helps detect failures, unauthorized access, and performance issues."
+      },
+      {
+        "question": "Why should hardware be cleaned regularly?",
+        "ideal_answer": "Cleaning prevents overheating and improves hardware performance and lifespan."
+      },
+      {
+        "question": "Why should power supply systems be protected?",
+        "ideal_answer": "Protection prevents damage from power surges and electrical faults."
+      },
+      {
+        "question": "Why is documentation important in IT systems?",
+        "ideal_answer": "Documentation helps track system changes, maintenance, and troubleshooting processes."
+      }
+    ]
+  },
+
+  "Diploma Automobile Engineer": {
+    "Automobile Engineering Fundamentals": [
+      {
+        "question": "What is the main function of an engine?",
+        "ideal_answer": "The engine converts fuel into mechanical energy to power the vehicle."
+      },
+      {
+        "question": "What is the purpose of engine oil?",
+        "ideal_answer": "Engine oil lubricates moving parts, reduces friction, and helps cool the engine."
+      },
+      {
+        "question": "What is the function of a radiator?",
+        "ideal_answer": "The radiator cools the engine by removing excess heat from the coolant."
+      },
+      {
+        "question": "What is the role of a battery in a vehicle?",
+        "ideal_answer": "The battery provides electrical power to start the engine and operate electrical systems."
+      },
+      {
+        "question": "What is the purpose of brakes?",
+        "ideal_answer": "Brakes slow down or stop the vehicle safely."
+      },
+      {
+        "question": "What is the function of a clutch?",
+        "ideal_answer": "The clutch connects and disconnects engine power from the transmission."
+      },
+      {
+        "question": "What is a gearbox?",
+        "ideal_answer": "A gearbox changes speed and torque between the engine and wheels."
+      },
+      {
+        "question": "Why is wheel alignment important?",
+        "ideal_answer": "Proper wheel alignment improves handling, tire life, and fuel efficiency."
+      },
+      {
+        "question": "What is suspension in a vehicle?",
+        "ideal_answer": "Suspension supports the vehicle and absorbs shocks for a smooth ride."
+      },
+      {
+        "question": "Why is tire pressure important?",
+        "ideal_answer": "Proper tire pressure improves safety, fuel efficiency, and tire lifespan."
+      }
+    ],
+    "Maintenance and Safety": [
+      {
+        "question": "Why is regular vehicle servicing important?",
+        "ideal_answer": "Regular servicing prevents breakdowns, improves performance, and increases vehicle life."
+      },
+      {
+        "question": "Why should brake fluid be checked regularly?",
+        "ideal_answer": "Brake fluid ensures proper braking performance and safe vehicle operation."
+      },
+      {
+        "question": "Why is coolant important in a vehicle?",
+        "ideal_answer": "Coolant prevents engine overheating and protects the cooling system."
+      },
+      {
+        "question": "What PPE should automobile engineers use?",
+        "ideal_answer": "Gloves, safety shoes, goggles, and protective clothing should be used while working on vehicles."
+      },
+      {
+        "question": "Why should battery terminals be cleaned?",
+        "ideal_answer": "Clean terminals ensure proper electrical connection and better battery performance."
+      },
+      {
+        "question": "Why is proper lifting important when using a jack?",
+        "ideal_answer": "Proper lifting prevents accidents and ensures safe vehicle repair."
+      },
+      {
+        "question": "Why should fuel leaks be repaired immediately?",
+        "ideal_answer": "Fuel leaks can cause fire hazards and reduce vehicle efficiency."
+      },
+      {
+        "question": "Why should air filters be replaced regularly?",
+        "ideal_answer": "Clean air filters improve engine performance and fuel efficiency."
+      },
+      {
+        "question": "Why is exhaust system inspection important?",
+        "ideal_answer": "It helps detect leaks, reduce pollution, and maintain engine performance."
+      },
+      {
+        "question": "Why should dashboard warning lights not be ignored?",
+        "ideal_answer": "Warning lights indicate potential problems that need immediate attention to prevent major damage."
+      }
+    ]
+  },
+  "Diploma Mechatronics Engineer": {
+    "Mechatronics Fundamentals": [
+      {
+        "question": "What is mechatronics engineering?",
+        "ideal_answer": "Mechatronics engineering combines mechanical, electrical, electronics, and computer systems to design and maintain automated machines."
+      },
+      {
+        "question": "What is the purpose of a sensor in mechatronics systems?",
+        "ideal_answer": "A sensor detects physical changes like temperature, pressure, or motion and sends signals for system control."
+      },
+      {
+        "question": "What is an actuator?",
+        "ideal_answer": "An actuator converts control signals into physical movement or action in a machine."
+      },
+      {
+        "question": "What is PLC in industrial automation?",
+        "ideal_answer": "PLC stands for Programmable Logic Controller, used to automate and control industrial machines and processes."
+      },
+      {
+        "question": "What is the role of a motor in mechatronic systems?",
+        "ideal_answer": "A motor converts electrical energy into mechanical motion for machine operation."
+      },
+      {
+        "question": "Why is feedback important in control systems?",
+        "ideal_answer": "Feedback helps monitor output and improves system accuracy by correcting errors automatically."
+      },
+      {
+        "question": "What is pneumatic control?",
+        "ideal_answer": "Pneumatic control uses compressed air to operate mechanical systems and machines."
+      },
+      {
+        "question": "What is hydraulic control?",
+        "ideal_answer": "Hydraulic control uses pressurized fluid to generate force and movement in machines."
+      },
+      {
+        "question": "Why is calibration important in mechatronics systems?",
+        "ideal_answer": "Calibration ensures accurate sensor readings and proper system performance."
+      },
+      {
+        "question": "What is automation in mechatronics?",
+        "ideal_answer": "Automation is the use of control systems and machines to perform tasks with minimal human intervention."
+      }
+    ],
+    "Maintenance and Safety": [
+      {
+        "question": "Why is preventive maintenance important in mechatronics systems?",
+        "ideal_answer": "Preventive maintenance reduces breakdowns, improves efficiency, and extends machine life."
+      },
+      {
+        "question": "What PPE should a mechatronics engineer use?",
+        "ideal_answer": "Helmets, gloves, safety shoes, goggles, and insulated tools should be used depending on the task."
+      },
+      {
+        "question": "Why should power be switched off before maintenance?",
+        "ideal_answer": "Switching off power prevents electric shock and accidental machine startup."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines remain safely shut down during inspection and repair."
+      },
+      {
+        "question": "Why should sensors be checked regularly?",
+        "ideal_answer": "Regular checking ensures accurate readings and prevents system failures."
+      },
+      {
+        "question": "Why is lubrication important in automated machines?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and improves machine life."
+      },
+      {
+        "question": "Why should wiring connections be inspected?",
+        "ideal_answer": "Inspection prevents short circuits, loose connections, and machine failure."
+      },
+      {
+        "question": "Why is emergency stop testing important?",
+        "ideal_answer": "It ensures machines can be stopped quickly during unsafe conditions."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce maintenance quality."
+      },
+      {
+        "question": "Why is documentation important in maintenance work?",
+        "ideal_answer": "Documentation helps track repairs, inspections, and machine performance history."
+      }
+    ]
+  },
+
+  "Production Supervisor": {
+    "Production Management Fundamentals": [
+      {
+        "question": "What is the role of a production supervisor?",
+        "ideal_answer": "A production supervisor manages daily production activities, workers, quality, and output to ensure smooth operations."
+      },
+      {
+        "question": "Why is production planning important?",
+        "ideal_answer": "Production planning ensures materials, manpower, and machines are available for timely manufacturing."
+      },
+      {
+        "question": "What is productivity in manufacturing?",
+        "ideal_answer": "Productivity is the measure of output produced compared to the input resources used."
+      },
+      {
+        "question": "Why is machine downtime reduction important?",
+        "ideal_answer": "Reducing downtime improves production efficiency and minimizes losses."
+      },
+      {
+        "question": "What is workflow management?",
+        "ideal_answer": "Workflow management ensures tasks move smoothly through each stage of production."
+      },
+      {
+        "question": "Why is inventory control important in production?",
+        "ideal_answer": "Inventory control prevents shortages, excess stock, and production delays."
+      },
+      {
+        "question": "What is the purpose of shift scheduling?",
+        "ideal_answer": "Shift scheduling ensures enough workers are available for continuous production."
+      },
+      {
+        "question": "Why is team coordination important in production?",
+        "ideal_answer": "Good coordination improves efficiency, reduces errors, and ensures timely output."
+      },
+      {
+        "question": "What is process standardization?",
+        "ideal_answer": "Process standardization ensures work is done consistently using approved methods."
+      },
+      {
+        "question": "Why is reporting important for production supervisors?",
+        "ideal_answer": "Reporting helps track output, issues, machine status, and worker performance."
+      }
+    ],
+    "Safety and Quality Control": [
+      {
+        "question": "Why should production supervisors enforce PPE usage?",
+        "ideal_answer": "PPE protects workers from injuries and ensures workplace safety compliance."
+      },
+      {
+        "question": "What PPE is commonly required in production areas?",
+        "ideal_answer": "Safety shoes, helmets, gloves, goggles, ear protection, and protective clothing are commonly required."
+      },
+      {
+        "question": "Why is quality checking important during production?",
+        "ideal_answer": "Quality checking ensures products meet standards and reduces customer complaints."
+      },
+      {
+        "question": "Why should machines be inspected regularly?",
+        "ideal_answer": "Regular inspection prevents breakdowns and ensures safe machine operation."
+      },
+      {
+        "question": "Why is workplace cleanliness important?",
+        "ideal_answer": "A clean workplace improves safety, efficiency, and reduces accidents."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is worker training important?",
+        "ideal_answer": "Training improves safety, productivity, and correct machine handling."
+      },
+      {
+        "question": "Why should defective products be identified quickly?",
+        "ideal_answer": "Early identification reduces waste and prevents faulty products from reaching customers."
+      },
+      {
+        "question": "Why is communication important between shifts?",
+        "ideal_answer": "Good communication ensures continuity and prevents production mistakes."
+      },
+      {
+        "question": "Why should safety incidents be documented?",
+        "ideal_answer": "Documentation helps improve safety measures and prevents repeated accidents."
+      }
+    ]
+  },
+
+  "Quality Control Engineer": {
+    "Quality Control Fundamentals": [
+      {
+        "question": "What is the role of a quality control engineer?",
+        "ideal_answer": "A quality control engineer ensures products and processes meet required quality standards and specifications."
+      },
+      {
+        "question": "Why is inspection important in quality control?",
+        "ideal_answer": "Inspection helps identify defects and ensures products meet required standards before delivery."
+      },
+      {
+        "question": "What is tolerance in quality control?",
+        "ideal_answer": "Tolerance is the acceptable limit of variation in product dimensions or performance."
+      },
+      {
+        "question": "Why is sampling used in quality checking?",
+        "ideal_answer": "Sampling helps inspect product quality efficiently without checking every single item."
+      },
+      {
+        "question": "What is root cause analysis?",
+        "ideal_answer": "Root cause analysis identifies the main reason behind defects or quality problems."
+      },
+      {
+        "question": "Why is calibration important for measuring instruments?",
+        "ideal_answer": "Calibration ensures accurate measurements and reliable inspection results."
+      },
+      {
+        "question": "What is process control in manufacturing?",
+        "ideal_answer": "Process control monitors production processes to maintain consistent quality."
+      },
+      {
+        "question": "Why is documentation important in quality control?",
+        "ideal_answer": "Documentation helps track inspections, defects, corrective actions, and compliance."
+      },
+      {
+        "question": "What is corrective action in quality management?",
+        "ideal_answer": "Corrective action is taken to fix problems and prevent the same defect from happening again."
+      },
+      {
+        "question": "Why is customer feedback important for quality improvement?",
+        "ideal_answer": "Customer feedback helps identify product issues and improve future quality."
+      }
+    ],
+    "Safety and Process Monitoring": [
+      {
+        "question": "Why should QC engineers follow safety procedures in factories?",
+        "ideal_answer": "Safety procedures protect them from machine hazards, chemicals, and workplace accidents."
+      },
+      {
+        "question": "What PPE should a quality control engineer use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, and protective clothing should be used based on the work area."
+      },
+      {
+        "question": "Why should measuring tools be handled carefully?",
+        "ideal_answer": "Careful handling prevents damage and ensures accurate inspection results."
+      },
+      {
+        "question": "Why is preventive maintenance important for testing equipment?",
+        "ideal_answer": "It ensures equipment accuracy, reliability, and reduces testing errors."
+      },
+      {
+        "question": "Why should defective products be separated immediately?",
+        "ideal_answer": "Separation prevents faulty products from mixing with approved products."
+      },
+      {
+        "question": "Why is process monitoring important?",
+        "ideal_answer": "Process monitoring helps detect problems early and maintains product consistency."
+      },
+      {
+        "question": "Why should audit reports be maintained?",
+        "ideal_answer": "Audit reports help track compliance and identify areas for improvement."
+      },
+      {
+        "question": "Why is cleanliness important in quality control areas?",
+        "ideal_answer": "Clean environments reduce contamination and improve product reliability."
+      },
+      {
+        "question": "Why should operators be informed about quality issues?",
+        "ideal_answer": "Informing operators helps correct mistakes and improve production quality."
+      },
+      {
+        "question": "Why is continuous improvement important in quality control?",
+        "ideal_answer": "Continuous improvement helps reduce defects, improve efficiency, and maintain high standards."
+      }
+    ]
+  },
+   "CAD Designer": {
+    "CAD Design Fundamentals": [
+      {
+        "question": "What is CAD?",
+        "ideal_answer": "CAD stands for Computer-Aided Design, used to create precise technical drawings and models using computer software."
+      },
+      {
+        "question": "Why is CAD important in engineering design?",
+        "ideal_answer": "CAD improves accuracy, saves time, reduces errors, and helps create detailed engineering drawings."
+      },
+      {
+        "question": "What is the difference between 2D and 3D design in CAD?",
+        "ideal_answer": "2D design creates flat drawings while 3D design creates models with length, width, and height."
+      },
+      {
+        "question": "What is dimensioning in CAD drawings?",
+        "ideal_answer": "Dimensioning shows the size, distance, and specifications required for manufacturing or construction."
+      },
+      {
+        "question": "Why is scale important in CAD drawings?",
+        "ideal_answer": "Scale ensures drawings represent real objects accurately in reduced or enlarged form."
+      },
+      {
+        "question": "What is a layer in CAD software?",
+        "ideal_answer": "A layer helps organize different parts of a drawing separately for better editing and visibility."
+      },
+      {
+        "question": "Why are templates used in CAD design?",
+        "ideal_answer": "Templates save time and maintain standard formats for drawings."
+      },
+      {
+        "question": "What is orthographic projection in CAD?",
+        "ideal_answer": "Orthographic projection shows different views of an object like front, top, and side views."
+      },
+      {
+        "question": "Why is tolerance important in design drawings?",
+        "ideal_answer": "Tolerance defines acceptable dimensional variation for proper fitting and manufacturing."
+      },
+      {
+        "question": "Why is revision control important in CAD?",
+        "ideal_answer": "Revision control helps track design changes and ensures the latest version is used."
+      }
+    ],
+    "Quality and Workflow": [
+      {
+        "question": "Why should CAD drawings be checked before final submission?",
+        "ideal_answer": "Checking ensures accuracy, proper dimensions, and compliance with design standards."
+      },
+      {
+        "question": "Why is file organization important in CAD work?",
+        "ideal_answer": "Good file organization improves workflow, prevents data loss, and saves time."
+      },
+      {
+        "question": "Why should design standards be followed?",
+        "ideal_answer": "Design standards ensure consistency, quality, and compatibility across projects."
+      },
+      {
+        "question": "Why is communication important with engineers and clients?",
+        "ideal_answer": "Clear communication helps avoid design errors and ensures project requirements are met."
+      },
+      {
+        "question": "Why should backup of CAD files be maintained?",
+        "ideal_answer": "Backup prevents loss of important design data due to system failure or mistakes."
+      },
+      {
+        "question": "Why is accuracy more important than speed in CAD design?",
+        "ideal_answer": "Accurate drawings prevent manufacturing errors and costly project failures."
+      },
+      {
+        "question": "Why should software updates be maintained?",
+        "ideal_answer": "Updates improve performance, compatibility, and security of CAD software."
+      },
+      {
+        "question": "Why is blueprint interpretation important?",
+        "ideal_answer": "It helps understand project requirements and convert ideas into correct drawings."
+      },
+      {
+        "question": "Why should dimensions be clearly labeled?",
+        "ideal_answer": "Clear labels prevent confusion and ensure correct execution of designs."
+      },
+      {
+        "question": "Why is version sharing control important in teams?",
+        "ideal_answer": "It prevents outdated drawings from being used and improves collaboration."
+      }
+    ]
+  },
+
+  "AutoCAD Technician": {
+    "AutoCAD Fundamentals": [
+      {
+        "question": "What is AutoCAD?",
+        "ideal_answer": "AutoCAD is a software used for creating 2D and 3D technical drawings for engineering, architecture, and design."
+      },
+      {
+        "question": "What is the purpose of the line command in AutoCAD?",
+        "ideal_answer": "The line command is used to draw straight lines between points in a drawing."
+      },
+      {
+        "question": "Why is the layer feature important in AutoCAD?",
+        "ideal_answer": "Layers help organize drawing elements separately for better editing and visibility."
+      },
+      {
+        "question": "What is the use of the dimension command?",
+        "ideal_answer": "The dimension command adds measurements to drawings for accurate construction or manufacturing."
+      },
+      {
+        "question": "What is snapping in AutoCAD?",
+        "ideal_answer": "Snapping helps place objects accurately by locking the cursor to exact points."
+      },
+      {
+        "question": "Why is scale important in AutoCAD drawings?",
+        "ideal_answer": "Scale ensures drawings represent real-life objects accurately in a practical size."
+      },
+      {
+        "question": "What is the use of blocks in AutoCAD?",
+        "ideal_answer": "Blocks are reusable drawing components that save time and maintain consistency."
+      },
+      {
+        "question": "What is the purpose of the trim command?",
+        "ideal_answer": "The trim command removes unwanted parts of objects from a drawing."
+      },
+      {
+        "question": "What is the use of the offset command?",
+        "ideal_answer": "The offset command creates parallel copies of lines, circles, or shapes at a specified distance."
+      },
+      {
+        "question": "Why is printing layout setup important?",
+        "ideal_answer": "Proper layout setup ensures correct printing scale and professional drawing presentation."
+      }
+    ],
+    "Drawing Management and Accuracy": [
+      {
+        "question": "Why should AutoCAD drawings be reviewed before printing?",
+        "ideal_answer": "Reviewing ensures dimensions, layers, and layouts are correct and error-free."
+      },
+      {
+        "question": "Why is proper file naming important?",
+        "ideal_answer": "Proper file naming helps easy identification and prevents confusion between drawing versions."
+      },
+      {
+        "question": "Why should backup copies of drawings be maintained?",
+        "ideal_answer": "Backups prevent loss of important work due to system errors or accidental deletion."
+      },
+      {
+        "question": "Why is dimension accuracy important in AutoCAD?",
+        "ideal_answer": "Accurate dimensions ensure correct construction, manufacturing, and project execution."
+      },
+      {
+        "question": "Why should standard templates be used?",
+        "ideal_answer": "Templates save time and ensure consistent professional drawing formats."
+      },
+      {
+        "question": "Why is client requirement understanding important?",
+        "ideal_answer": "Understanding requirements ensures the drawing matches project expectations correctly."
+      },
+      {
+        "question": "Why should hidden layers be checked before final submission?",
+        "ideal_answer": "Checking hidden layers prevents missing important details in final drawings."
+      },
+      {
+        "question": "Why is annotation important in AutoCAD?",
+        "ideal_answer": "Annotations provide clear instructions, notes, and labels for understanding the drawing."
+      },
+      {
+        "question": "Why should unnecessary objects be removed?",
+        "ideal_answer": "Removing extra objects keeps the drawing clean and avoids confusion."
+      },
+      {
+        "question": "Why is revision tracking important?",
+        "ideal_answer": "Revision tracking helps manage design updates and prevents outdated versions from being used."
+      }
+    ]
+  },
+
+  "Network Technician": {
+    "Networking Fundamentals": [
+      {
+        "question": "What is a computer network?",
+        "ideal_answer": "A computer network is a group of connected devices that share data and resources."
+      },
+      {
+        "question": "What is the function of a router?",
+        "ideal_answer": "A router connects different networks and directs data between them."
+      },
+      {
+        "question": "What is the purpose of a switch in networking?",
+        "ideal_answer": "A switch connects devices within the same network and manages data transfer efficiently."
+      },
+      {
+        "question": "What is an IP address?",
+        "ideal_answer": "An IP address is a unique identifier assigned to a device on a network."
+      },
+      {
+        "question": "What is the difference between LAN and WAN?",
+        "ideal_answer": "LAN covers a small local area while WAN connects networks over large geographic areas."
+      },
+      {
+        "question": "What is a firewall?",
+        "ideal_answer": "A firewall protects a network by controlling incoming and outgoing traffic based on security rules."
+      },
+      {
+        "question": "What is the purpose of DNS?",
+        "ideal_answer": "DNS converts domain names into IP addresses so devices can find websites and services."
+      },
+      {
+        "question": "Why is cable management important in networking?",
+        "ideal_answer": "Good cable management improves troubleshooting, safety, and network organization."
+      },
+      {
+        "question": "What is network troubleshooting?",
+        "ideal_answer": "Network troubleshooting is the process of identifying and solving network connectivity problems."
+      },
+      {
+        "question": "Why is network documentation important?",
+        "ideal_answer": "Documentation helps track configurations, maintenance, and faster issue resolution."
+      }
+    ],
+    "Maintenance and Security": [
+      {
+        "question": "Why should network devices be inspected regularly?",
+        "ideal_answer": "Regular inspection helps prevent failures and ensures stable network performance."
+      },
+      {
+        "question": "Why are software and firmware updates important?",
+        "ideal_answer": "Updates improve security, fix bugs, and improve network device performance."
+      },
+      {
+        "question": "What PPE may be required for network technicians?",
+        "ideal_answer": "Safety gloves, anti-static protection, and electrical safety precautions may be needed during hardware work."
+      },
+      {
+        "question": "Why should backup configurations be maintained?",
+        "ideal_answer": "Backup configurations help restore network settings quickly after failures."
+      },
+      {
+        "question": "Why is password security important for network devices?",
+        "ideal_answer": "Strong passwords prevent unauthorized access and protect network security."
+      },
+      {
+        "question": "Why should power supply systems be protected?",
+        "ideal_answer": "Protection prevents network failures caused by power surges and outages."
+      },
+      {
+        "question": "Why is monitoring network traffic important?",
+        "ideal_answer": "Traffic monitoring helps detect unusual activity, failures, and security threats."
+      },
+      {
+        "question": "Why should unused ports be disabled?",
+        "ideal_answer": "Disabling unused ports improves security and reduces unauthorized access risks."
+      },
+      {
+        "question": "Why is preventive maintenance important in networking?",
+        "ideal_answer": "Preventive maintenance reduces downtime and improves system reliability."
+      },
+      {
+        "question": "Why should emergency recovery plans be prepared?",
+        "ideal_answer": "Recovery plans help restore network operations quickly after failures or cyberattacks."
+      }
+    ]
+  },
+  "Embedded Systems Technician": {
+    "Embedded Systems Fundamentals": [
+      {
+        "question": "What is an embedded system?",
+        "ideal_answer": "An embedded system is a computer system designed to perform a specific function within a larger device or machine."
+      },
+      {
+        "question": "What is the role of a microcontroller in an embedded system?",
+        "ideal_answer": "A microcontroller controls the operation of the embedded system by processing inputs and generating outputs."
+      },
+      {
+        "question": "What is firmware?",
+        "ideal_answer": "Firmware is the software permanently programmed into the hardware of an embedded system."
+      },
+      {
+        "question": "What is the difference between a microcontroller and a microprocessor?",
+        "ideal_answer": "A microcontroller includes CPU, memory, and peripherals in one chip, while a microprocessor mainly contains only the CPU."
+      },
+      {
+        "question": "Why are sensors used in embedded systems?",
+        "ideal_answer": "Sensors detect physical changes like temperature, motion, or pressure and provide input to the system."
+      },
+      {
+        "question": "What is an actuator in embedded systems?",
+        "ideal_answer": "An actuator converts electrical signals into physical action such as movement or switching."
+      },
+      {
+        "question": "Why is real-time processing important in embedded systems?",
+        "ideal_answer": "Real-time processing ensures tasks are completed within strict timing requirements for proper system operation."
+      },
+      {
+        "question": "What is debugging in embedded systems?",
+        "ideal_answer": "Debugging is the process of finding and fixing errors in hardware or firmware."
+      },
+      {
+        "question": "Why is power management important in embedded devices?",
+        "ideal_answer": "Power management improves efficiency and increases battery life in embedded systems."
+      },
+      {
+        "question": "What is serial communication in embedded systems?",
+        "ideal_answer": "Serial communication is the transfer of data one bit at a time between devices using protocols like UART, SPI, or I2C."
+      }
+    ],
+    "Testing and Maintenance": [
+      {
+        "question": "Why should embedded systems be tested before deployment?",
+        "ideal_answer": "Testing ensures the system works correctly, safely, and reliably in real conditions."
+      },
+      {
+        "question": "Why is PCB inspection important?",
+        "ideal_answer": "PCB inspection helps detect faulty connections, damaged components, and manufacturing defects."
+      },
+      {
+        "question": "What PPE should an embedded systems technician use?",
+        "ideal_answer": "Anti-static protection, safety goggles, insulated tools, and gloves when needed should be used."
+      },
+      {
+        "question": "Why should anti-static precautions be followed?",
+        "ideal_answer": "Electrostatic discharge can damage sensitive electronic components."
+      },
+      {
+        "question": "Why should soldering be done carefully?",
+        "ideal_answer": "Careful soldering ensures strong connections and prevents circuit damage."
+      },
+      {
+        "question": "Why should power be switched off before repairs?",
+        "ideal_answer": "Switching off power prevents electric shock and component damage."
+      },
+      {
+        "question": "Why is calibration important for sensors?",
+        "ideal_answer": "Calibration ensures accurate readings and reliable system performance."
+      },
+      {
+        "question": "Why should software updates be maintained?",
+        "ideal_answer": "Updates improve performance, security, and bug fixing in embedded systems."
+      },
+      {
+        "question": "Why is documentation important in embedded systems?",
+        "ideal_answer": "Documentation helps track design, troubleshooting, and maintenance history."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance reduces failures and increases the reliability of embedded devices."
+      }
+    ]
+  },
+
+  "Robotics Technician": {
+    "Robotics Fundamentals": [
+      {
+        "question": "What is the role of a robotics technician?",
+        "ideal_answer": "A robotics technician installs, maintains, troubleshoots, and repairs robotic systems used in industries."
+      },
+      {
+        "question": "What is a robot?",
+        "ideal_answer": "A robot is a programmable machine capable of carrying out tasks automatically or semi-automatically."
+      },
+      {
+        "question": "What is the purpose of sensors in robots?",
+        "ideal_answer": "Sensors help robots detect movement, position, temperature, and surroundings for accurate operation."
+      },
+      {
+        "question": "What is an actuator in robotics?",
+        "ideal_answer": "An actuator creates movement in robots by converting electrical or fluid power into motion."
+      },
+      {
+        "question": "What is a robotic arm?",
+        "ideal_answer": "A robotic arm is a programmable mechanical arm used for tasks like welding, assembly, and material handling."
+      },
+      {
+        "question": "Why is PLC important in robotics?",
+        "ideal_answer": "PLC helps automate and control robotic systems efficiently in industrial environments."
+      },
+      {
+        "question": "What is programming in robotics?",
+        "ideal_answer": "Programming gives instructions that define how a robot performs tasks and responds to inputs."
+      },
+      {
+        "question": "Why is calibration important in robotics?",
+        "ideal_answer": "Calibration ensures the robot moves accurately and performs tasks precisely."
+      },
+      {
+        "question": "What is preventive maintenance in robotics?",
+        "ideal_answer": "Preventive maintenance includes regular inspection and servicing to avoid robotic system failures."
+      },
+      {
+        "question": "Why is alignment important in robotic systems?",
+        "ideal_answer": "Proper alignment prevents errors, improves accuracy, and reduces wear in robotic components."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should robotics technicians follow lockout and tagout procedures?",
+        "ideal_answer": "It prevents accidental startup of robots during maintenance and improves worker safety."
+      },
+      {
+        "question": "What PPE should a robotics technician use?",
+        "ideal_answer": "Helmets, gloves, safety shoes, goggles, and insulated tools should be used depending on the task."
+      },
+      {
+        "question": "Why should emergency stop systems be tested regularly?",
+        "ideal_answer": "Testing ensures robots can be stopped immediately during unsafe situations."
+      },
+      {
+        "question": "Why should robotic work zones be restricted?",
+        "ideal_answer": "Restricted zones prevent workers from entering dangerous areas during robot operation."
+      },
+      {
+        "question": "Why is electrical safety important in robotics?",
+        "ideal_answer": "Robotic systems involve electrical and high-power equipment that can cause serious hazards."
+      },
+      {
+        "question": "Why should sensors and wiring be checked regularly?",
+        "ideal_answer": "Regular checking prevents faults and ensures accurate robot operation."
+      },
+      {
+        "question": "Why is lubrication important in robotic joints?",
+        "ideal_answer": "Lubrication reduces friction, improves movement, and increases component life."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and poor maintenance quality."
+      },
+      {
+        "question": "Why is proper documentation important in robotic maintenance?",
+        "ideal_answer": "Documentation helps track repairs, inspections, and system performance."
+      },
+      {
+        "question": "Why is preventive maintenance scheduling important?",
+        "ideal_answer": "It reduces downtime and improves reliability of robotic systems."
+      }
+    ]
+  },
+
+  "Instrumentation Technician": {
+    "Instrumentation Fundamentals": [
+      {
+        "question": "What is the role of an instrumentation technician?",
+        "ideal_answer": "An instrumentation technician installs, calibrates, maintains, and repairs measuring and control instruments in industrial systems."
+      },
+      {
+        "question": "What is a sensor in instrumentation?",
+        "ideal_answer": "A sensor detects physical quantities like temperature, pressure, or flow and converts them into signals."
+      },
+      {
+        "question": "What is calibration in instrumentation?",
+        "ideal_answer": "Calibration is the process of adjusting instruments to ensure accurate measurements."
+      },
+      {
+        "question": "What is the purpose of a pressure gauge?",
+        "ideal_answer": "A pressure gauge measures the pressure of gases or liquids in a system."
+      },
+      {
+        "question": "What is a control valve?",
+        "ideal_answer": "A control valve regulates the flow of liquids or gases in a process system."
+      },
+      {
+        "question": "Why is temperature measurement important in industries?",
+        "ideal_answer": "Temperature measurement ensures safe operation and process efficiency."
+      },
+      {
+        "question": "What is a transmitter in instrumentation?",
+        "ideal_answer": "A transmitter converts sensor readings into signals that can be sent to control systems."
+      },
+      {
+        "question": "Why is PLC used in instrumentation systems?",
+        "ideal_answer": "PLC automates monitoring and control of industrial processes."
+      },
+      {
+        "question": "What is preventive maintenance in instrumentation?",
+        "ideal_answer": "Preventive maintenance includes regular checking and servicing of instruments to prevent failures."
+      },
+      {
+        "question": "Why is accuracy important in instrumentation?",
+        "ideal_answer": "Accurate measurements ensure safe operations, quality control, and efficient industrial performance."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should instrumentation technicians use insulated tools?",
+        "ideal_answer": "Insulated tools protect against electric shock during electrical maintenance."
+      },
+      {
+        "question": "What PPE should an instrumentation technician use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, and protective clothing should be used."
+      },
+      {
+        "question": "Why should instruments be calibrated regularly?",
+        "ideal_answer": "Regular calibration ensures accurate readings and reliable system operation."
+      },
+      {
+        "question": "Why should pressure systems be handled carefully?",
+        "ideal_answer": "Improper handling can cause leaks, accidents, and equipment damage."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures equipment is safely shut down before maintenance work begins."
+      },
+      {
+        "question": "Why should damaged cables be replaced immediately?",
+        "ideal_answer": "Damaged cables can cause faults, short circuits, and unsafe working conditions."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance reduces downtime and improves equipment reliability."
+      },
+      {
+        "question": "Why should emergency shutdown systems be tested?",
+        "ideal_answer": "Testing ensures the system responds quickly during dangerous situations."
+      },
+      {
+        "question": "Why is proper documentation important?",
+        "ideal_answer": "Documentation helps track calibration, maintenance, and troubleshooting history."
+      },
+      {
+        "question": "Why should workplace cleanliness be maintained?",
+        "ideal_answer": "A clean work area improves safety and prevents instrument contamination or damage."
+      }
+    ]
+  },
+  "Plant Operator": {
+    "Plant Operations Fundamentals": [
+      {
+        "question": "What is the main role of a plant operator?",
+        "ideal_answer": "A plant operator monitors, controls, and maintains industrial plant equipment to ensure safe and efficient production."
+      },
+      {
+        "question": "Why is process monitoring important in plant operations?",
+        "ideal_answer": "Process monitoring helps maintain safety, product quality, and smooth operation of plant systems."
+      },
+      {
+        "question": "What is the purpose of control panels in plants?",
+        "ideal_answer": "Control panels are used to monitor and control machines, systems, and process parameters."
+      },
+      {
+        "question": "Why is pressure monitoring important in industrial plants?",
+        "ideal_answer": "Pressure monitoring prevents equipment damage and ensures safe system operation."
+      },
+      {
+        "question": "What is the purpose of valves in plant systems?",
+        "ideal_answer": "Valves control, regulate, and stop the flow of liquids, gases, or steam in a plant."
+      },
+      {
+        "question": "Why is temperature control important in plant operations?",
+        "ideal_answer": "Temperature control ensures process efficiency, product quality, and equipment safety."
+      },
+      {
+        "question": "What is preventive maintenance in plant operations?",
+        "ideal_answer": "Preventive maintenance includes regular inspection and servicing to avoid breakdowns and improve equipment life."
+      },
+      {
+        "question": "Why is equipment calibration important?",
+        "ideal_answer": "Calibration ensures accurate readings and reliable plant performance."
+      },
+      {
+        "question": "What is the purpose of pumps in industrial plants?",
+        "ideal_answer": "Pumps move liquids or chemicals from one part of the plant to another."
+      },
+      {
+        "question": "Why should operating procedures be followed strictly?",
+        "ideal_answer": "Following procedures ensures safety, efficiency, and prevents accidents or process failures."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should plant operators wear PPE?",
+        "ideal_answer": "PPE protects operators from chemicals, heat, moving machinery, and workplace hazards."
+      },
+      {
+        "question": "What PPE should a plant operator use?",
+        "ideal_answer": "Helmets, gloves, safety shoes, goggles, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines are safely shut down before maintenance and prevents accidental startup."
+      },
+      {
+        "question": "Why should leaks be repaired immediately?",
+        "ideal_answer": "Leaks can cause accidents, product loss, and equipment damage."
+      },
+      {
+        "question": "Why is fire safety important in plants?",
+        "ideal_answer": "Fire safety prevents major accidents and protects workers, equipment, and production."
+      },
+      {
+        "question": "Why should emergency shutdown procedures be known?",
+        "ideal_answer": "They help quickly control dangerous situations and prevent serious damage."
+      },
+      {
+        "question": "Why is workplace cleanliness important?",
+        "ideal_answer": "A clean workplace improves safety, efficiency, and reduces accident risks."
+      },
+      {
+        "question": "Why should warning alarms be tested regularly?",
+        "ideal_answer": "Regular testing ensures alarms work properly during emergencies."
+      },
+      {
+        "question": "Why is proper communication important during plant operations?",
+        "ideal_answer": "Clear communication improves coordination and prevents operational errors."
+      },
+      {
+        "question": "Why should maintenance records be maintained?",
+        "ideal_answer": "Maintenance records help track inspections, repairs, and equipment history."
+      }
+    ]
+  },
+
+  "Process Technician": {
+    "Process Control Fundamentals": [
+      {
+        "question": "What is the role of a process technician?",
+        "ideal_answer": "A process technician monitors, controls, and improves industrial production processes for efficiency and safety."
+      },
+      {
+        "question": "Why is process flow monitoring important?",
+        "ideal_answer": "It ensures smooth operation, consistent output, and helps prevent production failures."
+      },
+      {
+        "question": "What is the purpose of process parameters like temperature and pressure?",
+        "ideal_answer": "These parameters help maintain product quality, equipment safety, and process efficiency."
+      },
+      {
+        "question": "What is a control valve in process systems?",
+        "ideal_answer": "A control valve regulates the flow of liquids or gases based on process requirements."
+      },
+      {
+        "question": "Why is sampling important in process industries?",
+        "ideal_answer": "Sampling helps check product quality and ensures standards are maintained."
+      },
+      {
+        "question": "What is preventive maintenance in process plants?",
+        "ideal_answer": "Preventive maintenance reduces breakdowns and keeps systems running efficiently."
+      },
+      {
+        "question": "Why is calibration important for process instruments?",
+        "ideal_answer": "Calibration ensures accurate readings and proper control of industrial processes."
+      },
+      {
+        "question": "What is the purpose of a pump in process industries?",
+        "ideal_answer": "Pumps move liquids, chemicals, or fluids through the process system."
+      },
+      {
+        "question": "Why is documentation important in process control?",
+        "ideal_answer": "Documentation helps track production, maintenance, and process performance."
+      },
+      {
+        "question": "Why should standard operating procedures be followed?",
+        "ideal_answer": "They ensure safe, consistent, and efficient process operations."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should process technicians wear PPE?",
+        "ideal_answer": "PPE protects them from chemicals, heat, pressure hazards, and moving equipment."
+      },
+      {
+        "question": "What PPE should a process technician use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, protective clothing, and ear protection should be used."
+      },
+      {
+        "question": "Why should chemical handling be done carefully?",
+        "ideal_answer": "Improper handling can cause injuries, contamination, and dangerous reactions."
+      },
+      {
+        "question": "Why is emergency shutdown knowledge important?",
+        "ideal_answer": "It helps control dangerous situations quickly and safely."
+      },
+      {
+        "question": "Why should pipelines be inspected regularly?",
+        "ideal_answer": "Inspection prevents leaks, failures, and unsafe operating conditions."
+      },
+      {
+        "question": "Why is lockout and tagout necessary?",
+        "ideal_answer": "It prevents accidental startup of machines during maintenance work."
+      },
+      {
+        "question": "Why should alarms and sensors be tested regularly?",
+        "ideal_answer": "Testing ensures fast response to unsafe conditions and process failures."
+      },
+      {
+        "question": "Why is ventilation important in process plants?",
+        "ideal_answer": "Ventilation removes harmful gases and improves worker safety."
+      },
+      {
+        "question": "Why should defective equipment be reported immediately?",
+        "ideal_answer": "Early reporting prevents major breakdowns and production loss."
+      },
+      {
+        "question": "Why is preventive maintenance scheduling important?",
+        "ideal_answer": "It improves reliability and reduces unplanned downtime."
+      }
+    ]
+  },
+
+  "Manufacturing Technician": {
+    "Manufacturing Fundamentals": [
+      {
+        "question": "What is the role of a manufacturing technician?",
+        "ideal_answer": "A manufacturing technician operates, monitors, and maintains machines and processes used in product manufacturing."
+      },
+      {
+        "question": "Why is production planning important in manufacturing?",
+        "ideal_answer": "Production planning ensures materials, manpower, and machines are available for efficient production."
+      },
+      {
+        "question": "What is machine setup in manufacturing?",
+        "ideal_answer": "Machine setup prepares equipment with correct tools, settings, and materials before production starts."
+      },
+      {
+        "question": "Why is quality checking important during manufacturing?",
+        "ideal_answer": "Quality checking ensures products meet required standards and reduces defects."
+      },
+      {
+        "question": "What is preventive maintenance in manufacturing?",
+        "ideal_answer": "Preventive maintenance keeps machines in good condition and reduces unexpected breakdowns."
+      },
+      {
+        "question": "Why is downtime reduction important?",
+        "ideal_answer": "Reducing downtime improves productivity and reduces production losses."
+      },
+      {
+        "question": "What is process standardization?",
+        "ideal_answer": "Process standardization ensures work is done consistently using approved methods."
+      },
+      {
+        "question": "Why is inventory control important?",
+        "ideal_answer": "Inventory control prevents shortages, excess stock, and production delays."
+      },
+      {
+        "question": "What is workflow management?",
+        "ideal_answer": "Workflow management ensures smooth movement of tasks through each stage of production."
+      },
+      {
+        "question": "Why is machine calibration important?",
+        "ideal_answer": "Calibration ensures machines produce accurate and consistent output."
+      }
+    ],
+    "Safety and Equipment Maintenance": [
+      {
+        "question": "Why should manufacturing technicians wear PPE?",
+        "ideal_answer": "PPE protects workers from machine hazards, chemicals, heat, and workplace accidents."
+      },
+      {
+        "question": "What PPE should a manufacturing technician use?",
+        "ideal_answer": "Safety shoes, helmets, gloves, goggles, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with moving parts and improves safety."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce product quality."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines are safely shut down during maintenance and repair."
+      },
+      {
+        "question": "Why should work areas be kept clean?",
+        "ideal_answer": "A clean workplace improves safety and production efficiency."
+      },
+      {
+        "question": "Why should emergency stop buttons be checked regularly?",
+        "ideal_answer": "They ensure machines can be stopped quickly during unsafe situations."
+      },
+      {
+        "question": "Why should operators report unusual machine sounds?",
+        "ideal_answer": "Unusual sounds may indicate faults that need early attention."
+      },
+      {
+        "question": "Why is documentation important in manufacturing?",
+        "ideal_answer": "Documentation helps track production, maintenance, and quality performance."
+      },
+      {
+        "question": "Why is worker training important?",
+        "ideal_answer": "Training improves safety, machine handling, and overall productivity."
+      }
+    ]
+  },
+  "Telecom Technician": {
+    "Telecommunication Fundamentals": [
+      {
+        "question": "What is the main role of a telecom technician?",
+        "ideal_answer": "A telecom technician installs, maintains, and repairs communication systems such as telephone lines, internet networks, and telecom equipment."
+      },
+      {
+        "question": "What is the purpose of a modem in telecommunications?",
+        "ideal_answer": "A modem converts digital data into signals for transmission and receives signals back into digital form."
+      },
+      {
+        "question": "What is the function of a router in telecom systems?",
+        "ideal_answer": "A router directs data between different networks and ensures proper communication between devices."
+      },
+      {
+        "question": "Why is signal strength important in telecom systems?",
+        "ideal_answer": "Strong signal strength ensures stable communication, better call quality, and reliable internet connectivity."
+      },
+      {
+        "question": "What is fiber optic communication?",
+        "ideal_answer": "Fiber optic communication uses light signals through optical fibers to transmit data at high speed."
+      },
+      {
+        "question": "Why is cable testing important in telecom work?",
+        "ideal_answer": "Cable testing helps identify faults, signal loss, and connection problems."
+      },
+      {
+        "question": "What is the purpose of a switch in telecom networks?",
+        "ideal_answer": "A switch connects multiple devices within the same network and manages data transfer efficiently."
+      },
+      {
+        "question": "Why is network documentation important?",
+        "ideal_answer": "Documentation helps track configurations, repairs, and troubleshooting history."
+      },
+      {
+        "question": "What is preventive maintenance in telecom systems?",
+        "ideal_answer": "Preventive maintenance includes regular inspection and servicing to avoid failures and improve reliability."
+      },
+      {
+        "question": "Why is proper cable management important?",
+        "ideal_answer": "Good cable management improves safety, troubleshooting, and network organization."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "Why should telecom technicians use insulated tools?",
+        "ideal_answer": "Insulated tools protect against electric shock while working with powered equipment."
+      },
+      {
+        "question": "What PPE should a telecom technician use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, safety belts for height work, and protective goggles should be used."
+      },
+      {
+        "question": "Why is ladder safety important in telecom installation?",
+        "ideal_answer": "Proper ladder safety prevents falls and injuries while working at heights."
+      },
+      {
+        "question": "Why should damaged cables be replaced immediately?",
+        "ideal_answer": "Damaged cables can cause signal loss, system failure, and electrical hazards."
+      },
+      {
+        "question": "Why is grounding important in telecom systems?",
+        "ideal_answer": "Grounding protects equipment and workers from electrical faults and lightning damage."
+      },
+      {
+        "question": "Why should power be switched off before repairs?",
+        "ideal_answer": "Switching off power prevents accidental electric shock and equipment damage."
+      },
+      {
+        "question": "Why should backup power systems be maintained?",
+        "ideal_answer": "Backup power ensures continuous communication during power failures."
+      },
+      {
+        "question": "Why is regular inspection of towers important?",
+        "ideal_answer": "Inspection helps identify structural damage and ensures worker safety."
+      },
+      {
+        "question": "Why should tools be stored properly after work?",
+        "ideal_answer": "Proper storage improves safety and prevents tool damage or loss."
+      },
+      {
+        "question": "Why is emergency response knowledge important?",
+        "ideal_answer": "It helps technicians handle accidents and system failures quickly and safely."
+      }
+    ]
+  },
+
+  "Biomedical Equipment Technician": {
+    "Biomedical Equipment Fundamentals": [
+      {
+        "question": "What is the main role of a biomedical equipment technician?",
+        "ideal_answer": "A biomedical equipment technician installs, maintains, tests, and repairs medical equipment used in hospitals and clinics."
+      },
+      {
+        "question": "Why is calibration important in medical equipment?",
+        "ideal_answer": "Calibration ensures accurate readings and safe operation of medical devices."
+      },
+      {
+        "question": "What is preventive maintenance in biomedical equipment?",
+        "ideal_answer": "Preventive maintenance involves regular inspection and servicing to avoid equipment failure and ensure reliability."
+      },
+      {
+        "question": "What is the purpose of a patient monitor?",
+        "ideal_answer": "A patient monitor measures vital signs such as heart rate, blood pressure, and oxygen levels."
+      },
+      {
+        "question": "Why is sterilization important for medical equipment?",
+        "ideal_answer": "Sterilization prevents infections and ensures safe use of medical devices."
+      },
+      {
+        "question": "What is the role of an ECG machine?",
+        "ideal_answer": "An ECG machine records the electrical activity of the heart for diagnosis."
+      },
+      {
+        "question": "Why is equipment testing important after repair?",
+        "ideal_answer": "Testing ensures the equipment works correctly and safely before patient use."
+      },
+      {
+        "question": "What is troubleshooting in biomedical equipment?",
+        "ideal_answer": "Troubleshooting is the process of identifying and fixing faults in medical devices."
+      },
+      {
+        "question": "Why is documentation important in biomedical maintenance?",
+        "ideal_answer": "Documentation helps track repairs, inspections, and maintenance history."
+      },
+      {
+        "question": "Why is battery backup important in medical equipment?",
+        "ideal_answer": "Battery backup ensures continuous operation during power failures, especially for critical devices."
+      }
+    ],
+    "Safety and Equipment Handling": [
+      {
+        "question": "Why should biomedical technicians use insulated tools?",
+        "ideal_answer": "Insulated tools protect against electric shock during maintenance of powered medical devices."
+      },
+      {
+        "question": "What PPE should a biomedical equipment technician use?",
+        "ideal_answer": "Gloves, safety goggles, masks, protective clothing, and insulated tools should be used depending on the task."
+      },
+      {
+        "question": "Why is electrical safety important in medical equipment handling?",
+        "ideal_answer": "Electrical safety prevents shocks and protects both patients and technicians."
+      },
+      {
+        "question": "Why should damaged cables be replaced immediately?",
+        "ideal_answer": "Damaged cables can cause equipment failure, inaccurate readings, and safety hazards."
+      },
+      {
+        "question": "Why should equipment be disinfected before servicing?",
+        "ideal_answer": "Disinfection prevents contamination and protects technicians from infection risks."
+      },
+      {
+        "question": "Why should emergency repair procedures be known?",
+        "ideal_answer": "Emergency repair knowledge helps quickly restore critical life-saving equipment."
+      },
+      {
+        "question": "Why is grounding important in hospital equipment?",
+        "ideal_answer": "Grounding prevents electrical faults and ensures safe operation of sensitive devices."
+      },
+      {
+        "question": "Why should sensitive devices be handled carefully?",
+        "ideal_answer": "Careful handling prevents damage and maintains equipment accuracy."
+      },
+      {
+        "question": "Why is preventive maintenance scheduling important?",
+        "ideal_answer": "It reduces unexpected failures and improves equipment reliability."
+      },
+      {
+        "question": "Why should service reports be maintained?",
+        "ideal_answer": "Service reports help track repairs, compliance, and equipment performance history."
+      }
+    ]
+  },
+
+  "Surveyor": {
+    "Surveying Fundamentals": [
+      {
+        "question": "What is the main role of a surveyor?",
+        "ideal_answer": "A surveyor measures land, distances, angles, and boundaries for construction and land development projects."
+      },
+      {
+        "question": "Why is surveying important before construction begins?",
+        "ideal_answer": "Surveying ensures accurate land measurement and proper planning for safe and correct construction."
+      },
+      {
+        "question": "What is leveling in surveying?",
+        "ideal_answer": "Leveling is the process of determining height differences between points on land."
+      },
+      {
+        "question": "What is the purpose of a theodolite?",
+        "ideal_answer": "A theodolite is used to measure horizontal and vertical angles accurately."
+      },
+      {
+        "question": "What is the use of a total station?",
+        "ideal_answer": "A total station measures angles and distances electronically for precise land surveying."
+      },
+      {
+        "question": "Why is benchmarking important in surveying?",
+        "ideal_answer": "Benchmarking provides a fixed reference point for accurate elevation measurements."
+      },
+      {
+        "question": "What is contour mapping?",
+        "ideal_answer": "Contour mapping shows land elevation and terrain shape using contour lines."
+      },
+      {
+        "question": "Why is site marking important?",
+        "ideal_answer": "Site marking helps guide accurate construction according to design plans."
+      },
+      {
+        "question": "Why is measurement accuracy important in surveying?",
+        "ideal_answer": "Accurate measurements prevent construction errors and legal boundary disputes."
+      },
+      {
+        "question": "Why is drawing preparation important after surveying?",
+        "ideal_answer": "Survey drawings provide clear data for engineers, architects, and construction teams."
+      }
+    ],
+    "Safety and Equipment Maintenance": [
+      {
+        "question": "Why should surveyors wear safety helmets on construction sites?",
+        "ideal_answer": "Helmets protect against falling objects and site hazards."
+      },
+      {
+        "question": "What PPE should a surveyor use?",
+        "ideal_answer": "Safety shoes, helmets, reflective jackets, gloves, and safety goggles should be used."
+      },
+      {
+        "question": "Why is equipment calibration important in surveying?",
+        "ideal_answer": "Calibration ensures accurate measurements and reliable survey results."
+      },
+      {
+        "question": "Why should surveying instruments be handled carefully?",
+        "ideal_answer": "Careful handling prevents damage and maintains precision."
+      },
+      {
+        "question": "Why is communication important during site surveying?",
+        "ideal_answer": "Clear communication ensures correct measurements and safe coordination with site teams."
+      },
+      {
+        "question": "Why should surveying work avoid unsafe weather conditions?",
+        "ideal_answer": "Bad weather reduces visibility and increases safety risks during fieldwork."
+      },
+      {
+        "question": "Why should tripods be placed on stable ground?",
+        "ideal_answer": "Stable placement ensures accurate readings and prevents equipment falling."
+      },
+      {
+        "question": "Why is documentation important in surveying?",
+        "ideal_answer": "Documentation helps track measurements, boundaries, and project records."
+      },
+      {
+        "question": "Why should emergency exits and safe paths be known on construction sites?",
+        "ideal_answer": "Knowing safe paths helps quick evacuation during emergencies."
+      },
+      {
+        "question": "Why is preventive maintenance important for surveying equipment?",
+        "ideal_answer": "Preventive maintenance improves instrument life and ensures accurate results."
+      }
+    ]
+  },
+  "Lab Technician": {
+    "Laboratory Fundamentals": [
+      {
+        "question": "What is the main role of a lab technician?",
+        "ideal_answer": "A lab technician prepares samples, performs tests, maintains laboratory equipment, and records accurate results."
+      },
+      {
+        "question": "Why is sample labeling important in a laboratory?",
+        "ideal_answer": "Proper labeling prevents mix-ups and ensures accurate identification and testing of samples."
+      },
+      {
+        "question": "What is calibration in laboratory equipment?",
+        "ideal_answer": "Calibration is the process of adjusting equipment to ensure accurate and reliable measurements."
+      },
+      {
+        "question": "Why is cleanliness important in a laboratory?",
+        "ideal_answer": "Cleanliness prevents contamination and ensures accurate test results and safe working conditions."
+      },
+      {
+        "question": "What is the purpose of a centrifuge in a lab?",
+        "ideal_answer": "A centrifuge separates substances of different densities by spinning samples at high speed."
+      },
+      {
+        "question": "Why is documentation important in laboratory work?",
+        "ideal_answer": "Documentation helps track samples, test results, and ensures compliance with procedures."
+      },
+      {
+        "question": "What is sterilization in laboratory work?",
+        "ideal_answer": "Sterilization removes microorganisms from tools and equipment to prevent contamination."
+      },
+      {
+        "question": "Why is accuracy important in measurements?",
+        "ideal_answer": "Accurate measurements ensure reliable test results and correct analysis."
+      },
+      {
+        "question": "What is preventive maintenance for lab equipment?",
+        "ideal_answer": "Preventive maintenance includes regular inspection and servicing to avoid equipment failure."
+      },
+      {
+        "question": "Why should expired chemicals not be used?",
+        "ideal_answer": "Expired chemicals can give incorrect results and may become unsafe to handle."
+      }
+    ],
+    "Safety and Equipment Handling": [
+      {
+        "question": "Why should lab technicians wear gloves?",
+        "ideal_answer": "Gloves protect against chemicals, biological samples, and contamination."
+      },
+      {
+        "question": "What PPE should a lab technician use?",
+        "ideal_answer": "Gloves, lab coat, safety goggles, masks, and safety shoes should be used depending on the work."
+      },
+      {
+        "question": "Why is eye protection important in laboratories?",
+        "ideal_answer": "Eye protection prevents injuries from chemical splashes and flying particles."
+      },
+      {
+        "question": "Why should chemicals be stored properly?",
+        "ideal_answer": "Proper storage prevents reactions, spills, and dangerous accidents."
+      },
+      {
+        "question": "Why should broken glass be handled carefully?",
+        "ideal_answer": "Improper handling can cause cuts, injuries, and contamination."
+      },
+      {
+        "question": "Why is ventilation important in laboratories?",
+        "ideal_answer": "Ventilation removes harmful fumes and improves worker safety."
+      },
+      {
+        "question": "Why should electrical equipment be checked regularly?",
+        "ideal_answer": "Regular checks prevent equipment failure and electrical hazards."
+      },
+      {
+        "question": "Why should spills be cleaned immediately?",
+        "ideal_answer": "Immediate cleaning prevents accidents, contamination, and unsafe conditions."
+      },
+      {
+        "question": "Why is waste segregation important in labs?",
+        "ideal_answer": "Waste segregation ensures safe disposal of chemicals, biological waste, and sharp objects."
+      },
+      {
+        "question": "Why should emergency procedures be known?",
+        "ideal_answer": "Knowing emergency procedures helps handle accidents quickly and safely."
+      }
+    ]
+  },
+
+  "Safety Officer": {
+    "Workplace Safety Fundamentals": [
+      {
+        "question": "What is the main role of a safety officer?",
+        "ideal_answer": "A safety officer ensures workplace safety by identifying hazards, enforcing safety rules, and preventing accidents."
+      },
+      {
+        "question": "Why is risk assessment important?",
+        "ideal_answer": "Risk assessment helps identify hazards and reduce the chances of accidents and injuries."
+      },
+      {
+        "question": "What is PPE?",
+        "ideal_answer": "PPE stands for Personal Protective Equipment used to protect workers from workplace hazards."
+      },
+      {
+        "question": "Why is safety training important for workers?",
+        "ideal_answer": "Safety training helps workers understand hazards and follow correct safety procedures."
+      },
+      {
+        "question": "What is a fire drill?",
+        "ideal_answer": "A fire drill is a practice exercise to prepare people for safe evacuation during fire emergencies."
+      },
+      {
+        "question": "Why is incident reporting important?",
+        "ideal_answer": "Incident reporting helps identify causes and prevent similar accidents in the future."
+      },
+      {
+        "question": "What is workplace inspection?",
+        "ideal_answer": "Workplace inspection checks for unsafe conditions and ensures compliance with safety standards."
+      },
+      {
+        "question": "Why are warning signs important?",
+        "ideal_answer": "Warning signs alert workers about hazards and help prevent accidents."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits allow quick and safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is documentation important in safety management?",
+        "ideal_answer": "Documentation helps track inspections, incidents, training, and compliance records."
+      }
+    ],
+    "Emergency Response and Compliance": [
+      {
+        "question": "Why should workers wear helmets on construction sites?",
+        "ideal_answer": "Helmets protect against falling objects and head injuries."
+      },
+      {
+        "question": "What PPE should be enforced by a safety officer?",
+        "ideal_answer": "Helmets, gloves, safety shoes, goggles, reflective jackets, masks, and harnesses depending on the work area."
+      },
+      {
+        "question": "Why is fire extinguisher inspection important?",
+        "ideal_answer": "Inspection ensures extinguishers are functional and ready during emergencies."
+      },
+      {
+        "question": "Why should electrical safety rules be followed?",
+        "ideal_answer": "Electrical safety prevents shocks, short circuits, and fire hazards."
+      },
+      {
+        "question": "Why is ladder safety important?",
+        "ideal_answer": "Proper ladder use prevents falls and serious injuries."
+      },
+      {
+        "question": "Why should unsafe conditions be corrected immediately?",
+        "ideal_answer": "Immediate correction prevents accidents and protects workers."
+      },
+      {
+        "question": "Why is first aid knowledge important?",
+        "ideal_answer": "First aid helps provide immediate care before medical help arrives."
+      },
+      {
+        "question": "Why should lifting techniques be taught properly?",
+        "ideal_answer": "Proper lifting prevents back injuries and workplace strain."
+      },
+      {
+        "question": "Why should hazardous chemicals be labeled clearly?",
+        "ideal_answer": "Clear labeling prevents misuse and improves safe handling."
+      },
+      {
+        "question": "Why is compliance with safety regulations necessary?",
+        "ideal_answer": "Compliance protects workers, reduces legal risks, and maintains a safe workplace."
+      }
+    ]
+  },
+
+  "Junior Site Engineer": {
+    "Site Engineering Fundamentals": [
+      {
+        "question": "What is the main role of a junior site engineer?",
+        "ideal_answer": "A junior site engineer supervises daily construction activities, checks quality, and supports project execution on site."
+      },
+      {
+        "question": "Why is site surveying important?",
+        "ideal_answer": "Site surveying helps determine correct dimensions, levels, and positions for construction work."
+      },
+      {
+        "question": "What is the purpose of a foundation in construction?",
+        "ideal_answer": "The foundation supports the structure and safely transfers the load to the ground."
+      },
+      {
+        "question": "What is RCC in construction?",
+        "ideal_answer": "RCC stands for Reinforced Cement Concrete, which combines concrete and steel reinforcement for strength."
+      },
+      {
+        "question": "Why is curing important in concrete work?",
+        "ideal_answer": "Curing helps concrete gain strength and prevents cracks and damage."
+      },
+      {
+        "question": "What is the purpose of reinforcement bars?",
+        "ideal_answer": "Reinforcement bars increase the tensile strength of concrete structures."
+      },
+      {
+        "question": "Why is leveling important on site?",
+        "ideal_answer": "Leveling ensures proper alignment, stability, and construction quality."
+      },
+      {
+        "question": "What is the purpose of construction drawings?",
+        "ideal_answer": "Construction drawings provide dimensions, design details, and execution instructions."
+      },
+      {
+        "question": "Why is material quality checking important?",
+        "ideal_answer": "Quality checking ensures strong, safe, and durable construction."
+      },
+      {
+        "question": "Why is progress reporting important?",
+        "ideal_answer": "Progress reporting helps track project completion, delays, and site performance."
+      }
+    ],
+    "Site Safety and Management": [
+      {
+        "question": "Why should junior site engineers wear safety helmets?",
+        "ideal_answer": "Helmets protect against falling objects and construction site hazards."
+      },
+      {
+        "question": "What PPE should a junior site engineer use?",
+        "ideal_answer": "Safety shoes, helmets, gloves, reflective jackets, and safety goggles should be used."
+      },
+      {
+        "question": "Why should scaffolding be inspected regularly?",
+        "ideal_answer": "Inspection ensures scaffolding is stable and safe for workers."
+      },
+      {
+        "question": "Why is housekeeping important on construction sites?",
+        "ideal_answer": "Good housekeeping reduces accidents and improves work efficiency."
+      },
+      {
+        "question": "Why should electrical safety be followed on site?",
+        "ideal_answer": "Electrical safety prevents shocks, short circuits, and fire hazards."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure quick evacuation during emergencies."
+      },
+      {
+        "question": "Why is communication important between workers and engineers?",
+        "ideal_answer": "Clear communication improves coordination, safety, and project success."
+      },
+      {
+        "question": "Why should heavy materials be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids material damage."
+      },
+      {
+        "question": "Why should documentation be maintained on site?",
+        "ideal_answer": "Documentation helps track materials, work progress, inspections, and quality checks."
+      },
+      {
+        "question": "Why should safety violations be corrected immediately?",
+        "ideal_answer": "Immediate correction prevents accidents and ensures site safety compliance."
+      }
+    ]
+  },
+  "Maintenance Engineer": {
+    "Maintenance Engineering Fundamentals": [
+      {
+        "question": "What is the main role of a maintenance engineer?",
+        "ideal_answer": "A maintenance engineer ensures machines and equipment operate efficiently by performing inspections, repairs, and preventive maintenance."
+      },
+      {
+        "question": "What is preventive maintenance?",
+        "ideal_answer": "Preventive maintenance is regular inspection and servicing of machines to prevent unexpected breakdowns and improve equipment life."
+      },
+      {
+        "question": "Why is lubrication important in machinery?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and improves machine performance and lifespan."
+      },
+      {
+        "question": "What is troubleshooting in maintenance work?",
+        "ideal_answer": "Troubleshooting is the process of identifying and solving faults in machines or systems."
+      },
+      {
+        "question": "Why is alignment important in rotating equipment?",
+        "ideal_answer": "Proper alignment prevents vibration, wear, and machine failure."
+      },
+      {
+        "question": "What is the purpose of bearings in machines?",
+        "ideal_answer": "Bearings support rotating parts and reduce friction between moving surfaces."
+      },
+      {
+        "question": "Why is vibration monitoring important?",
+        "ideal_answer": "Vibration monitoring helps detect faults early and prevents major machine failures."
+      },
+      {
+        "question": "What is calibration in maintenance engineering?",
+        "ideal_answer": "Calibration ensures machines and instruments operate with accurate measurements and correct performance."
+      },
+      {
+        "question": "Why should maintenance logs be maintained?",
+        "ideal_answer": "Maintenance logs help track repairs, inspections, and machine performance history."
+      },
+      {
+        "question": "Why is downtime reduction important?",
+        "ideal_answer": "Reducing downtime improves productivity and minimizes production losses."
+      }
+    ],
+    "Safety and Equipment Handling": [
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "Lockout and tagout ensure machines are safely shut down and cannot restart during maintenance."
+      },
+      {
+        "question": "What PPE should a maintenance engineer use?",
+        "ideal_answer": "Safety shoes, helmets, gloves, goggles, hearing protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why should machines be switched off before repair?",
+        "ideal_answer": "Switching off machines prevents accidental startup and protects workers from injury."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce maintenance quality."
+      },
+      {
+        "question": "Why is electrical safety important during maintenance?",
+        "ideal_answer": "Electrical safety prevents shocks, fires, and serious equipment damage."
+      },
+      {
+        "question": "Why should heavy machine parts be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids damage to equipment."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "A clean workshop reduces accidents and improves maintenance efficiency."
+      },
+      {
+        "question": "Why should emergency stop systems be checked regularly?",
+        "ideal_answer": "Regular checks ensure machines can be stopped quickly during unsafe situations."
+      },
+      {
+        "question": "Why is fire safety important in maintenance areas?",
+        "ideal_answer": "Fire safety protects workers, machines, and the facility from accidents."
+      },
+      {
+        "question": "Why should preventive maintenance schedules be followed strictly?",
+        "ideal_answer": "Following schedules improves machine reliability and increases equipment lifespan."
+      }
+    ]
+  },
+
+  "Service Engineer": {
+    "Service Engineering Fundamentals": [
+      {
+        "question": "What is the main role of a service engineer?",
+        "ideal_answer": "A service engineer installs, repairs, tests, and maintains machines or technical equipment at customer or industrial sites."
+      },
+      {
+        "question": "Why is troubleshooting important for service engineers?",
+        "ideal_answer": "Troubleshooting helps identify faults quickly and restore equipment to proper working condition."
+      },
+      {
+        "question": "What is preventive servicing?",
+        "ideal_answer": "Preventive servicing is regular maintenance done to avoid equipment failure and improve performance."
+      },
+      {
+        "question": "Why is customer communication important for service engineers?",
+        "ideal_answer": "Clear communication helps understand problems, explain solutions, and improve customer satisfaction."
+      },
+      {
+        "question": "Why is calibration important during service work?",
+        "ideal_answer": "Calibration ensures equipment works accurately and meets required performance standards."
+      },
+      {
+        "question": "What is installation testing?",
+        "ideal_answer": "Installation testing checks whether equipment is working correctly after setup."
+      },
+      {
+        "question": "Why should service reports be maintained?",
+        "ideal_answer": "Service reports help track repairs, maintenance history, and customer support records."
+      },
+      {
+        "question": "Why is spare parts management important?",
+        "ideal_answer": "Proper spare parts management reduces downtime and speeds up repairs."
+      },
+      {
+        "question": "Why should operating manuals be followed?",
+        "ideal_answer": "Manuals provide correct procedures for safe and effective equipment servicing."
+      },
+      {
+        "question": "Why is quick response important in service engineering?",
+        "ideal_answer": "Quick response reduces downtime and improves customer trust and productivity."
+      }
+    ],
+    "Safety and Field Work": [
+      {
+        "question": "What PPE should a service engineer use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, and insulated tools should be used depending on the work."
+      },
+      {
+        "question": "Why should power be switched off before servicing electrical equipment?",
+        "ideal_answer": "Switching off power prevents electric shock and protects both equipment and workers."
+      },
+      {
+        "question": "Why is ladder safety important during field work?",
+        "ideal_answer": "Proper ladder use prevents falls and injuries while working at heights."
+      },
+      {
+        "question": "Why should damaged cables be replaced immediately?",
+        "ideal_answer": "Damaged cables can cause short circuits, equipment failure, and safety hazards."
+      },
+      {
+        "question": "Why is grounding important in service work?",
+        "ideal_answer": "Grounding protects people and equipment from electrical faults."
+      },
+      {
+        "question": "Why should emergency procedures be known?",
+        "ideal_answer": "Emergency procedures help handle accidents and unsafe conditions quickly."
+      },
+      {
+        "question": "Why should tools be checked before field visits?",
+        "ideal_answer": "Tool checking ensures safe and efficient repair work without delays."
+      },
+      {
+        "question": "Why is proper documentation important after service completion?",
+        "ideal_answer": "Documentation helps future troubleshooting and confirms completed work."
+      },
+      {
+        "question": "Why should work areas be kept clean after service?",
+        "ideal_answer": "A clean work area improves safety and leaves a professional impression."
+      },
+      {
+        "question": "Why is preventive maintenance better than breakdown repair?",
+        "ideal_answer": "Preventive maintenance avoids major failures and reduces long-term repair costs."
+      }
+    ]
+  },
+
+  "Electrical Design Technician": {
+    "Electrical Design Fundamentals": [
+      {
+        "question": "What is the main role of an electrical design technician?",
+        "ideal_answer": "An electrical design technician prepares electrical drawings, circuit layouts, and design plans for safe and efficient electrical systems."
+      },
+      {
+        "question": "Why are electrical drawings important?",
+        "ideal_answer": "Electrical drawings provide clear instructions for installation, maintenance, and troubleshooting of electrical systems."
+      },
+      {
+        "question": "What is a single-line diagram?",
+        "ideal_answer": "A single-line diagram is a simplified drawing showing the main electrical connections of a system."
+      },
+      {
+        "question": "Why is load calculation important in electrical design?",
+        "ideal_answer": "Load calculation ensures the system can safely handle the required electrical demand."
+      },
+      {
+        "question": "What is the purpose of earthing in electrical design?",
+        "ideal_answer": "Earthing provides a safe path for fault current and protects people from electric shock."
+      },
+      {
+        "question": "Why is cable sizing important?",
+        "ideal_answer": "Correct cable sizing prevents overheating, voltage drop, and fire hazards."
+      },
+      {
+        "question": "What is the function of a circuit breaker in design planning?",
+        "ideal_answer": "A circuit breaker protects the system by disconnecting power during overload or short circuit conditions."
+      },
+      {
+        "question": "Why is voltage drop calculation important?",
+        "ideal_answer": "Voltage drop calculation ensures proper voltage reaches equipment for safe operation."
+      },
+      {
+        "question": "What is the purpose of panel layout design?",
+        "ideal_answer": "Panel layout design organizes electrical components safely and efficiently for operation and maintenance."
+      },
+      {
+        "question": "Why should design standards be followed?",
+        "ideal_answer": "Design standards ensure safety, reliability, and compliance with regulations."
+      }
+    ],
+    "Safety and Documentation": [
+      {
+        "question": "What PPE should an electrical design technician use during site visits?",
+        "ideal_answer": "Safety shoes, helmets, gloves, goggles, and insulated tools should be used when required."
+      },
+      {
+        "question": "Why is documentation important in electrical design work?",
+        "ideal_answer": "Documentation helps track design revisions, approvals, and future maintenance requirements."
+      },
+      {
+        "question": "Why should electrical panels be inspected before final design approval?",
+        "ideal_answer": "Inspection ensures safety, compliance, and proper system layout."
+      },
+      {
+        "question": "Why is short circuit analysis important?",
+        "ideal_answer": "It helps design protection systems that prevent damage during faults."
+      },
+      {
+        "question": "Why should backup copies of drawings be maintained?",
+        "ideal_answer": "Backup copies prevent data loss and protect important design information."
+      },
+      {
+        "question": "Why is coordination with site engineers important?",
+        "ideal_answer": "Coordination ensures the design matches practical installation requirements."
+      },
+      {
+        "question": "Why should outdated drawings not be used?",
+        "ideal_answer": "Outdated drawings can cause installation errors and safety risks."
+      },
+      {
+        "question": "Why is revision tracking important?",
+        "ideal_answer": "Revision tracking helps manage updates and ensures the latest approved design is used."
+      },
+      {
+        "question": "Why should proper labeling be used in electrical drawings?",
+        "ideal_answer": "Proper labeling improves understanding and reduces installation mistakes."
+      },
+      {
+        "question": "Why is preventive review important before project execution?",
+        "ideal_answer": "Preventive review helps detect design errors early and avoids costly corrections later."
+      }
+    ]
+  },
+  "Tool and Die Maker": {
+    "Tool and Die Fundamentals": [
+      {
+        "question": "What is the main role of a tool and die maker?",
+        "ideal_answer": "A tool and die maker designs, builds, repairs, and maintains tools, dies, molds, and precision parts used in manufacturing."
+      },
+      {
+        "question": "What is a die in manufacturing?",
+        "ideal_answer": "A die is a specialized tool used to cut, shape, or form materials like metal into specific shapes."
+      },
+      {
+        "question": "What is a jig?",
+        "ideal_answer": "A jig is a tool used to guide and hold a workpiece or cutting tool accurately during manufacturing."
+      },
+      {
+        "question": "What is a fixture?",
+        "ideal_answer": "A fixture holds the workpiece securely in place during machining operations."
+      },
+      {
+        "question": "Why is precision important in tool and die making?",
+        "ideal_answer": "Precision ensures accurate dimensions, proper fitting, and high-quality manufactured products."
+      },
+      {
+        "question": "What is heat treatment in tool making?",
+        "ideal_answer": "Heat treatment improves hardness, strength, and durability of tools and dies."
+      },
+      {
+        "question": "Why is grinding important in die making?",
+        "ideal_answer": "Grinding provides accurate dimensions and smooth surface finish for tools and dies."
+      },
+      {
+        "question": "What is tolerance in tool and die making?",
+        "ideal_answer": "Tolerance is the acceptable variation in dimensions of a manufactured part."
+      },
+      {
+        "question": "Why is blueprint reading important?",
+        "ideal_answer": "Blueprint reading helps understand exact dimensions and specifications required for manufacturing."
+      },
+      {
+        "question": "Why is inspection important after tool making?",
+        "ideal_answer": "Inspection ensures the tool meets required quality and dimensional standards."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "What PPE should a tool and die maker use?",
+        "ideal_answer": "Safety shoes, gloves, goggles, helmets, and protective clothing should be used."
+      },
+      {
+        "question": "Why should machines be switched off before adjustments?",
+        "ideal_answer": "Switching off machines prevents accidental startup and protects workers from injuries."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with moving parts and improves safety."
+      },
+      {
+        "question": "Why should cutting tools be inspected regularly?",
+        "ideal_answer": "Inspection prevents tool failure and ensures accurate machining."
+      },
+      {
+        "question": "Why is lubrication important in machine tools?",
+        "ideal_answer": "Lubrication reduces friction, prevents wear, and improves machine life."
+      },
+      {
+        "question": "Why should sharp edges be handled carefully?",
+        "ideal_answer": "Sharp edges can cause cuts and serious injuries if handled carelessly."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "A clean workshop improves safety and prevents accidents."
+      },
+      {
+        "question": "Why should heavy dies be lifted properly?",
+        "ideal_answer": "Proper lifting prevents injuries and avoids damage to expensive tools."
+      },
+      {
+        "question": "Why should emergency stop buttons be accessible?",
+        "ideal_answer": "Emergency stop buttons allow immediate shutdown during unsafe situations."
+      },
+      {
+        "question": "Why is preventive maintenance important?",
+        "ideal_answer": "Preventive maintenance improves machine reliability and increases equipment lifespan."
+      }
+    ]
+  },
+
+  "Water Treatment Technician": {
+    "Water Treatment Fundamentals": [
+      {
+        "question": "What is the main role of a water treatment technician?",
+        "ideal_answer": "A water treatment technician monitors, operates, and maintains systems that clean and purify water for safe use."
+      },
+      {
+        "question": "Why is water treatment important?",
+        "ideal_answer": "Water treatment removes harmful substances and makes water safe for drinking, industrial use, and environmental protection."
+      },
+      {
+        "question": "What is filtration in water treatment?",
+        "ideal_answer": "Filtration removes solid particles and impurities from water using filters."
+      },
+      {
+        "question": "What is chlorination?",
+        "ideal_answer": "Chlorination is the process of adding chlorine to water to kill harmful microorganisms."
+      },
+      {
+        "question": "Why is pH monitoring important in water treatment?",
+        "ideal_answer": "pH monitoring ensures water is chemically balanced and safe for use."
+      },
+      {
+        "question": "What is sedimentation in water treatment?",
+        "ideal_answer": "Sedimentation allows heavier particles to settle at the bottom for easier removal."
+      },
+      {
+        "question": "What is the purpose of pumps in water treatment plants?",
+        "ideal_answer": "Pumps move water through different stages of the treatment process."
+      },
+      {
+        "question": "Why is preventive maintenance important in treatment plants?",
+        "ideal_answer": "Preventive maintenance reduces breakdowns and ensures continuous safe water supply."
+      },
+      {
+        "question": "Why is testing water quality important?",
+        "ideal_answer": "Water quality testing ensures treated water meets safety and health standards."
+      },
+      {
+        "question": "What is sludge removal in treatment plants?",
+        "ideal_answer": "Sludge removal removes waste materials collected during the water treatment process."
+      }
+    ],
+    "Safety and Plant Maintenance": [
+      {
+        "question": "What PPE should a water treatment technician use?",
+        "ideal_answer": "Gloves, safety shoes, goggles, helmets, masks, and protective clothing should be used."
+      },
+      {
+        "question": "Why should chemicals be handled carefully in treatment plants?",
+        "ideal_answer": "Improper handling can cause burns, poisoning, and dangerous reactions."
+      },
+      {
+        "question": "Why is ventilation important in treatment plants?",
+        "ideal_answer": "Ventilation removes harmful gases and improves worker safety."
+      },
+      {
+        "question": "Why should leaks be repaired immediately?",
+        "ideal_answer": "Leaks can cause contamination, equipment damage, and unsafe conditions."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines are safely shut down before maintenance work."
+      },
+      {
+        "question": "Why should pumps and valves be inspected regularly?",
+        "ideal_answer": "Regular inspection prevents failures and ensures smooth plant operation."
+      },
+      {
+        "question": "Why is emergency shutdown knowledge important?",
+        "ideal_answer": "It helps control dangerous situations quickly and safely."
+      },
+      {
+        "question": "Why should warning alarms be tested regularly?",
+        "ideal_answer": "Testing ensures alarms work properly during emergencies."
+      },
+      {
+        "question": "Why is documentation important in water treatment plants?",
+        "ideal_answer": "Documentation helps track testing, maintenance, and regulatory compliance."
+      },
+      {
+        "question": "Why should waste disposal be managed properly?",
+        "ideal_answer": "Proper disposal prevents environmental pollution and health hazards."
+      }
+    ]
+  },
+
+  "Industrial Automation Technician": {
+    "Automation Fundamentals": [
+      {
+        "question": "What is the main role of an industrial automation technician?",
+        "ideal_answer": "An industrial automation technician installs, maintains, and troubleshoots automated machines and control systems in industries."
+      },
+      {
+        "question": "What is PLC in industrial automation?",
+        "ideal_answer": "PLC stands for Programmable Logic Controller, used to control and automate industrial machines and processes."
+      },
+      {
+        "question": "What is the purpose of sensors in automation systems?",
+        "ideal_answer": "Sensors detect physical conditions like temperature, pressure, or motion and send signals for control."
+      },
+      {
+        "question": "What is an actuator in automation?",
+        "ideal_answer": "An actuator converts control signals into physical movement or action in machines."
+      },
+      {
+        "question": "Why is HMI important in automation systems?",
+        "ideal_answer": "HMI, or Human Machine Interface, allows operators to monitor and control automated systems easily."
+      },
+      {
+        "question": "What is preventive maintenance in automation systems?",
+        "ideal_answer": "Preventive maintenance includes regular checking and servicing to avoid machine failures and downtime."
+      },
+      {
+        "question": "Why is calibration important in automation?",
+        "ideal_answer": "Calibration ensures sensors and instruments provide accurate readings and reliable system performance."
+      },
+      {
+        "question": "What is the role of SCADA in industrial automation?",
+        "ideal_answer": "SCADA is used for supervisory control, monitoring, and data collection in industrial systems."
+      },
+      {
+        "question": "Why is wiring inspection important?",
+        "ideal_answer": "Wiring inspection prevents short circuits, loose connections, and machine failures."
+      },
+      {
+        "question": "Why is downtime reduction important in automation?",
+        "ideal_answer": "Reducing downtime improves productivity and minimizes production losses."
+      }
+    ],
+    "Safety and Maintenance": [
+      {
+        "question": "What PPE should an industrial automation technician use?",
+        "ideal_answer": "Safety shoes, helmets, gloves, goggles, insulated tools, and protective clothing should be used."
+      },
+      {
+        "question": "Why is lockout and tagout important?",
+        "ideal_answer": "It ensures machines are safely shut down before maintenance and prevents accidental startup."
+      },
+      {
+        "question": "Why should power be switched off before repairs?",
+        "ideal_answer": "Switching off power prevents electric shock and protects workers during maintenance."
+      },
+      {
+        "question": "Why should sensors be tested regularly?",
+        "ideal_answer": "Regular testing ensures accurate machine operation and prevents system failures."
+      },
+      {
+        "question": "Why is emergency stop testing important?",
+        "ideal_answer": "It ensures machines can be stopped immediately during unsafe situations."
+      },
+      {
+        "question": "Why should control panels be inspected regularly?",
+        "ideal_answer": "Inspection helps detect faults early and prevents automation system failures."
+      },
+      {
+        "question": "Why is proper documentation important?",
+        "ideal_answer": "Documentation helps track maintenance, repairs, and system performance history."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce maintenance quality."
+      },
+      {
+        "question": "Why is fire safety important in automation areas?",
+        "ideal_answer": "Fire safety protects workers, machines, and facilities from accidents."
+      },
+      {
+        "question": "Why should preventive maintenance schedules be followed strictly?",
+        "ideal_answer": "Following schedules improves system reliability and increases equipment lifespan."
+      }
+    ]
+  }
+}

@@ -1,0 +1,2602 @@
+{
+  "Data Entry Operator": {
+    "Data Entry Fundamentals": [
+      {
+        "question": "What is the main role of a data entry operator?",
+        "ideal_answer": "A data entry operator enters, updates, verifies, and manages information accurately in computer systems and databases."
+      },
+      {
+        "question": "Why is typing accuracy important in data entry?",
+        "ideal_answer": "Typing accuracy prevents mistakes, improves data quality, and reduces correction time."
+      },
+      {
+        "question": "Why is speed important in data entry work?",
+        "ideal_answer": "Good typing speed improves productivity and helps complete work within deadlines."
+      },
+      {
+        "question": "What is data verification?",
+        "ideal_answer": "Data verification is the process of checking entered information to ensure it is correct and complete."
+      },
+      {
+        "question": "Why is spreadsheet knowledge important for data entry operators?",
+        "ideal_answer": "Spreadsheets help organize, manage, calculate, and analyze large amounts of data efficiently."
+      },
+      {
+        "question": "What is the purpose of database management in data entry?",
+        "ideal_answer": "Database management helps store, retrieve, and update information in an organized way."
+      },
+      {
+        "question": "Why is file organization important in office work?",
+        "ideal_answer": "Proper file organization improves efficiency and helps locate information quickly."
+      },
+      {
+        "question": "Why is confidentiality important in data entry?",
+        "ideal_answer": "Confidentiality protects sensitive company and customer information from misuse."
+      },
+      {
+        "question": "What is backup in data management?",
+        "ideal_answer": "Backup is the process of saving copies of important data to prevent data loss."
+      },
+      {
+        "question": "Why is attention to detail important in data entry?",
+        "ideal_answer": "Attention to detail helps avoid errors and ensures accurate information processing."
+      }
+    ],
+    "Workplace Discipline and Safety": [
+      {
+        "question": "Why should computer systems be shut down properly?",
+        "ideal_answer": "Proper shutdown prevents data corruption and protects hardware from damage."
+      },
+      {
+        "question": "Why is password security important for data entry operators?",
+        "ideal_answer": "Strong passwords protect company data from unauthorized access."
+      },
+      {
+        "question": "Why should regular backups be maintained?",
+        "ideal_answer": "Regular backups prevent permanent data loss during system failure or accidental deletion."
+      },
+      {
+        "question": "Why is proper sitting posture important during computer work?",
+        "ideal_answer": "Proper posture prevents back pain, eye strain, and long-term health problems."
+      },
+      {
+        "question": "Why should antivirus software be updated regularly?",
+        "ideal_answer": "Updated antivirus protects systems from malware, viruses, and cyber threats."
+      },
+      {
+        "question": "Why should unauthorized software not be installed?",
+        "ideal_answer": "Unauthorized software can cause security risks and system problems."
+      },
+      {
+        "question": "Why is time management important in office work?",
+        "ideal_answer": "Good time management improves productivity and helps meet deadlines."
+      },
+      {
+        "question": "Why should documents be checked before submission?",
+        "ideal_answer": "Checking prevents errors and ensures professional and accurate work."
+      },
+      {
+        "question": "Why is communication important with supervisors?",
+        "ideal_answer": "Clear communication avoids mistakes and improves workflow."
+      },
+      {
+        "question": "Why should workstation cleanliness be maintained?",
+        "ideal_answer": "A clean workstation improves efficiency and creates a professional working environment."
+      }
+    ]
+  },
+
+  "Office Assistant": {
+    "Office Work Fundamentals": [
+      {
+        "question": "What is the main role of an office assistant?",
+        "ideal_answer": "An office assistant supports daily office operations by handling files, documents, communication, scheduling, and administrative tasks."
+      },
+      {
+        "question": "Why is document organization important in offices?",
+        "ideal_answer": "Proper organization helps locate files quickly and improves work efficiency."
+      },
+      {
+        "question": "Why is communication important for an office assistant?",
+        "ideal_answer": "Good communication ensures smooth coordination with staff, clients, and management."
+      },
+      {
+        "question": "What is scheduling in office work?",
+        "ideal_answer": "Scheduling is the process of planning meetings, appointments, and tasks efficiently."
+      },
+      {
+        "question": "Why is email management important?",
+        "ideal_answer": "Email management helps maintain professional communication and prevents missing important information."
+      },
+      {
+        "question": "Why is record keeping important?",
+        "ideal_answer": "Record keeping helps track office activities, transactions, and official documents."
+      },
+      {
+        "question": "What is inventory management in offices?",
+        "ideal_answer": "Inventory management tracks office supplies and ensures required materials are available."
+      },
+      {
+        "question": "Why is professionalism important in office work?",
+        "ideal_answer": "Professionalism improves workplace discipline and creates a positive work environment."
+      },
+      {
+        "question": "Why is multitasking important for office assistants?",
+        "ideal_answer": "Multitasking helps manage multiple responsibilities efficiently within deadlines."
+      },
+      {
+        "question": "Why is customer handling important in office roles?",
+        "ideal_answer": "Good customer handling improves satisfaction and creates a positive company image."
+      }
+    ],
+    "Discipline and Workplace Safety": [
+      {
+        "question": "Why should confidential office documents be protected?",
+        "ideal_answer": "Protecting documents prevents misuse of sensitive company information."
+      },
+      {
+        "question": "Why is punctuality important in office work?",
+        "ideal_answer": "Punctuality improves productivity and maintains professional discipline."
+      },
+      {
+        "question": "Why should office equipment be handled carefully?",
+        "ideal_answer": "Careful handling prevents damage and reduces unnecessary repair costs."
+      },
+      {
+        "question": "Why is proper filing important?",
+        "ideal_answer": "Proper filing avoids document loss and improves quick access to records."
+      },
+      {
+        "question": "Why should printers and computers be maintained regularly?",
+        "ideal_answer": "Regular maintenance improves performance and prevents work interruptions."
+      },
+      {
+        "question": "Why is desk cleanliness important?",
+        "ideal_answer": "A clean desk improves focus, efficiency, and professionalism."
+      },
+      {
+        "question": "Why should emergency contact details be available in offices?",
+        "ideal_answer": "Emergency contacts help respond quickly during accidents or urgent situations."
+      },
+      {
+        "question": "Why is teamwork important in office administration?",
+        "ideal_answer": "Teamwork improves coordination and helps complete work smoothly."
+      },
+      {
+        "question": "Why should office supplies be monitored regularly?",
+        "ideal_answer": "Monitoring prevents shortages and ensures smooth daily operations."
+      },
+      {
+        "question": "Why should instructions from supervisors be followed carefully?",
+        "ideal_answer": "Following instructions ensures work accuracy and avoids mistakes."
+      }
+    ]
+  },
+
+  "Warehouse Assistant": {
+    "Warehouse Operations Fundamentals": [
+      {
+        "question": "What is the main role of a warehouse assistant?",
+        "ideal_answer": "A warehouse assistant helps in receiving, storing, organizing, and dispatching goods in a warehouse."
+      },
+      {
+        "question": "Why is inventory management important in warehouses?",
+        "ideal_answer": "Inventory management helps track stock levels and prevents shortages or excess stock."
+      },
+      {
+        "question": "Why is labeling important for warehouse items?",
+        "ideal_answer": "Proper labeling helps identify products quickly and reduces mistakes during storage and dispatch."
+      },
+      {
+        "question": "What is stock rotation in warehouses?",
+        "ideal_answer": "Stock rotation ensures older items are used or dispatched first to prevent wastage."
+      },
+      {
+        "question": "Why is proper storage important?",
+        "ideal_answer": "Proper storage prevents product damage and improves warehouse efficiency."
+      },
+      {
+        "question": "What is dispatch in warehouse work?",
+        "ideal_answer": "Dispatch is the process of preparing and sending goods to customers or other locations."
+      },
+      {
+        "question": "Why is receiving inspection important?",
+        "ideal_answer": "Receiving inspection checks quantity and quality of incoming goods before storage."
+      },
+      {
+        "question": "Why is record keeping important in warehouse operations?",
+        "ideal_answer": "Record keeping helps track stock movement and improves inventory accuracy."
+      },
+      {
+        "question": "Why is teamwork important in warehouses?",
+        "ideal_answer": "Teamwork improves coordination and ensures smooth warehouse operations."
+      },
+      {
+        "question": "Why is time management important during dispatch work?",
+        "ideal_answer": "Time management ensures timely delivery and improves customer satisfaction."
+      }
+    ],
+    "Safety and Material Handling": [
+      {
+        "question": "Why should warehouse assistants wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy falling objects and workplace injuries."
+      },
+      {
+        "question": "What PPE should a warehouse assistant use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, reflective jackets, and safety belts when required should be used."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to goods."
+      },
+      {
+        "question": "Why should damaged goods be reported immediately?",
+        "ideal_answer": "Reporting damaged goods prevents incorrect dispatch and helps maintain quality control."
+      },
+      {
+        "question": "Why is forklift path safety important?",
+        "ideal_answer": "Following forklift safety prevents accidents involving moving equipment."
+      },
+      {
+        "question": "Why should aisles be kept clear?",
+        "ideal_answer": "Clear aisles improve movement and reduce accidents in the warehouse."
+      },
+      {
+        "question": "Why is fire safety important in warehouses?",
+        "ideal_answer": "Fire safety protects workers, goods, and warehouse infrastructure."
+      },
+      {
+        "question": "Why should heavy goods be stacked properly?",
+        "ideal_answer": "Proper stacking prevents falling items and workplace injuries."
+      },
+      {
+        "question": "Why is equipment inspection important?",
+        "ideal_answer": "Inspection ensures safe operation of warehouse tools and machinery."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits allow quick and safe evacuation during emergencies."
+      }
+    ]
+  },
+  "Store Keeper": {
+    "Store Management Fundamentals": [
+      {
+        "question": "What is the main role of a store keeper?",
+        "ideal_answer": "A store keeper manages the storage, receiving, issuing, and record keeping of materials and goods in a store or warehouse."
+      },
+      {
+        "question": "Why is inventory management important for a store keeper?",
+        "ideal_answer": "Inventory management helps track stock levels and prevents shortages or overstocking."
+      },
+      {
+        "question": "Why is proper labeling important in store management?",
+        "ideal_answer": "Proper labeling helps identify materials quickly and reduces mistakes during issue and storage."
+      },
+      {
+        "question": "What is stock verification?",
+        "ideal_answer": "Stock verification is the process of checking physical stock against records to ensure accuracy."
+      },
+      {
+        "question": "Why is FIFO important in stores?",
+        "ideal_answer": "FIFO means First In First Out, ensuring older stock is used first to prevent expiry and wastage."
+      },
+      {
+        "question": "What is goods receiving in store operations?",
+        "ideal_answer": "Goods receiving is the process of checking and accepting incoming materials into the store."
+      },
+      {
+        "question": "Why is proper storage important in a store?",
+        "ideal_answer": "Proper storage prevents damage, improves safety, and makes materials easy to locate."
+      },
+      {
+        "question": "Why is documentation important for a store keeper?",
+        "ideal_answer": "Documentation helps track stock movement, issue records, and purchasing requirements."
+      },
+      {
+        "question": "What is stock issuing?",
+        "ideal_answer": "Stock issuing is the process of providing materials or goods from the store to departments or customers."
+      },
+      {
+        "question": "Why is reorder level important?",
+        "ideal_answer": "Reorder level helps ensure new stock is ordered before existing stock runs out."
+      }
+    ],
+    "Safety and Material Handling": [
+      {
+        "question": "Why should store keepers wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy falling materials and workplace injuries."
+      },
+      {
+        "question": "What PPE should a store keeper use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, reflective jackets, and safety belts when required should be used."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to goods."
+      },
+      {
+        "question": "Why should damaged goods be reported immediately?",
+        "ideal_answer": "Reporting damaged goods helps maintain quality control and prevents wrong stock records."
+      },
+      {
+        "question": "Why should aisles be kept clear in stores?",
+        "ideal_answer": "Clear aisles improve movement and reduce workplace accidents."
+      },
+      {
+        "question": "Why is fire safety important in storage areas?",
+        "ideal_answer": "Fire safety protects workers, goods, and the entire storage facility."
+      },
+      {
+        "question": "Why should heavy materials be stacked properly?",
+        "ideal_answer": "Proper stacking prevents items from falling and causing injuries."
+      },
+      {
+        "question": "Why is equipment inspection important in stores?",
+        "ideal_answer": "Inspection ensures safe use of trolleys, forklifts, and handling equipment."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe and quick evacuation during emergencies."
+      },
+      {
+        "question": "Why is cleanliness important in store areas?",
+        "ideal_answer": "Cleanliness improves safety, prevents damage, and increases work efficiency."
+      }
+    ]
+  },
+
+  "Sales Associate": {
+    "Sales Fundamentals": [
+      {
+        "question": "What is the main role of a sales associate?",
+        "ideal_answer": "A sales associate helps customers by explaining products, handling sales, and ensuring a good shopping experience."
+      },
+      {
+        "question": "Why is product knowledge important for sales associates?",
+        "ideal_answer": "Product knowledge helps explain features clearly and improves customer trust and sales."
+      },
+      {
+        "question": "Why is customer communication important in sales?",
+        "ideal_answer": "Good communication helps understand customer needs and improves satisfaction."
+      },
+      {
+        "question": "What is upselling in sales?",
+        "ideal_answer": "Upselling means encouraging customers to buy a better or additional product for greater value."
+      },
+      {
+        "question": "Why is billing accuracy important?",
+        "ideal_answer": "Accurate billing prevents customer complaints and ensures correct financial records."
+      },
+      {
+        "question": "What is inventory awareness in retail sales?",
+        "ideal_answer": "Inventory awareness helps sales associates know product availability and avoid wrong commitments."
+      },
+      {
+        "question": "Why is product display important in stores?",
+        "ideal_answer": "Good product display attracts customers and increases sales opportunities."
+      },
+      {
+        "question": "Why is customer feedback important?",
+        "ideal_answer": "Customer feedback helps improve service quality and product satisfaction."
+      },
+      {
+        "question": "What is return handling in retail?",
+        "ideal_answer": "Return handling is the process of managing returned products according to company policy."
+      },
+      {
+        "question": "Why is teamwork important in retail sales?",
+        "ideal_answer": "Teamwork improves customer service and ensures smooth store operations."
+      }
+    ],
+    "Workplace Discipline and Safety": [
+      {
+        "question": "Why is punctuality important for sales associates?",
+        "ideal_answer": "Punctuality ensures smooth store operations and maintains professionalism."
+      },
+      {
+        "question": "What basic PPE may be needed in retail stores?",
+        "ideal_answer": "Safety shoes, gloves when handling goods, and proper store uniforms may be required."
+      },
+      {
+        "question": "Why should cash handling be done carefully?",
+        "ideal_answer": "Careful cash handling prevents financial errors and theft risks."
+      },
+      {
+        "question": "Why should shelves be arranged safely?",
+        "ideal_answer": "Safe arrangement prevents products from falling and causing injuries."
+      },
+      {
+        "question": "Why is cleanliness important in sales areas?",
+        "ideal_answer": "A clean store improves customer experience and creates a professional environment."
+      },
+      {
+        "question": "Why should customer complaints be handled calmly?",
+        "ideal_answer": "Calm handling improves customer trust and helps resolve issues professionally."
+      },
+      {
+        "question": "Why should confidential customer information be protected?",
+        "ideal_answer": "Protecting customer information prevents misuse and maintains trust."
+      },
+      {
+        "question": "Why is proper stock checking important before promises to customers?",
+        "ideal_answer": "It prevents false commitments and improves customer satisfaction."
+      },
+      {
+        "question": "Why should emergency exits remain clear in retail stores?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why should instructions from supervisors be followed carefully?",
+        "ideal_answer": "Following instructions ensures smooth store management and better customer service."
+      }
+    ]
+  },
+
+  "Retail Executive": {
+    "Retail Management Fundamentals": [
+      {
+        "question": "What is the main role of a retail executive?",
+        "ideal_answer": "A retail executive manages store operations, customer service, sales performance, and team coordination."
+      },
+      {
+        "question": "Why is sales target planning important in retail?",
+        "ideal_answer": "Sales target planning helps improve business performance and track store growth."
+      },
+      {
+        "question": "Why is inventory control important for retail executives?",
+        "ideal_answer": "Inventory control prevents stock shortages, excess stock, and improves product availability."
+      },
+      {
+        "question": "What is customer relationship management in retail?",
+        "ideal_answer": "It involves maintaining good customer relationships to improve satisfaction and repeat business."
+      },
+      {
+        "question": "Why is staff coordination important in retail management?",
+        "ideal_answer": "Good coordination improves workflow, customer service, and store productivity."
+      },
+      {
+        "question": "What is visual merchandising?",
+        "ideal_answer": "Visual merchandising is the strategic arrangement of products to attract customers and increase sales."
+      },
+      {
+        "question": "Why is reporting important in retail management?",
+        "ideal_answer": "Reporting helps track sales, stock movement, customer feedback, and business performance."
+      },
+      {
+        "question": "Why is customer complaint resolution important?",
+        "ideal_answer": "Quick complaint resolution improves trust and customer loyalty."
+      },
+      {
+        "question": "Why is pricing accuracy important?",
+        "ideal_answer": "Accurate pricing prevents customer disputes and ensures proper revenue management."
+      },
+      {
+        "question": "Why is promotional planning important?",
+        "ideal_answer": "Promotional planning helps increase sales and attract more customers."
+      }
+    ],
+    "Operations and Workplace Safety": [
+      {
+        "question": "Why should retail executives ensure staff follow PPE rules?",
+        "ideal_answer": "Following PPE rules improves employee safety and prevents workplace injuries."
+      },
+      {
+        "question": "What basic PPE may be needed in retail stores?",
+        "ideal_answer": "Safety shoes, gloves for handling goods, uniforms, and protective measures depending on the store type may be required."
+      },
+      {
+        "question": "Why is store cleanliness important?",
+        "ideal_answer": "Cleanliness improves customer experience and maintains professional standards."
+      },
+      {
+        "question": "Why should shelves and displays be checked regularly?",
+        "ideal_answer": "Regular checks prevent product damage and reduce accident risks."
+      },
+      {
+        "question": "Why is cash flow monitoring important?",
+        "ideal_answer": "Cash flow monitoring prevents financial errors and supports smooth business operations."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is theft prevention important in retail stores?",
+        "ideal_answer": "Theft prevention protects company assets and improves profitability."
+      },
+      {
+        "question": "Why should stock audits be conducted regularly?",
+        "ideal_answer": "Stock audits ensure inventory accuracy and help identify losses or errors."
+      },
+      {
+        "question": "Why is employee training important in retail?",
+        "ideal_answer": "Training improves service quality, product knowledge, and store performance."
+      },
+      {
+        "question": "Why should safety incidents be documented?",
+        "ideal_answer": "Documentation helps improve safety procedures and prevents repeated accidents."
+      }
+    ]
+  },
+  "Customer Support Executive": {
+    "Customer Support Fundamentals": [
+      {
+        "question": "What is the main role of a customer support executive?",
+        "ideal_answer": "A customer support executive helps customers by resolving queries, handling complaints, and providing service-related information."
+      },
+      {
+        "question": "Why is communication important in customer support?",
+        "ideal_answer": "Good communication helps understand customer problems clearly and provide effective solutions."
+      },
+      {
+        "question": "Why is active listening important in customer service?",
+        "ideal_answer": "Active listening helps understand customer needs accurately and improves satisfaction."
+      },
+      {
+        "question": "What is complaint resolution?",
+        "ideal_answer": "Complaint resolution is the process of identifying customer issues and providing suitable solutions quickly."
+      },
+      {
+        "question": "Why is product knowledge important in customer support?",
+        "ideal_answer": "Product knowledge helps provide correct information and faster problem resolution."
+      },
+      {
+        "question": "Why is patience important for customer support executives?",
+        "ideal_answer": "Patience helps handle difficult customers calmly and professionally."
+      },
+      {
+        "question": "What is escalation in customer support?",
+        "ideal_answer": "Escalation means forwarding complex issues to higher-level support for proper resolution."
+      },
+      {
+        "question": "Why is documentation important in support work?",
+        "ideal_answer": "Documentation helps track customer issues, solutions, and service history."
+      },
+      {
+        "question": "Why is response time important in customer support?",
+        "ideal_answer": "Quick response improves customer satisfaction and trust in the company."
+      },
+      {
+        "question": "Why is professionalism important in customer service?",
+        "ideal_answer": "Professionalism builds customer trust and improves the company’s reputation."
+      }
+    ],
+    "Workplace Discipline and Service Quality": [
+      {
+        "question": "Why should confidential customer information be protected?",
+        "ideal_answer": "Protecting customer data prevents misuse and maintains trust and legal compliance."
+      },
+      {
+        "question": "Why is punctuality important in customer support roles?",
+        "ideal_answer": "Punctuality ensures smooth operations and timely customer assistance."
+      },
+      {
+        "question": "Why should calls and chats be handled politely?",
+        "ideal_answer": "Polite handling improves customer satisfaction and creates a positive experience."
+      },
+      {
+        "question": "Why is proper system documentation important after customer interaction?",
+        "ideal_answer": "It helps future follow-up and ensures service continuity."
+      },
+      {
+        "question": "Why should customer complaints not be taken personally?",
+        "ideal_answer": "Remaining professional helps focus on solving the issue effectively."
+      },
+      {
+        "question": "Why should software systems be updated regularly?",
+        "ideal_answer": "Updates improve performance, security, and service efficiency."
+      },
+      {
+        "question": "Why is teamwork important in customer support departments?",
+        "ideal_answer": "Teamwork improves issue resolution and ensures better customer service."
+      },
+      {
+        "question": "Why should escalation rules be followed properly?",
+        "ideal_answer": "Following escalation rules ensures complex issues are solved by the right team quickly."
+      },
+      {
+        "question": "Why is feedback important in customer support?",
+        "ideal_answer": "Feedback helps improve service quality and customer satisfaction."
+      },
+      {
+        "question": "Why should workstations be organized and clean?",
+        "ideal_answer": "A clean workstation improves efficiency and creates a professional work environment."
+      }
+    ]
+  },
+
+  "BPO Executive": {
+    "BPO Work Fundamentals": [
+      {
+        "question": "What is the main role of a BPO executive?",
+        "ideal_answer": "A BPO executive handles customer communication, process support, data management, and service operations for business processes."
+      },
+      {
+        "question": "Why is communication important in BPO work?",
+        "ideal_answer": "Good communication ensures clear understanding of customer needs and efficient problem handling."
+      },
+      {
+        "question": "Why is voice clarity important for BPO executives?",
+        "ideal_answer": "Clear voice communication improves customer understanding and professional service quality."
+      },
+      {
+        "question": "What is process compliance in BPO?",
+        "ideal_answer": "Process compliance means following company rules, scripts, and procedures while handling tasks."
+      },
+      {
+        "question": "Why is time management important in BPO operations?",
+        "ideal_answer": "Time management improves productivity and helps meet service targets."
+      },
+      {
+        "question": "Why is customer satisfaction important in BPO services?",
+        "ideal_answer": "Customer satisfaction improves client trust and business success."
+      },
+      {
+        "question": "What is call escalation in BPO?",
+        "ideal_answer": "Call escalation is forwarding complex customer issues to senior teams for proper resolution."
+      },
+      {
+        "question": "Why is CRM software important in BPO work?",
+        "ideal_answer": "CRM helps manage customer details, complaints, and service history efficiently."
+      },
+      {
+        "question": "Why is quality monitoring important in BPO?",
+        "ideal_answer": "Quality monitoring helps improve service performance and maintain standards."
+      },
+      {
+        "question": "Why is multitasking important for BPO executives?",
+        "ideal_answer": "Multitasking helps handle calls, systems, and documentation at the same time efficiently."
+      }
+    ],
+    "Discipline and Workplace Management": [
+      {
+        "question": "Why should confidential customer data be protected?",
+        "ideal_answer": "Protecting customer data prevents misuse and maintains trust and compliance."
+      },
+      {
+        "question": "Why is punctuality important in BPO jobs?",
+        "ideal_answer": "Punctuality ensures smooth shift operations and service continuity."
+      },
+      {
+        "question": "Why should calls be handled professionally?",
+        "ideal_answer": "Professional handling improves customer trust and service quality."
+      },
+      {
+        "question": "Why is proper documentation important after each interaction?",
+        "ideal_answer": "It helps track customer history and supports future issue resolution."
+      },
+      {
+        "question": "Why should system passwords be kept secure?",
+        "ideal_answer": "Secure passwords protect company and customer information from unauthorized access."
+      },
+      {
+        "question": "Why should workstation discipline be maintained?",
+        "ideal_answer": "Good discipline improves focus, productivity, and professionalism."
+      },
+      {
+        "question": "Why is teamwork important in BPO departments?",
+        "ideal_answer": "Teamwork improves service quality and helps resolve customer issues faster."
+      },
+      {
+        "question": "Why should supervisors be informed about repeated customer complaints?",
+        "ideal_answer": "It helps identify process issues and improve service quality."
+      },
+      {
+        "question": "Why is feedback important for performance improvement?",
+        "ideal_answer": "Feedback helps identify weaknesses and improve service delivery."
+      },
+      {
+        "question": "Why should stress management be practiced in BPO work?",
+        "ideal_answer": "Stress management helps maintain productivity and professional behavior under pressure."
+      }
+    ]
+  },
+
+  "Delivery Executive": {
+    "Delivery Operations Fundamentals": [
+      {
+        "question": "What is the main role of a delivery executive?",
+        "ideal_answer": "A delivery executive is responsible for delivering products safely and on time to customers while maintaining service quality."
+      },
+      {
+        "question": "Why is timely delivery important?",
+        "ideal_answer": "Timely delivery improves customer satisfaction and builds trust in the service."
+      },
+      {
+        "question": "Why is route planning important for delivery executives?",
+        "ideal_answer": "Route planning saves time, reduces fuel costs, and ensures faster deliveries."
+      },
+      {
+        "question": "What is proof of delivery?",
+        "ideal_answer": "Proof of delivery confirms that the customer has received the product successfully."
+      },
+      {
+        "question": "Why is package handling important during delivery?",
+        "ideal_answer": "Careful handling prevents product damage and improves customer satisfaction."
+      },
+      {
+        "question": "Why is customer communication important during delivery?",
+        "ideal_answer": "Good communication helps coordinate delivery time and improves customer experience."
+      },
+      {
+        "question": "What is cash on delivery handling?",
+        "ideal_answer": "It is the process of collecting payment from customers at the time of delivery."
+      },
+      {
+        "question": "Why is vehicle maintenance important for delivery executives?",
+        "ideal_answer": "Proper vehicle maintenance ensures safe travel and avoids delivery delays."
+      },
+      {
+        "question": "Why is inventory checking important before delivery?",
+        "ideal_answer": "It ensures the correct product is delivered to the right customer."
+      },
+      {
+        "question": "Why is professionalism important in delivery services?",
+        "ideal_answer": "Professional behavior improves customer trust and company reputation."
+      }
+    ],
+    "Safety and Field Discipline": [
+      {
+        "question": "Why should delivery executives wear helmets while riding two-wheelers?",
+        "ideal_answer": "Helmets protect against head injuries and improve road safety."
+      },
+      {
+        "question": "What PPE should a delivery executive use?",
+        "ideal_answer": "Helmet, safety shoes, reflective jacket, gloves, and rain protection when required should be used."
+      },
+      {
+        "question": "Why should traffic rules be followed strictly?",
+        "ideal_answer": "Following traffic rules prevents accidents and ensures safe deliveries."
+      },
+      {
+        "question": "Why should damaged packages be reported immediately?",
+        "ideal_answer": "Reporting damaged packages prevents customer complaints and ensures service quality."
+      },
+      {
+        "question": "Why is fuel management important?",
+        "ideal_answer": "Fuel management reduces delivery delays and improves cost efficiency."
+      },
+      {
+        "question": "Why should customer addresses be verified before delivery?",
+        "ideal_answer": "Verification prevents wrong deliveries and saves time."
+      },
+      {
+        "question": "Why should cash collected be handled carefully?",
+        "ideal_answer": "Careful handling prevents financial loss and ensures accurate records."
+      },
+      {
+        "question": "Why is emergency contact availability important?",
+        "ideal_answer": "Emergency contacts help during accidents, delays, or urgent delivery issues."
+      },
+      {
+        "question": "Why should delivery records be maintained properly?",
+        "ideal_answer": "Records help track completed deliveries and resolve disputes if needed."
+      },
+      {
+        "question": "Why is personal discipline important in delivery work?",
+        "ideal_answer": "Discipline improves punctuality, customer satisfaction, and professional service quality."
+      }
+    ]
+  },
+  "Packing Staff": {
+    "Packing Operations Fundamentals": [
+      {
+        "question": "What is the main role of packing staff?",
+        "ideal_answer": "Packing staff are responsible for properly packing products, checking quality, labeling, and preparing goods for storage or delivery."
+      },
+      {
+        "question": "Why is proper packaging important?",
+        "ideal_answer": "Proper packaging protects products from damage during storage and transportation."
+      },
+      {
+        "question": "Why is labeling important in packing work?",
+        "ideal_answer": "Labeling helps identify products correctly and prevents dispatch errors."
+      },
+      {
+        "question": "What is quality checking before packing?",
+        "ideal_answer": "Quality checking ensures damaged or defective products are not packed for delivery."
+      },
+      {
+        "question": "Why is quantity verification important in packing?",
+        "ideal_answer": "Quantity verification ensures the correct number of items are packed and delivered."
+      },
+      {
+        "question": "What is dispatch preparation?",
+        "ideal_answer": "Dispatch preparation is organizing packed goods for shipment to customers or warehouses."
+      },
+      {
+        "question": "Why is stock coordination important with packing staff?",
+        "ideal_answer": "It ensures correct products are packed and reduces delays in dispatch."
+      },
+      {
+        "question": "Why is speed important in packing operations?",
+        "ideal_answer": "Good speed improves productivity and helps meet delivery deadlines."
+      },
+      {
+        "question": "Why is accuracy important in packing work?",
+        "ideal_answer": "Accuracy prevents wrong deliveries and improves customer satisfaction."
+      },
+      {
+        "question": "Why is teamwork important in packing departments?",
+        "ideal_answer": "Teamwork improves workflow and helps complete packing tasks efficiently."
+      }
+    ],
+    "Safety and Workplace Discipline": [
+      {
+        "question": "Why should packing staff wear gloves?",
+        "ideal_answer": "Gloves protect hands from cuts, sharp edges, and product contamination."
+      },
+      {
+        "question": "What PPE should packing staff use?",
+        "ideal_answer": "Gloves, safety shoes, masks, hair covers, and protective clothing should be used depending on the product type."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to packed goods."
+      },
+      {
+        "question": "Why should damaged packing materials not be used?",
+        "ideal_answer": "Damaged materials can cause product damage and poor delivery quality."
+      },
+      {
+        "question": "Why is cleanliness important in packing areas?",
+        "ideal_answer": "Cleanliness prevents contamination and improves workplace safety."
+      },
+      {
+        "question": "Why should sharp tools be handled carefully?",
+        "ideal_answer": "Careless handling can cause injuries and damage products."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure quick and safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is fire safety important in packing areas?",
+        "ideal_answer": "Fire safety protects workers, materials, and stored products."
+      },
+      {
+        "question": "Why should supervisors be informed about shortages immediately?",
+        "ideal_answer": "Quick reporting prevents delays in production and dispatch."
+      },
+      {
+        "question": "Why is discipline important in packing work?",
+        "ideal_answer": "Discipline improves productivity, quality, and workplace safety."
+      }
+    ]
+  },
+
+  "Machine Helper": {
+    "Machine Assistance Fundamentals": [
+      {
+        "question": "What is the main role of a machine helper?",
+        "ideal_answer": "A machine helper supports machine operators by supplying materials, cleaning machines, and assisting in smooth machine operation."
+      },
+      {
+        "question": "Why is material supply important for machine helpers?",
+        "ideal_answer": "Proper material supply ensures continuous machine operation and avoids production delays."
+      },
+      {
+        "question": "Why is machine cleaning important?",
+        "ideal_answer": "Cleaning removes dust and waste, improves machine efficiency, and prevents breakdowns."
+      },
+      {
+        "question": "What is preventive support in machine operations?",
+        "ideal_answer": "Preventive support includes regular checking and assisting operators to avoid machine problems."
+      },
+      {
+        "question": "Why is machine observation important for helpers?",
+        "ideal_answer": "Observation helps identify unusual sounds, leaks, or faults early."
+      },
+      {
+        "question": "Why is tool availability important near machines?",
+        "ideal_answer": "Proper tool availability helps operators perform work efficiently without delays."
+      },
+      {
+        "question": "Why is production coordination important?",
+        "ideal_answer": "Good coordination ensures smooth workflow and better machine productivity."
+      },
+      {
+        "question": "Why is waste removal important around machines?",
+        "ideal_answer": "Waste removal improves safety and prevents machine blockage or accidents."
+      },
+      {
+        "question": "Why is communication with machine operators important?",
+        "ideal_answer": "Good communication helps avoid mistakes and improves production efficiency."
+      },
+      {
+        "question": "Why is attention important while assisting machines?",
+        "ideal_answer": "Attention helps prevent accidents and supports safe machine operation."
+      }
+    ],
+    "Safety and Machine Handling": [
+      {
+        "question": "Why should machine helpers wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy objects and workplace injuries."
+      },
+      {
+        "question": "What PPE should a machine helper use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why should loose clothes be avoided near machines?",
+        "ideal_answer": "Loose clothes can get caught in moving machine parts and cause serious injuries."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with moving parts."
+      },
+      {
+        "question": "Why should machines be switched off before cleaning?",
+        "ideal_answer": "Switching off prevents accidental startup and worker injuries."
+      },
+      {
+        "question": "Why should oil leaks be reported immediately?",
+        "ideal_answer": "Oil leaks can cause machine failure and slippery unsafe conditions."
+      },
+      {
+        "question": "Why should emergency stop buttons be known?",
+        "ideal_answer": "Knowing emergency stop buttons helps stop machines quickly during unsafe situations."
+      },
+      {
+        "question": "Why is fire safety important near machines?",
+        "ideal_answer": "Fire safety prevents major accidents caused by heat, sparks, or oil leaks."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce work quality."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "Cleanliness improves safety and prevents machine operation problems."
+      }
+    ]
+  },
+
+  "Production Line Worker": {
+    "Production Line Fundamentals": [
+      {
+        "question": "What is the main role of a production line worker?",
+        "ideal_answer": "A production line worker performs assigned tasks in a manufacturing line to help produce goods efficiently and maintain product quality."
+      },
+      {
+        "question": "Why is workflow coordination important on a production line?",
+        "ideal_answer": "Good coordination ensures smooth movement of work and avoids production delays."
+      },
+      {
+        "question": "Why is product quality checking important during production?",
+        "ideal_answer": "Quality checking helps detect defects early and prevents faulty products from reaching customers."
+      },
+      {
+        "question": "What is process standardization in production?",
+        "ideal_answer": "Process standardization means following fixed approved methods to maintain consistent product quality."
+      },
+      {
+        "question": "Why is speed important in production line work?",
+        "ideal_answer": "Good speed improves productivity and helps meet production targets."
+      },
+      {
+        "question": "Why is accuracy important in assembly work?",
+        "ideal_answer": "Accuracy prevents defects and improves final product quality."
+      },
+      {
+        "question": "Why is teamwork important on production lines?",
+        "ideal_answer": "Teamwork improves workflow and ensures smooth completion of manufacturing tasks."
+      },
+      {
+        "question": "What is downtime in production work?",
+        "ideal_answer": "Downtime is the period when production stops due to machine issues or lack of materials."
+      },
+      {
+        "question": "Why should defective materials be reported immediately?",
+        "ideal_answer": "Reporting prevents faulty production and reduces waste."
+      },
+      {
+        "question": "Why is attendance discipline important in production lines?",
+        "ideal_answer": "Attendance discipline ensures continuous workflow and prevents production delays."
+      }
+    ],
+    "Safety and Workplace Management": [
+      {
+        "question": "Why should production workers wear helmets and safety shoes?",
+        "ideal_answer": "They protect against workplace injuries from falling objects and machine hazards."
+      },
+      {
+        "question": "What PPE should a production line worker use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, masks, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why is machine guarding important on production lines?",
+        "ideal_answer": "Machine guarding prevents accidental contact with dangerous moving parts."
+      },
+      {
+        "question": "Why should workstations be kept clean?",
+        "ideal_answer": "Clean workstations improve safety, efficiency, and product quality."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why should tools be returned to proper places after use?",
+        "ideal_answer": "Proper tool placement prevents accidents and improves work efficiency."
+      },
+      {
+        "question": "Why should unusual machine sounds be reported?",
+        "ideal_answer": "Unusual sounds may indicate machine faults that need immediate attention."
+      },
+      {
+        "question": "Why is fire safety important in production areas?",
+        "ideal_answer": "Fire safety protects workers, machines, and factory operations."
+      },
+      {
+        "question": "Why should supervisors be informed about unsafe conditions?",
+        "ideal_answer": "Quick reporting helps prevent accidents and improves workplace safety."
+      },
+      {
+        "question": "Why is discipline important in production work?",
+        "ideal_answer": "Discipline improves productivity, safety, and smooth factory operations."
+      }
+    ]
+  },
+  "Security Guard": {
+    "Security Operations Fundamentals": [
+      {
+        "question": "What is the main role of a security guard?",
+        "ideal_answer": "A security guard protects people, property, and premises by monitoring activities and preventing unauthorized access or incidents."
+      },
+      {
+        "question": "Why is access control important in security work?",
+        "ideal_answer": "Access control prevents unauthorized entry and helps maintain safety and security."
+      },
+      {
+        "question": "Why is patrolling important for security guards?",
+        "ideal_answer": "Patrolling helps identify suspicious activities, safety risks, and security threats early."
+      },
+      {
+        "question": "What is incident reporting in security work?",
+        "ideal_answer": "Incident reporting is documenting unusual events, accidents, or security breaches for proper action."
+      },
+      {
+        "question": "Why is observation skill important for a security guard?",
+        "ideal_answer": "Good observation helps detect suspicious behavior and prevent problems quickly."
+      },
+      {
+        "question": "Why is visitor management important?",
+        "ideal_answer": "Visitor management helps track who enters and leaves the premises for safety and accountability."
+      },
+      {
+        "question": "What is emergency response in security work?",
+        "ideal_answer": "Emergency response means taking quick action during fire, accidents, theft, or medical emergencies."
+      },
+      {
+        "question": "Why is communication important for security guards?",
+        "ideal_answer": "Clear communication helps report issues quickly and coordinate with staff or emergency teams."
+      },
+      {
+        "question": "Why is CCTV monitoring important?",
+        "ideal_answer": "CCTV monitoring helps observe activities and improves overall security coverage."
+      },
+      {
+        "question": "Why is discipline important in security jobs?",
+        "ideal_answer": "Discipline ensures alertness, professionalism, and proper handling of responsibilities."
+      }
+    ],
+    "Safety and Emergency Handling": [
+      {
+        "question": "Why should security guards know fire extinguisher usage?",
+        "ideal_answer": "Knowing fire extinguisher usage helps control small fires quickly before they become dangerous."
+      },
+      {
+        "question": "What PPE may be needed for security guards?",
+        "ideal_answer": "Safety shoes, reflective jackets, gloves, helmets depending on the site, and proper uniforms may be required."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure quick and safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is first aid knowledge important for security guards?",
+        "ideal_answer": "First aid helps provide immediate assistance before medical help arrives."
+      },
+      {
+        "question": "Why should suspicious objects be reported immediately?",
+        "ideal_answer": "Immediate reporting helps prevent accidents and security threats."
+      },
+      {
+        "question": "Why is night vigilance important in security work?",
+        "ideal_answer": "Night vigilance helps prevent theft, trespassing, and unsafe incidents during low-activity hours."
+      },
+      {
+        "question": "Why should entry registers be maintained properly?",
+        "ideal_answer": "Registers help track movement and improve investigation during incidents."
+      },
+      {
+        "question": "Why should security alarms be checked regularly?",
+        "ideal_answer": "Regular checks ensure alarms work properly during emergencies."
+      },
+      {
+        "question": "Why should calm behavior be maintained during emergencies?",
+        "ideal_answer": "Calm behavior helps control panic and improves emergency response."
+      },
+      {
+        "question": "Why should instructions from supervisors be followed carefully?",
+        "ideal_answer": "Following instructions ensures effective security management and workplace safety."
+      }
+    ]
+  },
+
+  "Housekeeping Staff": {
+    "Housekeeping Fundamentals": [
+      {
+        "question": "What is the main role of housekeeping staff?",
+        "ideal_answer": "Housekeeping staff maintain cleanliness, hygiene, and organized surroundings in offices, hotels, hospitals, and other workplaces."
+      },
+      {
+        "question": "Why is cleanliness important in housekeeping work?",
+        "ideal_answer": "Cleanliness improves hygiene, safety, and creates a healthy environment."
+      },
+      {
+        "question": "Why is waste segregation important?",
+        "ideal_answer": "Waste segregation ensures safe disposal and prevents contamination or environmental hazards."
+      },
+      {
+        "question": "What is sanitization in housekeeping?",
+        "ideal_answer": "Sanitization is the process of reducing harmful germs and maintaining hygiene."
+      },
+      {
+        "question": "Why is proper cleaning schedule important?",
+        "ideal_answer": "A cleaning schedule ensures all areas are cleaned regularly and efficiently."
+      },
+      {
+        "question": "Why is inventory checking important for cleaning supplies?",
+        "ideal_answer": "Inventory checking ensures cleaning materials are always available when needed."
+      },
+      {
+        "question": "Why is teamwork important in housekeeping?",
+        "ideal_answer": "Teamwork improves cleaning efficiency and helps complete tasks faster."
+      },
+      {
+        "question": "Why is attention to detail important in housekeeping?",
+        "ideal_answer": "Attention to detail helps maintain high cleanliness standards and prevents missed areas."
+      },
+      {
+        "question": "Why is professionalism important in housekeeping services?",
+        "ideal_answer": "Professionalism improves workplace discipline and creates a positive impression."
+      },
+      {
+        "question": "Why is reporting maintenance issues important?",
+        "ideal_answer": "Reporting helps fix problems like leaks or damage quickly and maintains safe surroundings."
+      }
+    ],
+    "Safety and Hygiene Management": [
+      {
+        "question": "Why should housekeeping staff wear gloves?",
+        "ideal_answer": "Gloves protect hands from chemicals, dirt, and harmful waste materials."
+      },
+      {
+        "question": "What PPE should housekeeping staff use?",
+        "ideal_answer": "Gloves, masks, safety shoes, aprons, and protective clothing should be used depending on the work area."
+      },
+      {
+        "question": "Why should wet floors be marked with warning signs?",
+        "ideal_answer": "Warning signs prevent slips and accidents for people walking nearby."
+      },
+      {
+        "question": "Why should cleaning chemicals be handled carefully?",
+        "ideal_answer": "Improper handling can cause burns, poisoning, and unsafe reactions."
+      },
+      {
+        "question": "Why is ventilation important during cleaning work?",
+        "ideal_answer": "Ventilation removes harmful fumes and improves worker safety."
+      },
+      {
+        "question": "Why should broken glass be handled carefully?",
+        "ideal_answer": "Improper handling can cause cuts and injuries."
+      },
+      {
+        "question": "Why should waste bins be emptied regularly?",
+        "ideal_answer": "Regular emptying prevents bad odors, contamination, and pest problems."
+      },
+      {
+        "question": "Why is fire safety important in housekeeping areas?",
+        "ideal_answer": "Fire safety protects workers, buildings, and stored materials."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is personal hygiene important for housekeeping staff?",
+        "ideal_answer": "Personal hygiene prevents the spread of germs and maintains professional standards."
+      }
+    ]
+  },
+
+  "Hospital Ward Assistant": {
+    "Ward Assistance Fundamentals": [
+      {
+        "question": "What is the main role of a hospital ward assistant?",
+        "ideal_answer": "A hospital ward assistant supports patient care by helping with cleanliness, patient movement, basic assistance, and ward maintenance."
+      },
+      {
+        "question": "Why is patient comfort important in hospital wards?",
+        "ideal_answer": "Patient comfort supports recovery and improves overall healthcare experience."
+      },
+      {
+        "question": "Why is cleanliness important in hospital wards?",
+        "ideal_answer": "Cleanliness prevents infections and maintains a safe environment for patients and staff."
+      },
+      {
+        "question": "What is patient transport in hospital work?",
+        "ideal_answer": "Patient transport is safely moving patients between wards, departments, or treatment areas."
+      },
+      {
+        "question": "Why is communication important with nurses and doctors?",
+        "ideal_answer": "Good communication ensures proper patient care and avoids mistakes."
+      },
+      {
+        "question": "Why is bed preparation important?",
+        "ideal_answer": "Proper bed preparation improves patient comfort and hygiene."
+      },
+      {
+        "question": "Why is documentation important in hospital support work?",
+        "ideal_answer": "Documentation helps track patient movement, supplies, and ward activities."
+      },
+      {
+        "question": "Why is patient privacy important?",
+        "ideal_answer": "Patient privacy protects dignity and maintains trust in healthcare services."
+      },
+      {
+        "question": "Why is observation important for ward assistants?",
+        "ideal_answer": "Observation helps notice patient discomfort or urgent situations quickly."
+      },
+      {
+        "question": "Why is teamwork important in hospital wards?",
+        "ideal_answer": "Teamwork improves patient care and ensures smooth hospital operations."
+      }
+    ],
+    "Safety and Hygiene Management": [
+      {
+        "question": "Why should ward assistants wear gloves?",
+        "ideal_answer": "Gloves protect against infection, contamination, and contact with body fluids."
+      },
+      {
+        "question": "What PPE should a hospital ward assistant use?",
+        "ideal_answer": "Gloves, masks, aprons, safety shoes, and protective clothing should be used depending on the task."
+      },
+      {
+        "question": "Why is hand hygiene important in hospitals?",
+        "ideal_answer": "Hand hygiene prevents the spread of infections between patients and staff."
+      },
+      {
+        "question": "Why should medical waste be disposed of properly?",
+        "ideal_answer": "Proper disposal prevents infection risks and maintains hospital safety."
+      },
+      {
+        "question": "Why should spills be cleaned immediately in hospital wards?",
+        "ideal_answer": "Immediate cleaning prevents slips, contamination, and infection risks."
+      },
+      {
+        "question": "Why is wheelchair safety important during patient transport?",
+        "ideal_answer": "Safe handling prevents patient injury and improves comfort."
+      },
+      {
+        "question": "Why should emergency exits remain clear in hospitals?",
+        "ideal_answer": "Clear exits ensure quick evacuation during emergencies."
+      },
+      {
+        "question": "Why should patients be handled gently?",
+        "ideal_answer": "Gentle handling ensures comfort, dignity, and avoids injury."
+      },
+      {
+        "question": "Why is infection control important in hospital wards?",
+        "ideal_answer": "Infection control protects patients, staff, and visitors from disease spread."
+      },
+      {
+        "question": "Why should unusual patient conditions be reported immediately?",
+        "ideal_answer": "Quick reporting helps medical staff provide timely treatment and prevent serious complications."
+      }
+    ]
+  },
+   "Nursing Assistant": {
+    "Patient Care Fundamentals": [
+      {
+        "question": "What is the main role of a nursing assistant?",
+        "ideal_answer": "A nursing assistant supports nurses and doctors by helping patients with basic care, hygiene, mobility, and daily activities."
+      },
+      {
+        "question": "Why is patient hygiene important in healthcare?",
+        "ideal_answer": "Patient hygiene prevents infections, improves comfort, and supports faster recovery."
+      },
+      {
+        "question": "Why is communication important with patients?",
+        "ideal_answer": "Good communication helps understand patient needs and provides better care and comfort."
+      },
+      {
+        "question": "What is patient mobility assistance?",
+        "ideal_answer": "It means helping patients move safely from bed to chair, wheelchair, or walking support."
+      },
+      {
+        "question": "Why is observation important for nursing assistants?",
+        "ideal_answer": "Observation helps notice changes in patient condition and report them quickly."
+      },
+      {
+        "question": "Why is bed preparation important?",
+        "ideal_answer": "Proper bed preparation improves patient comfort, cleanliness, and safety."
+      },
+      {
+        "question": "Why is documentation important in patient care?",
+        "ideal_answer": "Documentation helps track patient care activities and supports medical staff coordination."
+      },
+      {
+        "question": "Why is patient dignity important?",
+        "ideal_answer": "Patient dignity maintains respect, privacy, and emotional comfort during care."
+      },
+      {
+        "question": "Why is teamwork important in hospitals?",
+        "ideal_answer": "Teamwork improves patient care and ensures smooth healthcare operations."
+      },
+      {
+        "question": "Why is emotional support important for patients?",
+        "ideal_answer": "Emotional support reduces stress and helps patients feel safe and cared for."
+      }
+    ],
+    "Safety and Hygiene Management": [
+      {
+        "question": "Why should nursing assistants wear gloves?",
+        "ideal_answer": "Gloves protect against infections, body fluids, and contamination."
+      },
+      {
+        "question": "What PPE should a nursing assistant use?",
+        "ideal_answer": "Gloves, masks, aprons, safety shoes, and protective clothing should be used depending on the task."
+      },
+      {
+        "question": "Why is hand hygiene important in hospitals?",
+        "ideal_answer": "Hand hygiene prevents the spread of infections between patients and healthcare staff."
+      },
+      {
+        "question": "Why should medical waste be disposed of properly?",
+        "ideal_answer": "Proper disposal prevents infection risks and maintains hospital safety."
+      },
+      {
+        "question": "Why should spills be cleaned immediately?",
+        "ideal_answer": "Immediate cleaning prevents slips, contamination, and infection risks."
+      },
+      {
+        "question": "Why is wheelchair safety important?",
+        "ideal_answer": "Safe wheelchair handling prevents patient injuries during movement."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why should patients be handled gently?",
+        "ideal_answer": "Gentle handling ensures comfort, dignity, and avoids unnecessary pain or injury."
+      },
+      {
+        "question": "Why is infection control important?",
+        "ideal_answer": "Infection control protects patients, staff, and visitors from disease spread."
+      },
+      {
+        "question": "Why should unusual patient conditions be reported immediately?",
+        "ideal_answer": "Quick reporting helps medical staff provide timely treatment and prevent serious complications."
+      }
+    ]
+  },
+
+  "Caregiver": {
+    "Caregiving Fundamentals": [
+      {
+        "question": "What is the main role of a caregiver?",
+        "ideal_answer": "A caregiver supports elderly, sick, or dependent individuals with daily activities, personal care, and emotional support."
+      },
+      {
+        "question": "Why is personal hygiene important for patients or elderly people?",
+        "ideal_answer": "Personal hygiene prevents infections, improves comfort, and supports overall health."
+      },
+      {
+        "question": "Why is patience important for caregivers?",
+        "ideal_answer": "Patience helps caregivers handle emotional, physical, and daily care challenges calmly."
+      },
+      {
+        "question": "What is mobility assistance in caregiving?",
+        "ideal_answer": "Mobility assistance means helping people move safely while walking, standing, or changing positions."
+      },
+      {
+        "question": "Why is emotional support important in caregiving?",
+        "ideal_answer": "Emotional support reduces loneliness, stress, and improves mental well-being."
+      },
+      {
+        "question": "Why is medication reminder support important?",
+        "ideal_answer": "Medication reminders help ensure proper treatment and prevent missed doses."
+      },
+      {
+        "question": "Why is observation important for caregivers?",
+        "ideal_answer": "Observation helps notice health changes and report them quickly to family or medical staff."
+      },
+      {
+        "question": "Why is proper meal assistance important?",
+        "ideal_answer": "Proper meal assistance ensures nutrition, safe eating, and better health."
+      },
+      {
+        "question": "Why is documentation important in caregiving?",
+        "ideal_answer": "Documentation helps track daily care, health changes, and medication schedules."
+      },
+      {
+        "question": "Why is respect for privacy important in caregiving?",
+        "ideal_answer": "Respecting privacy maintains dignity and trust for the person receiving care."
+      }
+    ],
+    "Safety and Hygiene Management": [
+      {
+        "question": "Why should caregivers wear gloves?",
+        "ideal_answer": "Gloves protect against infections and contact with body fluids or waste."
+      },
+      {
+        "question": "What PPE should a caregiver use?",
+        "ideal_answer": "Gloves, masks, aprons, safety shoes, and protective clothing should be used depending on the care situation."
+      },
+      {
+        "question": "Why is hand hygiene important for caregivers?",
+        "ideal_answer": "Hand hygiene prevents the spread of infections and protects both caregiver and patient."
+      },
+      {
+        "question": "Why should spills be cleaned immediately?",
+        "ideal_answer": "Immediate cleaning prevents slips, falls, and infection risks."
+      },
+      {
+        "question": "Why is fall prevention important for elderly care?",
+        "ideal_answer": "Fall prevention protects elderly people from serious injuries and health complications."
+      },
+      {
+        "question": "Why should medicines be stored safely?",
+        "ideal_answer": "Safe storage prevents misuse, confusion, and accidental overdose."
+      },
+      {
+        "question": "Why should emergency contacts be easily available?",
+        "ideal_answer": "Emergency contacts help respond quickly during urgent medical situations."
+      },
+      {
+        "question": "Why should patients be handled gently?",
+        "ideal_answer": "Gentle handling improves comfort and prevents pain or injury."
+      },
+      {
+        "question": "Why is infection control important in caregiving?",
+        "ideal_answer": "Infection control protects vulnerable people from illness and improves health safety."
+      },
+      {
+        "question": "Why should unusual health changes be reported immediately?",
+        "ideal_answer": "Quick reporting helps prevent serious health problems and ensures timely treatment."
+      }
+    ]
+  },
+
+  "Receptionist": {
+    "Reception Work Fundamentals": [
+      {
+        "question": "What is the main role of a receptionist?",
+        "ideal_answer": "A receptionist manages front desk operations by greeting visitors, answering calls, scheduling appointments, and handling basic office communication."
+      },
+      {
+        "question": "Why is communication important for a receptionist?",
+        "ideal_answer": "Good communication helps provide clear information and creates a positive first impression."
+      },
+      {
+        "question": "Why is professionalism important at the front desk?",
+        "ideal_answer": "Professionalism improves customer trust and represents the company positively."
+      },
+      {
+        "question": "What is appointment scheduling?",
+        "ideal_answer": "Appointment scheduling is organizing meetings, visits, and bookings efficiently."
+      },
+      {
+        "question": "Why is visitor management important?",
+        "ideal_answer": "Visitor management helps track guests and improves office security and coordination."
+      },
+      {
+        "question": "Why is phone etiquette important for receptionists?",
+        "ideal_answer": "Good phone etiquette improves customer satisfaction and professional communication."
+      },
+      {
+        "question": "Why is record keeping important at reception?",
+        "ideal_answer": "Record keeping helps track visitors, calls, appointments, and office activities."
+      },
+      {
+        "question": "Why is multitasking important for receptionists?",
+        "ideal_answer": "Multitasking helps handle calls, visitors, and administrative work efficiently."
+      },
+      {
+        "question": "Why is customer handling important?",
+        "ideal_answer": "Good customer handling improves satisfaction and creates a positive office environment."
+      },
+      {
+        "question": "Why is punctuality important for receptionists?",
+        "ideal_answer": "Punctuality ensures smooth front desk operations and professional discipline."
+      }
+    ],
+    "Office Discipline and Workplace Management": [
+      {
+        "question": "Why should confidential visitor information be protected?",
+        "ideal_answer": "Protecting confidential information prevents misuse and maintains trust."
+      },
+      {
+        "question": "Why is desk cleanliness important at reception?",
+        "ideal_answer": "A clean desk improves professionalism and work efficiency."
+      },
+      {
+        "question": "Why should office equipment be handled carefully?",
+        "ideal_answer": "Careful handling prevents damage and reduces unnecessary repair costs."
+      },
+      {
+        "question": "Why is proper filing important at the front desk?",
+        "ideal_answer": "Proper filing helps avoid document loss and improves quick access to records."
+      },
+      {
+        "question": "Why should emergency contact details be available?",
+        "ideal_answer": "Emergency contacts help respond quickly during accidents or urgent situations."
+      },
+      {
+        "question": "Why should visitors be guided politely?",
+        "ideal_answer": "Polite guidance improves visitor experience and creates a positive company image."
+      },
+      {
+        "question": "Why is teamwork important with office staff?",
+        "ideal_answer": "Teamwork improves coordination and ensures smooth office operations."
+      },
+      {
+        "question": "Why should supervisors’ instructions be followed carefully?",
+        "ideal_answer": "Following instructions ensures work accuracy and professional service."
+      },
+      {
+        "question": "Why should appointment records be updated regularly?",
+        "ideal_answer": "Regular updates prevent scheduling mistakes and missed meetings."
+      },
+      {
+        "question": "Why should emergency exits remain clear in offices?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      }
+    ]
+  },
+  "Field Executive": {
+    "Field Operations Fundamentals": [
+      {
+        "question": "What is the main role of a field executive?",
+        "ideal_answer": "A field executive handles on-site tasks such as customer visits, document collection, inspections, service coordination, and reporting."
+      },
+      {
+        "question": "Why is customer communication important for a field executive?",
+        "ideal_answer": "Good communication helps understand requirements clearly and improves service quality."
+      },
+      {
+        "question": "Why is route planning important in field work?",
+        "ideal_answer": "Route planning saves time, reduces travel costs, and improves daily productivity."
+      },
+      {
+        "question": "What is field reporting?",
+        "ideal_answer": "Field reporting is documenting completed visits, customer feedback, and task status for office records."
+      },
+      {
+        "question": "Why is punctuality important for field executives?",
+        "ideal_answer": "Punctuality improves customer trust and ensures timely completion of tasks."
+      },
+      {
+        "question": "Why is document verification important during field visits?",
+        "ideal_answer": "Document verification ensures accuracy and prevents errors or fraud."
+      },
+      {
+        "question": "Why is professionalism important during client visits?",
+        "ideal_answer": "Professional behavior creates trust and improves the company’s image."
+      },
+      {
+        "question": "Why is follow-up important in field operations?",
+        "ideal_answer": "Follow-up ensures pending tasks are completed and customer issues are resolved."
+      },
+      {
+        "question": "Why is mobile app or system updating important in field jobs?",
+        "ideal_answer": "System updates help maintain accurate real-time records and improve work tracking."
+      },
+      {
+        "question": "Why is attention to detail important in field work?",
+        "ideal_answer": "Attention to detail prevents mistakes and ensures accurate task completion."
+      }
+    ],
+    "Safety and Work Discipline": [
+      {
+        "question": "Why should field executives follow traffic rules during travel?",
+        "ideal_answer": "Following traffic rules prevents accidents and ensures safe travel."
+      },
+      {
+        "question": "What PPE may be needed for field executives?",
+        "ideal_answer": "Helmet, safety shoes, reflective jacket, gloves, and proper ID cards depending on the work type may be required."
+      },
+      {
+        "question": "Why should customer addresses be verified before visits?",
+        "ideal_answer": "Verification prevents delays, wrong visits, and wasted travel time."
+      },
+      {
+        "question": "Why is mobile battery backup important in field work?",
+        "ideal_answer": "Battery backup ensures continuous communication and reporting during travel."
+      },
+      {
+        "question": "Why should collected cash or documents be handled carefully?",
+        "ideal_answer": "Careful handling prevents financial loss and protects important records."
+      },
+      {
+        "question": "Why should emergency contact numbers be available?",
+        "ideal_answer": "Emergency contacts help during accidents, delays, or urgent situations."
+      },
+      {
+        "question": "Why is personal discipline important in field jobs?",
+        "ideal_answer": "Discipline improves reliability, punctuality, and professional performance."
+      },
+      {
+        "question": "Why should supervisors be informed about delays immediately?",
+        "ideal_answer": "Quick reporting helps manage customer expectations and workflow planning."
+      },
+      {
+        "question": "Why is safe document storage important?",
+        "ideal_answer": "Safe storage prevents loss, damage, and misuse of important papers."
+      },
+      {
+        "question": "Why should daily work summaries be maintained?",
+        "ideal_answer": "Daily summaries help track completed tasks and improve accountability."
+      }
+    ]
+  },
+
+  "Inventory Assistant": {
+    "Inventory Management Fundamentals": [
+      {
+        "question": "What is the main role of an inventory assistant?",
+        "ideal_answer": "An inventory assistant helps track stock levels, update records, organize goods, and support inventory control in stores or warehouses."
+      },
+      {
+        "question": "Why is stock counting important in inventory work?",
+        "ideal_answer": "Stock counting ensures physical stock matches system records and prevents shortages or excess stock."
+      },
+      {
+        "question": "Why is labeling important in inventory management?",
+        "ideal_answer": "Proper labeling helps identify products quickly and reduces mistakes in storage and dispatch."
+      },
+      {
+        "question": "What is stock verification?",
+        "ideal_answer": "Stock verification is checking physical stock against inventory records for accuracy."
+      },
+      {
+        "question": "Why is FIFO important in inventory handling?",
+        "ideal_answer": "FIFO ensures older stock is used first to prevent expiry and wastage."
+      },
+      {
+        "question": "Why is record updating important in inventory systems?",
+        "ideal_answer": "Regular updates maintain accurate stock data and improve planning."
+      },
+      {
+        "question": "Why is receiving inspection important?",
+        "ideal_answer": "Receiving inspection checks quantity and quality of incoming goods before storage."
+      },
+      {
+        "question": "Why is dispatch coordination important?",
+        "ideal_answer": "It ensures correct products are sent on time without stock errors."
+      },
+      {
+        "question": "Why is inventory reporting important?",
+        "ideal_answer": "Reporting helps management track stock movement and purchasing needs."
+      },
+      {
+        "question": "Why is teamwork important in inventory operations?",
+        "ideal_answer": "Teamwork improves workflow and ensures smooth stock handling."
+      }
+    ],
+    "Safety and Material Handling": [
+      {
+        "question": "Why should inventory assistants wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy falling items and workplace injuries."
+      },
+      {
+        "question": "What PPE should an inventory assistant use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, reflective jackets, and safety belts when required should be used."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to goods."
+      },
+      {
+        "question": "Why should damaged goods be reported immediately?",
+        "ideal_answer": "Reporting damaged goods helps maintain stock quality and correct inventory records."
+      },
+      {
+        "question": "Why should aisles be kept clear?",
+        "ideal_answer": "Clear aisles improve movement and reduce accidents in storage areas."
+      },
+      {
+        "question": "Why is fire safety important in inventory areas?",
+        "ideal_answer": "Fire safety protects workers, goods, and storage facilities."
+      },
+      {
+        "question": "Why should heavy goods be stacked properly?",
+        "ideal_answer": "Proper stacking prevents falling items and workplace injuries."
+      },
+      {
+        "question": "Why is equipment inspection important?",
+        "ideal_answer": "Inspection ensures safe use of trolleys, forklifts, and handling tools."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe and quick evacuation during emergencies."
+      },
+      {
+        "question": "Why is workplace cleanliness important?",
+        "ideal_answer": "Cleanliness improves safety and helps efficient inventory operations."
+      }
+    ]
+  },
+
+  "Helper Technician": {
+    "Technical Assistance Fundamentals": [
+      {
+        "question": "What is the main role of a helper technician?",
+        "ideal_answer": "A helper technician supports senior technicians by assisting in installation, repair, maintenance, cleaning, and tool handling."
+      },
+      {
+        "question": "Why is tool preparation important for helper technicians?",
+        "ideal_answer": "Proper tool preparation helps technicians work efficiently and reduces repair delays."
+      },
+      {
+        "question": "Why is machine observation important for helper technicians?",
+        "ideal_answer": "Observation helps identify unusual sounds, leaks, or faults early."
+      },
+      {
+        "question": "Why is cleaning important during technical work?",
+        "ideal_answer": "Cleaning improves machine efficiency and prevents dust-related problems."
+      },
+      {
+        "question": "What is preventive support in technical work?",
+        "ideal_answer": "Preventive support includes assisting with regular checks to avoid breakdowns and failures."
+      },
+      {
+        "question": "Why is spare part organization important?",
+        "ideal_answer": "Proper spare part organization reduces downtime and speeds up repair work."
+      },
+      {
+        "question": "Why is communication important with senior technicians?",
+        "ideal_answer": "Good communication avoids mistakes and improves maintenance efficiency."
+      },
+      {
+        "question": "Why is attention important during repair work?",
+        "ideal_answer": "Attention helps prevent accidents and ensures correct technical support."
+      },
+      {
+        "question": "Why is documentation important in technical work?",
+        "ideal_answer": "Documentation helps track repairs, inspections, and maintenance history."
+      },
+      {
+        "question": "Why is discipline important in workshop jobs?",
+        "ideal_answer": "Discipline improves safety, productivity, and work quality."
+      }
+    ],
+    "Safety and Equipment Handling": [
+      {
+        "question": "Why should helper technicians wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy tools, machine parts, and workplace injuries."
+      },
+      {
+        "question": "What PPE should a helper technician use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why should loose clothes be avoided near machines?",
+        "ideal_answer": "Loose clothes can get caught in moving parts and cause serious injuries."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with dangerous moving parts."
+      },
+      {
+        "question": "Why should machines be switched off before cleaning or repair?",
+        "ideal_answer": "Switching off prevents accidental startup and protects workers from injury."
+      },
+      {
+        "question": "Why should oil leaks be reported immediately?",
+        "ideal_answer": "Oil leaks can cause machine failure and unsafe slippery conditions."
+      },
+      {
+        "question": "Why should emergency stop buttons be known?",
+        "ideal_answer": "Knowing emergency stop buttons helps stop machines quickly during unsafe situations."
+      },
+      {
+        "question": "Why is fire safety important near machines?",
+        "ideal_answer": "Fire safety prevents major accidents caused by sparks, oil leaks, or overheating."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce work quality."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "Cleanliness improves safety and prevents machine operation problems."
+      }
+    ]
+  },
+  "Loading/Unloading Staff": {
+    "Material Handling Fundamentals": [
+      {
+        "question": "What is the main role of loading and unloading staff?",
+        "ideal_answer": "Loading and unloading staff handle the safe movement of goods during receiving, dispatch, and transportation processes."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to goods during handling."
+      },
+      {
+        "question": "Why is quantity checking important during loading and unloading?",
+        "ideal_answer": "Quantity checking ensures correct stock movement and prevents missing or extra goods."
+      },
+      {
+        "question": "What is dispatch preparation?",
+        "ideal_answer": "Dispatch preparation is arranging goods properly before sending them to customers or other locations."
+      },
+      {
+        "question": "Why is labeling important in loading operations?",
+        "ideal_answer": "Labeling helps identify products correctly and prevents delivery mistakes."
+      },
+      {
+        "question": "Why is teamwork important in loading work?",
+        "ideal_answer": "Teamwork improves speed, safety, and smooth handling of heavy materials."
+      },
+      {
+        "question": "Why is stock coordination important?",
+        "ideal_answer": "Stock coordination ensures correct products are moved without delays or errors."
+      },
+      {
+        "question": "Why is time management important in dispatch work?",
+        "ideal_answer": "Time management ensures timely delivery and smooth warehouse operations."
+      },
+      {
+        "question": "Why should damaged goods be reported immediately?",
+        "ideal_answer": "Reporting damaged goods prevents incorrect dispatch and supports quality control."
+      },
+      {
+        "question": "Why is attention important during loading operations?",
+        "ideal_answer": "Attention prevents accidents and ensures safe handling of materials."
+      }
+    ],
+    "Safety and Workplace Discipline": [
+      {
+        "question": "Why should loading staff wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy falling objects and workplace injuries."
+      },
+      {
+        "question": "What PPE should loading and unloading staff use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, reflective jackets, and safety belts when required should be used."
+      },
+      {
+        "question": "Why should heavy goods be stacked properly?",
+        "ideal_answer": "Proper stacking prevents items from falling and causing injuries."
+      },
+      {
+        "question": "Why should forklift paths be kept clear?",
+        "ideal_answer": "Clear paths prevent accidents involving moving equipment and workers."
+      },
+      {
+        "question": "Why should aisles remain clear?",
+        "ideal_answer": "Clear aisles improve movement and reduce workplace accidents."
+      },
+      {
+        "question": "Why is fire safety important in loading areas?",
+        "ideal_answer": "Fire safety protects workers, goods, and warehouse infrastructure."
+      },
+      {
+        "question": "Why should lifting equipment be inspected regularly?",
+        "ideal_answer": "Inspection ensures safe use and prevents equipment failure during heavy lifting."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is cleanliness important in loading zones?",
+        "ideal_answer": "Cleanliness improves safety and reduces slipping or obstruction risks."
+      },
+      {
+        "question": "Why is discipline important in loading work?",
+        "ideal_answer": "Discipline improves safety, efficiency, and smooth daily operations."
+      }
+    ]
+  },
+
+  "Food Delivery Executive": {
+    "Delivery Service Fundamentals": [
+      {
+        "question": "What is the main role of a food delivery executive?",
+        "ideal_answer": "A food delivery executive delivers food orders safely, quickly, and in good condition while ensuring customer satisfaction."
+      },
+      {
+        "question": "Why is timely delivery important in food delivery?",
+        "ideal_answer": "Timely delivery ensures food quality and improves customer satisfaction."
+      },
+      {
+        "question": "Why is route planning important for food delivery?",
+        "ideal_answer": "Route planning saves time, reduces fuel costs, and helps deliver orders faster."
+      },
+      {
+        "question": "What is order verification before delivery?",
+        "ideal_answer": "Order verification ensures the correct food items are delivered to the right customer."
+      },
+      {
+        "question": "Why is food handling important during delivery?",
+        "ideal_answer": "Careful handling prevents spills, damage, and maintains food quality."
+      },
+      {
+        "question": "Why is customer communication important during delivery?",
+        "ideal_answer": "Good communication helps coordinate delivery time and improves customer experience."
+      },
+      {
+        "question": "What is proof of delivery?",
+        "ideal_answer": "Proof of delivery confirms the customer has received the food order successfully."
+      },
+      {
+        "question": "Why is cash on delivery handling important?",
+        "ideal_answer": "Proper cash handling prevents financial errors and improves service reliability."
+      },
+      {
+        "question": "Why is vehicle maintenance important for delivery executives?",
+        "ideal_answer": "Vehicle maintenance ensures safe travel and avoids delivery delays."
+      },
+      {
+        "question": "Why is professionalism important in delivery services?",
+        "ideal_answer": "Professional behavior improves customer trust and company reputation."
+      }
+    ],
+    "Safety and Field Discipline": [
+      {
+        "question": "Why should food delivery executives wear helmets while riding two-wheelers?",
+        "ideal_answer": "Helmets protect against head injuries and improve road safety."
+      },
+      {
+        "question": "What PPE should a food delivery executive use?",
+        "ideal_answer": "Helmet, safety shoes, reflective jacket, gloves, and rain protection when required should be used."
+      },
+      {
+        "question": "Why should traffic rules be followed strictly?",
+        "ideal_answer": "Following traffic rules prevents accidents and ensures safe deliveries."
+      },
+      {
+        "question": "Why should damaged food packages be reported immediately?",
+        "ideal_answer": "Reporting damaged packages prevents customer complaints and maintains service quality."
+      },
+      {
+        "question": "Why is fuel management important?",
+        "ideal_answer": "Fuel management reduces delivery delays and improves cost efficiency."
+      },
+      {
+        "question": "Why should customer addresses be verified before delivery?",
+        "ideal_answer": "Verification prevents wrong deliveries and saves time."
+      },
+      {
+        "question": "Why should collected cash be handled carefully?",
+        "ideal_answer": "Careful handling prevents financial loss and ensures correct records."
+      },
+      {
+        "question": "Why is personal hygiene important in food delivery?",
+        "ideal_answer": "Personal hygiene helps maintain food safety and creates a professional impression."
+      },
+      {
+        "question": "Why should delivery records be maintained properly?",
+        "ideal_answer": "Records help track completed deliveries and resolve disputes if needed."
+      },
+      {
+        "question": "Why is discipline important in delivery work?",
+        "ideal_answer": "Discipline improves punctuality, customer satisfaction, and service quality."
+      }
+    ]
+  },
+
+  "Kitchen Assistant": {
+    "Kitchen Work Fundamentals": [
+      {
+        "question": "What is the main role of a kitchen assistant?",
+        "ideal_answer": "A kitchen assistant supports chefs and kitchen staff by preparing ingredients, maintaining cleanliness, and helping with food preparation tasks."
+      },
+      {
+        "question": "Why is cleanliness important in kitchen work?",
+        "ideal_answer": "Cleanliness prevents contamination and ensures safe food preparation."
+      },
+      {
+        "question": "Why is food preparation accuracy important?",
+        "ideal_answer": "Accurate preparation ensures food quality, taste consistency, and proper portion control."
+      },
+      {
+        "question": "What is ingredient preparation?",
+        "ideal_answer": "Ingredient preparation includes washing, cutting, peeling, and organizing food items before cooking."
+      },
+      {
+        "question": "Why is stock checking important in kitchens?",
+        "ideal_answer": "Stock checking ensures ingredients are available and prevents cooking delays."
+      },
+      {
+        "question": "Why is teamwork important in kitchens?",
+        "ideal_answer": "Teamwork improves speed, coordination, and smooth kitchen operations."
+      },
+      {
+        "question": "Why is proper storage important for food items?",
+        "ideal_answer": "Proper storage prevents spoilage and maintains food safety and freshness."
+      },
+      {
+        "question": "Why is waste management important in kitchens?",
+        "ideal_answer": "Waste management improves hygiene and reduces food contamination risks."
+      },
+      {
+        "question": "Why is time management important during food preparation?",
+        "ideal_answer": "Time management ensures timely serving and smooth kitchen workflow."
+      },
+      {
+        "question": "Why is discipline important in kitchen work?",
+        "ideal_answer": "Discipline improves hygiene, safety, and food quality."
+      }
+    ],
+    "Safety and Hygiene Management": [
+      {
+        "question": "Why should kitchen assistants wear gloves and hair covers?",
+        "ideal_answer": "They prevent food contamination and maintain hygiene standards."
+      },
+      {
+        "question": "What PPE should a kitchen assistant use?",
+        "ideal_answer": "Gloves, apron, mask, hair cover, safety shoes, and protective clothing should be used."
+      },
+      {
+        "question": "Why should knives be handled carefully?",
+        "ideal_answer": "Careful handling prevents cuts and serious kitchen injuries."
+      },
+      {
+        "question": "Why should wet floors be cleaned immediately?",
+        "ideal_answer": "Immediate cleaning prevents slips and workplace accidents."
+      },
+      {
+        "question": "Why is fire safety important in kitchens?",
+        "ideal_answer": "Fire safety protects staff, food supplies, and kitchen equipment."
+      },
+      {
+        "question": "Why should hot utensils be handled carefully?",
+        "ideal_answer": "Careful handling prevents burns and injuries."
+      },
+      {
+        "question": "Why should expired ingredients not be used?",
+        "ideal_answer": "Expired ingredients can cause food poisoning and poor food quality."
+      },
+      {
+        "question": "Why is hand washing important before handling food?",
+        "ideal_answer": "Hand washing prevents the spread of germs and food contamination."
+      },
+      {
+        "question": "Why should emergency exits remain clear in kitchens?",
+        "ideal_answer": "Clear exits ensure quick evacuation during emergencies."
+      },
+      {
+        "question": "Why should damaged kitchen equipment be reported immediately?",
+        "ideal_answer": "Reporting prevents accidents and ensures safe kitchen operations."
+      }
+    ]
+  },
+  "Driver Assistant": {
+    "Transport Support Fundamentals": [
+      {
+        "question": "What is the main role of a driver assistant?",
+        "ideal_answer": "A driver assistant supports the driver by helping with loading, unloading, route coordination, document handling, and safe delivery of goods."
+      },
+      {
+        "question": "Why is route coordination important for a driver assistant?",
+        "ideal_answer": "Route coordination helps save time, avoid delays, and ensure timely deliveries."
+      },
+      {
+        "question": "Why is loading verification important before transport?",
+        "ideal_answer": "Loading verification ensures the correct goods are loaded and prevents delivery mistakes."
+      },
+      {
+        "question": "What is dispatch support in transport work?",
+        "ideal_answer": "Dispatch support includes preparing goods, checking documents, and helping ensure smooth shipment."
+      },
+      {
+        "question": "Why is customer communication important during delivery?",
+        "ideal_answer": "Good communication helps coordinate delivery time and improves customer satisfaction."
+      },
+      {
+        "question": "Why is proof of delivery important?",
+        "ideal_answer": "Proof of delivery confirms that goods were received successfully by the customer."
+      },
+      {
+        "question": "Why is document handling important in transport work?",
+        "ideal_answer": "Proper document handling ensures accurate records and avoids delivery disputes."
+      },
+      {
+        "question": "Why is teamwork important between the driver and assistant?",
+        "ideal_answer": "Teamwork improves efficiency, safety, and smooth delivery operations."
+      },
+      {
+        "question": "Why is attention important during transport support?",
+        "ideal_answer": "Attention prevents delivery errors and improves safety during loading and unloading."
+      },
+      {
+        "question": "Why is punctuality important in delivery support jobs?",
+        "ideal_answer": "Punctuality improves workflow and ensures timely customer service."
+      }
+    ],
+    "Safety and Field Discipline": [
+      {
+        "question": "Why should driver assistants wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy goods and loading-related injuries."
+      },
+      {
+        "question": "What PPE should a driver assistant use?",
+        "ideal_answer": "Safety shoes, gloves, reflective jacket, helmet when required, and proper work uniform should be used."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to goods."
+      },
+      {
+        "question": "Why should traffic rules be followed during transport work?",
+        "ideal_answer": "Following traffic rules prevents accidents and ensures safe deliveries."
+      },
+      {
+        "question": "Why should damaged goods be reported immediately?",
+        "ideal_answer": "Reporting damaged goods prevents customer complaints and improves delivery quality."
+      },
+      {
+        "question": "Why should loading areas be kept clear?",
+        "ideal_answer": "Clear loading areas improve safety and reduce workplace accidents."
+      },
+      {
+        "question": "Why is emergency contact availability important?",
+        "ideal_answer": "Emergency contacts help during accidents, delays, or urgent delivery issues."
+      },
+      {
+        "question": "Why should cash or documents be handled carefully?",
+        "ideal_answer": "Careful handling prevents financial loss and protects important records."
+      },
+      {
+        "question": "Why is discipline important in transport jobs?",
+        "ideal_answer": "Discipline improves punctuality, safety, and professional service quality."
+      },
+      {
+        "question": "Why should daily trip records be maintained?",
+        "ideal_answer": "Trip records help track deliveries and improve accountability."
+      }
+    ]
+  },
+
+  "Assembly Line Worker": {
+    "Assembly Work Fundamentals": [
+      {
+        "question": "What is the main role of an assembly line worker?",
+        "ideal_answer": "An assembly line worker performs specific tasks in sequence to assemble products efficiently while maintaining quality standards."
+      },
+      {
+        "question": "Why is workflow coordination important on an assembly line?",
+        "ideal_answer": "Good coordination ensures smooth production flow and avoids delays."
+      },
+      {
+        "question": "Why is product quality checking important during assembly?",
+        "ideal_answer": "Quality checking helps identify defects early and prevents faulty products from reaching customers."
+      },
+      {
+        "question": "What is process standardization in assembly work?",
+        "ideal_answer": "Process standardization means following approved methods to ensure consistent product quality."
+      },
+      {
+        "question": "Why is speed important in assembly work?",
+        "ideal_answer": "Good speed improves productivity and helps meet production targets."
+      },
+      {
+        "question": "Why is accuracy important in product assembly?",
+        "ideal_answer": "Accuracy prevents defects and improves final product quality."
+      },
+      {
+        "question": "Why is teamwork important on assembly lines?",
+        "ideal_answer": "Teamwork improves workflow and ensures smooth completion of production tasks."
+      },
+      {
+        "question": "What is downtime in assembly work?",
+        "ideal_answer": "Downtime is the period when production stops due to machine issues or lack of materials."
+      },
+      {
+        "question": "Why should defective parts be reported immediately?",
+        "ideal_answer": "Reporting prevents faulty production and reduces material waste."
+      },
+      {
+        "question": "Why is attendance discipline important in assembly work?",
+        "ideal_answer": "Attendance discipline ensures continuous workflow and prevents production delays."
+      }
+    ],
+    "Safety and Workplace Management": [
+      {
+        "question": "Why should assembly workers wear helmets and safety shoes?",
+        "ideal_answer": "They protect against workplace injuries from falling objects and machine hazards."
+      },
+      {
+        "question": "What PPE should an assembly line worker use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, goggles, masks, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why is machine guarding important on assembly lines?",
+        "ideal_answer": "Machine guarding prevents accidental contact with dangerous moving parts."
+      },
+      {
+        "question": "Why should workstations be kept clean?",
+        "ideal_answer": "Clean workstations improve safety, efficiency, and product quality."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why should tools be returned to proper places after use?",
+        "ideal_answer": "Proper tool placement prevents accidents and improves work efficiency."
+      },
+      {
+        "question": "Why should unusual machine sounds be reported?",
+        "ideal_answer": "Unusual sounds may indicate machine faults that need immediate attention."
+      },
+      {
+        "question": "Why is fire safety important in production areas?",
+        "ideal_answer": "Fire safety protects workers, machines, and factory operations."
+      },
+      {
+        "question": "Why should supervisors be informed about unsafe conditions?",
+        "ideal_answer": "Quick reporting helps prevent accidents and improves workplace safety."
+      },
+      {
+        "question": "Why is discipline important in assembly work?",
+        "ideal_answer": "Discipline improves productivity, safety, and smooth factory operations."
+      }
+    ]
+  },
+
+  "Courier Staff": {
+    "Courier Service Fundamentals": [
+      {
+        "question": "What is the main role of courier staff?",
+        "ideal_answer": "Courier staff are responsible for safely collecting, transporting, and delivering parcels, documents, and packages on time."
+      },
+      {
+        "question": "Why is timely delivery important in courier services?",
+        "ideal_answer": "Timely delivery improves customer satisfaction and builds trust in the service."
+      },
+      {
+        "question": "Why is route planning important for courier staff?",
+        "ideal_answer": "Route planning saves time, reduces fuel costs, and helps complete more deliveries efficiently."
+      },
+      {
+        "question": "What is parcel verification before delivery?",
+        "ideal_answer": "Parcel verification ensures the correct package is delivered to the right customer."
+      },
+      {
+        "question": "Why is package handling important during delivery?",
+        "ideal_answer": "Careful handling prevents parcel damage and improves customer satisfaction."
+      },
+      {
+        "question": "Why is customer communication important during delivery?",
+        "ideal_answer": "Good communication helps coordinate delivery timing and improves customer experience."
+      },
+      {
+        "question": "What is proof of delivery?",
+        "ideal_answer": "Proof of delivery confirms that the customer has successfully received the parcel."
+      },
+      {
+        "question": "Why is COD handling important in courier services?",
+        "ideal_answer": "Proper cash on delivery handling prevents financial errors and improves trust."
+      },
+      {
+        "question": "Why is vehicle maintenance important for courier staff?",
+        "ideal_answer": "Vehicle maintenance ensures safe travel and avoids delivery delays."
+      },
+      {
+        "question": "Why is professionalism important in courier services?",
+        "ideal_answer": "Professional behavior improves customer trust and company reputation."
+      }
+    ],
+    "Safety and Field Discipline": [
+      {
+        "question": "Why should courier staff wear helmets while riding two-wheelers?",
+        "ideal_answer": "Helmets protect against head injuries and improve road safety."
+      },
+      {
+        "question": "What PPE should courier staff use?",
+        "ideal_answer": "Helmet, safety shoes, reflective jacket, gloves, and rain protection when required should be used."
+      },
+      {
+        "question": "Why should traffic rules be followed strictly?",
+        "ideal_answer": "Following traffic rules prevents accidents and ensures safe deliveries."
+      },
+      {
+        "question": "Why should damaged parcels be reported immediately?",
+        "ideal_answer": "Reporting damaged parcels prevents customer complaints and maintains service quality."
+      },
+      {
+        "question": "Why is fuel management important?",
+        "ideal_answer": "Fuel management reduces delivery delays and improves cost efficiency."
+      },
+      {
+        "question": "Why should customer addresses be verified before delivery?",
+        "ideal_answer": "Verification prevents wrong deliveries and saves time."
+      },
+      {
+        "question": "Why should collected cash be handled carefully?",
+        "ideal_answer": "Careful handling prevents financial loss and ensures correct records."
+      },
+      {
+        "question": "Why is emergency contact availability important?",
+        "ideal_answer": "Emergency contacts help during accidents, delays, or urgent delivery issues."
+      },
+      {
+        "question": "Why should delivery records be maintained properly?",
+        "ideal_answer": "Records help track completed deliveries and resolve disputes if needed."
+      },
+      {
+        "question": "Why is discipline important in courier work?",
+        "ideal_answer": "Discipline improves punctuality, customer satisfaction, and professional service quality."
+      }
+    ]
+  },
+  "Printing Machine Assistant": {
+    "Printing Operations Fundamentals": [
+      {
+        "question": "What is the main role of a printing machine assistant?",
+        "ideal_answer": "A printing machine assistant supports machine operators by preparing materials, assisting in machine setup, monitoring printing processes, and maintaining cleanliness around the machine."
+      },
+      {
+        "question": "Why is paper quality checking important before printing?",
+        "ideal_answer": "Paper quality checking ensures smooth printing, prevents machine jams, and improves final print quality."
+      },
+      {
+        "question": "Why is ink level monitoring important in printing operations?",
+        "ideal_answer": "Ink level monitoring prevents printing interruptions and ensures consistent print quality."
+      },
+      {
+        "question": "What is machine setup assistance in printing work?",
+        "ideal_answer": "Machine setup assistance includes helping with paper loading, plate positioning, ink preparation, and alignment before printing starts."
+      },
+      {
+        "question": "Why is print alignment important?",
+        "ideal_answer": "Proper print alignment ensures accurate output and avoids wasted materials."
+      },
+      {
+        "question": "Why is cleaning important around printing machines?",
+        "ideal_answer": "Cleaning removes dust, ink waste, and paper scraps, improving machine performance and safety."
+      },
+      {
+        "question": "Why is communication important with machine operators?",
+        "ideal_answer": "Good communication helps avoid printing errors and improves workflow efficiency."
+      },
+      {
+        "question": "Why is waste management important in printing areas?",
+        "ideal_answer": "Waste management improves safety, cleanliness, and reduces production problems."
+      },
+      {
+        "question": "Why is observation important during printing operations?",
+        "ideal_answer": "Observation helps identify machine faults, paper jams, or print quality issues early."
+      },
+      {
+        "question": "Why is discipline important in printing departments?",
+        "ideal_answer": "Discipline improves productivity, print quality, and workplace safety."
+      }
+    ],
+    "Safety and Machine Handling": [
+      {
+        "question": "Why should printing machine assistants wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy materials and machine-related injuries."
+      },
+      {
+        "question": "What PPE should a printing machine assistant use?",
+        "ideal_answer": "Safety shoes, gloves, masks, goggles, ear protection, and protective clothing should be used."
+      },
+      {
+        "question": "Why should loose clothes be avoided near machines?",
+        "ideal_answer": "Loose clothes can get caught in moving machine parts and cause serious injuries."
+      },
+      {
+        "question": "Why is machine guarding important?",
+        "ideal_answer": "Machine guarding prevents accidental contact with dangerous moving parts."
+      },
+      {
+        "question": "Why should machines be switched off before cleaning?",
+        "ideal_answer": "Switching off prevents accidental startup and protects workers from injury."
+      },
+      {
+        "question": "Why should ink spills be cleaned immediately?",
+        "ideal_answer": "Ink spills can cause slipping hazards and affect workplace cleanliness."
+      },
+      {
+        "question": "Why should emergency stop buttons be known?",
+        "ideal_answer": "Knowing emergency stop buttons helps stop machines quickly during unsafe situations."
+      },
+      {
+        "question": "Why is fire safety important in printing areas?",
+        "ideal_answer": "Fire safety protects workers and materials, especially because paper and chemicals can be flammable."
+      },
+      {
+        "question": "Why should damaged tools not be used?",
+        "ideal_answer": "Damaged tools can cause injuries and reduce work quality."
+      },
+      {
+        "question": "Why is workshop cleanliness important?",
+        "ideal_answer": "Cleanliness improves safety and prevents machine operation problems."
+      }
+    ]
+  },
+
+  "Office Support Staff": {
+    "Office Support Fundamentals": [
+      {
+        "question": "What is the main role of office support staff?",
+        "ideal_answer": "Office support staff assist daily office operations by handling files, documents, deliveries, supplies, and basic administrative support."
+      },
+      {
+        "question": "Why is document organization important in offices?",
+        "ideal_answer": "Proper organization helps locate files quickly and improves office efficiency."
+      },
+      {
+        "question": "Why is communication important for office support staff?",
+        "ideal_answer": "Good communication ensures smooth coordination with staff and management."
+      },
+      {
+        "question": "What is record keeping in office work?",
+        "ideal_answer": "Record keeping is maintaining documents, files, and official information in an organized way."
+      },
+      {
+        "question": "Why is inventory management important for office supplies?",
+        "ideal_answer": "Inventory management ensures required office materials are always available."
+      },
+      {
+        "question": "Why is scheduling support important?",
+        "ideal_answer": "Scheduling support helps manage meetings, appointments, and daily tasks efficiently."
+      },
+      {
+        "question": "Why is professionalism important in office work?",
+        "ideal_answer": "Professionalism improves discipline and creates a positive workplace environment."
+      },
+      {
+        "question": "Why is multitasking important for office support staff?",
+        "ideal_answer": "Multitasking helps handle multiple responsibilities efficiently within deadlines."
+      },
+      {
+        "question": "Why is customer handling important in office roles?",
+        "ideal_answer": "Good customer handling improves satisfaction and company image."
+      },
+      {
+        "question": "Why is punctuality important in office work?",
+        "ideal_answer": "Punctuality improves productivity and maintains professional discipline."
+      }
+    ],
+    "Discipline and Workplace Management": [
+      {
+        "question": "Why should confidential office documents be protected?",
+        "ideal_answer": "Protecting documents prevents misuse of sensitive company information."
+      },
+      {
+        "question": "Why is desk cleanliness important?",
+        "ideal_answer": "A clean desk improves focus, efficiency, and professionalism."
+      },
+      {
+        "question": "Why should office equipment be handled carefully?",
+        "ideal_answer": "Careful handling prevents damage and reduces unnecessary repair costs."
+      },
+      {
+        "question": "Why is proper filing important?",
+        "ideal_answer": "Proper filing avoids document loss and improves quick access to records."
+      },
+      {
+        "question": "Why should printers and computers be maintained regularly?",
+        "ideal_answer": "Regular maintenance improves performance and prevents work interruptions."
+      },
+      {
+        "question": "Why should emergency contact details be available?",
+        "ideal_answer": "Emergency contacts help respond quickly during accidents or urgent situations."
+      },
+      {
+        "question": "Why is teamwork important in office administration?",
+        "ideal_answer": "Teamwork improves coordination and helps complete work smoothly."
+      },
+      {
+        "question": "Why should office supplies be monitored regularly?",
+        "ideal_answer": "Monitoring prevents shortages and ensures smooth daily operations."
+      },
+      {
+        "question": "Why should instructions from supervisors be followed carefully?",
+        "ideal_answer": "Following instructions ensures work accuracy and avoids mistakes."
+      },
+      {
+        "question": "Why should emergency exits remain clear in offices?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      }
+    ]
+  },
+
+  "Dispatch Assistant": {
+    "Dispatch Operations Fundamentals": [
+      {
+        "question": "What is the main role of a dispatch assistant?",
+        "ideal_answer": "A dispatch assistant helps coordinate the preparation, checking, documentation, and movement of goods for timely delivery."
+      },
+      {
+        "question": "Why is dispatch planning important?",
+        "ideal_answer": "Dispatch planning ensures goods are delivered on time and reduces delays in transportation."
+      },
+      {
+        "question": "Why is quantity verification important before dispatch?",
+        "ideal_answer": "Quantity verification ensures the correct number of items are sent and prevents delivery mistakes."
+      },
+      {
+        "question": "What is dispatch documentation?",
+        "ideal_answer": "Dispatch documentation includes invoices, delivery notes, and shipment records required for transportation."
+      },
+      {
+        "question": "Why is labeling important in dispatch work?",
+        "ideal_answer": "Labeling helps identify products correctly and prevents wrong deliveries."
+      },
+      {
+        "question": "Why is stock coordination important in dispatch operations?",
+        "ideal_answer": "Stock coordination ensures correct goods are available and ready for shipment."
+      },
+      {
+        "question": "Why is teamwork important in dispatch departments?",
+        "ideal_answer": "Teamwork improves workflow and ensures smooth movement of goods."
+      },
+      {
+        "question": "Why is time management important in dispatch work?",
+        "ideal_answer": "Time management ensures timely deliveries and improves customer satisfaction."
+      },
+      {
+        "question": "Why should damaged goods be reported immediately?",
+        "ideal_answer": "Reporting damaged goods prevents wrong dispatch and supports quality control."
+      },
+      {
+        "question": "Why is accuracy important in dispatch operations?",
+        "ideal_answer": "Accuracy prevents shipment errors and improves delivery reliability."
+      }
+    ],
+    "Safety and Workplace Discipline": [
+      {
+        "question": "Why should dispatch assistants wear safety shoes?",
+        "ideal_answer": "Safety shoes protect feet from heavy goods and workplace injuries."
+      },
+      {
+        "question": "What PPE should a dispatch assistant use?",
+        "ideal_answer": "Safety shoes, gloves, helmets, reflective jackets, and safety belts when required should be used."
+      },
+      {
+        "question": "Why is proper lifting technique important?",
+        "ideal_answer": "Proper lifting prevents back injuries and avoids damage to goods."
+      },
+      {
+        "question": "Why should loading areas be kept clear?",
+        "ideal_answer": "Clear loading areas improve safety and reduce workplace accidents."
+      },
+      {
+        "question": "Why should damaged packing materials not be used?",
+        "ideal_answer": "Damaged materials can cause product damage and poor delivery quality."
+      },
+      {
+        "question": "Why is fire safety important in dispatch areas?",
+        "ideal_answer": "Fire safety protects workers, goods, and warehouse infrastructure."
+      },
+      {
+        "question": "Why should lifting equipment be inspected regularly?",
+        "ideal_answer": "Inspection ensures safe use and prevents equipment failure during heavy lifting."
+      },
+      {
+        "question": "Why should emergency exits remain clear?",
+        "ideal_answer": "Clear exits ensure safe evacuation during emergencies."
+      },
+      {
+        "question": "Why is cleanliness important in dispatch zones?",
+        "ideal_answer": "Cleanliness improves safety and reduces slipping or obstruction risks."
+      },
+      {
+        "question": "Why is discipline important in dispatch work?",
+        "ideal_answer": "Discipline improves productivity, safety, and smooth operations."
+      }
+    ]
+  }
+}

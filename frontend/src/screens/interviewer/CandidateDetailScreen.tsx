@@ -130,7 +130,11 @@ async function openMailClient(email: string, subject: string, body: string) {
   const gmailUrl = buildGmailComposeUrl(email, subject, body);
 
   try {
-    const canOpenMailto = Platform.OS === 'web' ? true : await Linking.canOpenURL(mailtoUrl);
+    if (Platform.OS === 'web') {
+      await Linking.openURL(gmailUrl);
+      return;
+    }
+    const canOpenMailto = await Linking.canOpenURL(mailtoUrl);
     if (canOpenMailto) {
       await Linking.openURL(mailtoUrl);
       return;

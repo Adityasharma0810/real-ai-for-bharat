@@ -235,7 +235,10 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
     () => resolveDepartmentAccess(user?.email || profile?.email || null),
     [user?.email, profile?.email]
   );
-  const allowedTrades = departmentAccessInfo.allowedTrades || [];
+  const allowedTrades = useMemo(
+    () => departmentAccessInfo.allowedTrades ?? [],
+    [departmentAccessInfo.allowedTrades]
+  );
   const hasTradeRestriction = allowedTrades.length > 0;
   const allowedTradeSet = useMemo(
     () => new Set(allowedTrades.map((trade) => normalizeValue(trade))),

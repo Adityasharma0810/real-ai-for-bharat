@@ -30,6 +30,9 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
   const [loading, setLoading] = useState(true);
   const [candidate, setCandidate] = useState<any>(null);
   const [updating, setUpdating] = useState(false);
+  const [transcript, setTranscript] = useState<{ role: string; content: string; timestamp?: number }[] | null>(null);
+  const [transcriptText, setTranscriptText] = useState<string | null>(null);
+  const [showTranscript, setShowTranscript] = useState(false);
 
   useEffect(() => {
     fetchCandidateDetails();
@@ -90,6 +93,17 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
       };
 
       setCandidate(merged);
+
+      // ── 4. Fetch transcript from Supabase interviews table ──────────────
+      if (interviewData?.id) {
+        const { data: ivRow } = await supabase
+          .from('interviews')
+          .select('transcript, transcript_text')
+          .eq('id', interviewData.id)
+          .maybeSingle();
+        if (ivRow?.transcript) setTranscript(ivRow.transcript);
+        if (ivRow?.transcript_text) setTranscriptText(ivRow.transcript_text);
+      }
     } catch (err) {
       console.error('Error fetching candidate:', err);
     } finally {
@@ -327,8 +341,56 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
           </View>
         )}
 
-        {/* ── Technical Skills — only if data exists ── */}
-        {candidate.skills?.length > 0 && (
+        {/* ── Interview Transcript ── */}
+        {(transcript || transcriptText) && (
+          <View style={styles.section}>
+            <TouchableOpacity
+              style={styles.transcriptToggle}
+              onPress={() => setShowTranscript((v) => !v)}
+              activeOpacity={0.7}
+            >
+              <View style={styles.transcriptToggleLeft}>
+                <Ionicons name="document-text-outline" size={20} color={theme.colors.primary} />
+                <Text style={styles.sectionTitle}>Interview Transcript</Text>
+              </View>
+              <Ionicons
+                name={showTranscript ? 'chevron-up' : 'chevron-down'}
+                size={20}
+                color={theme.colors.textSecondary}
+              />
+            </TouchableOpacity>
+
+            {showTranscript && (
+              <AppCard variant="outlined" style={styles.transcriptCard}>
+                {transcript && transcript.length > 0 ? (
+                  transcript.map((msg, i) => (
+                    <View
+                      key={i}
+                      style={[
+                        styles.transcriptBubble,
+                        msg.role === 'user' ? styles.userBubble : styles.aiBubble,
+                      ]}
+                    >
+                      <Text style={styles.transcriptSpeaker}>
+                        {msg.role === 'assistant' ? '🤖 Priya (AI)' : '👤 Candidate'}
+                      </Text>
+                      <Text style={styles.transcriptText}>{msg.content}</Text>
+                      {msg.timestamp && (
+                        <Text style={styles.transcriptTime}>
+                          {new Date(msg.timestamp).toLocaleTimeString()}
+                        </Text>
+                      )}
+                    </View>
+                  ))
+                ) : transcriptText ? (
+                  <Text style={styles.transcriptRawText}>{transcriptText}</Text>
+                ) : null}
+              </AppCard>
+            )}
+          </View>
+        )}
+
+        {/* ── Technical Skills — only if data exists ── */}        {candidate.skills?.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Technical Skills</Text>
             <View style={styles.skillsRow}>
@@ -505,4 +567,21 @@ const styles = StyleSheet.create({
   },
   resetBtnText: { fontSize: 13, fontWeight: '600', color: theme.colors.textSecondary },
   noInterviewText: { textAlign: 'center', fontSize: 14, fontWeight: '700', color: theme.colors.textSecondary },
+
+  // Transcript
+  transcriptToggle: {
+    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
+    paddingVertical: 8, marginBottom: 8,
+  },
+  transcriptToggleLeft: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  transcriptCard: { padding: 0, overflow: 'hidden' },
+  transcriptBubble: {
+    padding: 12, marginBottom: 2,
+  },
+  aiBubble: { backgroundColor: '#f8fafc', borderLeftWidth: 3, borderLeftColor: theme.colors.primary },
+  userBubble: { backgroundColor: '#eff6ff', borderLeftWidth: 3, borderLeftColor: theme.colors.secondary },
+  transcriptSpeaker: { fontSize: 11, fontWeight: '800', color: theme.colors.textSecondary, marginBottom: 4, textTransform: 'uppercase' },
+  transcriptText: { fontSize: 14, color: theme.colors.text, lineHeight: 20 },
+  transcriptTime: { fontSize: 10, color: theme.colors.textSecondary, marginTop: 4 },
+  transcriptRawText: { fontSize: 13, color: theme.colors.text, lineHeight: 20, padding: 12, fontFamily: 'monospace' },
 });

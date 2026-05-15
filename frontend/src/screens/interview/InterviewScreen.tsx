@@ -25,7 +25,7 @@ import { runOnJS } from 'react-native-reanimated';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { theme } from "../../theme";
 import { AppButton } from "../../components/AppButton";
-import { blockCandidate, getLatestResult, ResultNotReadyError, startInterview, InterviewResult } from "../../services/interviewService";
+import { blockCandidate, getLatestResult, ResultNotReadyError, startInterview, InterviewResult, saveTranscriptToSupabase, TranscriptEntry } from "../../services/interviewService";
 import { LiveOcrStatus, LiveOcrTracker } from "../../ai_modules/ocr_ai";
 import { WebFaceProctor, WebFaceStatus, computeFaceDescriptor } from "../../ai_modules/proctoring_ai";
 
@@ -118,6 +118,7 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
   const blockInProgressRef = useRef(false);
   const livekitRoomRef = useRef('');
   const transcriptScrollRef = useRef<ScrollView | null>(null);
+  const transcriptSnapshotRef = useRef<TranscriptMessage[]>([]);
   // Track attached RemoteAudioTrack instances so we can detach on cleanup
   const remoteAudioTracksRef = useRef<RemoteAudioTrack[]>([]);
   // Cached reference face descriptor for identity matching
@@ -351,7 +352,9 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
   const appendTranscriptMessage = useCallback((message: TranscriptMessage) => {
     setTranscriptMessages((current) => {
       if (current.some((item) => item.id === message.id)) return current;
-      return [...current, message].slice(-40);
+      const updated = [...current, message].slice(-40);
+      transcriptSnapshotRef.current = updated;
+      return updated;
     });
   }, []);
 
@@ -458,6 +461,11 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
         setPriyaSpeaking(false);
         if (blockInProgressRef.current) return;
         setInterviewState("completed");
+        // Save transcript — use a snapshot via ref to avoid stale closure
+        const snapshot = transcriptSnapshotRef.current;
+        if (snapshot.length > 0) {
+          void saveTranscriptToSupabase(livekitRoomRef.current, snapshot as TranscriptEntry[], userId);
+        }
         await fetchFitment();
       });
 
@@ -506,8 +514,13 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
     setMicActive(false);
     setPriyaSpeaking(false);
     setInterviewState("completed");
+    // Save transcript before fetching result
+    const currentTranscript = transcriptMessages;
+    if (currentTranscript.length > 0) {
+      void saveTranscriptToSupabase(livekitRoomRef.current, currentTranscript as TranscriptEntry[], userId);
+    }
     await fetchFitment();
-  }, [disconnectCleanly, fetchFitment, stopLiveOcr, stopWebFaceProctor]);
+  }, [disconnectCleanly, fetchFitment, stopLiveOcr, stopWebFaceProctor, transcriptMessages, userId]);
 
   const handleViewResult = useCallback(() => {
     // Pass the full result object directly — no need to re-fetch

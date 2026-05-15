@@ -1,0 +1,112 @@
+[
+  {
+    "aadhaar_number": "123456789012",
+    "full_name": "Ramesh Kumar",
+    "email": "ramesh.kumar@example.com",
+    "phone": "9876543210",
+    "address": "12, MG Road, Bengaluru",
+    "district": "Bengaluru",
+    "gender": "Male",
+    "dob": "1990-05-14",
+    "age": "34"
+  },
+  {
+    "aadhaar_number": "234567890123",
+    "full_name": "Priya Sharma",
+    "email": "priya.sharma@example.com",
+    "phone": "9123456780",
+    "address": "45, Nehru Nagar, Mumbai",
+    "district": "Mumbai",
+    "gender": "Female",
+    "dob": "1995-08-22",
+    "age": "29"
+  },
+  {
+    "aadhaar_number": "345678901234",
+    "full_name": "Suresh Patil",
+    "email": "suresh.patil@example.com",
+    "phone": "9988776655",
+    "address": "78, Shivaji Chowk, Pune",
+    "district": "Pune",
+    "gender": "Male",
+    "dob": "1988-11-03",
+    "age": "36"
+  },
+  {
+    "aadhaar_number": "456789012345",
+    "full_name": "Anita Devi",
+    "email": "anita.devi@example.com",
+    "phone": "9765432109",
+    "address": "23, Gandhi Street, Chennai",
+    "district": "Chennai",
+    "gender": "Female",
+    "dob": "1993-02-17",
+    "age": "31"
+  },
+  {
+    "aadhaar_number": "567890123456",
+    "full_name": "Mohan Lal",
+    "email": "mohan.lal@example.com",
+    "phone": "9654321098",
+    "address": "56, Rajpur Road, Dehradun",
+    "district": "Dehradun",
+    "gender": "Male",
+    "dob": "1985-07-30",
+    "age": "39"
+  },
+  {
+    "aadhaar_number": "678901234567",
+    "full_name": "Kavitha Reddy",
+    "email": "kavitha.reddy@example.com",
+    "phone": "9543210987",
+    "address": "89, Banjara Hills, Hyderabad",
+    "district": "Hyderabad",
+    "gender": "Female",
+    "dob": "1997-12-05",
+    "age": "27"
+  },
+  {
+    "aadhaar_number": "789012345678",
+    "full_name": "Arjun Singh",
+    "email": "arjun.singh@example.com",
+    "phone": "9432109876",
+    "address": "34, Civil Lines, Jaipur",
+    "district": "Jaipur",
+    "gender": "Male",
+    "dob": "1991-04-19",
+    "age": "33"
+  },
+  {
+    "aadhaar_number": "890123456789",
+    "full_name": "Meena Kumari",
+    "email": "meena.kumari@example.com",
+    "phone": "9321098765",
+    "address": "67, Ashok Nagar, Bhopal",
+    "district": "Bhopal",
+    "gender": "Female",
+    "dob": "1999-09-11",
+    "age": "25"
+  },
+  {
+    "aadhaar_number": "901234567890",
+    "full_name": "Vijay Nair",
+    "email": "vijay.nair@example.com",
+    "phone": "9210987654",
+    "address": "11, MG Road, Kochi",
+    "district": "Kochi",
+    "gender": "Male",
+    "dob": "1987-01-25",
+    "age": "37"
+  },
+  {
+    "aadhaar_number": "112233445566",
+    "full_name": "Sunita Yadav",
+    "email": "sunita.yadav@example.com",
+    "phone": "9109876543",
+    "address": "90, Hazratganj, Lucknow",
+    "district": "Lucknow",
+    "gender": "Female",
+    "dob": "1994-06-08",
+    "age": "30"
+  }
+]

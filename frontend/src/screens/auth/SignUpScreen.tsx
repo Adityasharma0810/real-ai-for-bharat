@@ -1,10 +1,23 @@
 import React, { useState, useContext, useRef, useCallback, useEffect } from 'react';
-import { View, Text, StyleSheet, KeyboardAvoidingView, Platform, ScrollView, TouchableOpacity, Image, Modal, ActionSheetIOS, Alert } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  TouchableOpacity,
+  Image,
+  Modal,
+  ActionSheetIOS,
+  Alert,
+} from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from '../../navigation/types';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
-import { registerUser, checkDuplicateAadhaar, checkDuplicatePhone } from '../../services/supabase/auth';
+import { registerWithAadhaar } from '../../services/supabase/auth';
+import { lookupAadhaar, AadhaarRecord } from '../../services/aadhaarService';
 import { AuthContext } from '../../context/AuthContext';
 
 // Only import image picker on native
@@ -13,14 +26,20 @@ if (Platform.OS !== 'web') {
   ImagePicker = require('expo-image-picker');
 }
 
-
 type SignUpScreenNavigationProp = NativeStackNavigationProp<AuthStackParamList, 'SignUp'>;
 
 interface Props {
   navigation: SignUpScreenNavigationProp;
 }
 
-const WebCameraView = ({ onCapture, onClose }: { onCapture: (uri: string) => void, onClose: () => void }) => {
+// ── Web camera component (unchanged) ─────────────────────────────────────────
+const WebCameraView = ({
+  onCapture,
+  onClose,
+}: {
+  onCapture: (uri: string) => void;
+  onClose: () => void;
+}) => {
   const videoRef = useRef<any>(null);
   const canvasRef = useRef<any>(null);
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
@@ -31,20 +50,15 @@ const WebCameraView = ({ onCapture, onClose }: { onCapture: (uri: string) => voi
       try {
         stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
         setHasPermission(true);
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        }
+        if (videoRef.current) videoRef.current.srcObject = stream;
       } catch (err) {
         console.error('Camera access denied:', err);
         setHasPermission(false);
       }
     };
     startCamera();
-
     return () => {
-      if (stream) {
-        stream.getTracks().forEach(track => track.stop());
-      }
+      if (stream) stream.getTracks().forEach((t) => t.stop());
     };
   }, []);
 
@@ -57,8 +71,7 @@ const WebCameraView = ({ onCapture, onClose }: { onCapture: (uri: string) => voi
       const ctx = canvas.getContext('2d');
       if (ctx) {
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
-        onCapture(dataUrl);
+        onCapture(canvas.toDataURL('image/jpeg', 0.8));
       }
     }
   };
@@ -76,16 +89,15 @@ const WebCameraView = ({ onCapture, onClose }: { onCapture: (uri: string) => voi
 
   return (
     <View style={{ width: '100%', alignItems: 'center' }}>
-      {Platform.OS === 'web' && React.createElement('video', {
-        ref: videoRef,
-        autoPlay: true,
-        playsInline: true,
-        style: { width: '100%', height: 300, backgroundColor: 'black', borderRadius: 8, objectFit: 'cover' }
-      })}
-      {Platform.OS === 'web' && React.createElement('canvas', {
-        ref: canvasRef,
-        style: { display: 'none' }
-      })}
+      {Platform.OS === 'web' &&
+        React.createElement('video', {
+          ref: videoRef,
+          autoPlay: true,
+          playsInline: true,
+          style: { width: '100%', height: 300, backgroundColor: 'black', borderRadius: 8, objectFit: 'cover' },
+        })}
+      {Platform.OS === 'web' &&
+        React.createElement('canvas', { ref: canvasRef, style: { display: 'none' } })}
       <View style={styles.webCamButtonRow}>
         <TouchableOpacity style={styles.captureButton} onPress={handleCapture}>
           <Text style={{ color: '#fff', fontWeight: 'bold' }}>Capture Photo</Text>
@@ -98,64 +110,76 @@ const WebCameraView = ({ onCapture, onClose }: { onCapture: (uri: string) => voi
   );
 };
 
+// ── Main SignUp Screen ────────────────────────────────────────────────────────
 export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
-  const { t } = useContext(AuthContext);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const { t, refreshProfile } = useContext(AuthContext);
+
   const [aadhaarNumber, setAadhaarNumber] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [district, setDistrict] = useState('');
   const [photoUri, setPhotoUri] = useState<string | null>(null);
-  
+
+  // Auto-filled details fetched from mock Aadhaar DB
+  const [aadhaarRecord, setAadhaarRecord] = useState<AadhaarRecord | null>(null);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
-  
+
   const [showPhotoOptions, setShowPhotoOptions] = useState(false);
   const [showWebCamera, setShowWebCamera] = useState(false);
 
-  // Web file input refs
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  // ── Web: use native file input ──────────────────────
+  // ── Aadhaar lookup on blur ──────────────────────────────────────────────────
+  const handleAadhaarBlur = () => {
+    if (aadhaarNumber.length === 12) {
+      const record = lookupAadhaar(aadhaarNumber);
+      if (record) {
+        setAadhaarRecord(record);
+        setValidationErrors((prev) => {
+          const { aadhaar, ...rest } = prev;
+          return rest;
+        });
+      } else {
+        setAadhaarRecord(null);
+        setValidationErrors((prev) => ({
+          ...prev,
+          aadhaar: 'Aadhaar number not found in government records',
+        }));
+      }
+    } else {
+      setAadhaarRecord(null);
+    }
+  };
+
+  // ── Photo picking ───────────────────────────────────────────────────────────
   const handleWebFileChange = useCallback((event: any) => {
     const file = event.target?.files?.[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = () => {
-      setPhotoUri(reader.result as string);
-    };
+    reader.onload = () => setPhotoUri(reader.result as string);
     reader.readAsDataURL(file);
     setShowPhotoOptions(false);
   }, []);
 
-  // ── Pick Image Functions ────────────────────────────
   const pickImageFromGallery = async () => {
     if (Platform.OS === 'web') {
       fileInputRef.current?.click();
       setShowPhotoOptions(false);
       return;
     }
-
     if (!ImagePicker) return;
-    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (!permissionResult.granted) {
+    const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!perm.granted) {
       Alert.alert('Permission required', 'Please allow access to your photo library.');
       return;
     }
-
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ['images'],
       allowsEditing: true,
       aspect: [1, 1],
       quality: 0.7,
     });
-
-    if (!result.canceled && result.assets[0]) {
-      setPhotoUri(result.assets[0].uri);
-    }
+    if (!result.canceled && result.assets[0]) setPhotoUri(result.assets[0].uri);
   };
 
   const takePhoto = async () => {
@@ -164,151 +188,76 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
       setShowWebCamera(true);
       return;
     }
-
     if (!ImagePicker) return;
-    const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
-    if (!permissionResult.granted) {
+    const perm = await ImagePicker.requestCameraPermissionsAsync();
+    if (!perm.granted) {
       Alert.alert('Permission required', 'Please allow access to your camera.');
       return;
     }
-
     const result = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
       aspect: [1, 1],
       quality: 0.7,
     });
-
-    if (!result.canceled && result.assets[0]) {
-      setPhotoUri(result.assets[0].uri);
-    }
+    if (!result.canceled && result.assets[0]) setPhotoUri(result.assets[0].uri);
   };
 
   const handlePickPhoto = () => {
     if (Platform.OS === 'ios') {
       ActionSheetIOS.showActionSheetWithOptions(
-        {
-          options: ['Cancel', t('take_photo'), t('choose_gallery')],
-          cancelButtonIndex: 0,
-        },
-        (buttonIndex) => {
-          if (buttonIndex === 1) takePhoto();
-          else if (buttonIndex === 2) pickImageFromGallery();
+        { options: ['Cancel', t('take_photo'), t('choose_gallery')], cancelButtonIndex: 0 },
+        (idx) => {
+          if (idx === 1) takePhoto();
+          else if (idx === 2) pickImageFromGallery();
         }
       );
     } else if (Platform.OS === 'android') {
-      Alert.alert(
-        t('upload_photo'),
-        '',
-        [
-          { text: t('take_photo'), onPress: takePhoto },
-          { text: t('choose_gallery'), onPress: pickImageFromGallery },
-          { text: 'Cancel', style: 'cancel' },
-        ]
-      );
+      Alert.alert(t('upload_photo'), '', [
+        { text: t('take_photo'), onPress: takePhoto },
+        { text: t('choose_gallery'), onPress: pickImageFromGallery },
+        { text: 'Cancel', style: 'cancel' },
+      ]);
     } else {
       setShowPhotoOptions(true);
     }
   };
 
-  const handleAadhaarBlur = async () => {
-    if (aadhaarNumber.length === 12) {
-      const isDuplicate = await checkDuplicateAadhaar(aadhaarNumber);
-      if (isDuplicate) {
-        setValidationErrors(prev => ({ ...prev, aadhaar: t('aadhaar_duplicate_error') || 'Aadhaar already registered' }));
-      } else {
-        setValidationErrors(prev => { const { aadhaar, ...rest } = prev; return rest; });
-      }
-    }
-  };
-
-  const handlePhoneBlur = async () => {
-    if (phoneNumber.length === 10) {
-      const isDuplicate = await checkDuplicatePhone(phoneNumber);
-      if (isDuplicate) {
-        setValidationErrors(prev => ({ ...prev, phone: 'Phone number already registered' }));
-      } else {
-        setValidationErrors(prev => { const { phone, ...rest } = prev; return rest; });
-      }
-    }
-  };
-
-  const autofillLocation = async () => {
-    try {
-      const res = await fetch('https://ipapi.co/json/');
-      const data = await res.json();
-      if (data && data.city) {
-        setDistrict(data.city);
-        setValidationErrors(prev => { const { district, ...rest } = prev; return rest; });
-      } else {
-        Alert.alert('Error', 'Could not detect location. Please enter manually.');
-      }
-    } catch (e) {
-      Alert.alert('Error', 'Could not detect location. Please enter manually.');
-    }
-  };
-
+  // ── Validation ──────────────────────────────────────────────────────────────
   const validateForm = () => {
     const errors: Record<string, string> = {};
-    if (!name) errors.name = t('filling_fields');
-    if (!email) {
-      errors.email = t('filling_fields');
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = 'Email is invalid';
-    }
-    
-    if (!password) {
-      errors.password = t('filling_fields');
-    } else if (password.length < 8) {
-      errors.password = 'Password must be at least 8 characters';
-    }
 
-    if (password !== confirmPassword) {
-      errors.confirmPassword = 'Passwords do not match';
-    }
-
-    // Aadhaar validation — exactly 12 digits
     if (!aadhaarNumber) {
       errors.aadhaar = t('filling_fields');
     } else if (!/^\d{12}$/.test(aadhaarNumber)) {
       errors.aadhaar = t('aadhaar_invalid');
+    } else if (!aadhaarRecord) {
+      errors.aadhaar = 'Aadhaar number not found in government records';
     }
 
-    // Phone validation — exactly 10 digits
-    if (!phoneNumber) {
-      errors.phone = t('filling_fields');
-    } else if (!/^\d{10}$/.test(phoneNumber)) {
-      errors.phone = t('phone_invalid');
-    }
-
-    // Photo validation
     if (!photoUri) {
       errors.photo = t('filling_fields');
-    }
-
-    if (!district.trim()) {
-      errors.district = t('filling_fields');
     }
 
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
-  const { refreshProfile } = useContext(AuthContext);
-
+  // ── Submit ──────────────────────────────────────────────────────────────────
   const handleSignUp = async () => {
     if (!validateForm()) return;
 
     try {
       setLoading(true);
       setError('');
-      const newUser = await registerUser(name, email, password, aadhaarNumber, phoneNumber, photoUri || undefined, district);
-      // Fetch the updated profile immediately so photo_url is loaded
-      if (newUser?.id) {
-        await refreshProfile(newUser.id);
+      const result = await registerWithAadhaar(aadhaarNumber, photoUri || undefined);
+      if (result?.userId) {
+        await refreshProfile(result.userId);
       }
     } catch (err: any) {
       if (err.message === 'AADHAAR_DUPLICATE') {
         setError(t('aadhaar_duplicate_error'));
+      } else if (err.message === 'AADHAAR_NOT_FOUND') {
+        setError('Aadhaar number not found in government records');
       } else {
         setError(err.message || 'Failed to create an account');
       }
@@ -318,22 +267,22 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <KeyboardAvoidingView 
-      style={styles.container} 
+    <KeyboardAvoidingView
+      style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        {/* Header */}
         <View style={styles.header}>
           <Text style={styles.title}>{t('create_account')}</Text>
-          <Text style={styles.subtitle}>{t('join_skillfit')}</Text>
+          <Text style={styles.subtitle}>{t('aadhaar_signup_subtitle')}</Text>
         </View>
 
         {error ? <Text style={styles.globalError}>{error}</Text> : null}
 
-        {/* ── Photo Upload ─────────────────────────────────── */}
+        {/* ── Photo Upload ──────────────────────────────────────────────────── */}
         <View style={styles.photoSection}>
           <Text style={styles.photoLabel}>{t('upload_photo')}</Text>
-          {/* Hidden file input for web gallery */}
           {Platform.OS === 'web' && (
             <input
               ref={fileInputRef as any}
@@ -356,7 +305,7 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           {validationErrors.photo ? <Text style={styles.errorText}>{validationErrors.photo}</Text> : null}
         </View>
 
-        {/* Photo Options Modal for Web */}
+        {/* Photo Options Modal (Web) */}
         {Platform.OS === 'web' && (
           <Modal transparent visible={showPhotoOptions} animationType="fade">
             <View style={styles.modalOverlay}>
@@ -368,7 +317,10 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
                 <TouchableOpacity style={styles.modalButton} onPress={pickImageFromGallery}>
                   <Text style={styles.modalButtonText}>{t('choose_gallery')}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.modalButton, styles.modalCancelButton]} onPress={() => setShowPhotoOptions(false)}>
+                <TouchableOpacity
+                  style={[styles.modalButton, styles.modalCancelButton]}
+                  onPress={() => setShowPhotoOptions(false)}
+                >
                   <Text style={styles.modalCancelText}>Cancel</Text>
                 </TouchableOpacity>
               </View>
@@ -381,7 +333,7 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           <Modal transparent visible={showWebCamera} animationType="fade">
             <View style={styles.modalOverlay}>
               <View style={styles.webCameraContainer}>
-                <WebCameraView 
+                <WebCameraView
                   onCapture={(uri) => {
                     setPhotoUri(uri);
                     setShowWebCamera(false);
@@ -393,91 +345,53 @@ export const SignUpScreen: React.FC<Props> = ({ navigation }) => {
           </Modal>
         )}
 
-        <Input
-          label={t('full_name_label')}
-          placeholder={t('enter_full_name')}
-          value={name}
-          onChangeText={setName}
-          error={validationErrors.name}
-        />
-
-        <Input
-          label={t('email_label')}
-          placeholder={t('enter_email')}
-          value={email}
-          onChangeText={setEmail}
-          keyboardType="email-address"
-          autoCapitalize="none"
-          error={validationErrors.email}
-        />
-
-        {/* ── Aadhaar Number ──────────────────────────────── */}
+        {/* ── Aadhaar Number ────────────────────────────────────────────────── */}
         <Input
           label={t('aadhaar_label')}
           placeholder={t('enter_aadhaar')}
           value={aadhaarNumber}
-          onChangeText={(text: string) => setAadhaarNumber(text.replace(/[^0-9]/g, '').slice(0, 12))}
+          onChangeText={(text: string) => {
+            setAadhaarNumber(text.replace(/[^0-9]/g, '').slice(0, 12));
+            if (aadhaarRecord) setAadhaarRecord(null);
+          }}
           onBlur={handleAadhaarBlur}
           keyboardType="numeric"
           maxLength={12}
           error={validationErrors.aadhaar}
         />
 
-        {/* ── Phone Number ────────────────────────────────── */}
-        <Input
-          label={t('phone_label_signup')}
-          placeholder={t('enter_phone_signup')}
-          value={phoneNumber}
-          onChangeText={(text: string) => setPhoneNumber(text.replace(/[^0-9]/g, '').slice(0, 10))}
-          onBlur={handlePhoneBlur}
-          keyboardType="phone-pad"
-          maxLength={10}
-          error={validationErrors.phone}
-        />
-
-        {/* ── Location ────────────────────────────────────── */}
-        <View style={styles.locationContainer}>
-          <View style={styles.locationInputWrapper}>
-            <Input
-              label="Location (City/District)"
-              placeholder="e.g. Mumbai"
-              value={district}
-              onChangeText={setDistrict}
-              error={validationErrors.district}
-            />
+        {/* ── Auto-filled Details Preview ───────────────────────────────────── */}
+        {aadhaarRecord && (
+          <View style={styles.autoFillCard}>
+            <View style={styles.autoFillHeader}>
+              <Text style={styles.autoFillIcon}>✅</Text>
+              <Text style={styles.autoFillTitle}>{t('aadhaar_verified')}</Text>
+            </View>
+            <Text style={styles.autoFillNote}>{t('aadhaar_autofill_note')}</Text>
+            <View style={styles.autoFillRow}>
+              <Text style={styles.autoFillLabel}>{t('full_name_label')}:</Text>
+              <Text style={styles.autoFillValue}>{aadhaarRecord.full_name}</Text>
+            </View>
+            <View style={styles.autoFillRow}>
+              <Text style={styles.autoFillLabel}>{t('phone_label')}:</Text>
+              <Text style={styles.autoFillValue}>
+                {'XXXXXX' + aadhaarRecord.phone.slice(-4)}
+              </Text>
+            </View>
+            <View style={styles.autoFillRow}>
+              <Text style={styles.autoFillLabel}>{t('district_label')}:</Text>
+              <Text style={styles.autoFillValue}>{aadhaarRecord.district}</Text>
+            </View>
+            <View style={styles.autoFillRow}>
+              <Text style={styles.autoFillLabel}>{t('gender_label')}:</Text>
+              <Text style={styles.autoFillValue}>{aadhaarRecord.gender}</Text>
+            </View>
           </View>
-          <TouchableOpacity 
-            style={styles.autofillButton}
-            onPress={autofillLocation}
-          >
-            <Text style={styles.autofillText}>Autofill</Text>
-          </TouchableOpacity>
-        </View>
+        )}
 
-        <Input
-          label={t('password_label')}
-          placeholder={t('enter_password')}
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry
-          error={validationErrors.password}
-        />
-
-        <Input
-          label={t('password_label')}
-          placeholder={t('enter_password')}
-          value={confirmPassword}
-          onChangeText={setConfirmPassword}
-          secureTextEntry
-          error={validationErrors.confirmPassword}
-        />
-
+        {/* ── Submit ────────────────────────────────────────────────────────── */}
         <View style={styles.buttonContainer}>
-          <Button 
-            title={t('signup_btn')} 
-            onPress={handleSignUp} 
-            loading={loading} 
-          />
+          <Button title={t('signup_btn')} onPress={handleSignUp} loading={loading} />
         </View>
 
         <View style={styles.footer}>
@@ -522,7 +436,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 8,
   },
-  // ── Photo styles ──────────────────────────────────────
+  // Photo
   photoSection: {
     alignItems: 'center',
     marginBottom: 20,
@@ -571,7 +485,51 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: 4,
   },
-  // ── Web Modal Styles ──────────────────────────────────
+  // Auto-fill card
+  autoFillCard: {
+    backgroundColor: '#f0fdf4',
+    borderWidth: 1,
+    borderColor: '#86efac',
+    borderRadius: 12,
+    padding: 16,
+    marginTop: 8,
+    marginBottom: 8,
+  },
+  autoFillHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  autoFillIcon: {
+    fontSize: 18,
+    marginRight: 8,
+  },
+  autoFillTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#15803d',
+  },
+  autoFillNote: {
+    fontSize: 12,
+    color: '#166534',
+    marginBottom: 12,
+  },
+  autoFillRow: {
+    flexDirection: 'row',
+    marginBottom: 6,
+  },
+  autoFillLabel: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#374151',
+    width: 90,
+  },
+  autoFillValue: {
+    fontSize: 13,
+    color: '#111827',
+    flex: 1,
+  },
+  // Modals
   modalOverlay: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.5)',
@@ -637,7 +595,6 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 8,
   },
-  // ── Original styles ───────────────────────────────────
   buttonContainer: {
     marginTop: 16,
   },
@@ -645,31 +602,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginTop: 24,
-  },
-  locationContainer: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
-  locationInputWrapper: {
-    flex: 1,
-  },
-  autofillButton: {
-    marginTop: 26,
-    marginLeft: 10,
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    backgroundColor: '#eff6ff',
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#2563eb',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 48,
-  },
-  autofillText: {
-    color: '#2563eb',
-    fontWeight: '600',
-    fontSize: 14,
   },
   footerText: {
     color: '#6b7280',
@@ -679,4 +611,3 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 });
-

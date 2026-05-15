@@ -1,5 +1,6 @@
 import { supabase } from './config';
 import { Platform } from 'react-native';
+import { lookupAadhaar, verifyAadhaarOtp } from '../aadhaarService';
 
 export const loginUser = async (email: string, password: string) => {
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -227,5 +228,99 @@ export const logoutUser = async () => {
 
 export const resetPassword = async (email: string) => {
   const { error } = await supabase.auth.resetPasswordForEmail(email);
+  if (error) throw error;
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Aadhaar-based Authentication (Prototype)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Register a new user using their Aadhaar number.
+ * Profile details (name, email, phone, district, gender, age) are fetched
+ * from the mock Aadhaar database and stored automatically.
+ */
+export const registerWithAadhaar = async (
+  aadhaarNumber: string,
+  photoUri?: string,
+): Promise<{ userId: string; email: string }> => {
+  // 1. Look up Aadhaar in mock government DB
+  const aadhaarRecord = lookupAadhaar(aadhaarNumber);
+  if (!aadhaarRecord) {
+    throw new Error('AADHAAR_NOT_FOUND');
+  }
+
+  // 2. Check if already registered
+  const isDuplicate = await checkDuplicateAadhaar(aadhaarNumber);
+  if (isDuplicate) {
+    throw new Error('AADHAAR_DUPLICATE');
+  }
+
+  // 3. Create a Supabase auth user.
+  //    We derive a deterministic email + password from the Aadhaar so the user
+  //    never has to remember credentials — they always log in via OTP.
+  const derivedEmail = `aadhaar_${aadhaarNumber}@skillfit.internal`;
+  const derivedPassword = `aadhaar_${aadhaarNumber}_secure`;
+
+  const { data, error } = await supabase.auth.signUp({
+    email: derivedEmail,
+    password: derivedPassword,
+    options: {
+      data: { full_name: aadhaarRecord.full_name },
+    },
+  });
+
+  if (error) throw error;
+  if (!data.user) throw new Error('Failed to create user account');
+
+  // 4. Upload photo if provided
+  let photoUrl: string | null = null;
+  if (photoUri) {
+    photoUrl = await uploadProfilePhoto(data.user.id, photoUri);
+  }
+
+  // 5. Create profile with auto-filled Aadhaar details
+  const profileData: Record<string, any> = {
+    id: data.user.id,
+    full_name: aadhaarRecord.full_name,
+    email: aadhaarRecord.email,
+    phone: aadhaarRecord.phone,
+    district: aadhaarRecord.district,
+    gender: aadhaarRecord.gender,
+    age: aadhaarRecord.age,
+    aadhaar_number: aadhaarNumber,
+    role: 'candidate',
+    updated_at: new Date(),
+  };
+
+  if (photoUrl) {
+    profileData.photo_url = photoUrl;
+  }
+
+  const { error: profileError } = await supabase
+    .from('profiles')
+    .upsert(profileData);
+
+  if (profileError) {
+    console.error('Error creating profile:', profileError);
+  }
+
+  return { userId: data.user.id, email: derivedEmail };
+};
+
+/**
+ * Login using Aadhaar number + OTP.
+ * The OTP has already been verified before calling this function.
+ * We sign in with the deterministic credentials derived from the Aadhaar.
+ */
+export const loginWithAadhaar = async (aadhaarNumber: string): Promise<void> => {
+  const derivedEmail = `aadhaar_${aadhaarNumber}@skillfit.internal`;
+  const derivedPassword = `aadhaar_${aadhaarNumber}_secure`;
+
+  const { error } = await supabase.auth.signInWithPassword({
+    email: derivedEmail,
+    password: derivedPassword,
+  });
+
   if (error) throw error;
 };

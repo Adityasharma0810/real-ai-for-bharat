@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../../theme';
@@ -8,9 +8,8 @@ import { AppButton } from '../../components/AppButton';
 import { AppCard } from '../../components/AppCard';
 
 export const RoleSelectionScreen = () => {
-  const { updateProfile, t } = useContext(AuthContext);
+  const { updateProfile, profile, t } = useContext(AuthContext);
   const [selectedRole, setSelectedRole] = React.useState<'candidate' | 'employer' | null>(null);
-  const [fullName, setFullName] = React.useState('');
   const [loading, setLoading] = React.useState(false);
 
   const roles = [
@@ -31,16 +30,13 @@ export const RoleSelectionScreen = () => {
   ];
 
   const handleContinue = async () => {
-    if (!selectedRole || !fullName.trim()) {
-      Alert.alert('Missing Info', 'Please provide your full name and select a role.');
+    if (!selectedRole) {
+      Alert.alert('Missing Info', 'Please select a role to continue.');
       return;
     }
     setLoading(true);
     try {
-      await updateProfile({ 
-        role: selectedRole,
-        full_name: fullName.trim() 
-      });
+      await updateProfile({ role: selectedRole });
     } catch (error) {
       console.error('Error setting role:', error);
     } finally {
@@ -51,18 +47,8 @@ export const RoleSelectionScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Complete Your Profile</Text>
-        <Text style={styles.subtitle}>Tell us who you are and how you'll use AI SkillFit</Text>
-
-        <View style={styles.inputSection}>
-          <Text style={styles.label}>Full Name</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="e.g. John Doe"
-            value={fullName}
-            onChangeText={setFullName}
-          />
-        </View>
+        <Text style={styles.title}>Welcome, {profile?.full_name || 'there'}!</Text>
+        <Text style={styles.subtitle}>How will you be using AI SkillFit?</Text>
 
         <Text style={[styles.label, { marginBottom: 16 }]}>I am a...</Text>
 
@@ -77,7 +63,7 @@ export const RoleSelectionScreen = () => {
               <AppCard
                 style={[
                   styles.roleCard,
-                  ...(selectedRole === role.id ? [{ borderColor: role.color, borderWidth: 2 }] : [])
+                  ...(selectedRole === role.id ? [{ borderColor: role.color, borderWidth: 2 }] : []),
                 ]}
                 variant="outlined"
               >
@@ -122,7 +108,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: '800',
     color: theme.colors.text,
     marginBottom: 8,
@@ -134,24 +120,11 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     textAlign: 'center',
   },
-  inputSection: {
-    marginBottom: 32,
-  },
   label: {
     fontSize: 14,
     fontWeight: '700',
     color: theme.colors.text,
     marginBottom: 8,
-  },
-  input: {
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: theme.colors.border,
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    fontSize: 16,
-    color: theme.colors.text,
   },
   rolesContainer: {
     marginBottom: 48,

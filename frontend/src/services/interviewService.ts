@@ -358,3 +358,79 @@ export async function getBlockedCandidates(params?: {
   if (!response.ok) throw new Error(`Failed to fetch blocked candidates (${response.status})`);
   return response.json() as Promise<BlockedCandidate[]>;
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Transcript saving
+// ─────────────────────────────────────────────────────────────────────────────
+
+export interface TranscriptEntry {
+  id: string;
+  speaker: 'assistant' | 'user';
+  text: string;
+  timestamp: number;
+}
+
+/**
+ * Save the full interview transcript to the `interviews` table in Supabase.
+ * Matches the row by livekit_room (set when the interview starts).
+ * Falls back to matching by user_id + most recent row if room is unavailable.
+ */
+export async function saveTranscriptToSupabase(
+  livekitRoom: string,
+  transcript: TranscriptEntry[],
+  userId?: string,
+): Promise<void> {
+  if (!transcript || transcript.length === 0) return;
+
+  const { supabase } = await import('../services/supabase/config');
+
+  // Format transcript as plain text for easy reading in admin panel
+  const transcriptText = transcript
+    .map((msg) => {
+      const time = new Date(msg.timestamp).toLocaleTimeString();
+      const speaker = msg.speaker === 'assistant' ? 'Priya (AI)' : 'Candidate';
+      return `[${time}] ${speaker}: ${msg.text}`;
+    })
+    .join('\n');
+
+  // Also keep the structured JSON version
+  const transcriptJson = transcript.map((msg) => ({
+    role: msg.speaker === 'assistant' ? 'assistant' : 'user',
+    content: msg.text,
+    timestamp: msg.timestamp,
+  }));
+
+  let updateError: any = null;
+
+  // Primary: match by livekit_room
+  if (livekitRoom) {
+    const { error } = await supabase
+      .from('interviews')
+      .update({
+        transcript: transcriptJson,
+        transcript_text: transcriptText,
+      })
+      .eq('livekit_room', livekitRoom);
+    updateError = error;
+  }
+
+  // Fallback: match by user_id, most recent interview
+  if ((updateError || !livekitRoom) && userId) {
+    const { error } = await supabase
+      .from('interviews')
+      .update({
+        transcript: transcriptJson,
+        transcript_text: transcriptText,
+      })
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false })
+      .limit(1);
+    updateError = error;
+  }
+
+  if (updateError) {
+    console.warn('[Transcript] Failed to save transcript to Supabase:', updateError.message);
+  } else {
+    console.log('[Transcript] Saved successfully.');
+  }
+}

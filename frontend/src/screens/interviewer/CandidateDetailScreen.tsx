@@ -9,6 +9,7 @@ import { theme } from '../../theme';
 import { supabase } from '../../services/supabase/config';
 import { AppCard } from '../../components/AppCard';
 import { getResults, updateInterviewAdminStatus } from '../../services/interviewService';
+import { PortfolioGallery } from '../../components/PortfolioGallery';
 
 const FITMENT_COLOR: Record<string, string> = {
   'Job-Ready': '#10b981',
@@ -415,6 +416,16 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
                 </View>
               ))}
             </View>
+          </View>
+        )}
+
+        {/* ── Work Portfolio ── */}
+        {(candidateId || candidate?.interview?.user_id) && (
+          <View style={styles.section}>
+            <PortfolioGallery
+              userId={candidateId || candidate.interview.user_id}
+              readOnly
+            />
           </View>
         )}
 

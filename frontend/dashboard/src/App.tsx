@@ -17,6 +17,7 @@ import {
   ShieldAlert,
   BarChart2,
 } from 'lucide-react';
+import { AdminPortfolioViewer } from './components/AdminPortfolioViewer';
 import {
   Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart,
   Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis,
@@ -1051,6 +1052,11 @@ function CandidateDetailModal({ interview, onClose }: { interview: Interview; on
                 ))}
               </div>
             </>
+          )}
+
+          {/* Work Portfolio — visible to admins (Requirement 7.1) */}
+          {interview.user_id && (
+            <AdminPortfolioViewer candidateUserId={interview.user_id} />
           )}
 
           <div style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--muted)' }}>

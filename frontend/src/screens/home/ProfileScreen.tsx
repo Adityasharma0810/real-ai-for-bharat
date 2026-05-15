@@ -6,6 +6,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { theme } from '../../theme';
 import { AppCard } from '../../components/AppCard';
 import { AppButton } from '../../components/AppButton';
+import { PortfolioGallery } from '../../components/PortfolioGallery';
 
 const LANGUAGES = [
   { id: 'en', label: 'English', native: 'English' },
@@ -124,6 +125,12 @@ export const ProfileScreen: React.FC<any> = ({ navigation }) => {
                 </View>
               </View>
             </AppCard>
+          </View>
+        )}
+
+        {profile?.role === 'candidate' && user?.id && (
+          <View style={styles.section}>
+            <PortfolioGallery userId={user.id} />
           </View>
         )}
 

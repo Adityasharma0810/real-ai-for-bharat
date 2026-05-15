@@ -1,15 +1,5 @@
 [
-  {
-    "aadhaar_number": "123456789012",
-    "full_name": "Ramesh Kumar",
-    "email": "ramesh.kumar@example.com",
-    "phone": "9876543210",
-    "address": "12, MG Road, Bengaluru",
-    "district": "Bengaluru",
-    "gender": "Male",
-    "dob": "1990-05-14",
-    "age": "34"
-  },
+
   {
     "aadhaar_number": "234567890123",
     "full_name": "Priya Sharma",

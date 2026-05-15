@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  ActivityIndicator, Alert, Image, Linking,
+  ActivityIndicator, Alert, Image, Linking, Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -114,6 +114,38 @@ function buildMailtoUrl(email: string, subject: string, body: string) {
   return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
+function buildGmailComposeUrl(email: string, subject: string, body: string) {
+  const params = new URLSearchParams({
+    view: 'cm',
+    fs: '1',
+    to: email,
+    su: subject,
+    body,
+  });
+  return `https://mail.google.com/mail/?${params.toString()}`;
+}
+
+async function openMailClient(email: string, subject: string, body: string) {
+  const mailtoUrl = buildMailtoUrl(email, subject, body);
+  const gmailUrl = buildGmailComposeUrl(email, subject, body);
+
+  try {
+    const canOpenMailto = Platform.OS === 'web' ? true : await Linking.canOpenURL(mailtoUrl);
+    if (canOpenMailto) {
+      await Linking.openURL(mailtoUrl);
+      return;
+    }
+  } catch (err) {
+    // Fall back to Gmail compose
+  }
+
+  try {
+    await Linking.openURL(gmailUrl);
+  } catch (err) {
+    Alert.alert('Unable to open mail app', 'Please check your mail app settings and try again.');
+  }
+}
+
 export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => {
   const { candidateId, jobId, interviewId } = route.params;
   const [loading, setLoading] = useState(true);
@@ -123,7 +155,7 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
   const [transcriptText, setTranscriptText] = useState<string | null>(null);
   const [showTranscript, setShowTranscript] = useState(false);
 
-  const openDecisionEmail = (status: DecisionStatus) => {
+  const openDecisionEmail = async (status: DecisionStatus) => {
     if (!candidate) return;
 
     const candidateEmail = candidate.email?.trim()
@@ -136,10 +168,7 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
     }
 
     const { subject, body } = buildDecisionEmail(status, candidate.full_name, candidate.trade);
-    const mailtoUrl = buildMailtoUrl(candidateEmail, subject, body);
-    Linking.openURL(mailtoUrl).catch(() => {
-      Alert.alert('Unable to open mail app', 'Please check your mail app settings and try again.');
-    });
+    await openMailClient(candidateEmail, subject, body);
   };
 
   useEffect(() => {
@@ -576,7 +605,7 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
             <TouchableOpacity
               style={[styles.actionBtn, { backgroundColor: '#fef2f2' }, updating && styles.btnDisabled]}
               onPress={() => {
-                openDecisionEmail('rejected');
+                void openDecisionEmail('rejected');
                 updateStatus('rejected');
               }}
               disabled={updating}
@@ -587,7 +616,7 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
             <TouchableOpacity
               style={[styles.actionBtn, { backgroundColor: '#f5f3ff' }, updating && styles.btnDisabled]}
               onPress={() => {
-                openDecisionEmail('marked_for_training');
+                void openDecisionEmail('marked_for_training');
                 updateStatus('marked_for_training');
               }}
               disabled={updating}
@@ -598,7 +627,7 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
             <TouchableOpacity
               style={[styles.actionBtn, { backgroundColor: '#f0fdf4' }, updating && styles.btnDisabled]}
               onPress={() => {
-                openDecisionEmail('shortlisted');
+                void openDecisionEmail('shortlisted');
                 updateStatus('shortlisted');
               }}
               disabled={updating}

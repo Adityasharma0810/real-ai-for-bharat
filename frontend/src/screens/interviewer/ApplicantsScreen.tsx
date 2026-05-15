@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import {
   View, Text, StyleSheet, FlatList, TouchableOpacity,
-  ActivityIndicator, TextInput, Modal, ScrollView, Pressable, Alert, Linking,
+  ActivityIndicator, TextInput, Modal, ScrollView, Pressable, Alert, Linking, Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -165,6 +165,38 @@ function buildMailtoUrl(email: string, subject: string, body: string) {
   return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
+function buildGmailComposeUrl(email: string, subject: string, body: string) {
+  const params = new URLSearchParams({
+    view: 'cm',
+    fs: '1',
+    to: email,
+    su: subject,
+    body,
+  });
+  return `https://mail.google.com/mail/?${params.toString()}`;
+}
+
+async function openMailClient(email: string, subject: string, body: string) {
+  const mailtoUrl = buildMailtoUrl(email, subject, body);
+  const gmailUrl = buildGmailComposeUrl(email, subject, body);
+
+  try {
+    const canOpenMailto = Platform.OS === 'web' ? true : await Linking.canOpenURL(mailtoUrl);
+    if (canOpenMailto) {
+      await Linking.openURL(mailtoUrl);
+      return;
+    }
+  } catch (err) {
+    // Fall back to Gmail compose
+  }
+
+  try {
+    await Linking.openURL(gmailUrl);
+  } catch (err) {
+    Alert.alert('Unable to open mail app', 'Please check your mail app settings and try again.');
+  }
+}
+
 function resolveDepartmentAccess(email?: string | null) {
   const normalized = normalizeValue(email);
   if (!normalized) return { label: null, allowedTrades: null, isSuperAdmin: false };
@@ -221,7 +253,7 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
   const [filterMaxScore, setFilterMaxScore] = useState('');
   const [onlyFlagged, setOnlyFlagged] = useState(filterFlagged ?? false);
 
-  const openDecisionEmail = useCallback((candidate: Candidate, status: DecisionStatus) => {
+  const openDecisionEmail = useCallback(async (candidate: Candidate, status: DecisionStatus) => {
     const candidateEmail = candidate.email?.trim()
       || findAadhaarEmailByPhone(candidate.phoneNumber)
       || findAadhaarEmailByName(candidate.name);
@@ -232,10 +264,7 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
     }
 
     const { subject, body } = buildDecisionEmail(status, candidate.name, candidate.trade);
-    const mailtoUrl = buildMailtoUrl(candidateEmail, subject, body);
-    Linking.openURL(mailtoUrl).catch(() => {
-      Alert.alert('Unable to open mail app', 'Please check your mail app settings and try again.');
-    });
+    await openMailClient(candidateEmail, subject, body);
   }, []);
 
   // Re-sync onlyFlagged when route params change (e.g. navigating from Dashboard)
@@ -498,7 +527,7 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
   };
 
   const handleDecision = (candidate: Candidate, status: DecisionStatus) => {
-    openDecisionEmail(candidate, status);
+    void openDecisionEmail(candidate, status);
     updateAppStatus(candidate, status);
   };
 

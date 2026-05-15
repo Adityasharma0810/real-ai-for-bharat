@@ -96,6 +96,7 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
   const [priyaSpeaking, setPriyaSpeaking] = useState(false);
   const [micActive, setMicActive] = useState(false);
   const [fitmentResult, setFitmentResult] = useState<InterviewResult | null>(null);
+  const [resultTimedOut, setResultTimedOut] = useState(false);
   const [showEndConfirm, setShowEndConfirm] = useState(false);
   const [transcriptMessages, setTranscriptMessages] = useState<TranscriptMessage[]>([]);
   const [liveOcrStatus, setLiveOcrStatus] = useState<LiveOcrStatus>('idle');
@@ -337,18 +338,25 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
     const fetchPromise = (async () => {
       const afterISO = interviewStartISORef.current;
 
-      for (let attempt = 0; attempt < 15; attempt++) {
+      // Fix 3: Increased from 15×3s (45s) to 20×4s (80s) to give the agent
+      // enough time to finish LLM calls (feedback + closing message) and write
+      // to Supabase before we give up. On timeout, set resultTimedOut so the
+      // UI shows a "Check Results Later" button instead of silently showing nothing.
+      for (let attempt = 0; attempt < 20; attempt++) {
         try {
           const result = await getLatestResult(phoneNumber, afterISO, email);
           setFitmentResult(result);
+          setResultTimedOut(false);
           return;
         } catch (err) {
           if (!(err instanceof ResultNotReadyError)) {
             console.warn('[fetchFitment] Backend result lookup failed:', err);
           }
         }
-        await new Promise(r => setTimeout(r, 3000));
+        await new Promise(r => setTimeout(r, 4000));
       }
+      // All attempts exhausted — let the user know they can check later
+      setResultTimedOut(true);
     })();
 
     fitmentFetchRef.current = fetchPromise;
@@ -378,6 +386,7 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
     setLiveOcrStatus('idle');
     setProctorFlagCount(0);
     setLastProctorFlag('');
+    setResultTimedOut(false);
     blockInProgressRef.current = false;
     livekitRoomRef.current = '';
     lastFlagStatusRef.current = null;
@@ -915,13 +924,18 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
               <View style={{ alignItems: 'center', gap: 10 }}>
                 <Ionicons name="hourglass-outline" size={32} color={theme.colors.textSecondary} />
                 <Text style={[styles.fitmentLabel, { textAlign: 'center' }]}>
-                  Your results are being processed.{'\n'}Check your History tab in a moment.
+                  {resultTimedOut
+                    ? `Your results are ready soon.${'\n'}Check your History tab in a moment.`
+                    : `Evaluating your responses...${'\n'}This usually takes under a minute.`}
                 </Text>
+                {!resultTimedOut && <ActivityIndicator size="small" color={theme.colors.primary} style={{ marginTop: 4 }} />}
               </View>
             )}
           </View>
           {fitmentResult ? (
             <AppButton title="View Full Result" onPress={handleViewResult} style={styles.primaryBtn} />
+          ) : resultTimedOut ? (
+            <AppButton title="Check Results Later" onPress={() => navigation.navigate("HomeTabs")} style={styles.primaryBtn} />
           ) : null}
           <AppButton title="Back to Home" variant="ghost" onPress={() => navigation.navigate("HomeTabs")} style={styles.ghostBtn} textStyle={{ color: theme.colors.textSecondary }} />
         </View>

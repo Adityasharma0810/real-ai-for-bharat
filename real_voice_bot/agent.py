@@ -218,9 +218,11 @@ class VoiceAgent(Agent):
     async def on_exit(self):
         if self.state.get("result_saved"):
             return
-        if self.state.get("scores"):
-            logger.info("[Agent exit] Attempting to save partial interview result before shutdown.")
-            self.state = persist_interview_result(self.state, partial=True)
+        # Fix 2: Always attempt to save on exit — persist_interview_result now
+        # handles the zero-score case (interview dropped before technical round)
+        # by saving a "Requires Manual Verification" partial record.
+        logger.info("[Agent exit] Attempting to save interview result before shutdown.")
+        self.state = persist_interview_result(self.state, partial=True)
 
     async def on_user_turn_completed(self, turn_ctx, new_message):
         user_text = new_message.text_content

@@ -295,9 +295,13 @@ Just the spoken response, nothing else."""
 
     logger.info(f"[Technical] Follow-up #{followup_count + 1} for Q{index + 1}: {followup_q[:60]}")
 
+    # Fix 1: Do NOT add the score yet — we are still on the same question.
+    # The score will be recorded when the follow-up answer is processed and
+    # the question is finally closed (moved to next question or close phase).
+    # Adding it here caused double-counting and prevented question_index from
+    # advancing, which meant close_interview_node was never reached.
     return {
         **state,
-        "scores": state["scores"] + [score],
         "awaiting_followup": True,
         "followup_count": followup_count + 1,
         "last_response": followup_q,
@@ -373,13 +377,44 @@ def persist_interview_result(state: InterviewState, *, partial: bool = False) ->
         return state
 
     scores = state.get("scores", [])
+    candidate_info = state.get("candidate_info", {})
+
+    # Fix 2: Always save something on exit, even if no questions were scored.
+    # Previously, if the candidate dropped during icebreaker/experience, nothing
+    # was saved and the frontend would poll forever and give up silently.
+    # Now we save a zero-score partial record so the row exists in Supabase.
     if not scores:
-        logger.warning("[Persist] No scored answers yet; skipping result save.")
-        return state
+        if not partial:
+            logger.warning("[Persist] No scored answers yet; skipping result save.")
+            return state
+        # Partial exit with no scores — save a minimal record so the row exists
+        logger.info("[Persist] Saving zero-score partial record (interview ended before technical round).")
+        try:
+            record_id = save_result(
+                candidate_name=candidate_info.get("name", "Unknown"),
+                phone_number=candidate_info.get("phone_number", ""),
+                trade=candidate_info.get("trade", ""),
+                scores=[],
+                weak_topics=[],
+                fitment="Requires Manual Verification",
+                average_score=0.0,
+                language=candidate_info.get("language", "English"),
+                district=candidate_info.get("district"),
+                feedback={"strengths": [], "improvements": []},
+                transcript=state.get("messages", []),
+                email=candidate_info.get("email", ""),
+                job_id=candidate_info.get("job_id") or None,
+                user_id=candidate_info.get("user_id") or None,
+                livekit_room=candidate_info.get("livekit_room") or None,
+            )
+            logger.info(f"[Persist] Zero-score partial record saved — record ID: {record_id}")
+            return {**state, "result_saved": True, "saved_result_id": record_id}
+        except Exception as e:
+            logger.error(f"[Persist] Failed to save zero-score partial record: {e}")
+            return state
 
     avg = round(sum(scores) / len(scores), 1)
     weak_topics = list(set(state.get("weak_topics", [])))
-    candidate_info = state.get("candidate_info", {})
     questions = state.get("questions", [])
 
     from database import check_integrity_flag

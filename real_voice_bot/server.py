@@ -61,10 +61,19 @@ app = FastAPI(
 async def startup_event():
     asyncio.create_task(_keep_alive())
 
+allowed_origins_env = os.getenv("ALLOWED_ORIGINS", "").strip()
+allowed_origins = [
+    origin.strip() for origin in allowed_origins_env.split(",") if origin.strip()
+]
+allow_credentials = True
+if not allowed_origins:
+    allowed_origins = ["*"]
+    allow_credentials = False
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=allowed_origins,
+    allow_credentials=allow_credentials,
     allow_methods=["*"],
     allow_headers=["*"],
 )

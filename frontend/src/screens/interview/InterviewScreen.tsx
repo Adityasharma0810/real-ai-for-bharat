@@ -164,37 +164,47 @@ export const InterviewScreen: React.FC<any> = ({ navigation, route }) => {
   const startWebFaceProctor = useCallback(() => {
     if (!isWeb || webFaceProctorRef.current) return;
 
-    const tracker = new WebFaceProctor({
-      intervalMs: 1200,
-      onStatus: (status: WebFaceStatus, faceCount: number) => {
-        if (status === 'unsupported' || status === 'error') {
-          setFacesCount(0);
-          setVerificationStatus('scanning');
-          return;
-        }
+    void (async () => {
+      let referenceDescriptor: Float32Array | null = referenceDescriptorRef.current;
+      if (referencePhoto && !referenceDescriptor) {
+        referenceDescriptor = await computeFaceDescriptor(referencePhoto);
+        referenceDescriptorRef.current = referenceDescriptor;
+      }
 
-        setFacesCount(faceCount);
-        if (status === 'no_face') {
-          setVerificationStatus('no_face');
-          noteProctorFlag('no_face');
-        } else if (status === 'multiple_faces') {
-          setVerificationStatus('multiple_faces');
-          noteProctorFlag('multiple_faces');
-        } else if (status === 'face_mismatch') {
-          setVerificationStatus('face_mismatch');
-          noteProctorFlag('face_mismatch');
-        } else if (status === 'verified') {
-          setVerificationStatus('verified');
-          noteProctorFlag('verified');
-        } else {
-          setVerificationStatus('scanning');
-        }
-      },
-    });
+      const tracker = new WebFaceProctor({
+        intervalMs: 1000,
+        referenceDescriptor: referenceDescriptor || null,
+        matchEveryN: referenceDescriptor ? 3 : 3,
+        onStatus: (status: WebFaceStatus, faceCount: number) => {
+          if (status === 'unsupported' || status === 'error') {
+            setFacesCount(0);
+            setVerificationStatus('scanning');
+            return;
+          }
 
-    webFaceProctorRef.current = tracker;
-    void tracker.start();
-  }, [noteProctorFlag]);
+          setFacesCount(faceCount);
+          if (status === 'no_face') {
+            setVerificationStatus('no_face');
+            noteProctorFlag('no_face');
+          } else if (status === 'multiple_faces') {
+            setVerificationStatus('multiple_faces');
+            noteProctorFlag('multiple_faces');
+          } else if (status === 'face_mismatch') {
+            setVerificationStatus('face_mismatch');
+            noteProctorFlag('face_mismatch');
+          } else if (status === 'verified') {
+            setVerificationStatus('verified');
+            noteProctorFlag('verified');
+          } else {
+            setVerificationStatus('scanning');
+          }
+        },
+      });
+
+      webFaceProctorRef.current = tracker;
+      await tracker.start();
+    })();
+  }, [noteProctorFlag, referencePhoto]);
 
   const stopLiveOcr = useCallback(() => {
     const tracker = liveOcrRef.current;

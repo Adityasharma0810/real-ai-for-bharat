@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useCallback, useMemo } from 'react';
 import {
   View, Text, StyleSheet, FlatList, TouchableOpacity,
-  ActivityIndicator, TextInput, Modal, ScrollView, Pressable,
+  ActivityIndicator, TextInput, Modal, ScrollView, Pressable, Alert, Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,6 +10,8 @@ import { supabase } from '../../services/supabase/config';
 import { AppCard } from '../../components/AppCard';
 import { AuthContext } from '../../context/AuthContext';
 import { getBlockedCandidates, getResults, updateInterviewAdminStatus } from '../../services/interviewService';
+import departmentAccess from '../../data/departmentAccess.json';
+import aadhaarDatabase from '../../data/aadhaarDatabase.json';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 type Candidate = {
@@ -19,6 +21,7 @@ type Candidate = {
   jobId: string | null;
   applicationId: string | null;
   name: string;
+  email?: string | null;
   trade: string;
   district: string;
   language: string;
@@ -34,6 +37,28 @@ type Candidate = {
   scores: number[];
   phoneNumber?: string;
 };
+
+type DepartmentAccessConfig = {
+  superAdmins: string[];
+  departments: { label: string; email: string; trades: string[] }[];
+};
+
+type AadhaarRecord = {
+  aadhaar_number: string;
+  full_name: string;
+  email: string;
+  phone: string;
+  address: string;
+  district: string;
+  gender: string;
+  dob: string;
+  age: string;
+};
+
+const DEPARTMENT_ACCESS = departmentAccess as DepartmentAccessConfig;
+const AADHAAR_RECORDS = aadhaarDatabase as AadhaarRecord[];
+
+type DecisionStatus = 'shortlisted' | 'marked_for_training' | 'rejected';
 
 // ── Fitment helpers ───────────────────────────────────────────────────────────
 const FITMENT_COLOR: Record<string, string> = {
@@ -69,8 +94,86 @@ function normalizeText(value?: string | null) {
   return (value || '').trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
+function normalizeValue(value?: string | null) {
+  return (value || '').trim().toLowerCase();
+}
+
 function normalizePhone(value?: string | null) {
   return (value || '').replace(/\D/g, '');
+}
+
+function findAadhaarEmailByPhone(phone?: string | null) {
+  const normalized = normalizePhone(phone);
+  if (!normalized) return null;
+  const record = AADHAAR_RECORDS.find((item) => normalizePhone(item.phone) === normalized);
+  return record?.email || null;
+}
+
+function findAadhaarEmailByName(name?: string | null) {
+  const normalized = normalizeText(name);
+  if (!normalized) return null;
+  const record = AADHAAR_RECORDS.find((item) => normalizeText(item.full_name) === normalized);
+  return record?.email || null;
+}
+
+function formatTradeLine(trade?: string | null) {
+  const trimmed = (trade || '').trim();
+  return trimmed && trimmed !== '—' ? `for the ${trimmed} role` : 'for the role you applied for';
+}
+
+function buildDecisionEmail(status: DecisionStatus, name: string, trade?: string | null) {
+  const subject =
+    status === 'shortlisted'
+      ? 'AI SkillFit Interview Update - Shortlisted'
+      : status === 'marked_for_training'
+        ? 'AI SkillFit Interview Update - Training Recommended'
+        : 'AI SkillFit Interview Update - Not Selected';
+
+  const greetingName = name?.trim() || 'Candidate';
+  const tradeLine = formatTradeLine(trade);
+
+  const statusLine =
+    status === 'shortlisted'
+      ? 'Status: Shortlisted'
+      : status === 'marked_for_training'
+        ? 'Status: Training Recommended'
+        : 'Status: Not Selected';
+
+  const nextSteps =
+    status === 'shortlisted'
+      ? 'Next steps: Our team will contact you with details for the next round.'
+      : status === 'marked_for_training'
+        ? 'Next steps: We recommend training to strengthen key skills. We will share learning resources shortly.'
+        : 'Next steps: You are welcome to reapply after strengthening your skills.';
+
+  const body = [
+    `Hello ${greetingName},`,
+    '',
+    `Thank you for completing your interview ${tradeLine}.`,
+    '',
+    statusLine,
+    nextSteps,
+    '',
+    'Regards,',
+    'AI SkillFit Team',
+  ].join('\n');
+
+  return { subject, body };
+}
+
+function buildMailtoUrl(email: string, subject: string, body: string) {
+  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function resolveDepartmentAccess(email?: string | null) {
+  const normalized = normalizeValue(email);
+  if (!normalized) return { label: null, allowedTrades: null, isSuperAdmin: false };
+  if ((DEPARTMENT_ACCESS.superAdmins || []).some((admin) => normalizeValue(admin) === normalized)) {
+    return { label: null, allowedTrades: null, isSuperAdmin: true };
+  }
+  const department = (DEPARTMENT_ACCESS.departments || []).find((d) => normalizeValue(d.email) === normalized);
+  if (!department) return { label: null, allowedTrades: null, isSuperAdmin: false };
+  return { label: department.label, allowedTrades: department.trades || [], isSuperAdmin: false };
 }
 
 // ── Filter chip ───────────────────────────────────────────────────────────────
@@ -92,6 +195,17 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
   const isAdmin = profile?.role === 'admin';
   const { jobId, filterFlagged } = route.params || {};
 
+  const departmentAccessInfo = useMemo(
+    () => resolveDepartmentAccess(user?.email || profile?.email || null),
+    [user?.email, profile?.email]
+  );
+  const allowedTrades = departmentAccessInfo.allowedTrades || [];
+  const hasTradeRestriction = allowedTrades.length > 0;
+  const allowedTradeSet = useMemo(
+    () => new Set(allowedTrades.map((trade) => normalizeValue(trade))),
+    [allowedTrades]
+  );
+
   const [allCandidates, setAllCandidates] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState(true);
   const [showFilters, setShowFilters] = useState(false);
@@ -106,6 +220,23 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
   const [filterMinScore, setFilterMinScore] = useState('');
   const [filterMaxScore, setFilterMaxScore] = useState('');
   const [onlyFlagged, setOnlyFlagged] = useState(filterFlagged ?? false);
+
+  const openDecisionEmail = useCallback((candidate: Candidate, status: DecisionStatus) => {
+    const candidateEmail = candidate.email?.trim()
+      || findAadhaarEmailByPhone(candidate.phoneNumber)
+      || findAadhaarEmailByName(candidate.name);
+
+    if (!candidateEmail) {
+      Alert.alert('Email not found', 'No email address found for this candidate in Aadhaar records.');
+      return;
+    }
+
+    const { subject, body } = buildDecisionEmail(status, candidate.name, candidate.trade);
+    const mailtoUrl = buildMailtoUrl(candidateEmail, subject, body);
+    Linking.openURL(mailtoUrl).catch(() => {
+      Alert.alert('Unable to open mail app', 'Please check your mail app settings and try again.');
+    });
+  }, []);
 
   // Re-sync onlyFlagged when route params change (e.g. navigating from Dashboard)
   useEffect(() => {
@@ -215,7 +346,7 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
       if (isAdmin) {
         const { data: profiles, error: profilesError } = await supabase
           .from('profiles')
-          .select('id, full_name, phone, trade, district, role');
+          .select('id, full_name, email, phone, trade, district, role');
 
         if (profilesError) {
           console.warn('Admin profiles fetch failed:', profilesError.message);
@@ -231,6 +362,7 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
             jobId: null,
             applicationId: null,
             name: p.full_name || 'Unknown',
+            email: p.email || null,
             trade: p.trade || '—',
             district: p.district || '—',
             language: '—',
@@ -281,16 +413,23 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
             fitment: 'Result Missing',
           }));
 
-        setAllCandidates([...candidates, ...unmatchedProfileOnlyCandidates]);
+        const combined = [...candidates, ...unmatchedProfileOnlyCandidates];
+        const filteredByDepartment = hasTradeRestriction
+          ? combined.filter((candidate) => allowedTradeSet.has(normalizeValue(candidate.trade)))
+          : combined;
+        setAllCandidates(filteredByDepartment);
       } else {
-        setAllCandidates(candidates);
+        const filteredByDepartment = hasTradeRestriction
+          ? candidates.filter((candidate) => allowedTradeSet.has(normalizeValue(candidate.trade)))
+          : candidates;
+        setAllCandidates(filteredByDepartment);
       }
     } catch (err) {
       console.error('Error fetching candidates:', err);
     } finally {
       setLoading(false);
     }
-  }, [user, isAdmin, jobId]);
+  }, [user, isAdmin, jobId, hasTradeRestriction, allowedTradeSet]);
 
   useEffect(() => { fetchCandidates(); }, [fetchCandidates]);
   useEffect(() => {
@@ -356,6 +495,11 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
         c.id === candidate.id ? { ...c, appStatus: candidate.appStatus } : c
       ));
     }
+  };
+
+  const handleDecision = (candidate: Candidate, status: DecisionStatus) => {
+    openDecisionEmail(candidate, status);
+    updateAppStatus(candidate, status);
   };
 
   const renderItem = ({ item, index }: { item: Candidate; index: number }) => (
@@ -429,21 +573,21 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
               <>
                 <TouchableOpacity
                   style={[styles.actionBtn, { backgroundColor: '#f0fdf4' }]}
-                  onPress={() => updateAppStatus(item, 'shortlisted')}
+                  onPress={() => handleDecision(item, 'shortlisted')}
                 >
                   <Ionicons name="checkmark-circle" size={16} color="#10b981" />
                   <Text style={[styles.actionText, { color: '#10b981' }]}>Shortlist</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={[styles.actionBtn, { backgroundColor: '#f5f3ff' }]}
-                  onPress={() => updateAppStatus(item, 'marked_for_training')}
+                  onPress={() => handleDecision(item, 'marked_for_training')}
                 >
                   <Ionicons name="school" size={16} color="#8b5cf6" />
                   <Text style={[styles.actionText, { color: '#8b5cf6' }]}>Training</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={[styles.actionBtn, { backgroundColor: '#fef2f2' }]}
-                  onPress={() => updateAppStatus(item, 'rejected')}
+                  onPress={() => handleDecision(item, 'rejected')}
                 >
                   <Ionicons name="close-circle" size={16} color="#ef4444" />
                   <Text style={[styles.actionText, { color: '#ef4444' }]}>Reject</Text>
@@ -465,9 +609,14 @@ export const InterviewerApplicantsScreen = ({ route, navigation }: any) => {
             <Ionicons name="arrow-back" size={24} color={theme.colors.text} />
           </TouchableOpacity>
         )}
-        <Text style={styles.headerTitle}>
-          {onlyFlagged ? '⚑ Flagged Cases' : 'Candidates'}
-        </Text>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.headerTitle}>
+            {onlyFlagged ? '⚑ Flagged Cases' : 'Candidates'}
+          </Text>
+          {departmentAccessInfo.label && (
+            <Text style={styles.departmentLabel}>{departmentAccessInfo.label}</Text>
+          )}
+        </View>
         <TouchableOpacity
           style={[styles.filterBtn, activeFilterCount > 0 && styles.filterBtnActive]}
           onPress={() => setShowFilters(true)}
@@ -648,6 +797,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff', borderBottomWidth: 1, borderBottomColor: theme.colors.border,
   },
   headerTitle: { flex: 1, fontSize: 20, fontWeight: '800', color: theme.colors.text },
+  departmentLabel: { fontSize: 12, fontWeight: '700', color: theme.colors.primary, marginTop: 2 },
   filterBtn: {
     flexDirection: 'row', alignItems: 'center', gap: 4,
     paddingHorizontal: 12, paddingVertical: 8, borderRadius: 20,

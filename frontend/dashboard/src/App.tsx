@@ -18,6 +18,7 @@ import {
   BarChart2,
 } from 'lucide-react';
 import { AdminPortfolioViewer } from './components/AdminPortfolioViewer';
+import departmentAccess from './data/departmentAccess.json';
 import {
   Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart,
   Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis,
@@ -32,6 +33,11 @@ type Profile = {
   full_name: string | null;
   email: string | null;
   role: 'candidate' | 'employer' | 'admin' | null;
+};
+
+type DepartmentAccessConfig = {
+  superAdmins: string[];
+  departments: { label: string; email: string; trades: string[] }[];
 };
 
 type Interview = {
@@ -59,6 +65,23 @@ type Interview = {
   profile_district?: string | null;
   experience_level?: string | null;
 };
+
+const DEPARTMENT_ACCESS = departmentAccess as DepartmentAccessConfig;
+
+function normalizeValue(value?: string | null) {
+  return (value || '').trim().toLowerCase();
+}
+
+function resolveDepartmentAccess(email?: string | null) {
+  const normalized = normalizeValue(email);
+  if (!normalized) return { label: null, allowedTrades: null, isSuperAdmin: false };
+  if ((DEPARTMENT_ACCESS.superAdmins || []).some((admin) => normalizeValue(admin) === normalized)) {
+    return { label: null, allowedTrades: null, isSuperAdmin: true };
+  }
+  const department = (DEPARTMENT_ACCESS.departments || []).find((d) => normalizeValue(d.email) === normalized);
+  if (!department) return { label: null, allowedTrades: null, isSuperAdmin: false };
+  return { label: department.label, allowedTrades: department.trades || [], isSuperAdmin: false };
+}
 
 type JobForm = {
   id?: string;
@@ -143,6 +166,11 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState('');
 
+  const departmentAccessInfo = useMemo(
+    () => resolveDepartmentAccess(sessionUser?.email ?? profile?.email ?? null),
+    [sessionUser?.email, profile?.email]
+  );
+
   useEffect(() => {
     bootstrap();
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -177,6 +205,9 @@ export default function App() {
   const fetchData = useCallback(async (userId = sessionUser?.id, role = profile?.role) => {
     if (!userId) return;
     const isAdmin = role === 'admin';
+    const allowedTrades = departmentAccessInfo.allowedTrades || [];
+    const hasTradeRestriction = allowedTrades.length > 0;
+    const allowedTradeSet = new Set(allowedTrades.map((trade) => normalizeValue(trade)));
 
     // Jobs
     const jobsQuery = supabase
@@ -204,6 +235,11 @@ export default function App() {
     if (!isAdmin && jobIds.length > 0) {
       interviewData = interviewData.filter((item: any) => jobIds.includes(item.job_id));
     }
+    if (hasTradeRestriction) {
+      interviewData = interviewData.filter((item: any) =>
+        allowedTradeSet.has(normalizeValue(item.trade))
+      );
+    }
 
     setJobs(jobsData || []);
     setInterviews((interviewData || []) as Interview[]);
@@ -216,30 +252,37 @@ export default function App() {
       ) ?? null,
     }));
 
-    // Add interview-only candidates (no application record) — admin only
-    // These are candidates who did a voice interview without applying to a specific job
-    if (isAdmin) {
-      const appUserJobKeys = new Set(appsData.map((a: any) => `${a.user_id}__${a.job_id}`));
-      const interviewOnlyCandidates = (interviewData || [])
-        .filter((iv: any) => {
-          const key = `${iv.user_id}__${iv.job_id}`;
-          return !appUserJobKeys.has(key);
+    const combinedCandidates = isAdmin
+      ? (() => {
+          const appUserJobKeys = new Set(appsData.map((a: any) => `${a.user_id}__${a.job_id}`));
+          const interviewOnlyCandidates = (interviewData || [])
+            .filter((iv: any) => {
+              const key = `${iv.user_id}__${iv.job_id}`;
+              return !appUserJobKeys.has(key);
+            })
+            .map((iv: any) => ({
+              id: `iv_${iv.id}`,
+              user_id: iv.user_id,
+              job_id: iv.job_id,
+              status: 'not_applied',
+              created_at: iv.created_at,
+              profiles: null,
+              jobs: null,
+              interview: iv,
+            }));
+          return [...appCandidates, ...interviewOnlyCandidates];
+        })()
+      : appCandidates;
+
+    const tradeFilteredCandidates = hasTradeRestriction
+      ? combinedCandidates.filter((candidate: any) => {
+          const trade = candidate.profiles?.trade ?? candidate.interview?.trade ?? '';
+          return allowedTradeSet.has(normalizeValue(trade));
         })
-        .map((iv: any) => ({
-          id: `iv_${iv.id}`, // synthetic id to avoid collisions
-          user_id: iv.user_id,
-          job_id: iv.job_id,
-          status: 'not_applied',
-          created_at: iv.created_at,
-          profiles: null,
-          jobs: null,
-          interview: iv,
-        }));
-      setCandidates([...appCandidates, ...interviewOnlyCandidates]);
-    } else {
-      setCandidates(appCandidates);
-    }
-  }, [sessionUser?.id, profile?.role]);
+      : combinedCandidates;
+
+    setCandidates(tradeFilteredCandidates);
+  }, [sessionUser?.id, profile?.role, departmentAccessInfo]);
 
   async function signOut() { await supabase.auth.signOut(); }
 
@@ -265,7 +308,7 @@ export default function App() {
         <div style={{ marginBottom: '2rem' }}>
           <h1 style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--primary)' }}>AI SkillFit</h1>
           <p style={{ fontSize: '0.72rem', color: 'var(--muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-            {isAdmin ? 'Admin Portal' : 'Employer Portal'}
+            {isAdmin ? (departmentAccessInfo.label || 'Admin Portal') : 'Employer Portal'}
           </p>
         </div>
         <nav style={{ flex: 1 }}>
@@ -285,7 +328,15 @@ export default function App() {
       <main className="main-content">
         {message && <div className="notice error">{message}<button className="link-btn" style={{ marginLeft: '1rem' }} onClick={() => setMessage('')}>Dismiss</button></div>}
         {activeTab === 'dashboard' && <DashboardView jobs={jobs} candidates={candidates} interviews={interviews} />}
-        {activeTab === 'candidates' && <CandidatesView candidates={candidates} interviews={interviews} onRefresh={() => fetchData()} setMessage={setMessage} />}
+        {activeTab === 'candidates' && (
+          <CandidatesView
+            candidates={candidates}
+            interviews={interviews}
+            onRefresh={() => fetchData()}
+            setMessage={setMessage}
+            departmentLabel={departmentAccessInfo.label}
+          />
+        )}
         {activeTab === 'flagged' && <FlaggedView interviews={interviews} />}
         {activeTab === 'jobs' && <JobsView jobs={jobs} userId={sessionUser.id} onRefresh={() => fetchData()} setMessage={setMessage} />}
       </main>
@@ -647,11 +698,12 @@ const FITMENT_OPTIONS = ['All', 'Job-Ready', 'Requires Training', 'Low Confidenc
 const CATEGORY_OPTIONS = ['All', 'Blue-collar Trades', 'Polytechnic-Skilled Roles', 'Semi-Skilled Workforce'];
 const LANGUAGE_OPTIONS = ['All', 'English', 'Hindi', 'Tamil', 'Telugu', 'Kannada', 'Marathi', 'Bengali', 'Gujarati', 'Malayalam', 'Punjabi', 'Odia'];
 
-function CandidatesView({ candidates, interviews, onRefresh, setMessage }: {
+function CandidatesView({ candidates, interviews, onRefresh, setMessage, departmentLabel }: {
   candidates: any[];
   interviews: Interview[];
   onRefresh: () => void;
   setMessage: (m: string) => void;
+  departmentLabel?: string | null;
 }) {
   const [query, setQuery] = useState('');
   const [filterFitment, setFilterFitment] = useState('All');
@@ -736,11 +788,19 @@ function CandidatesView({ candidates, interviews, onRefresh, setMessage }: {
       <div className="page-header">
         <h2>Candidates</h2>
         <p>Filter, review, and shortlist candidates based on interview results.</p>
-      </div>
-
-      {/* Filters */}
-      <div className="filters-bar">
-        <div className="search-box" style={{ flex: '1 1 200px' }}>
+      <div>
+        <div className="section-title">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <h1>Candidates</h1>
+            {departmentLabel && <span className="badge badge-info">{departmentLabel}</span>}
+          </div>
+          <p>Filter, review, and shortlist candidates based on interview results.</p>
+          {departmentLabel && (
+            <p className="muted" style={{ marginTop: '0.35rem' }}>
+              Showing candidates for {departmentLabel}.
+            </p>
+          )}
+        </div>
           <Search size={16} color="var(--muted)" />
           <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search by name or trade..." />
         </div>

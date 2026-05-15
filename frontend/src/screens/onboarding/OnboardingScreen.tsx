@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useMemo, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -65,7 +65,7 @@ const WORK_TYPES = ['Full-time', 'Part-time', 'Contract'];
 const EDUCATION_LEVELS = ['Below 10th', '10th Pass', '12th Pass', 'ITI/Diploma', 'Graduate', 'Post Graduate'];
 
 export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
-  const { updateProfile, t } = useContext(AuthContext);
+  const { updateProfile, t, profile } = useContext(AuthContext);
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
 
@@ -78,6 +78,39 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
   const [workPreference, setWorkPreference] = useState('');
   const [skillInput, setSkillInput] = useState('');
   const [skills, setSkills] = useState<string[]>([]);
+  const [tradeQuery, setTradeQuery] = useState('');
+
+  const filteredTradeCategories = useMemo(() => {
+    const query = tradeQuery.trim().toLowerCase();
+    if (!query) return TRADE_CATEGORIES;
+    return TRADE_CATEGORIES
+      .map((cat) => ({
+        ...cat,
+        trades: cat.trades.filter((item) => item.toLowerCase().includes(query)),
+      }))
+      .filter((cat) => cat.trades.length > 0);
+  }, [tradeQuery]);
+
+  const showNoTrades = tradeQuery.trim().length > 0 && filteredTradeCategories.length === 0;
+
+  const profileGenderMatch = useMemo(() => {
+    const normalizedGender = profile?.gender?.trim().toLowerCase();
+    if (!normalizedGender) return '';
+    const match = GENDERS.find((item) => item.toLowerCase() === normalizedGender);
+    return match || '';
+  }, [profile?.gender]);
+
+  const isAgeLocked = Boolean(profile?.age);
+  const isGenderLocked = Boolean(profileGenderMatch);
+
+  useEffect(() => {
+    if (profile?.age && profile.age !== age) {
+      setAge(profile.age);
+    }
+    if (profileGenderMatch && profileGenderMatch !== gender) {
+      setGender(profileGenderMatch);
+    }
+  }, [profile?.age, profileGenderMatch, age, gender]);
 
   const addSkill = () => {
     if (skillInput.trim() && !skills.includes(skillInput.trim())) {
@@ -119,17 +152,38 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
       case 1:
         return (
           <View style={styles.stepContainer}>
-            <Text style={styles.title}>{t('work_trade')}</Text>
+            <View style={styles.stepHeader}>
+              <Text style={styles.title}>{t('work_trade')}</Text>
+              <Text style={styles.subtitle}>{t('work_trade_subtitle')}</Text>
+            </View>
             <Text style={styles.label}>{t('select_trade')}</Text>
+            <View style={styles.searchRow}>
+              <Ionicons name="search-outline" size={18} color="#94a3b8" />
+              <TextInput
+                style={styles.searchInput}
+                placeholder={t('search_trade_placeholder')}
+                placeholderTextColor="#94a3b8"
+                value={tradeQuery}
+                onChangeText={setTradeQuery}
+              />
+              {tradeQuery ? (
+                <TouchableOpacity onPress={() => setTradeQuery('')} style={styles.searchClear}>
+                  <Ionicons name="close" size={16} color="#64748b" />
+                </TouchableOpacity>
+              ) : null}
+            </View>
             {trade ? (
               <View style={styles.selectedTradeBox}>
-                <Text style={styles.selectedTradeText}>{trade}</Text>
+                <View style={styles.selectedTradeTextWrap}>
+                  <Text style={styles.selectedTradeCaption}>{t('selected_trade_label')}</Text>
+                  <Text style={styles.selectedTradeText}>{trade}</Text>
+                </View>
                 <TouchableOpacity onPress={() => setTrade('')}>
                   <Ionicons name="close-circle" size={20} color={theme.colors.primary} />
                 </TouchableOpacity>
               </View>
             ) : null}
-            {TRADE_CATEGORIES.map(cat => (
+            {filteredTradeCategories.map(cat => (
               <View key={cat.label}>
                 <Text style={styles.categoryHeader}>{cat.label}</Text>
                 <View style={styles.chipContainer}>
@@ -145,19 +199,34 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
                 </View>
               </View>
             ))}
+            {showNoTrades ? (
+              <View style={styles.emptyState}>
+                <Text style={styles.emptyStateText}>{t('no_trades_found')}</Text>
+              </View>
+            ) : null}
             <Text style={styles.label}>{t('experience')}</Text>
-            {EXPERIENCE_LEVELS.map(exp => (
-              <TouchableOpacity key={exp.value} onPress={() => setExperience(exp.value)} style={styles.radioOption}>
-                <View style={[styles.radio, experience === exp.value && styles.radioSelected]} />
-                <Text style={styles.radioLabel}>{exp.label}</Text>
-              </TouchableOpacity>
-            ))}
+            <Text style={styles.helperText}>{t('experience_helper')}</Text>
+            <View style={styles.experienceGrid}>
+              {EXPERIENCE_LEVELS.map(exp => (
+                <TouchableOpacity
+                  key={exp.value}
+                  onPress={() => setExperience(exp.value)}
+                  style={[styles.experienceCard, experience === exp.value && styles.experienceCardSelected]}
+                >
+                  <View style={[styles.radio, experience === exp.value && styles.radioSelected]} />
+                  <Text style={[styles.experienceText, experience === exp.value && styles.experienceTextSelected]}>{exp.label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
           </View>
         );
       case 2:
         return (
           <View style={styles.stepContainer}>
-            <Text style={styles.title}>{t('skills_edu')}</Text>
+            <View style={styles.stepHeader}>
+              <Text style={styles.title}>{t('skills_edu')}</Text>
+              <Text style={styles.subtitle}>{t('skills_edu_subtitle')}</Text>
+            </View>
             <Text style={styles.label}>{t('skills')}</Text>
             <View style={styles.skillInputRow}>
               <TextInput
@@ -166,7 +235,9 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
                 value={skillInput}
                 onChangeText={setSkillInput}
               />
-              <TouchableOpacity onPress={addSkill} style={styles.addSkillBtn}><Ionicons name="add" size={24} color="#fff" /></TouchableOpacity>
+              <TouchableOpacity onPress={addSkill} style={styles.addSkillBtn}>
+                <Ionicons name="add" size={24} color="#fff" />
+              </TouchableOpacity>
             </View>
             <View style={styles.chipContainer}>
               {skills.map(s => (
@@ -189,20 +260,56 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
       case 3:
         return (
           <View style={styles.stepContainer}>
-            <Text style={styles.title}>{t('preferences')}</Text>
+            <View style={styles.stepHeader}>
+              <Text style={styles.title}>{t('preferences')}</Text>
+              <Text style={styles.subtitle}>{t('preferences_subtitle')}</Text>
+            </View>
             <Text style={styles.label}>{t('age')}</Text>
+            {isAgeLocked ? (
+              <View style={styles.lockHintRow}>
+                <Ionicons name="lock-closed" size={14} color="#64748b" />
+                <Text style={styles.lockHintText}>{t('autofilled_from_aadhaar')}</Text>
+              </View>
+            ) : null}
             <TextInput
-              style={styles.input}
+              style={[styles.input, isAgeLocked && styles.inputLocked]}
               placeholder={t('age')}
               value={age}
               onChangeText={setAge}
               keyboardType="numeric"
+              editable={!isAgeLocked}
+              selectTextOnFocus={!isAgeLocked}
             />
             <Text style={styles.label}>{t('gender')}</Text>
+            {isGenderLocked ? (
+              <View style={styles.lockHintRow}>
+                <Ionicons name="lock-closed" size={14} color="#64748b" />
+                <Text style={styles.lockHintText}>{t('autofilled_from_aadhaar')}</Text>
+              </View>
+            ) : null}
             <View style={styles.row}>
               {GENDERS.map(g => (
-                <TouchableOpacity key={g} onPress={() => setGender(g)} style={[styles.smallChip, gender === g && styles.selectedChip]}>
-                  <Text style={[styles.chipText, gender === g && styles.selectedChipText]}>{g}</Text>
+                <TouchableOpacity
+                  key={g}
+                  onPress={() => {
+                    if (!isGenderLocked) setGender(g);
+                  }}
+                  style={[
+                    styles.smallChip,
+                    gender === g && styles.selectedChip,
+                    isGenderLocked && gender !== g && styles.disabledChip,
+                  ]}
+                  activeOpacity={0.7}
+                >
+                  <Text
+                    style={[
+                      styles.chipText,
+                      gender === g && styles.selectedChipText,
+                      isGenderLocked && gender !== g && styles.disabledChipText,
+                    ]}
+                  >
+                    {g}
+                  </Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -227,7 +334,12 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
         </View>
         <View style={styles.headerInfo}>
           <Text style={styles.stepIndicator}>{t('step')} {step} {t('of')} 3</Text>
-          {step > 1 && <TouchableOpacity onPress={() => setStep(step - 1)}><Text style={styles.backBtn}>{t('back')}</Text></TouchableOpacity>}
+          {step > 1 && (
+            <TouchableOpacity onPress={() => setStep(step - 1)} style={styles.backPill}>
+              <Ionicons name="chevron-back" size={16} color={theme.colors.primary} />
+              <Text style={styles.backBtnText}>{t('back')}</Text>
+            </TouchableOpacity>
+          )}
         </View>
       </View>
       <ScrollView contentContainerStyle={styles.content}>{renderStep()}</ScrollView>
@@ -239,44 +351,75 @@ export const OnboardingScreen: React.FC<any> = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff' },
-  progressHeader: { padding: 24, paddingTop: 12 },
-  progressTrack: { height: 6, backgroundColor: '#e2e8f0', borderRadius: 3, marginBottom: 8 },
-  progressFill: { height: '100%', backgroundColor: theme.colors.primary, borderRadius: 3 },
+  container: { flex: 1, backgroundColor: '#f4f6fb' },
+  progressHeader: { paddingHorizontal: 24, paddingTop: 16, paddingBottom: 8 },
+  progressTrack: { height: 8, backgroundColor: '#e2e8f0', borderRadius: 999, marginBottom: 10 },
+  progressFill: { height: '100%', backgroundColor: theme.colors.primary, borderRadius: 999 },
   headerInfo: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  stepIndicator: { fontSize: 12, fontWeight: '700', color: '#64748b' },
-  backBtn: { color: theme.colors.primary, fontWeight: '600' },
-  content: { padding: 24 },
-  stepContainer: { flex: 1 },
-  title: { fontSize: 24, fontWeight: '700', color: '#1e293b', marginBottom: 24 },
-  label: { fontSize: 14, fontWeight: '600', color: '#475569', marginBottom: 8, marginTop: 16 },
-  input: { height: 50, backgroundColor: '#f8fafc', borderRadius: 12, paddingHorizontal: 16, fontSize: 16, color: '#1e293b', borderWidth: 1, borderColor: '#e2e8f0', marginBottom: 12 },
+  stepIndicator: { fontSize: 12, fontWeight: '700', color: '#64748b', letterSpacing: 0.6, textTransform: 'uppercase' },
+  backPill: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, paddingVertical: 6, backgroundColor: '#ffffff', borderRadius: 999, borderWidth: 1, borderColor: '#e2e8f0' },
+  backBtnText: { marginLeft: 2, color: theme.colors.primary, fontWeight: '600' },
+  content: { paddingHorizontal: 20, paddingBottom: 24 },
+  stepContainer: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    borderRadius: 20,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: '#e2e8f0',
+    shadowColor: '#0f172a',
+    shadowOpacity: 0.06,
+    shadowRadius: 16,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 2,
+  },
+  stepHeader: { marginBottom: 14 },
+  title: { fontSize: 26, fontWeight: '700', color: '#0f172a', marginBottom: 6 },
+  subtitle: { fontSize: 14, color: '#64748b' },
+  label: { fontSize: 12, fontWeight: '700', color: '#64748b', marginBottom: 8, marginTop: 16, letterSpacing: 0.6, textTransform: 'uppercase' },
+  helperText: { fontSize: 13, color: '#94a3b8', marginBottom: 8 },
+  input: { height: 50, backgroundColor: '#f8fafc', borderRadius: 12, paddingHorizontal: 16, fontSize: 16, color: '#0f172a', borderWidth: 1, borderColor: '#e2e8f0', marginBottom: 12 },
+  inputLocked: { backgroundColor: '#eef2f7', color: '#64748b', borderColor: '#d1d5db' },
   row: { flexDirection: 'row', flexWrap: 'wrap' },
   chipContainer: { flexDirection: 'row', flexWrap: 'wrap', marginHorizontal: -4 },
-  chip: { paddingHorizontal: 16, paddingVertical: 10, borderRadius: 20, backgroundColor: '#f1f5f9', margin: 4, borderWidth: 1, borderColor: '#e2e8f0' },
-  smallChip: { paddingHorizontal: 12, paddingVertical: 8, borderRadius: 16, backgroundColor: '#f1f5f9', marginRight: 8, marginBottom: 8, borderWidth: 1, borderColor: '#e2e8f0' },
-  selectedChip: { backgroundColor: '#eff6ff', borderColor: theme.colors.primary },
-  chipText: { fontSize: 14, color: '#475569' },
+  chip: { paddingHorizontal: 14, paddingVertical: 8, borderRadius: 999, backgroundColor: '#f8fafc', margin: 4, borderWidth: 1, borderColor: '#e2e8f0' },
+  smallChip: { paddingHorizontal: 12, paddingVertical: 8, borderRadius: 999, backgroundColor: '#f8fafc', marginRight: 8, marginBottom: 8, borderWidth: 1, borderColor: '#e2e8f0' },
+  selectedChip: { backgroundColor: '#eef2ff', borderColor: theme.colors.primary },
+  disabledChip: { backgroundColor: '#f1f5f9', borderColor: '#e2e8f0' },
+  chipText: { fontSize: 13, color: '#475569' },
   selectedChipText: { color: theme.colors.primary, fontWeight: '600' },
-  categoryHeader: { fontSize: 13, fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 0.8, marginTop: 16, marginBottom: 6, marginLeft: 4 },
-  selectedTradeBox: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#eff6ff', borderWidth: 1, borderColor: theme.colors.primary, borderRadius: 12, paddingHorizontal: 16, paddingVertical: 12, marginBottom: 8 },
-  selectedTradeText: { fontSize: 15, fontWeight: '600', color: theme.colors.primary, flex: 1 },
-  radioOption: { flexDirection: 'row', alignItems: 'center', paddingVertical: 12 },
-  radio: { width: 20, height: 20, borderRadius: 10, borderWidth: 2, borderColor: '#cbd5e1', marginRight: 12 },
+  disabledChipText: { color: '#94a3b8' },
+  categoryHeader: { fontSize: 11, fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 1, marginTop: 16, marginBottom: 6, marginLeft: 4 },
+  selectedTradeBox: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#eef2ff', borderWidth: 1, borderColor: '#c7d2fe', borderRadius: 14, paddingHorizontal: 14, paddingVertical: 10, marginBottom: 10 },
+  selectedTradeTextWrap: { flex: 1, marginRight: 10 },
+  selectedTradeCaption: { fontSize: 11, fontWeight: '700', color: '#6366f1', textTransform: 'uppercase', letterSpacing: 0.8, marginBottom: 2 },
+  selectedTradeText: { fontSize: 15, fontWeight: '600', color: '#312e81', flexShrink: 1 },
+  radio: { width: 18, height: 18, borderRadius: 9, borderWidth: 2, borderColor: '#cbd5e1', marginRight: 12 },
   radioSelected: { borderColor: theme.colors.primary, backgroundColor: theme.colors.primary },
-  radioLabel: { fontSize: 16, color: '#334155' },
+  experienceGrid: { marginTop: 4 },
+  experienceCard: { flexDirection: 'row', alignItems: 'center', padding: 12, backgroundColor: '#f8fafc', borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', marginBottom: 8 },
+  experienceCardSelected: { backgroundColor: '#eef2ff', borderColor: theme.colors.primary },
+  experienceText: { fontSize: 15, color: '#334155', fontWeight: '600' },
+  experienceTextSelected: { color: theme.colors.primary },
   skillInputRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 12 },
   addSkillBtn: { width: 50, height: 50, backgroundColor: theme.colors.primary, borderRadius: 12, marginLeft: 8, justifyContent: 'center', alignItems: 'center' },
-  skillChip: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#f1f5f9', paddingHorizontal: 12, paddingVertical: 6, borderRadius: 12, margin: 4 },
+  skillChip: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#eef2ff', paddingHorizontal: 12, paddingVertical: 6, borderRadius: 12, margin: 4, borderWidth: 1, borderColor: '#e0e7ff' },
   skillChipText: { fontSize: 14, color: '#334155', marginRight: 6 },
   dropdown: { backgroundColor: '#f8fafc', borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', overflow: 'hidden' },
   dropdownItem: { padding: 16, borderBottomWidth: 1, borderBottomColor: '#f1f5f9' },
-  dropdownItemSelected: { backgroundColor: '#eff6ff' },
+  dropdownItemSelected: { backgroundColor: '#eef2ff' },
   dropdownText: { fontSize: 16, color: '#475569' },
   dropdownTextSelected: { color: theme.colors.primary, fontWeight: '600' },
   listOption: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 16, backgroundColor: '#f8fafc', borderRadius: 12, marginBottom: 8, borderWidth: 1, borderColor: '#e2e8f0' },
-  listOptionSelected: { borderColor: theme.colors.primary, backgroundColor: '#eff6ff' },
+  listOptionSelected: { borderColor: theme.colors.primary, backgroundColor: '#eef2ff' },
   listOptionText: { fontSize: 16, color: '#475569' },
   listOptionTextSelected: { color: theme.colors.primary, fontWeight: '600' },
-  footer: { padding: 24, paddingBottom: 40 }
+  footer: { paddingHorizontal: 24, paddingBottom: 32, paddingTop: 12 },
+  lockHintRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 8 },
+  lockHintText: { marginLeft: 6, fontSize: 12, color: '#64748b' },
+  searchRow: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#f8fafc', borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', paddingHorizontal: 12, height: 44, marginBottom: 12 },
+  searchInput: { flex: 1, fontSize: 15, color: '#0f172a', paddingVertical: 8, paddingHorizontal: 8 },
+  searchClear: { width: 24, height: 24, borderRadius: 12, backgroundColor: '#e2e8f0', alignItems: 'center', justifyContent: 'center' },
+  emptyState: { padding: 14, backgroundColor: '#f8fafc', borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', marginTop: 6 },
+  emptyStateText: { color: '#64748b', fontSize: 14, textAlign: 'center' },
 });

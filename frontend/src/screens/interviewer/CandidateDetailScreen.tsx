@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  ActivityIndicator, Alert, Image,
+  ActivityIndicator, Alert, Image, Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,6 +10,23 @@ import { supabase } from '../../services/supabase/config';
 import { AppCard } from '../../components/AppCard';
 import { getResults, updateInterviewAdminStatus } from '../../services/interviewService';
 import { PortfolioGallery } from '../../components/PortfolioGallery';
+import aadhaarDatabase from '../../data/aadhaarDatabase.json';
+
+type AadhaarRecord = {
+  aadhaar_number: string;
+  full_name: string;
+  email: string;
+  phone: string;
+  address: string;
+  district: string;
+  gender: string;
+  dob: string;
+  age: string;
+};
+
+const AADHAAR_RECORDS = aadhaarDatabase as AadhaarRecord[];
+
+type DecisionStatus = 'shortlisted' | 'marked_for_training' | 'rejected';
 
 const FITMENT_COLOR: Record<string, string> = {
   'Job-Ready': '#10b981',
@@ -26,6 +43,77 @@ const STATUS_COLOR: Record<string, string> = {
   blocked: '#111827',
 };
 
+function normalizeText(value?: string | null) {
+  return (value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function normalizePhone(value?: string | null) {
+  return (value || '').replace(/\D/g, '');
+}
+
+function findAadhaarEmailByPhone(phone?: string | null) {
+  const normalized = normalizePhone(phone);
+  if (!normalized) return null;
+  const record = AADHAAR_RECORDS.find((item) => normalizePhone(item.phone) === normalized);
+  return record?.email || null;
+}
+
+function findAadhaarEmailByName(name?: string | null) {
+  const normalized = normalizeText(name);
+  if (!normalized) return null;
+  const record = AADHAAR_RECORDS.find((item) => normalizeText(item.full_name) === normalized);
+  return record?.email || null;
+}
+
+function formatTradeLine(trade?: string | null) {
+  const trimmed = (trade || '').trim();
+  return trimmed && trimmed !== '—' ? `for the ${trimmed} role` : 'for the role you applied for';
+}
+
+function buildDecisionEmail(status: DecisionStatus, name: string, trade?: string | null) {
+  const subject =
+    status === 'shortlisted'
+      ? 'AI SkillFit Interview Update - Shortlisted'
+      : status === 'marked_for_training'
+        ? 'AI SkillFit Interview Update - Training Recommended'
+        : 'AI SkillFit Interview Update - Not Selected';
+
+  const greetingName = name?.trim() || 'Candidate';
+  const tradeLine = formatTradeLine(trade);
+
+  const statusLine =
+    status === 'shortlisted'
+      ? 'Status: Shortlisted'
+      : status === 'marked_for_training'
+        ? 'Status: Training Recommended'
+        : 'Status: Not Selected';
+
+  const nextSteps =
+    status === 'shortlisted'
+      ? 'Next steps: Our team will contact you with details for the next round.'
+      : status === 'marked_for_training'
+        ? 'Next steps: We recommend training to strengthen key skills. We will share learning resources shortly.'
+        : 'Next steps: You are welcome to reapply after strengthening your skills.';
+
+  const body = [
+    `Hello ${greetingName},`,
+    '',
+    `Thank you for completing your interview ${tradeLine}.`,
+    '',
+    statusLine,
+    nextSteps,
+    '',
+    'Regards,',
+    'AI SkillFit Team',
+  ].join('\n');
+
+  return { subject, body };
+}
+
+function buildMailtoUrl(email: string, subject: string, body: string) {
+  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => {
   const { candidateId, jobId, interviewId } = route.params;
   const [loading, setLoading] = useState(true);
@@ -34,6 +122,25 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
   const [transcript, setTranscript] = useState<{ role: string; content: string; timestamp?: number }[] | null>(null);
   const [transcriptText, setTranscriptText] = useState<string | null>(null);
   const [showTranscript, setShowTranscript] = useState(false);
+
+  const openDecisionEmail = (status: DecisionStatus) => {
+    if (!candidate) return;
+
+    const candidateEmail = candidate.email?.trim()
+      || findAadhaarEmailByPhone(candidate.phone)
+      || findAadhaarEmailByName(candidate.full_name);
+
+    if (!candidateEmail) {
+      Alert.alert('Email not found', 'No email address found for this candidate in Aadhaar records.');
+      return;
+    }
+
+    const { subject, body } = buildDecisionEmail(status, candidate.full_name, candidate.trade);
+    const mailtoUrl = buildMailtoUrl(candidateEmail, subject, body);
+    Linking.openURL(mailtoUrl).catch(() => {
+      Alert.alert('Unable to open mail app', 'Please check your mail app settings and try again.');
+    });
+  };
 
   useEffect(() => {
     fetchCandidateDetails();
@@ -468,7 +575,10 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
           <View style={styles.footerRow}>
             <TouchableOpacity
               style={[styles.actionBtn, { backgroundColor: '#fef2f2' }, updating && styles.btnDisabled]}
-              onPress={() => updateStatus('rejected')}
+              onPress={() => {
+                openDecisionEmail('rejected');
+                updateStatus('rejected');
+              }}
               disabled={updating}
             >
               <Ionicons name="close-circle" size={22} color="#dc2626" />
@@ -476,7 +586,10 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.actionBtn, { backgroundColor: '#f5f3ff' }, updating && styles.btnDisabled]}
-              onPress={() => updateStatus('marked_for_training')}
+              onPress={() => {
+                openDecisionEmail('marked_for_training');
+                updateStatus('marked_for_training');
+              }}
               disabled={updating}
             >
               <Ionicons name="school" size={22} color="#8b5cf6" />
@@ -484,7 +597,10 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.actionBtn, { backgroundColor: '#f0fdf4' }, updating && styles.btnDisabled]}
-              onPress={() => updateStatus('shortlisted')}
+              onPress={() => {
+                openDecisionEmail('shortlisted');
+                updateStatus('shortlisted');
+              }}
               disabled={updating}
             >
               <Ionicons name="checkmark-circle" size={22} color="#16a34a" />

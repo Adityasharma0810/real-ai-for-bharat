@@ -1,0 +1,21 @@
+{
+  "superAdmins": [
+    "gov@gmail.com"
+  ],
+  "departments": [
+    {
+      "label": "Electrical Department",
+      "email": "electrical.department@gov.com",
+      "trades": [
+        "Electrician"
+      ]
+    },
+    {
+        "label": "Water Department",
+        "email": "water.department@gov.com",
+        "trades": [
+            "Plumber"
+        ]
+    }
+  ]
+}

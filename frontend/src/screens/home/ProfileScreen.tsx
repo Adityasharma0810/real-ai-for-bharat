@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Alert, ScrollView, Modal } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert, ScrollView, Modal, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { AuthContext } from '../../context/AuthContext';
@@ -66,11 +66,19 @@ export const ProfileScreen: React.FC<any> = ({ navigation }) => {
         </View>
 
         <View style={styles.profileHeader}>
-          <View style={styles.avatar}>
-            <Text style={styles.avatarText}>
-              {profile?.full_name?.charAt(0) || user?.email?.charAt(0) || 'U'}
-            </Text>
-          </View>
+          <TouchableOpacity style={styles.avatar} onPress={() => navigation.navigate('EditProfile')}>
+            {profile?.photo_url ? (
+              <Image
+                source={{ uri: profile.photo_url }}
+                style={styles.avatarImage}
+                resizeMode="cover"
+              />
+            ) : (
+              <Text style={styles.avatarText}>
+                {profile?.full_name?.charAt(0) || user?.email?.charAt(0) || 'U'}
+              </Text>
+            )}
+          </TouchableOpacity>
           <Text style={styles.userName}>{profile?.full_name || 'User'}</Text>
           <Text style={styles.userEmail}>{user?.email}</Text>
           <TouchableOpacity 
@@ -198,7 +206,8 @@ const styles = StyleSheet.create({
   header: { marginBottom: 24, alignItems: 'center' },
   headerTitle: { fontSize: 20, fontWeight: '700', color: '#1e293b' },
   profileHeader: { alignItems: 'center', marginBottom: 32 },
-  avatar: { width: 100, height: 100, borderRadius: 50, backgroundColor: theme.colors.primary, justifyContent: 'center', alignItems: 'center', marginBottom: 16 },
+  avatar: { width: 100, height: 100, borderRadius: 50, backgroundColor: theme.colors.primary, justifyContent: 'center', alignItems: 'center', marginBottom: 16, overflow: 'hidden' },
+  avatarImage: { width: 100, height: 100, borderRadius: 50 },
   avatarText: { fontSize: 40, color: '#fff', fontWeight: 'bold' },
   userName: { fontSize: 24, fontWeight: '700', color: '#1e293b' },
   userEmail: { fontSize: 14, color: '#64748b', marginTop: 4 },

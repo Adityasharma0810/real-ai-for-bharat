@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  ActivityIndicator, Alert,
+  ActivityIndicator, Alert, Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -58,7 +58,7 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
       if (resolvedUserId) {
         const { data, error } = await supabase
           .from('profiles')
-          .select('full_name, email, phone, age, gender, district, trade, experience_level, skills, education, work_preference')
+          .select('full_name, email, phone, age, gender, district, trade, experience_level, skills, education, work_preference, photo_url')
           .eq('id', resolvedUserId)
           .maybeSingle();
         if (error) console.warn('Profile fetch (non-fatal):', error.message);
@@ -87,6 +87,8 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
         age: profileData?.age || null,
         gender: profileData?.gender || null,
         skills: profileData?.skills?.length > 0 ? profileData.skills : [],
+        // Profile photo
+        photo_url: profileData?.photo_url || null,
         // Interview data
         interview: interviewData || null,
         // Status — use admin_status from interview (works without application record)
@@ -212,9 +214,17 @@ export const InterviewerCandidateDetailScreen = ({ route, navigation }: any) => 
         {/* ── Profile header ── */}
         <View style={styles.profileHeader}>
           <View style={styles.avatar}>
-            <Text style={styles.avatarText}>
-              {candidate.full_name?.charAt(0)?.toUpperCase() ?? '?'}
-            </Text>
+            {candidate.photo_url ? (
+              <Image
+                source={{ uri: candidate.photo_url }}
+                style={styles.avatarImage}
+                resizeMode="cover"
+              />
+            ) : (
+              <Text style={styles.avatarText}>
+                {candidate.full_name?.charAt(0)?.toUpperCase() ?? '?'}
+              </Text>
+            )}
           </View>
           <Text style={styles.name}>{candidate.full_name}</Text>
           {candidate.trade && (
@@ -511,7 +521,9 @@ const styles = StyleSheet.create({
     width: 80, height: 80, borderRadius: 40,
     backgroundColor: theme.colors.primary,
     justifyContent: 'center', alignItems: 'center', marginBottom: 14,
+    overflow: 'hidden',
   },
+  avatarImage: { width: 80, height: 80, borderRadius: 40 },
   avatarText: { fontSize: 32, fontWeight: '800', color: '#fff' },
   name: { fontSize: 22, fontWeight: '800', color: theme.colors.text, marginBottom: 4, textAlign: 'center' },
   tradeText: { fontSize: 14, color: theme.colors.textSecondary, fontWeight: '600', marginBottom: 8 },
